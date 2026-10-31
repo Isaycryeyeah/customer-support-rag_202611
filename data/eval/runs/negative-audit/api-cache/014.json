@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0148",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "positive_like",
+            "reason": "直接支持问题中风扇异响需停止使用并送修检测这一结论，虽未涉及数据安全，但覆盖了复合问题的一项必要结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "仅说明风扇异响属保修范围，未涉及数据安全或送修建议，与问题核心结论无直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0004",
+            "judgment": "negative_ok",
+            "reason": "讨论保修外收费维修，与风扇异响或数据安全均无直接关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "positive_like",
+            "reason": "流程中明确建议提前备份重要数据以避免维修中数据丢失，直接支持数据安全方面的结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0151",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲充电异常处理，未涉及屏幕碎裂临时处理或非官方充电器快充兼容性问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "讲触控异常排查，与屏幕碎裂临时处理及第三方充电器问题无直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修免责说明，虽提及非官方电源适配器，但针对笔记本且未回答快充兼容性，主题相关但无直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "人工客服转接流程，与问题两项结论均无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0152",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "明确建议寄修前自行备份数据并说明数据隐私保护，直接支持数据隐私准备方面的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "positive_like",
+            "reason": "流程第2步建议提前备份重要数据避免丢失，直接支持寄修前数据准备结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "进液处理说明，与触控板故障或寄修数据隐私无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0003",
+            "judgment": "negative_ok",
+            "reason": "售后能力边界说明，与问题结论无直接关系。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0154",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "虽为手机/平板文档，但明确说明不应自行拆卸鼓包电池并联系售后，直接支持不能自行拆后盖取电池的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "仅说明保修期限，未涉及电池鼓包处理或充电器插脚变形能否使用。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "设备无法开机排查，与电池鼓包自行拆卸及充电器变形问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0003",
+            "judgment": "negative_ok",
+            "reason": "投诉升级禁止行为，与问题两项结论均无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0155",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "positive_like",
+            "reason": "说明七天无理由退货需商品完好无明显使用痕迹，直接支持已拆封有划痕能否退货的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "说明换货需检测确认，未涉及15天换新条件或七天无理由退货，与问题结论无直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0001",
+            "judgment": "negative_ok",
+            "reason": "购买凭证信息要求，与换新或退货条件无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0005",
+            "judgment": "negative_ok",
+            "reason": "笔记本屏幕亮点检测，与手机换新及退货政策无直接关系。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0157",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲快充协议与官方充电器要求，未涉及快充发热是否正常或电池存放注意事项。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0002",
+            "judgment": "positive_like",
+            "reason": "建议通风环境快充、避免遮盖，直接支持平时充电注意事项这一结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "维修前数据备份建议，与快充发热或电池存放无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0003",
+            "judgment": "negative_ok",
+            "reason": "平板与手机数据同步异常，与问题结论无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1238,
+    "prompt_tokens": 5693,
+    "total_tokens": 6931,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5693
+  },
+  "model": "deepseek-flash",
+  "response_id": "c4f6c11d-a5c8-4c5f-bbd5-28516c5b66da"
+}

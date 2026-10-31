@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0356",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "虽为手机/平板指南，但明确给出鼓包后停止使用、断开电源、联系售后等直接处置结论，对问题第一项提供直接支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲的是电池衰减与更换评估，未涉及鼓包处置或快充注意事项。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "退货流程与电池鼓包处置及快充注意事项无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0000",
+            "judgment": "negative_ok",
+            "reason": "投诉识别规则与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0357",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0004",
+            "judgment": "negative_ok",
+            "reason": "仅针对数据隐私泄露投诉，未覆盖用户多次咨询未解决、要求投诉答复的诉求。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "service_boundary_0002",
+            "judgment": "negative_ok",
+            "reason": "说明越权承诺风险，未直接支持投诉识别或转人工结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "充电器选择与投诉诉求无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "维修时长与投诉识别无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0358",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "positive_like",
+            "reason": "流程中明确建议提前备份数据，并说明检测后确认费用、用户确认后维修，直接支持两个子问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "明确建议寄修前自行备份重要数据，直接支持数据备份子问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "换货流程与维修费用确认及数据备份无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0000",
+            "judgment": "negative_ok",
+            "reason": "手机/平板维修流程，未涉及笔记本费用确认或数据备份结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0361",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "讲保修不覆盖情况，未涉及接口故障判断或维修费用。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "换新政策与接口故障及维修价格无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "快充禁止操作与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0003",
+            "judgment": "negative_ok",
+            "reason": "投诉禁止行为与接口故障及费用无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0363",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "保修所需材料，未涉及售后检测流程或数据备份建议。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0002",
+            "judgment": "negative_ok",
+            "reason": "平板漏光偏色，非笔记本亮点检测流程，也未涉及备份。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "发票补发与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "长期存放建议与屏幕亮点售后流程无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0365",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "触控板故障与无法开机及维修进度查询无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "手机/平板无法开机排查，未涉及笔记本主板判断或进度查询。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "快充发热说明与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0002",
+            "judgment": "negative_ok",
+            "reason": "充电异常排查与无法开机及进度查询无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1087,
+    "prompt_tokens": 5931,
+    "total_tokens": 7018,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5931
+  },
+  "model": "deepseek-flash",
+  "response_id": "d329e3a8-c59b-44a0-a343-14837df3afe6"
+}

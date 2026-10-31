@@ -1,0 +1,18 @@
+{
+  "query_count": 65,
+  "answerable_count": 55,
+  "test_sha256": "e69a3ed76ba6c1d3b7b0758f7f159a471867bfe1652848639e04f4aa84e4c3da",
+  "rejected_candidates": [
+    "new_26aaa5bce6",
+    "new_69d0627db9",
+    "new_6e053f1389",
+    "new_add9780c83",
+    "new_e4562082cb"
+  ],
+  "no_reused_support_sets": true,
+  "no_reused_original_target_pairs": true,
+  "max_allowed_wording_similarity_to_previous": 0.8,
+  "frozen_before_clean_training": true,
+  "human_labels_verified": false,
+  "scope": "additional synthetic held-out data-quality study; known KB facts still shared"
+}

@@ -36,6 +36,8 @@ class GenerationResult:
     usage: dict = field(default_factory=dict)
     elapsed_ms: float = 0.0
     thinking: str = ''
+    response_id: str | None = None
+    system_fingerprint: str | None = None
 
     def to_dict(self):
         return asdict(self)
@@ -64,7 +66,7 @@ class LLMClient:
         self.max_attempts = int(max_attempts if max_attempts is not None else os.getenv('LLM_MAX_ATTEMPTS', '2'))
         if self.timeout <= 0 or self.budget <= 0 or self.max_attempts < 1:
             raise ValueError('Generation timeout/budget must be positive; attempts must be >= 1.')
-        self.model = os.getenv('DEEPSEEK_MODEL', 'deepseek-chat') if provider == 'deepseek' else provider
+        self.model = os.getenv('DEEPSEEK_MODEL', 'deepseek-flash') if provider == 'deepseek' else provider
         self.thinking = os.getenv('DEEPSEEK_THINKING', 'disabled')
         if self.thinking not in ('enabled', 'disabled'):
             raise ValueError('DEEPSEEK_THINKING must be enabled or disabled.')
@@ -100,6 +102,9 @@ class LLMClient:
                         extra_body={'thinking': {'type': self.thinking}},
                         timeout=min(self.timeout, remaining))
                     result.usage = response.usage.model_dump() if response.usage else {}
+                    result.response_id = getattr(response, 'id', None)
+                    result.system_fingerprint = getattr(response, 'system_fingerprint', None)
+                    result.model = getattr(response, 'model', self.model)
                     choice = response.choices[0] if response.choices else None
                     result.finish_reason = choice.finish_reason if choice else None
                     text = choice.message.content if choice else None

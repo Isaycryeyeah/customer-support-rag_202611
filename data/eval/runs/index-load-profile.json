@@ -1,0 +1,11 @@
+{
+  "persisted_index_read_first_ms": 1.7771999991964549,
+  "warm_read_ms": [
+    1.0809999985212926,
+    1.019799999994575,
+    1.1006999993696809,
+    1.0085000012622913,
+    1.0201000004599337
+  ],
+  "scope": "index and metadata reads in a fresh process; OS cache state unspecified; not model initialization"
+}

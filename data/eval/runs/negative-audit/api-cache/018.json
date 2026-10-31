@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0190",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "ambiguous",
+            "reason": "涉及插座冒烟等充电异常，与电池冒烟/焦味主题相近，但针对充电器/插座异常而非设备电池冒烟，不能直接支持问题结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "同属电池安全但讲漏液处理，与冒烟/焦味处理无直接对应，主题相关但非直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_pricing_0001",
+            "judgment": "negative_ok",
+            "reason": "维修费用参考，与冒烟处理及进水保修均无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "充电器选择建议，与冒烟处理和进水保修问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0191",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "列出保修所需材料含序列号，直接关联序列号看不清能否保修的问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "讲保修不覆盖情况，未涉及标签/序列号缺失或保修范围列举，主题相关但不直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "进液紧急处理，与标签序列号及保修范围无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0003",
+            "judgment": "negative_ok",
+            "reason": "维修费用说明，与标签序列号缺失及保修范围问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0193",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲电池衰减处理，非长期存放电量建议，主题相关但不支持存放问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0004",
+            "judgment": "negative_ok",
+            "reason": "讲长期存放后电量显示异常校准，非存放电量区间建议，不直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "进液禁止处理方式，与长期存放电量无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0001",
+            "judgment": "negative_ok",
+            "reason": "拆机危险操作清单，与电池存放电量无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0194",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "明确建议更换主板/存储前自行备份数据，直接支持备份问题（虽为笔记本文档）。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "positive_like",
+            "reason": "流程中建议提前备份重要数据，直接支持维修前备份结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0003",
+            "judgment": "negative_ok",
+            "reason": "投诉升级禁止行为，与备份及同步问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "非官方维修影响保修，与备份及同步问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0197",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0003",
+            "judgment": "ambiguous",
+            "reason": "讲电池冒烟/焦味处理，与插座冒烟及米缸问题主题相近但非直接对应，不能直接支持结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "ambiguous",
+            "reason": "讲进液紧急处理步骤，与米缸偏方问题相关但未直接回答米缸是否管用。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0004",
+            "judgment": "negative_ok",
+            "reason": "平板长期存放电量异常，与插座冒烟及米缸问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "维修数据备份说明，与插座冒烟及米缸问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0198",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "明确说明不应自行拆卸鼓包电池并联系售后，直接支持不可自行拆取的结论（虽为手机/平板文档）。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲电池衰减处理，非鼓包及自行拆机问题，主题相关但不支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0002",
+            "judgment": "negative_ok",
+            "reason": "维修前数据备份建议，与电池鼓包自行拆机无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "人工客服转接流程，与电池鼓包拆机问题无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1199,
+    "prompt_tokens": 5852,
+    "total_tokens": 7051,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5852
+  },
+  "model": "deepseek-flash",
+  "response_id": "4565c90b-b05e-4f1e-af40-e31a6c77e5e7"
+}

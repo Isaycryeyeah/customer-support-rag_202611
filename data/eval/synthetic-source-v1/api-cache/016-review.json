@@ -1,0 +1,141 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0096",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的云枢笔记本散热风扇一直有异响，这种情况在保修范围内吗？",
+        "expected_points": [
+          "散热风扇异响属于保修范围",
+          "保修范围包括非人为硬件故障"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0001",
+            "quote": "保修范围包括主板故障、屏幕显示异常、键盘失灵、散热风扇异响或不转、接口无法识别设备等非人为硬件故障。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本"
+      },
+      {
+        "task_id": "t0097",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我想申请笔记本保修，需要准备哪些材料？",
+        "expected_points": [
+          "购买发票或电子凭证",
+          "设备序列号",
+          "详细故障描述"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0002",
+            "quote": "申请笔记本保修需提供：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（机身底部标签或系统设置中查看）；\n3. 详细故障描述，建议附带截图或录屏。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本"
+      },
+      {
+        "task_id": "t0098",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的笔记本因为用了非官方电源适配器导致接口坏了，还能保修吗？",
+        "expected_points": [
+          "使用非官方电源适配器导致的接口或主板损坏不在保修范围内",
+          "具体是否保修需以官方检测结果为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "使用非官方电源适配器导致的接口或主板损坏。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "具体是否保修需以官方检测结果为准，客服不能提前承诺。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本"
+      },
+      {
+        "task_id": "t0099",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的云枢手机不小心进水了，现在应该怎么紧急处理？",
+        "expected_points": [
+          "立即关机，不要开机测试",
+          "断开充电器，不要充电",
+          "用干燥软布擦拭外部液体，不要用吹风机加热吹干",
+          "尽快送官方售后拆检干燥"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0000",
+            "quote": "设备进液或进水后，应立即执行以下步骤：\n\n1. 立即关机，不要尝试开机测试是否正常；\n2. 断开充电器，不要在设备潮湿状态下充电；\n3. 用干燥软布擦拭外部液体，不要用吹风机加热吹干；\n4. 尽快将设备送至官方售后进行专业拆检和干燥处理。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0100",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "手机进水后，网上说放米缸里可以吸水，这个方法能用吗？",
+        "expected_points": [
+          "严禁将进液设备放入米缸等民间偏方处理",
+          "这些方法可能加速腐蚀或造成短路"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0101",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的笔记本进水后主板坏了，这种情况还能保修吗？",
+        "expected_points": [
+          "进液导致的故障通常不属于保修范围",
+          "具体是否可维修及费用需以官方检测结果为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0002",
+            "quote": "进液导致的故障通常不属于保修范围（详见\"保修免责与不予保修情况说明\"文档），具体是否可维修、维修费用需以官方检测结果为准。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1053,
+    "prompt_tokens": 2068,
+    "total_tokens": 3121,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2068
+  },
+  "model": "deepseek-flash",
+  "response_id": "4aab172c-fce2-404b-b2b0-cf201788294e"
+}

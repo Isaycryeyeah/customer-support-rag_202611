@@ -1,0 +1,82 @@
+{
+  "accepted_queries": 451,
+  "independent_evidence_groups": 448,
+  "split_counts": {
+    "dev": 90,
+    "train": 272,
+    "test": 89
+  },
+  "historical_like_groups_train_only": 0,
+  "near_duplicate_merges": [
+    [
+      "syn_t0000",
+      "syn_t0288",
+      0.937
+    ],
+    [
+      "syn_t0179",
+      "syn_t0279",
+      0.949
+    ],
+    [
+      "syn_t0329",
+      "syn_t0364",
+      0.883
+    ]
+  ],
+  "rejected": [
+    {
+      "task_id": "t0013",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0014",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0015",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0016",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0077",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0082",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0113",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0180",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0344",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0346",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0347",
+      "reason": "review rejected or evidence failed exact-match validation"
+    },
+    {
+      "task_id": "t0348",
+      "reason": "review rejected or evidence failed exact-match validation"
+    }
+  ],
+  "limitations": [
+    "Synthetic known-KB evidence-combination benchmark; not real traffic.",
+    "AI review and exact quotations do not establish human-verified semantic labels.",
+    "Evidence combinations share facts across splits; this is not unseen-fact generalization."
+  ]
+}

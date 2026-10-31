@@ -1,0 +1,184 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_018",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0001",
+          "repair_process_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0001",
+            "quote": "常规部件（键盘、触控板、电池）维修时长约为 3～5 个工作日；主板级维修或需要更换屏幕总成的维修时长约为 7～15 个工作日，具体以检测中心和零件库存情况为准。"
+          }
+        ],
+        "expected_points": [
+          "清理后仍失灵可能是键盘模组故障，建议联系售后检测更换",
+          "笔记本常规部件（键盘、触控板、电池）维修时长约为3～5个工作日，主板级维修约为7～15个工作日，具体以检测中心和零件库存情况为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "原gold误用手机/平板维修时长片段，已改为笔记本维修时长片段；键盘故障片段保留。"
+      },
+      {
+        "query_id": "new_019",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0001",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "清理后仍失灵可能是键盘模组故障，建议联系售后检测更换",
+          "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议寄修前自行备份数据；官方会尽量保护数据隐私，但不对维修导致的数据丢失承担恢复责任"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "键盘故障与笔记本维修数据安全片段均直接支持问题，gold合理。"
+      },
+      {
+        "query_id": "new_020",
+        "accepted": false,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "human_transfer_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "以下情况智能客服应主动建议转接人工客服，而不是直接给出结论：\n\n1. 涉及退款、换新、保修审批等需要人工审核决策的事项；\n2. 用户情绪明显激动、表达强烈不满或投诉意向；\n3. 智能客服连续两次未能理解用户问题或给出的回答无法解决用户诉求；\n4. 涉及安全风险问题（如电池鼓包、起火、漏电）且用户需要进一步指导时，除安全提示外的具体处置应转人工或官方售后热线；\n5. 用户明确要求转人工。"
+          }
+        ],
+        "expected_points": [
+          "怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为",
+          "用户情绪明显激动、表达强烈不满或投诉意向，以及用户明确要求转人工时，应转接人工客服"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "原gold含无关的service_boundary_0003，且缺少直接支持隐私投诉转人工的data_privacy_repair_0004；已修正。"
+      },
+      {
+        "query_id": "new_021",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_faq_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_faq_0003",
+            "quote": "请先清洁摄像头镜片表面，并在相机设置中检查是否开启了特殊滤镜或对焦模式。如清洁后仍模糊，或出现摄像头黑屏、无法启动相机应用等情况，建议联系售后检测摄像头模组。"
+          }
+        ],
+        "expected_points": [
+          "怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为",
+          "摄像头模糊可先清洁镜片表面，检查相机设置是否开启特殊滤镜或对焦模式；清洁后仍模糊或出现黑屏、无法启动相机应用，建议联系售后检测摄像头模组"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "两个片段分别支持隐私投诉转人工和摄像头故障排查，gold合理。"
+      },
+      {
+        "query_id": "new_022",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0002",
+          "fast_charging_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0002",
+            "quote": "避免长时间覆盖充电器和设备（如塞进被子中充电）。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "expected_points": [
+          "避免长时间覆盖充电器和设备（如塞进被子中充电）",
+          "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "充电环境与快充发热片段直接回答危险性问题，gold合理。"
+      },
+      {
+        "query_id": "new_023",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0000",
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "云枢设备支持最高 66W 快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率。使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          },
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "云枢设备支持最高66W快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率；使用非官方充电器可能无法触发快充，或存在兼容性风险",
+          "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "快充兼容性与禁止自行更换第三方屏幕片段均直接支持问题，gold合理。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1614,
+    "prompt_tokens": 11675,
+    "total_tokens": 13289,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2203
+  },
+  "model": "deepseek-flash",
+  "response_id": "24e6d9d7-5c7e-4e55-a2ef-92622cf4be65"
+}

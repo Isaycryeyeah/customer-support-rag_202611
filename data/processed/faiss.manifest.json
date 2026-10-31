@@ -1,0 +1,7 @@
+{
+  "chunks_sha256": "6c7cc7fb8caf7e6bf85ae79573ddc7507c0b74418dfbd87ef4b57b08cbcff654",
+  "model_name": "BAAI/bge-small-zh-v1.5",
+  "dimension": 512,
+  "chunk_count": 103,
+  "model_revision": "7999e1d3359715c523056ef9478215996d62a620"
+}

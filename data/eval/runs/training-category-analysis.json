@@ -1,0 +1,93 @@
+{
+  "scope": "post-test descriptive analysis, not used to choose new parameters",
+  "results": {
+    "pretrained": {
+      "safety": {
+        "count": 13,
+        "mrr@10": 0.8717948717948718,
+        "hit@1": 0.7692307692307693
+      },
+      "service": {
+        "count": 5,
+        "mrr@10": 0.9,
+        "hit@1": 0.8
+      },
+      "repair": {
+        "count": 15,
+        "mrr@10": 0.8555555555555556,
+        "hit@1": 0.7333333333333333
+      },
+      "warranty": {
+        "count": 8,
+        "mrr@10": 1.0,
+        "hit@1": 1.0
+      }
+    },
+    "random": {
+      "safety": {
+        "count": 13,
+        "mrr@10": 0.8717948717948718,
+        "hit@1": 0.7692307692307693
+      },
+      "service": {
+        "count": 5,
+        "mrr@10": 0.9,
+        "hit@1": 0.8
+      },
+      "repair": {
+        "count": 15,
+        "mrr@10": 0.8222222222222223,
+        "hit@1": 0.6666666666666666
+      },
+      "warranty": {
+        "count": 8,
+        "mrr@10": 1.0,
+        "hit@1": 1.0
+      }
+    },
+    "hard": {
+      "safety": {
+        "count": 13,
+        "mrr@10": 0.8717948717948718,
+        "hit@1": 0.7692307692307693
+      },
+      "service": {
+        "count": 5,
+        "mrr@10": 0.9,
+        "hit@1": 0.8
+      },
+      "repair": {
+        "count": 15,
+        "mrr@10": 0.8555555555555556,
+        "hit@1": 0.7333333333333333
+      },
+      "warranty": {
+        "count": 8,
+        "mrr@10": 1.0,
+        "hit@1": 1.0
+      }
+    },
+    "hard-60": {
+      "safety": {
+        "count": 13,
+        "mrr@10": 0.8717948717948718,
+        "hit@1": 0.7692307692307693
+      },
+      "service": {
+        "count": 5,
+        "mrr@10": 0.9,
+        "hit@1": 0.8
+      },
+      "repair": {
+        "count": 15,
+        "mrr@10": 0.8555555555555556,
+        "hit@1": 0.7333333333333333
+      },
+      "warranty": {
+        "count": 8,
+        "mrr@10": 1.0,
+        "hit@1": 1.0
+      }
+    }
+  }
+}

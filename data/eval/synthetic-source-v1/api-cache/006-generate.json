@@ -1,0 +1,131 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0036",
+        "question": "晚上十点以后打人工客服没人接，我该怎么联系你们处理问题？",
+        "expected_points": [
+          "人工客服热线服务时间为每日9:00～21:00",
+          "非工作时间可提交在线工单",
+          "人工客服将在下一个工作时段内回复处理"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "human_transfer_policy_0002",
+            "quote": "官方人工客服热线服务时间为每日 9:00～21:00，非工作时间用户可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "通用",
+        "rationale": "用户询问非工作时间如何联系人工客服，需要依据人工客服转接规则中的服务时间和非工作时间处理方式回答。"
+      },
+      {
+        "task_id": "t0037",
+        "question": "我在授权实体店买的手机，纸质收据可以作为保修凭证吗？",
+        "expected_points": [
+          "授权线下门店开具的纸质发票或收据可作为有效购买凭证"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0000",
+            "quote": "授权线下门店开具的纸质发票或收据；"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户询问授权门店纸质收据是否可作为保修凭证，需要依据有效购买凭证类型说明回答。"
+      },
+      {
+        "task_id": "t0038",
+        "question": "保修时提供的购买凭证上必须显示哪些信息才算有效？",
+        "expected_points": [
+          "购买凭证需清晰显示购买日期",
+          "需显示商品型号",
+          "需显示设备序列号（如凭证上有标注）",
+          "需显示购买渠道（门店名称或平台订单号）"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0001",
+            "quote": "购买凭证需清晰显示以下信息：\n\n- 购买日期；\n- 商品型号；\n- 设备序列号（如凭证上有标注）；\n- 购买渠道（门店名称或平台订单号）。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "通用",
+        "rationale": "用户询问有效购买凭证需显示的信息，需要依据凭证信息要求说明回答。"
+      },
+      {
+        "task_id": "t0039",
+        "question": "我的发票日期和官方系统里记录的注册日期不一样，保修期按哪个算？",
+        "expected_points": [
+          "保修期以购买凭证上的购买日期为起始点计算",
+          "如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准",
+          "客服会协助核实差异原因"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0002",
+            "quote": "保修期以购买凭证上的购买日期为起始点计算。如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准，客服会协助核实差异原因。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "通用",
+        "rationale": "用户询问凭证日期与系统注册日期不一致时保修期如何计算，需要依据凭证与保修期计算关系说明回答。"
+      },
+      {
+        "task_id": "t0040",
+        "question": "我的手机购买凭证找不到了，还能通过什么方式查询购买记录来保修？",
+        "expected_points": [
+          "可尝试通过设备序列号在官方系统查询购买记录（适用于官方渠道购买的设备）",
+          "第三方渠道购买且无法查询到记录的，可参考“丢失发票处理政策”文档进一步处理"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0003",
+            "quote": "如无法提供购买凭证，可尝试通过设备序列号在官方系统查询购买记录（适用于官方渠道购买的设备）。第三方渠道购买且无法查询到记录的，可参考\"丢失发票处理政策\"文档进一步处理。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户询问无法提供购买凭证时如何查询购买记录，需要依据无法提供凭证的处理说明回答。"
+      },
+      {
+        "task_id": "t0041",
+        "question": "我在官方商城买的平板，发票丢了，还能用其他方式证明购买吗？",
+        "expected_points": [
+          "可联系客服提供购买时使用的账号、手机号或支付信息",
+          "客服可协助在官方系统中查询订单记录作为购买凭证"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0000",
+            "quote": "如用户通过官方商城、官方授权门店购买设备，但丢失发票或电子凭证，可联系客服提供购买时使用的账号、手机号或支付信息，协助在官方系统中查询订单记录作为购买凭证。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "平板",
+        "rationale": "用户询问官方渠道购买但丢失发票后如何证明购买，需要依据官方渠道购买丢失发票处理政策回答。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1224,
+    "prompt_tokens": 970,
+    "total_tokens": 2194,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 842
+  },
+  "model": "deepseek-flash",
+  "response_id": "d1cddd1b-449b-4903-8e7e-06d298fb9132"
+}

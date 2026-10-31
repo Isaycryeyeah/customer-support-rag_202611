@@ -1,0 +1,160 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "new_97f3f9469d",
+        "question": "我的笔记本键盘有几个键按了没反应，清理过缝隙也没用，想寄修换键盘，但电脑里有很多工作文件，维修时数据会不会丢？",
+        "expected_points": [
+          "清理异物后仍失灵可能是键盘模组故障，建议联系售后检测更换",
+          "维修涉及更换主板、存储芯片可能导致数据丢失，建议寄修前自行备份数据",
+          "官方会尽量保护数据隐私，但不对维修导致的数据丢失承担恢复责任"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本",
+        "rationale": "用户既询问键盘失灵的处理方式，又关心寄修换键盘时的数据安全，需分别依据键盘故障FAQ和数据安全说明作答。"
+      },
+      {
+        "task_id": "new_69d0627db9",
+        "question": "我想问一下你们新出的那款云枢平板什么时候开卖、多少钱，另外我还有个旧手机的问题想顺便问，能一起回答吗？",
+        "expected_points": [
+          "新机购买咨询超出售后知识库范围，应说明当前知识库不包含相关信息并引导联系对应渠道",
+          "用户明确要求转人工或涉及需人工处理的事项时应转接人工客服"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "service_boundary_0003",
+            "quote": "对于超出售后知识库范围的问题（如产品新机购买咨询、非本品牌产品问题），应说明\"当前知识库不包含相关信息\"，并引导用户联系对应渠道。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "5. 用户明确要求转人工。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "平板",
+        "rationale": "用户同时提出新机购买咨询（超出知识库范围）和转人工诉求，需依据能力边界说明和人工转接规则共同判断处理方式。"
+      },
+      {
+        "task_id": "new_26aaa5bce6",
+        "question": "我手机送修换摄像头后，发现相册里多了几张不是我拍的照片，怀疑维修时有人动过我手机数据，你们怎么处理？",
+        "expected_points": [
+          "怀疑维修过程中数据隐私泄露应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露",
+          "摄像头模糊可先清洁镜片并检查滤镜或对焦模式，清洁后仍模糊或黑屏建议联系售后检测摄像头模组"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_faq_0003",
+            "quote": "请先清洁摄像头镜片表面，并在相机设置中检查是否开启了特殊滤镜或对焦模式。"
+          }
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "device_type": "手机",
+        "rationale": "用户投诉维修中数据隐私泄露，需按隐私投诉规则转人工；同时涉及摄像头维修后的故障排查，需参考摄像头FAQ。"
+      },
+      {
+        "task_id": "new_eb865a49e9",
+        "question": "我习惯把手机插着快充放在枕头边充电，最近感觉充电器和手机都挺热的，这样用安全吗？什么情况要停？",
+        "expected_points": [
+          "避免长时间覆盖充电器和设备（如塞进被子中充电）",
+          "快充时设备与充电器比普通充电更温热属正常现象",
+          "若出现烫手无法触摸、外壳变形等异常应立即停止充电"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0002",
+            "quote": "避免长时间覆盖充电器和设备（如塞进被子中充电）。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户询问快充发热是否安全及何时停止，需结合充电环境要求和快充发热说明两个片段回答。"
+      },
+      {
+        "task_id": "new_25016fbe48",
+        "question": "我手机屏幕摔裂了，想自己上网买个第三方屏幕总成换上，顺便问下用非原装充电器会不会影响快充？",
+        "expected_points": [
+          "严禁自行购买第三方屏幕总成更换，可能损坏内部排线、传感器并导致保修失效，应通过官方售后处理",
+          "需搭配官方快充充电器和数据线才能达到最高66W功率，非官方充电器可能无法触发快充或存在兼容性风险"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          }
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户既想自行更换第三方屏幕（涉及危险拆修），又询问非原装充电器对快充的影响，需两个片段分别回应。"
+      },
+      {
+        "task_id": "new_150aefc43b",
+        "question": "我的笔记本长按电源键重启后还是开不了机，如果送去修，大概要花多少钱？",
+        "expected_points": [
+          "长按电源键10秒后仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测",
+          "保修期内非人为故障维修免费；保修期外或不在保修范围需付费，具体费用以检测后官方报价为准，客服不能在检测前直接报价"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0000",
+            "quote": "如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本",
+        "rationale": "用户询问笔记本无法开机的处理及维修费用，需依据开机故障FAQ和维修费用说明共同回答。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1396,
+    "prompt_tokens": 1547,
+    "total_tokens": 2943,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1419
+  },
+  "model": "deepseek-flash",
+  "response_id": "36e4d04e-0022-421c-82c3-a5d389bfdf8d"
+}

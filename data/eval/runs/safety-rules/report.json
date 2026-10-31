@@ -1,0 +1,6 @@
+{
+  "sample_count": 25,
+  "metric_scope": "risk_detection_only; does not measure final answer safety",
+  "need_human_accuracy": 1.0,
+  "risk_type_accuracy": 1.0
+}

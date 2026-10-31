@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0292",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0000",
+            "judgment": "positive_like",
+            "reason": "直接支持屏幕碎裂后继续使用的风险结论（停止触摸破损区域、临时覆盖后停止使用），与问题第一项必要结论直接相关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "针对屏幕漏液这一特定情形，未直接说明碎裂屏幕继续使用的普遍风险，主题相关但无法确定是否支持问题结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0004",
+            "judgment": "negative_ok",
+            "reason": "涉及维修数据隐私投诉，与屏幕碎裂风险及电池注意事项无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0001",
+            "judgment": "negative_ok",
+            "reason": "涉及购买凭证信息，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0294",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，非手机，不能支持手机整机及电池保修期结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "涉及第三方屏幕更换导致保修失效，未说明人为损坏免责条款或保修期限，不直接支持问题结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "换货流程，与保修免责条款及保修期限无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池衰减处理，与手机保修问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0295",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "ambiguous",
+            "reason": "说明键盘失灵可能为模组故障并建议售后检测，但未涉及刷非官方系统与保修认定的关系，无法确定是否支持问题结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0001",
+            "judgment": "negative_ok",
+            "reason": "平板外接键盘问题，与笔记本键盘失灵保修问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "退货流程，与保修认定无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，未涉及软件问题与硬件保修关系，不直接支持问题结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0299",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "针对第三方渠道购买丢失发票情形，与用户官方商城购买场景不同，不直接支持其结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "说明保修期限及以发票日期为准，未回答无发票能否保修，也不涉及摄像头保修范围，不直接支持问题结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本维修时长，与手机无发票保修及摄像头保修范围无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池衰减处理，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0300",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "positive_like",
+            "reason": "直接涉及非认证充电器可能导致发热、损坏电池甚至安全事故，支持问题中关于非原装快充头安全风险的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "快充使用建议，属一般性建议，未说明绝对禁止做法，不直接支持问题结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修范围，与快充及进水禁止做法无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "发票丢失处理，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0302",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "针对屏幕漏液情形，未直接说明屏幕碎裂的紧急处理，无法确定是否支持问题结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "禁止自行更换屏幕，属维修方式说明，非屏幕碎裂与进水同时发生时的紧急处理步骤。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池衰减处理，与手机屏幕碎裂及进水紧急处理无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本过热处理，与问题无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1178,
+    "prompt_tokens": 5416,
+    "total_tokens": 6594,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5416
+  },
+  "model": "deepseek-flash",
+  "response_id": "ba4b538b-bcf5-4bf2-89f0-6685132519fe"
+}

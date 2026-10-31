@@ -60,7 +60,7 @@ def test_no_evidence_consistent_handoff(components, empty_candidates):
         components[0].search.return_value = []
     else:
         components[1].rerank.return_value = [{'content': 'x', 'rerank_score': 0.01}]
-    result = CustomerSupportRAG(*components).answer('天气怎么样？')
+    result = CustomerSupportRAG(*components).answer('云枢手机的闪屏现象有资料吗？')
     assert result['answer_type'] == 'low_confidence'
     assert result['ticket']['need_human'] == result['need_human'] is True
     assert result['handoff_reason'] == result['ticket']['handoff_reason'] == 'insufficient_evidence'

@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0313",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "涉及屏幕漏液而非电池漏液，且未涉及皮肤接触处理或拆后盖指导，仅主题相近。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "针对笔记本电池鼓包，未涉及平板电池漏液接触处理或拆后盖清理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0003",
+            "judgment": "negative_ok",
+            "reason": "讨论软件故障保修，与电池漏液处理及拆后盖无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "快充使用建议，与漏液接触处理或拆机无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0316",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0004",
+            "judgment": "negative_ok",
+            "reason": "笔记本接口无法识别外接设备，与手机充电异常及维修进度查询无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "非官方维修记录影响保修，未涉及充电异常排查或维修进度查询。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本键盘失灵，与手机充电异常及维修进度无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0002",
+            "judgment": "negative_ok",
+            "reason": "投诉升级路径，与维修进度查询无直接关系。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0317",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "明确建议寄修前自行备份数据，直接支持问题中是否需要备份数据的结论，虽为笔记本但结论通用。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "设备无法开机排查，与寄修前数据备份无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "退货流程，与寄修前备份数据无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "快充使用建议，与数据备份无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0321",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "换货审批说明，与USB接口故障维修费用无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_pricing_0001",
+            "judgment": "ambiguous",
+            "reason": "维修费用参考区间表，但未包含USB接口维修项目，无法直接支持费用结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "退货审批说明，与维修费用无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "屏幕漏液处理，与USB接口故障及维修费用无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0324",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "设备无法开机排查，与电池耗电异常及检测维修费用无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "negative_ok",
+            "reason": "平板配件无法连接，与电池耗电及费用无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池鼓包，与平板耗电异常及费用无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0000",
+            "judgment": "positive_like",
+            "reason": "明确客服不能直接承诺具体维修费用，直接支持费用无法预先确定这一结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0329",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "positive_like",
+            "reason": "说明七天无理由退货需商品完好无明显使用痕迹，直接支持屏幕划痕可能不支持无理由退货的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0003",
+            "judgment": "positive_like",
+            "reason": "明确客服不能未审核直接承诺退款，直接支持不能直接批准退款的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "充电器外观检查，与退货退款无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本触控板问题，与退货退款无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1114,
+    "prompt_tokens": 5546,
+    "total_tokens": 6660,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5546
+  },
+  "model": "deepseek-flash",
+  "response_id": "6ba8494f-dd5b-411e-9c03-e590bc41205b"
+}

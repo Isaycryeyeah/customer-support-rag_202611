@@ -1,0 +1,169 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0114",
+        "accepted": true,
+        "reason": "问题同时包含投诉识别与退款时效两个诉求，需两个片段共同回答；证据原文存在且支持要点；未引入未知承诺；问题非标题抄写；投诉场景转人工适当。",
+        "question": "我买的手机想退货，已经提交申请了，但客服一直没处理，我要投诉！请问退货审核通过后多久能收到退款？",
+        "expected_points": [
+          "用户表达投诉意愿，应识别为投诉而非普通咨询",
+          "退款到账时间通常为验货通过后3～7个工作日内，根据支付渠道不同可能有所差异"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0000",
+            "quote": "明确使用\"投诉\"\"举报\"\"维权\"等词汇；"
+          },
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0115",
+        "accepted": true,
+        "reason": "问题同时描述设备异常发热和充电器插头发烫，需两个片段分别给出安全处置建议；证据原文存在且支持要点；未引入未知承诺；问题非标题抄写；电池安全风险无需转人工，建议联系售后即可。",
+        "question": "我的手机充电时特别烫手，充电器插头也发烫，我该怎么办？",
+        "expected_points": [
+          "设备异常发热、烫手时应立即停止使用并断开电源",
+          "充电器插头发烫属于充电异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "如果设备出现异常发热、烫手，应立即停止使用并断开电源。"
+          },
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          }
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0116",
+        "accepted": true,
+        "reason": "问题同时询问凭证类型和直接审批保修，需两个片段共同回答；证据原文存在且支持要点；用户要求直接通过审批属于越权承诺边界，转人工适当；问题非标题抄写。",
+        "question": "我的手机还在保修期内，但发票丢了，只有电商平台的订单截图，能申请保修吗？另外能不能直接帮我通过保修审批？",
+        "expected_points": [
+          "电商平台（经官方授权店铺）订单详情页可作为有效购买凭证",
+          "保修申请需经过官方售后检测确认故障原因后方可批准，客服无法在未检测的情况下直接承诺保修通过"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0000",
+            "quote": "电商平台（经官方授权店铺）订单详情页。"
+          },
+          {
+            "chunk_id": "warranty_policy_0003",
+            "quote": "保修申请需经过官方售后检测确认故障原因后方可批准，客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准。"
+          }
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0117",
+        "accepted": true,
+        "reason": "问题同时涉及非官方维修记录和意外损坏两类保修情形，需两个片段分别回答；证据原文存在且支持要点；未引入未知承诺；问题非标题抄写；正常保修政策咨询无需转人工。",
+        "question": "我的笔记本电脑之前在外面维修店换过屏幕，现在主板坏了还能保修吗？另外如果是我自己不小心摔坏的，保修管吗？",
+        "expected_points": [
+          "非官方渠道维修记录可能影响保修资格评估，需以官方检测结果为准",
+          "摔落等意外损坏通常不在保修范围内，可走意外保范围（如已购买），具体是否保修需以官方检测结果为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0001",
+            "quote": "如设备存在非官方渠道维修记录（例如第三方维修点更换过屏幕、电池等部件），可能影响保修资格评估，需以官方检测结果为准。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "摔落、进液等意外损坏（可走意外保范围，如已购买）；"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本"
+      },
+      {
+        "task_id": "t0118",
+        "accepted": true,
+        "reason": "问题同时包含投诉升级和直接要求退款赔偿，需能力边界与投诉处理两个片段共同回答；证据原文存在且支持要点；要求直接退款赔偿属于越权承诺边界，转人工适当；问题非标题抄写。",
+        "question": "我要投诉你们客服，之前的问题一直没解决，现在必须给我退款并赔偿！",
+        "expected_points": [
+          "智能客服不能直接批准或执行退款，也不能直接承诺赔偿金额",
+          "投诉应被记录并升级至客户体验组处理，不承诺具体处理结果、赔偿方案或处理时限"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "service_boundary_0000",
+            "quote": "直接批准或执行退款；"
+          },
+          {
+            "chunk_id": "complaint_escalation_0001",
+            "quote": "不承诺具体的处理结果、赔偿方案或处理时限，具体处理方式由人工客服和相关部门根据实际情况决定；"
+          }
+        ],
+        "risk_types": [
+          "complaint",
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "device_type": "通用"
+      },
+      {
+        "task_id": "t0119",
+        "accepted": true,
+        "reason": "问题同时询问投诉处理时限和换货政策适用性，需两个片段共同回答；证据原文存在且支持要点；未引入未知承诺；问题非标题抄写；投诉场景转人工适当。",
+        "question": "我买的平板出现故障想换新，但客服说我的情况可能不符合换货政策，我要投诉！请问投诉后多久能处理？",
+        "expected_points": [
+          "普通投诉由客户体验组在1～3个工作日内跟进，涉及安全事故等将优先升级处理",
+          "人为损坏、故障无法复现或超过换新时间窗口等情况通常不适用换新政策"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0002",
+            "quote": "普通投诉由客户体验组在 1～3 个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+          },
+          {
+            "chunk_id": "exchange_policy_0003",
+            "quote": "以下情况通常不适用换新政策：\n\n- 人为损坏（摔落、进水、私自拆机等）；\n- 故障无法复现，且经检测确认设备功能正常；\n- 已超过换新政策规定的时间窗口。"
+          }
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "device_type": "平板"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1484,
+    "prompt_tokens": 3168,
+    "total_tokens": 4652,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 3168
+  },
+  "model": "deepseek-flash",
+  "response_id": "eac01811-56ec-49bf-a97f-b8d33af5958e"
+}

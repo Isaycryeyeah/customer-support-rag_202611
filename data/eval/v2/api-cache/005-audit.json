@@ -1,0 +1,183 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_030",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0000",
+          "warranty_policy_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0000",
+            "quote": "私自拆机、改装、加装非官方配件；"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0002",
+            "quote": "申请笔记本保修需提供：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（机身底部标签或系统设置中查看）；\n3. 详细故障描述，建议附带截图或录屏。"
+          }
+        ],
+        "expected_points": [
+          "私自拆机属于人为损坏，不在免费保修范围内",
+          "申请笔记本保修需提供购买发票或电子凭证",
+          "需提供设备序列号（机身底部标签或系统设置中查看）",
+          "需提供详细故障描述，建议附带截图或录屏"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两问分别由保修免责和笔记本保修材料片段直接支持，gold完整无噪声。"
+      },
+      {
+        "query_id": "new_031",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0004",
+          "warranty_policy_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0004",
+            "quote": "例如用户于 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0000",
+            "quote": "云枢笔记本整机保修期为购买之日起 24 个月，电池保修期为 12 个月，外接鼠标、键盘等随机赠品配件保修期为 6 个月。"
+          }
+        ],
+        "expected_points": [
+          "手机电池保修期至2026年7月9日",
+          "笔记本电池保修期为12个月"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "手机电池截止日期由计算示例直接给出，笔记本电池保修期由笔记本保修政策片段直接给出。"
+      },
+      {
+        "query_id": "new_032",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0001",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "手机重启后仍触控失灵，建议联系售后检测屏幕模组",
+          "笔记本维修涉及更换主板、存储芯片可能导致数据丢失，建议寄修前自行备份数据",
+          "官方不对维修导致的数据丢失承担恢复责任"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两问分别由手机触控故障FAQ和笔记本维修数据安全片段直接支持。"
+      },
+      {
+        "query_id": "new_033",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0001",
+          "data_privacy_repair_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          }
+        ],
+        "expected_points": [
+          "键盘清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换",
+          "寄修前备份重要数据到云端或其他存储设备",
+          "退出账号或开启访客模式（如设备支持）",
+          "移除设备内的敏感应用或数据（如银行类应用的登录状态）"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "键盘故障处理与寄修前隐私准备分别由对应片段直接支持。"
+      },
+      {
+        "query_id": "new_034",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0001",
+          "repair_faq_tablet_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          }
+        ],
+        "expected_points": [
+          "笔记本键盘清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换",
+          "平板长期存放后首次开机电量显示异常，建议完全充满电后重新校准",
+          "平板校准后仍耗电异常快，建议联系售后检测电池健康度"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两设备问题分别由笔记本键盘FAQ和平板电池FAQ片段直接支持。"
+      },
+      {
+        "query_id": "new_035",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000",
+          "repair_process_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          },
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "expected_points": [
+          "维修涉及更换主板、存储模块可能导致数据丢失，建议寄修前自行备份重要数据",
+          "保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准",
+          "客服不能在检测前直接报价"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "数据备份建议与检测前不能报价分别由对应片段直接支持，属政策咨询非退款审批。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1426,
+    "prompt_tokens": 11461,
+    "total_tokens": 12887,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1989
+  },
+  "model": "deepseek-flash",
+  "response_id": "a191365d-9d22-424a-9e38-d0a300fca779"
+}

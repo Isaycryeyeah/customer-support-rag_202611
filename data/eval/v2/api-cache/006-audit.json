@@ -1,0 +1,196 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_036",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003",
+          "water_damage_policy_0001",
+          "water_damage_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0000",
+            "quote": "设备进液或进水后，应立即执行以下步骤：\n\n1. 立即关机，不要尝试开机测试是否正常；\n2. 断开充电器，不要在设备潮湿状态下充电；\n3. 用干燥软布擦拭外部液体，不要用吹风机加热吹干；\n4. 尽快将设备送至官方售后进行专业拆检和干燥处理。"
+          }
+        ],
+        "expected_points": [
+          "冒烟后应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后",
+          "严禁在冒烟或起火后继续操作、充电或强行关机",
+          "设备已进液，应立即关机、断开充电器、用干燥软布擦拭外部液体，不要用吹风机加热吹干，尽快送官方售后专业拆检",
+          "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式",
+          "严禁在设备进液后立即通电测试是否可以使用"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "用户描述冒烟后用水冲，属电池安全现实风险；需冒烟处理片段和进液紧急处理片段，原gold缺少进液后的正确紧急处理步骤，已补充water_damage_policy_0000。"
+      },
+      {
+        "query_id": "new_037",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0003",
+          "repair_faq_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露",
+          "触控板无响应可先在系统设置中确认未被禁用，并检查是否连接外接鼠标导致自动关闭；排除设置问题后仍异常，建议联系售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个诉求分别由数据隐私责任片段和笔记本触控板FAQ片段直接支持，gold完整。"
+      },
+      {
+        "query_id": "new_038",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_faq_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          },
+          {
+            "chunk_id": "repair_faq_0002",
+            "quote": "请先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物。如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口。"
+          }
+        ],
+        "expected_points": [
+          "寄修前建议备份重要数据到云端或其他存储设备",
+          "退出账号或开启访客模式（如设备支持）",
+          "移除设备内的敏感应用或数据（如银行类应用的登录状态）",
+          "充电问题可先检查是否使用官方充电器和数据线，并清理充电接口灰尘异物；更换后仍无法充电或提示充电异常，建议联系售后检测电池和充电接口"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "寄修前隐私操作由data_privacy_repair_0002直接支持，充电故障排查由repair_faq_0002支持，gold完整。"
+      },
+      {
+        "query_id": "new_039",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0003",
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          },
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "充电过程中出现充电器插头发烫等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理",
+          "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "充电器发烫安全处理与屏幕自行更换禁止分别由对应片段直接支持；属常规安全咨询，无需转人工。"
+      },
+      {
+        "query_id": "new_040",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000",
+          "water_damage_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0003",
+            "quote": "- 避免在浴室、厨房、雨天户外等潮湿环境使用设备；\n- 如设备具备防水等级，仍建议避免长时间浸泡或超出防水等级的使用场景。"
+          }
+        ],
+        "expected_points": [
+          "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起；发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检",
+          "避免在浴室、厨房、雨天户外等潮湿环境使用设备；如设备具备防水等级，仍建议避免长时间浸泡或超出防水等级的使用场景"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "鼓包与自行拆取涉及电池安全和危险拆修，由笔记本电池鼓包片段直接支持；进水预防由water_damage_policy_0003支持，gold完整。"
+      },
+      {
+        "query_id": "new_041",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0003",
+          "warranty_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0003",
+            "quote": "因用户自行安装非官方系统、root/越狱、刷入非官方固件导致的软件故障不在硬件保修范围内，但通常可通过官方售后渠道协助恢复出厂系统。"
+          },
+          {
+            "chunk_id": "warranty_policy_0003",
+            "quote": "保修申请需经过官方售后检测确认故障原因后方可批准，客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准。"
+          }
+        ],
+        "expected_points": [
+          "因用户自行安装非官方系统、root/越狱、刷入非官方固件导致的软件故障不在硬件保修范围内，但通常可通过官方售后渠道协助恢复出厂系统",
+          "保修申请需经过官方售后检测确认故障原因后方可批准，客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "root对保修的影响由warranty_exclusions_0003支持，客服不能直接承诺保修通过由warranty_policy_0003支持；要求直接批准保修属越权，需转人工。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1948,
+    "prompt_tokens": 11775,
+    "total_tokens": 13723,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2303
+  },
+  "model": "deepseek-flash",
+  "response_id": "bef8ff3c-2245-48c0-bfba-6781f3aaeced"
+}

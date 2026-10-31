@@ -1,0 +1,96 @@
+{
+  "configuration": {
+    "base_model": "BAAI/bge-reranker-base",
+    "base_revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+    "training_queries": "data/training/v2/queries.jsonl",
+    "dev_cache": "data/eval/runs/dev-fp32-reviewed/rows.jsonl",
+    "seed": 42,
+    "train_last_layers": 2,
+    "max_length": 512,
+    "batch_size": 4,
+    "gradient_accumulation": 4,
+    "learning_rate": 1e-05,
+    "epochs": 3,
+    "patience": 2,
+    "negative_strategy": "hard",
+    "limit_groups": null,
+    "output": "models/reranker-hard-clean"
+  },
+  "device": "cuda",
+  "torch_version": "2.6.0+cu124",
+  "training_groups": 232,
+  "training_pairs": 874,
+  "trainable_parameters": 14767105,
+  "total_parameters": 278044417,
+  "loss_function": "BCEWithLogitsLoss on query-document relevance",
+  "optimizer": "AdamW",
+  "best_epoch": 3,
+  "best_dev_mrr@10": 0.9101731601731601,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.5675774741224152,
+      "dev": {
+        "hit@1": 0.8311688311688312,
+        "hit@3": 0.987012987012987,
+        "hit@5": 1.0,
+        "recall@1": 0.5064935064935064,
+        "recall@3": 0.8051948051948052,
+        "recall@5": 0.8701298701298701,
+        "mrr@10": 0.9015151515151516,
+        "ndcg@5": 0.8195598102452032,
+        "sample_count": 77,
+        "answerable_count": 77,
+        "unanswerable_count": 0
+      },
+      "elapsed_seconds": 15.43364449999899
+    },
+    {
+      "epoch": 2,
+      "loss": 0.4475662926157608,
+      "dev": {
+        "hit@1": 0.8311688311688312,
+        "hit@3": 0.987012987012987,
+        "hit@5": 1.0,
+        "recall@1": 0.5064935064935064,
+        "recall@3": 0.8051948051948052,
+        "recall@5": 0.8701298701298701,
+        "mrr@10": 0.9036796536796536,
+        "ndcg@5": 0.8206023973991227,
+        "sample_count": 77,
+        "answerable_count": 77,
+        "unanswerable_count": 0
+      },
+      "elapsed_seconds": 30.656867300000158
+    },
+    {
+      "epoch": 3,
+      "loss": 0.4423551037630548,
+      "dev": {
+        "hit@1": 0.8441558441558441,
+        "hit@3": 0.987012987012987,
+        "hit@5": 1.0,
+        "recall@1": 0.512987012987013,
+        "recall@3": 0.8051948051948052,
+        "recall@5": 0.8701298701298701,
+        "mrr@10": 0.9101731601731601,
+        "ndcg@5": 0.8235412855229008,
+        "sample_count": 77,
+        "answerable_count": 77,
+        "unanswerable_count": 0
+      },
+      "elapsed_seconds": 45.80633579999994
+    }
+  ],
+  "elapsed_seconds": 45.88222759999917,
+  "peak_allocated_gpu_bytes": 1434534400,
+  "input_sha256": {
+    "training_queries": "5016f4f2b781bd36f9991d94ec0e5624ace165beb105f82b1d675b10d623b79a",
+    "dev_cache": "bc54cc11fdacb00a4187f57d096fed3ea39fe3420f428d0eb37f8114c8c412bb"
+  },
+  "adapter_sha256": "b6ec14b43868885c4b37e5d1bec5570a6e8475bc1f7d5201ea871a632fae0007",
+  "limitations": [
+    "Single seed feasibility experiment on AI-generated/reviewed synthetic data.",
+    "Only final transformer layers and classification head trained; not full-model or LoRA fine-tuning."
+  ]
+}

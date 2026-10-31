@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0367",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "虽为手机/平板指南，但明确说明鼓包电池不应自行拆卸并应联系售后，直接支持“不能自己拆换”这一必要结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲的是电池衰减后的检测更换评估，未涉及鼓包能否自行拆换或长期存放，主题相关但不支持结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0002",
+            "judgment": "negative_ok",
+            "reason": "讨论保修期起算与凭证日期，与鼓包处理及电池存放无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0002",
+            "judgment": "negative_ok",
+            "reason": "讲寄修前数据备份与隐私操作，与问题两项结论无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0369",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲7天无理由退货，用户已收货12天且为质量问题，不直接支持换新或退款到账时间结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "说明换货需检测确认，属流程限制，未直接回答12天能否换新或退款时长。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "negative_ok",
+            "reason": "讲平板配件无法连接，与无法开机换新及退款时长无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本维修时长，与平板换新或退货退款时长无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0370",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "说明换货需检测确认，属流程补充限制，未直接描述换货流程步骤或退款到账时间。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲15天换新条件，未描述换货流程步骤，也未涉及退货退款到账时间。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "讲保修所需材料，与换货流程及退款到账时间无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0002",
+            "judgment": "negative_ok",
+            "reason": "讲保修期起算，与换货流程和退款时长无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0371",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本保修范围，虽含屏幕显示异常，但问题第一项针对手机，第二项问材料，均不直接支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲15天换新政策，与手机屏幕是否属保修范围及笔记本保修材料无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕漏液安全处理，与保修范围认定和保修材料无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0002",
+            "judgment": "negative_ok",
+            "reason": "讲越权承诺风险，未直接支持保修范围或材料结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0373",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0004",
+            "judgment": "negative_ok",
+            "reason": "讲设备发热处理，与电池漏液及屏幕墨渍扩散的安全处理无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲进液进水处理，与电池漏液和屏幕漏液的安全处理不同，不直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0003",
+            "judgment": "negative_ok",
+            "reason": "讲维修费用说明，与安全处理结论无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "讲电池发热处理，与漏液处理无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0376",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕碎裂后的临时覆盖与联系售后，未直接说明继续使用的危险，也未涉及进液保修。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲禁止自行更换屏幕及保修失效，与继续使用风险及进液保修问题不直接对应。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讲非官方维修记录影响保修，与进液是否保修及碎屏继续使用风险无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本维修时长，与手机碎屏风险和进液保修无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1210,
+    "prompt_tokens": 5600,
+    "total_tokens": 6810,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5600
+  },
+  "model": "deepseek-flash",
+  "response_id": "b7cee5e5-b4eb-4d7d-b21a-4fb3db78b2f5"
+}

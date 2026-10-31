@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0199",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅说明七天无理由退货条件，未涉及退款时限或客服投诉处理。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0003",
+            "judgment": "positive_like",
+            "reason": "直接支持“不能保证几天内退款”的结论，说明客服不能未审核承诺退款。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0003",
+            "judgment": "negative_ok",
+            "reason": "维修费用说明，与退货退款投诉无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "屏幕碎裂风险，与退货退款无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0200",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "positive_like",
+            "reason": "直接支持“摔过屏幕问题需检测、不能直接承诺换新”的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0004",
+            "judgment": "negative_ok",
+            "reason": "笔记本接口问题，与平板换新及转人工无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0005",
+            "judgment": "negative_ok",
+            "reason": "笔记本屏幕亮点问题，与平板摔落换新无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0001",
+            "judgment": "positive_like",
+            "reason": "换货流程含初步判断是否符合换新条件，对“能否换”有直接支持。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0201",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "仅保修期限，未涉及主板维修费用或数据丢失。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "直接支持维修更换主板可能导致数据丢失、建议备份的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "维修时长，与费用和数据丢失无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "保修不覆盖情况，未涉及维修费用或数据丢失。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0203",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅保修期限，未涉及触控失灵处理或数据同步排查。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0005",
+            "judgment": "negative_ok",
+            "reason": "系统卡顿重启问题，与触控失灵和数据同步无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，与手机平板问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "重复候选，仅保修期限，与问题结论无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0205",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "positive_like",
+            "reason": "直接支持轻负载风扇异响属异常、应停止使用送修的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本无法开机，与风扇异响和数据同步无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0004",
+            "judgment": "negative_ok",
+            "reason": "数据隐私投诉处理，与风扇噪音和数据同步排查无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "保修审批说明，与风扇异响和数据同步无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0206",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0003",
+            "judgment": "positive_like",
+            "reason": "直接支持冒烟时应远离、停止操作充电的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "充电器外观破损检查，未涉及插头发烫或插座冒烟处理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "发票丢失处理，与充电异常无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "触控板问题，与充电异常无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1077,
+    "prompt_tokens": 5650,
+    "total_tokens": 6727,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5650
+  },
+  "model": "deepseek-flash",
+  "response_id": "6a87caed-3534-4dad-bb22-a9162bf2f877"
+}

@@ -12,7 +12,8 @@ RISK_KEYWORDS = {
         "自己拆", "拆电池", "短接", "飞线", "撬开", "加热电池",
         "刺破电池", "电池刺破", "强行拆机", "焊接主板", "自行拆解",
         "湿手", "用力按压屏幕", "按压屏幕", "放进大米", "吹风机吹干",
-        "立刻开机测试", "进水后开机", "进水立刻开机", "拆充电器", "拆开改装"
+        "立刻开机测试", "进水后开机", "进水立刻开机", "拆充电器", "拆开改装",
+        "拆开充电器", "拆解充电器"
     ],
     "refund_boundary": [
         "直接退款", "马上退款", "强制退款", "帮我退钱", "直接帮我退款",
@@ -49,6 +50,10 @@ def detect_risk(query: str) -> Dict:
     if active_match(r'(?:自己|自行).{0,25}(?:拆|改装|屏幕.{0,12}换)'):
         if 'dangerous_repair' not in matched_types:
             matched_types.append('dangerous_repair')
+    # Post-M1 regression fix. M1 test remains historical; test_v2 is still sealed.
+    if active_match(r'(?:怀疑|担心|发现).{0,35}(?:偷看|隐私泄露|数据泄露)'):
+        if 'complaint' not in matched_types:
+            matched_types.append('complaint')
 
     risk_level = "low"
     need_human = False

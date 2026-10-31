@@ -1,0 +1,180 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_cc9d89edc7",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0004",
+          "warranty_policy_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0004",
+            "quote": "例如用户于 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0000",
+            "quote": "云枢笔记本整机保修期为购买之日起 24 个月，电池保修期为 12 个月，外接鼠标、键盘等随机赠品配件保修期为 6 个月。"
+          }
+        ],
+        "expected_points": [
+          "手机电池保修期至2026年7月9日",
+          "笔记本整机保修期为24个月",
+          "笔记本电池保修期为12个月"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题同时询问手机电池保修截止日期和笔记本整机/电池保修期，两个gold片段分别直接支持对应结论，无风险。"
+      },
+      {
+        "query_id": "new_7693baa0f8",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0001",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。"
+          }
+        ],
+        "expected_points": [
+          "手机重启后仍触控失灵，建议联系售后检测屏幕模组",
+          "笔记本维修涉及更换主板可能导致数据丢失，建议寄修前自行备份数据"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含手机屏幕触控故障的售后检测建议和笔记本维修前的数据备份提醒，两个gold片段分别直接支持对应结论，无风险。"
+      },
+      {
+        "query_id": "new_e6c7d94e3b",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_faq_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          }
+        ],
+        "expected_points": [
+          "键盘清理后仍失灵可能是键盘模组故障，建议联系售后检测更换",
+          "寄修前建议备份数据、退出账号或开启访客模式、移除敏感应用或数据"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及笔记本键盘故障的售后检测建议和寄修前的数据隐私操作，两个gold片段分别直接支持对应结论，无风险。"
+      },
+      {
+        "query_id": "new_18c68e2116",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0001",
+          "repair_faq_tablet_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          }
+        ],
+        "expected_points": [
+          "笔记本键盘清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换",
+          "平板长期存放后首次开机电量显示异常，建议完全充满电后重新校准；校准后仍耗电快，建议联系售后检测电池健康度"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题同时询问笔记本键盘失灵和平板长期不用后耗电快的处理方式，两个gold片段分别直接支持对应结论，无风险。"
+      },
+      {
+        "query_id": "new_f63db533ec",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000",
+          "repair_process_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          },
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "expected_points": [
+          "维修涉及更换主板、存储模块可能导致数据丢失，建议寄修前自行备份重要数据",
+          "保修期内非人为故障维修免费；保修期外或非保修范围需付费，具体费用以检测后官方报价为准，客服不能在检测前直接报价"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含寄修前的数据备份建议和维修费用咨询，两个gold片段分别直接支持对应结论，无风险。"
+      },
+      {
+        "query_id": "new_bc5b566ae9",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003",
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁在设备进液后立即通电测试是否可以使用，短路风险可能导致主板永久性损坏，甚至引发安全事故。"
+          },
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。\n\n严禁在冒烟或起火后继续操作、充电或强行关机。"
+          }
+        ],
+        "expected_points": [
+          "设备进液后严禁立即通电测试，短路风险可能导致主板永久性损坏甚至引发安全事故",
+          "设备冒烟、焦味或起火时应立即远离，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后",
+          "严禁在冒烟或起火后继续操作、充电或强行关机"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "问题涉及电池鼓包和进液后能否充电测试，以及冒烟处理，存在电池安全和短路现实风险，两个gold片段分别直接支持对应安全处置结论，需转人工。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1867,
+    "prompt_tokens": 11559,
+    "total_tokens": 13426,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2087
+  },
+  "model": "deepseek-flash",
+  "response_id": "60495d96-32c6-4f20-a686-ff5a87219fe4"
+}

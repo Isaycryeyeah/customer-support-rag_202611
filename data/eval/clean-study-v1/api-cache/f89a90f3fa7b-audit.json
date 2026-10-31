@@ -1,0 +1,179 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_5a908b33f0",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0002",
+          "data_privacy_repair_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          }
+        ],
+        "expected_points": [
+          "触控板无响应应先确认未被禁用并检查是否连接外接鼠标导致自动关闭，排除设置问题后仍异常建议联系售后检测",
+          "因维修更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量保护用户数据不被泄露"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个gold片段分别直接支持触控板排查建议和数据丢失责任，引用逐字准确，无风险。"
+      },
+      {
+        "query_id": "new_135fef4530",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_faq_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          },
+          {
+            "chunk_id": "repair_faq_0002",
+            "quote": "请先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物。如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口。"
+          }
+        ],
+        "expected_points": [
+          "寄修前建议备份重要数据到云端或其他存储设备，退出账号或开启访客模式，并移除敏感应用或数据（如银行类应用登录状态）",
+          "无法充电应先检查是否使用官方充电器和数据线并清理充电接口灰尘，更换后仍无法充电或提示充电异常建议联系售后检测电池和充电接口"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "数据隐私处理与充电故障排查两个片段均直接支撑问题，引用逐字准确。"
+      },
+      {
+        "query_id": "new_1df534a0c0",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0003",
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          },
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "充电中出现插头发烫、插座冒烟等异常应立即拔出充电器并断开电源，不要继续插拔测试，联系官方售后检测处理",
+          "严禁自行购买第三方屏幕总成更换，可能损坏内部排线、传感器并导致保修失效，应通过官方售后渠道维修"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "涉及插座冒烟现实安全风险及自行换屏危险操作诉求，两个片段直接支撑，需转人工。"
+      },
+      {
+        "query_id": "new_6e053f1389",
+        "accepted": false,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          }
+        ],
+        "expected_points": [
+          "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起，发现鼓包应立即停止使用、关闭设备并断开电源适配器",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后专业拆检"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "gold中water_damage_policy_0003为潮湿环境预防建议，与电池鼓包及自行拆机问题无关，属噪声片段，应剔除；仅保留battery_safety_laptop_0000。"
+      },
+      {
+        "query_id": "new_2e7d4025ed",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0003",
+          "warranty_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0003",
+            "quote": "因用户自行安装非官方系统、root/越狱、刷入非官方固件导致的软件故障不在硬件保修范围内，但通常可通过官方售后渠道协助恢复出厂系统。"
+          },
+          {
+            "chunk_id": "warranty_policy_0003",
+            "quote": "保修申请需经过官方售后检测确认故障原因后方可批准，客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准。"
+          }
+        ],
+        "expected_points": [
+          "因用户自行安装非官方系统、刷入非官方固件导致的软件故障不在硬件保修范围内，但通常可通过官方售后渠道协助恢复出厂系统",
+          "保修申请需经官方售后检测确认故障原因后方可批准，客服无法在未检测情况下直接承诺保修通过，审批结果以检测报告为准"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "涉及保修资格与要求直接确认保修通过，两个片段分别支撑资格说明与审批边界，需转人工。"
+      },
+      {
+        "query_id": "new_8d52183f5b",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0004",
+          "repair_faq_tablet_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          }
+        ],
+        "expected_points": [
+          "接口无法识别外接设备应先更换数据线或外接设备排查配件问题，更换后仍无法识别可能是接口故障，建议联系售后检测",
+          "平板屏幕漏光应在暗光环境测试，轻微漏光在部分机型属于正常工艺现象，影响使用体验较严重时建议联系售后评估检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个片段分别直接回答笔记本接口识别问题与平板漏光判断，引用逐字准确。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1629,
+    "prompt_tokens": 11831,
+    "total_tokens": 13460,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2359
+  },
+  "model": "deepseek-flash",
+  "response_id": "d6965d06-3dce-4a8f-aac6-fb119bb2f0bb"
+}

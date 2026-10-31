@@ -20,7 +20,8 @@ class Reranker:
             if unexpected:
                 raise ValueError(f'Adapter contains unexpected parameter names: {unexpected}')
         else:
-            self.model = CrossEncoder(model_name)
+            revision = '2cfc18c9415c912f9d8155881c133215df768a70' if model_name == 'BAAI/bge-reranker-base' else None
+            self.model = CrossEncoder(model_name, revision=revision)
         if dtype == 'auto':
             dtype = 'float16' if self.model.device.type == 'cuda' else 'float32'
         if dtype not in ('float32', 'float16'):

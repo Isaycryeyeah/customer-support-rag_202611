@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0031",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "positive_like",
+            "reason": "提到充电器插头发烫属异常应立即断电，直接支持“什么程度需要停下来”的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "仅介绍快充协议与配件要求，未涉及发热是否正常或停止充电程度。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修不覆盖情况，与快充发热问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0003",
+            "judgment": "negative_ok",
+            "reason": "通用危险操作应答原则，未直接支持发热正常性或停止程度。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0032",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "仅说明快充协议与官方配件，未涉及游戏叠加发热或使用建议。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "保修期限信息，与快充发热及使用建议无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "重复的保修期限片段，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0004",
+            "judgment": "negative_ok",
+            "reason": "笔记本接口识别故障，与手机快充使用建议无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0034",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "直接支持电池鼓包应立即停止使用并联系售后，回答“还能继续用吗”的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅保修期限，未涉及鼓包能否继续使用或换新审批。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "补开发票凭证，与电池鼓包及换新无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "人工客服工作时间，未直接支持鼓包处置或换新结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0036",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "human_transfer_policy_0001",
+            "judgment": "positive_like",
+            "reason": "提供App联系人工入口或售后热线，直接支持非工作时间如何联系处理。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "human_transfer_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "列举应转人工的情形，未说明非工作时间联系方式。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0002",
+            "judgment": "negative_ok",
+            "reason": "电气安全危险操作清单，与联系客服渠道无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "换货流程，与夜间联系客服方式无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0037",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "针对非授权第三方渠道丢失发票，未回答授权门店纸质收据是否有效。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "官方渠道丢失发票的查询方式，未涉及纸质收据凭证效力。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修不覆盖情况，与购买凭证类型无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "补开发票凭证流程，未直接回答收据是否可作为保修凭证。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0038",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "列出保修所需材料类型，但未说明凭证上必须显示哪些信息。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "invoice_proof_0002",
+            "judgment": "negative_ok",
+            "reason": "说明保修期起算与日期差异处理，未列出凭证必须显示的信息项。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0000",
+            "judgment": "negative_ok",
+            "reason": "投诉识别规则，与购买凭证信息要求无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "充电环境要求，与保修凭证信息无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1111,
+    "prompt_tokens": 4843,
+    "total_tokens": 5954,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4843
+  },
+  "model": "deepseek-flash",
+  "response_id": "0f952c9b-150a-4aed-b6b4-3ab800ac604e"
+}

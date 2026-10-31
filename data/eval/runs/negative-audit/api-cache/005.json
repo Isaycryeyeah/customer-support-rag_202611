@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0051",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "ambiguous",
+            "reason": "手机/平板无法开机排查，与笔记本问题主题相近但设备类型不同，未直接支持笔记本送售后结论"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0004",
+            "judgment": "negative_ok",
+            "reason": "讨论平板长期存放后电量显示异常，与笔记本无法开机无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "充电器外观安全检查，未涉及无法开机或送修判断"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "维修数据安全说明，不直接支持是否送售后检测"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0053",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "negative_ok",
+            "reason": "平板配件连接问题，非笔记本触控板故障，主题相关但设备与部件不同"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "ambiguous",
+            "reason": "手机/平板屏幕触控异常排查，与笔记本触控板问题相近但设备不同，未直接支持送修结论"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0000",
+            "judgment": "negative_ok",
+            "reason": "购买凭证类型说明，与触控板故障排查无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0000",
+            "judgment": "negative_ok",
+            "reason": "售后能力边界说明，未涉及触控板故障或送修判断"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0055",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0001",
+            "judgment": "negative_ok",
+            "reason": "平板外接键盘延迟问题，与笔记本USB接口识别故障无关"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0002",
+            "judgment": "ambiguous",
+            "reason": "手机/平板充电接口排查，涉及接口检测但设备与故障类型不同，未直接支持USB接口结论"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "屏幕破损安全处理，与USB接口识别问题无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "屏幕触控异常排查，与USB接口故障无关"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0057",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0001",
+            "judgment": "positive_like",
+            "reason": "直接针对平板外接键盘失灵提供排查建议（固件、蓝牙干扰、售后检测），支持问题中键盘排查部分"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本触控板问题，与平板磁吸键盘和笔配对无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "退货流程说明，与配件连接排查无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0003",
+            "judgment": "negative_ok",
+            "reason": "维修数据丢失责任说明，与配件连接排查无关"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0058",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本键盘按键失灵，设备与故障场景不同，未直接支持平板外接键盘结论"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本触控板问题，与平板外接键盘延迟无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "保修范围说明，未涉及外接键盘延迟排查"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池存放建议，与键盘延迟问题无关"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0059",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0005",
+            "judgment": "ambiguous",
+            "reason": "笔记本屏幕亮点暗点排查，与平板漏光偏色相近但设备不同，未直接支持是否正常或送修结论"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "屏幕触控异常排查，与漏光偏色问题无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池鼓包处理，与屏幕漏光偏色无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0000",
+            "judgment": "negative_ok",
+            "reason": "保修免责情况说明，未直接支持漏光偏色是否正常或送修判断"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1147,
+    "prompt_tokens": 4677,
+    "total_tokens": 5824,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4677
+  },
+  "model": "deepseek-flash",
+  "response_id": "1df003fd-05c1-4fc0-9fb9-f48e91c26bb6"
+}

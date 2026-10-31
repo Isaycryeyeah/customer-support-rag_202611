@@ -1,0 +1,423 @@
+{
+  "ready": {
+    "status": "ready",
+    "knowledge_version": "6c7cc7fb8caf7e6bf85ae79573ddc7507c0b74418dfbd87ef4b57b08cbcff654"
+  },
+  "frontend_health": "ok",
+  "checks": [
+    {
+      "question": "手机保修期是多久？",
+      "http_status": 200,
+      "elapsed_seconds": 7.70871249999982,
+      "result": {
+        "log_id": 11,
+        "request_id": "3f1e5510-5240-4f68-a9b6-5eb9aa4488c0",
+        "answer_type": "generated",
+        "question": "手机保修期是多久？",
+        "answer": "结论：\n根据资料，云枢手机整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月；保修期以购机发票或电子凭证日期为准（资料2）。若凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准（资料3）。\n\n处理步骤：\n1. 确认购买日期：查看购机发票或电子凭证上的购买日期，作为保修期起算依据（资料2、资料3）。\n2. 区分保修范围：整机按 12 个月计算，电池按 6 个月计算（资料2）。例如 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日（资料1）。\n3. 如凭证日期与官方系统注册日期不一致，可联系客服协助核实差异原因，最终以官方系统记录为准（资料3）。\n\n注意事项：\n- 保修期以购买凭证日期为起始点，但凭证日期与官方系统注册日期不一致时以官方系统记录为准（资料3）。\n- 电池属于易耗部件，保修期短于整机，请单独核对（资料2）。\n- 保修期内出现故障按保修政策走维修流程；超过收货 15 天后不再适用换新政策（资料5）。\n- 本回答仅说明保修期限规则，不构成保修审批承诺，实际保修认定以官方检测和审核结果为准。\n\n引用来源：\n- 资料1：data/raw_docs/warranty_policy.md（保修期示例）\n- 资料2：data/raw_docs/warranty_policy.md（整机 12 个月、电池 6 个月，以购机发票或电子凭证日期为准）\n- 资料3：data/raw_docs/invoice_proof.md（凭证日期与官方系统注册日期不一致时以官方系统记录为准）\n- 资料5：data/raw_docs/exchange_policy.md（超过 15 天但在保修期内按保修政策维修）",
+        "risk_info": {
+          "risk_types": [],
+          "risk_level": "low",
+          "need_human": false
+        },
+        "low_confidence": false,
+        "need_human": false,
+        "handoff_reason": null,
+        "ticket": null,
+        "contexts": [
+          {
+            "chunk_id": "warranty_policy_0004",
+            "doc_id": "warranty_policy",
+            "title": "保修政策（手机 / 平板）",
+            "section": "保修期计算示例",
+            "source": "manual",
+            "source_path": "data/raw_docs/warranty_policy.md",
+            "updated_at": "2026-07-07",
+            "content": "例如用户于 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日。",
+            "bm25_score": 6.560615556789937,
+            "hybrid_score": 0.9514187935102212,
+            "rerank_score": 0.9952606558799744
+          },
+          {
+            "chunk_id": "warranty_policy_0000",
+            "doc_id": "warranty_policy",
+            "title": "保修政策（手机 / 平板）",
+            "section": "保修期限",
+            "source": "manual",
+            "source_path": "data/raw_docs/warranty_policy.md",
+            "updated_at": "2026-07-07",
+            "content": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。",
+            "bm25_score": 7.828311637160754,
+            "hybrid_score": 0.9142395850644163,
+            "rerank_score": 0.9924479722976685
+          },
+          {
+            "chunk_id": "invoice_proof_0002",
+            "doc_id": "invoice_proof",
+            "title": "发票和购买凭证说明",
+            "section": "凭证与保修期计算关系",
+            "source": "manual",
+            "source_path": "data/raw_docs/invoice_proof.md",
+            "updated_at": "2026-07-07",
+            "content": "保修期以购买凭证上的购买日期为起始点计算。如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准，客服会协助核实差异原因。",
+            "bm25_score": 2.420744180597545,
+            "hybrid_score": 0.48530139646593484,
+            "rerank_score": 0.9566322565078735
+          },
+          {
+            "chunk_id": "repair_process_0001",
+            "doc_id": "repair_process",
+            "title": "维修流程说明（手机 / 平板）",
+            "section": "维修时长",
+            "source": "manual",
+            "source_path": "data/raw_docs/repair_process.md",
+            "updated_at": "2026-07-07",
+            "content": "一般故障（如更换电池、摄像头模组）维修时长约为 3～5 个工作日；主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。",
+            "dense_score": 0.6608683466911316,
+            "hybrid_score": 0.413729856721421,
+            "rerank_score": 0.8499206304550171
+          },
+          {
+            "chunk_id": "exchange_policy_0000",
+            "doc_id": "exchange_policy",
+            "title": "换货政策",
+            "section": "15 天换新政策",
+            "source": "manual",
+            "source_path": "data/raw_docs/exchange_policy.md",
+            "updated_at": "2026-07-07",
+            "content": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。\n\n超过 15 天但在保修期内出现故障的，按保修政策走维修流程，不再适用换新政策。",
+            "bm25_score": 1.9300726005460598,
+            "hybrid_score": 0.5243654937895783,
+            "rerank_score": 0.8006100654602051
+          }
+        ],
+        "generation": {
+          "success": true,
+          "text": "结论：\n根据资料，云枢手机整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月；保修期以购机发票或电子凭证日期为准（资料2）。若凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准（资料3）。\n\n处理步骤：\n1. 确认购买日期：查看购机发票或电子凭证上的购买日期，作为保修期起算依据（资料2、资料3）。\n2. 区分保修范围：整机按 12 个月计算，电池按 6 个月计算（资料2）。例如 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日（资料1）。\n3. 如凭证日期与官方系统注册日期不一致，可联系客服协助核实差异原因，最终以官方系统记录为准（资料3）。\n\n注意事项：\n- 保修期以购买凭证日期为起始点，但凭证日期与官方系统注册日期不一致时以官方系统记录为准（资料3）。\n- 电池属于易耗部件，保修期短于整机，请单独核对（资料2）。\n- 保修期内出现故障按保修政策走维修流程；超过收货 15 天后不再适用换新政策（资料5）。\n- 本回答仅说明保修期限规则，不构成保修审批承诺，实际保修认定以官方检测和审核结果为准。\n\n引用来源：\n- 资料1：data/raw_docs/warranty_policy.md（保修期示例）\n- 资料2：data/raw_docs/warranty_policy.md（整机 12 个月、电池 6 个月，以购机发票或电子凭证日期为准）\n- 资料3：data/raw_docs/invoice_proof.md（凭证日期与官方系统注册日期不一致时以官方系统记录为准）\n- 资料5：data/raw_docs/exchange_policy.md（超过 15 天但在保修期内按保修政策维修）",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "error_type": null,
+          "attempts": 1,
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 452,
+            "prompt_tokens": 799,
+            "total_tokens": 1251,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 159
+          },
+          "elapsed_ms": 3655.856510999911,
+          "thinking": "disabled"
+        },
+        "timings": {
+          "risk_ms": 2.1514009999918926,
+          "retrieval_ms": 187.75605799987716,
+          "rerank_ms": 3804.005793999977,
+          "llm_ms": 3655.856510999911,
+          "total_ms": 7649.8054650000995
+        }
+      }
+    },
+    {
+      "question": "今天天气怎么样？",
+      "http_status": 200,
+      "elapsed_seconds": 1.4150357999988046,
+      "result": {
+        "log_id": 12,
+        "request_id": "e1cea0bc-98a7-4124-846f-4b011fe616d6",
+        "answer_type": "low_confidence",
+        "question": "今天天气怎么样？",
+        "answer": "结论：\n根据当前资料无法确认该问题的准确答案，建议联系人工客服。\n\n处理步骤：\n1. 请准备设备型号、购买凭证和故障描述。\n2. 联系官方售后渠道。\n3. 等待人工客服进一步核实。\n\n注意事项：\n- 不建议根据非官方信息自行处理。\n- 涉及安全风险时，请停止使用设备。\n\n引用来源：\n- 当前知识库无明确资料。\n",
+        "risk_info": {
+          "risk_types": [],
+          "risk_level": "low",
+          "need_human": false
+        },
+        "low_confidence": true,
+        "need_human": true,
+        "handoff_reason": "insufficient_evidence",
+        "ticket": {
+          "user_question": "今天天气怎么样？",
+          "category": "普通咨询",
+          "priority": "低",
+          "suggested_department": "客服一线",
+          "risk_level": "low",
+          "need_human": true,
+          "handoff_reason": "insufficient_evidence",
+          "answer_type": "low_confidence",
+          "status": "suggested",
+          "summary": "用户咨询：今天天气怎么样？。处理状态：low_confidence。建议联系客服一线；此信息仅为工单建议，尚未实际派单。",
+          "model_answer": "结论：\n根据当前资料无法确认该问题的准确答案，建议联系人工客服。\n\n处理步骤：\n1. 请准备设备型号、购买凭证和故障描述。\n2. 联系官方售后渠道。\n3. 等待人工客服进一步核实。\n\n注意事项：\n- 不建议根据非官方信息自行处理。\n- 涉及安全风险时，请停止使用设备。\n\n引用来源：\n- 当前知识库无明确资料。\n"
+        },
+        "contexts": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "doc_id": "battery_safety",
+            "title": "电池安全使用指南（手机 / 平板）",
+            "section": "电池发热处理",
+            "source": "manual",
+            "source_path": "data/raw_docs/battery_safety.md",
+            "updated_at": "2026-07-07",
+            "content": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。\n\n请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。",
+            "bm25_score": 0.0,
+            "hybrid_score": 1.0,
+            "rerank_score": 0.005083426367491484
+          },
+          {
+            "chunk_id": "repair_faq_0004",
+            "doc_id": "repair_faq",
+            "title": "常见故障 FAQ（手机 / 平板）",
+            "section": "设备发热明显",
+            "source": "manual",
+            "source_path": "data/raw_docs/repair_faq.md",
+            "updated_at": "2026-07-07",
+            "content": "请参考\"电池安全使用指南\"文档中的电池发热处理说明。如排除高负载使用场景后仍存在异常发热，建议联系售后检测。",
+            "bm25_score": 0.0,
+            "hybrid_score": 0.8244371305397622,
+            "rerank_score": 0.002363679464906454
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0001",
+            "doc_id": "battery_safety_laptop",
+            "title": "电池安全使用指南（笔记本电脑）",
+            "section": "笔记本使用中过热",
+            "source": "manual",
+            "source_path": "data/raw_docs/battery_safety_laptop.md",
+            "updated_at": "2026-07-07",
+            "content": "笔记本在高负载运行（如游戏、渲染）时风扇噪音增大、机身温热属于正常现象。但如果出现底部烫手、风扇异响、自动关机等情况，应立即停止使用并送修检测。\n\n请勿在床上、沙发、毯子等柔软且不透气的表面上长时间使用笔记本，以免影响散热导致电池过热。",
+            "bm25_score": 0.0,
+            "hybrid_score": 0.4645229491114815,
+            "rerank_score": 0.0014504360733553767
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "doc_id": "repair_faq_laptop",
+            "title": "常见故障 FAQ（笔记本电脑）",
+            "section": "风扇噪音大或不转",
+            "source": "manual",
+            "source_path": "data/raw_docs/repair_faq_laptop.md",
+            "updated_at": "2026-07-07",
+            "content": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。",
+            "dense_score": 0.3522030711174011,
+            "hybrid_score": 0.458919951709418,
+            "rerank_score": 0.0004420197510626167
+          },
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "doc_id": "fast_charging_safety",
+            "title": "快充安全使用说明",
+            "section": "快充发热说明",
+            "source": "manual",
+            "source_path": "data/raw_docs/fast_charging_safety.md",
+            "updated_at": "2026-07-07",
+            "content": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。",
+            "bm25_score": 0.0,
+            "hybrid_score": 0.5619367022530902,
+            "rerank_score": 0.00015838304534554482
+          }
+        ],
+        "generation": null,
+        "timings": {
+          "risk_ms": 0.12360599998828548,
+          "retrieval_ms": 14.32028099998206,
+          "rerank_ms": 1334.08992700015,
+          "llm_ms": 0.0,
+          "total_ms": 1348.5523150000063
+        }
+      }
+    },
+    {
+      "question": "电池鼓包了还能充电吗？",
+      "http_status": 200,
+      "elapsed_seconds": 0.04225679999944987,
+      "result": {
+        "log_id": 13,
+        "request_id": "41cbec78-7282-4a71-a386-38f6b4e18a94",
+        "answer_type": "safety_refusal",
+        "question": "电池鼓包了还能充电吗？",
+        "answer": "结论：\n电池鼓包、漏液、冒烟、起火等属于高风险安全问题，请立即停止使用设备并断开电源，不要自行拆卸、挤压、刺破或加热处理，建议尽快联系官方售后服务中心。\n\n处理步骤：\n1. 优先确保人身安全，停止使用设备；不要触碰已冒烟或起火的设备。\n2. 不要自行拆卸、挤压、刺破、加热或短接处理。\n3. 联系官方售后服务中心，由专业人员进行检测和处理。\n\n注意事项：\n- 该问题涉及安全风险，建议优先联系人工售后；当前仅提供处理建议，尚未实际派单。\n- 如出现冒烟、异味或起火，请远离设备并及时报警。\n\n引用来源：\n- 安全风险识别规则（非文档检索结果）。\n",
+        "risk_info": {
+          "risk_types": [
+            "battery_safety"
+          ],
+          "risk_level": "high",
+          "need_human": true
+        },
+        "low_confidence": false,
+        "need_human": true,
+        "handoff_reason": "safety_risk",
+        "ticket": {
+          "user_question": "电池鼓包了还能充电吗？",
+          "category": "安全风险",
+          "priority": "高",
+          "suggested_department": "售后安全组",
+          "risk_level": "high",
+          "need_human": true,
+          "handoff_reason": "safety_risk",
+          "answer_type": "safety_refusal",
+          "status": "suggested",
+          "summary": "用户咨询：电池鼓包了还能充电吗？。处理状态：safety_refusal。建议联系售后安全组；此信息仅为工单建议，尚未实际派单。",
+          "model_answer": "结论：\n电池鼓包、漏液、冒烟、起火等属于高风险安全问题，请立即停止使用设备并断开电源，不要自行拆卸、挤压、刺破或加热处理，建议尽快联系官方售后服务中心。\n\n处理步骤：\n1. 优先确保人身安全，停止使用设备；不要触碰已冒烟或起火的设备。\n2. 不要自行拆卸、挤压、刺破、加热或短接处理。\n3. 联系官方售后服务中心，由专业人员进行检测和处理。\n\n注意事项：\n- 该问题涉及安全风险，建议优先联系人工售后；当前仅提供处理建议，尚未实际派单。\n- 如出现冒烟、异味或起火，请远离设备并及时报警。\n\n引用来源：\n- 安全风险识别规则（非文档检索结果）。\n"
+        },
+        "contexts": [],
+        "generation": null,
+        "timings": {
+          "risk_ms": 0.448120999863022,
+          "retrieval_ms": 0.0,
+          "rerank_ms": 0.0,
+          "llm_ms": 0.0,
+          "total_ms": 0.458222000133901
+        }
+      }
+    },
+    {
+      "question": "担心上次维修人员偷看了我的照片，能查有没有数据泄露吗？",
+      "http_status": 200,
+      "elapsed_seconds": 7.152646000000459,
+      "result": {
+        "log_id": 14,
+        "request_id": "fa063fbb-a082-4f10-86f7-35954f31e724",
+        "answer_type": "generated",
+        "question": "担心上次维修人员偷看了我的照片，能查有没有数据泄露吗？",
+        "answer": "结论：\n根据当前资料，无法由智能客服直接判断是否存在数据泄露行为。资料1明确说明：如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。同时资料3说明官方检测和维修人员仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。因此，是否存在泄露需转人工核查确认。\n\n处理步骤：\n1. 将该问题作为高优先级投诉转人工处理（依据资料1）。\n2. 向人工客服说明情况：上次维修的时间、维修项目、设备类型，以及您怀疑照片被查看的具体情形，便于人工进一步核查。\n3. 等待人工客服按投诉流程跟进处理，不要自行尝试通过拆机、短接等方式检查设备。\n\n注意事项：\n- 根据当前资料无法确认是否发生了数据泄露，请不要仅凭担心下结论，以人工核查结果为准（依据资料1）。\n- 官方维修人员仅在必要范围内访问设备数据用于故障排查，不会主动查看个人照片、聊天记录等隐私内容（依据资料3）。\n- 后续如需再次寄修，建议提前自行备份照片、文档、聊天记录等重要数据；官方会尽量保护用户数据不被泄露，但不对维修导致的数据丢失承担恢复责任（依据资料2、资料4、资料5）。\n- 涉及拆机等操作存在安全风险，请勿自行操作。\n\n引用来源：\n- 资料1：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料2：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料3：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料4：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料5：维修流程说明（笔记本电脑）（data/raw_docs/repair_process_laptop.md）",
+        "risk_info": {
+          "risk_types": [
+            "complaint"
+          ],
+          "risk_level": "medium",
+          "need_human": true
+        },
+        "low_confidence": false,
+        "need_human": true,
+        "handoff_reason": "policy_review",
+        "ticket": {
+          "user_question": "担心上次维修人员偷看了我的照片，能查有没有数据泄露吗？",
+          "category": "投诉升级",
+          "priority": "高",
+          "suggested_department": "客户体验组",
+          "risk_level": "medium",
+          "need_human": true,
+          "handoff_reason": "policy_review",
+          "answer_type": "generated",
+          "status": "suggested",
+          "summary": "用户咨询：担心上次维修人员偷看了我的照片，能查有没有数据泄露吗？。处理状态：generated。建议联系客户体验组；此信息仅为工单建议，尚未实际派单。",
+          "model_answer": "结论：\n根据当前资料，无法由智能客服直接判断是否存在数据泄露行为。资料1明确说明：如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。同时资料3说明官方检测和维修人员仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。因此，是否存在泄露需转人工核查确认。\n\n处理步骤：\n1. 将该问题作为高优先级投诉转人工处理（依据资料1）。\n2. 向人工客服说明情况：上次维修的时间、维修项目、设备类型，以及您怀疑照片被查看的具体情形，便于人工进一步核查。\n3. 等待人工客服按投诉流程跟进处理，不要自行尝试通过拆机、短接等方式检查设备。\n\n注意事项：\n- 根据当前资料无法确认是否发生了数据泄露，请不要仅凭担心下结论，以人工核查结果为准（依据资料1）。\n- 官方维修人员仅在必要范围内访问设备数据用于故障排查，不会主动查看个人照片、聊天记录等隐私内容（依据资料3）。\n- 后续如需再次寄修，建议提前自行备份照片、文档、聊天记录等重要数据；官方会尽量保护用户数据不被泄露，但不对维修导致的数据丢失承担恢复责任（依据资料2、资料4、资料5）。\n- 涉及拆机等操作存在安全风险，请勿自行操作。\n\n引用来源：\n- 资料1：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料2：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料3：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料4：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料5：维修流程说明（笔记本电脑）（data/raw_docs/repair_process_laptop.md）"
+        },
+        "contexts": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "doc_id": "data_privacy_repair",
+            "title": "维修过程中的数据隐私说明",
+            "section": "用户隐私投诉处理",
+            "source": "manual",
+            "source_path": "data/raw_docs/data_privacy_repair.md",
+            "updated_at": "2026-07-07",
+            "content": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。",
+            "bm25_score": 12.02056901324216,
+            "hybrid_score": 0.9343687433902418,
+            "rerank_score": 0.9903483390808105
+          },
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "doc_id": "data_privacy_repair",
+            "title": "维修过程中的数据隐私说明",
+            "section": "数据丢失责任说明",
+            "source": "manual",
+            "source_path": "data/raw_docs/data_privacy_repair.md",
+            "updated_at": "2026-07-07",
+            "content": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。",
+            "bm25_score": 12.22408875676809,
+            "hybrid_score": 0.8799272195353682,
+            "rerank_score": 0.9623231887817383
+          },
+          {
+            "chunk_id": "data_privacy_repair_0001",
+            "doc_id": "data_privacy_repair",
+            "title": "维修过程中的数据隐私说明",
+            "section": "维修过程中的数据访问",
+            "source": "manual",
+            "source_path": "data/raw_docs/data_privacy_repair.md",
+            "updated_at": "2026-07-07",
+            "content": "官方检测和维修人员在维修过程中仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。",
+            "bm25_score": 13.20868130493947,
+            "hybrid_score": 1.0,
+            "rerank_score": 0.9224625825881958
+          },
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "doc_id": "data_privacy_repair",
+            "title": "维修过程中的数据隐私说明",
+            "section": "维修前的数据备份建议",
+            "source": "manual",
+            "source_path": "data/raw_docs/data_privacy_repair.md",
+            "updated_at": "2026-07-07",
+            "content": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。",
+            "bm25_score": 10.724307644201613,
+            "hybrid_score": 0.6552559950579508,
+            "rerank_score": 0.5328711271286011
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "doc_id": "repair_process_laptop",
+            "title": "维修流程说明（笔记本电脑）",
+            "section": "数据安全说明",
+            "source": "manual",
+            "source_path": "data/raw_docs/repair_process_laptop.md",
+            "updated_at": "2026-07-07",
+            "content": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。",
+            "bm25_score": 8.516940647442642,
+            "hybrid_score": 0.6563935125394261,
+            "rerank_score": 0.28288426995277405
+          }
+        ],
+        "generation": {
+          "success": true,
+          "text": "结论：\n根据当前资料，无法由智能客服直接判断是否存在数据泄露行为。资料1明确说明：如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。同时资料3说明官方检测和维修人员仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。因此，是否存在泄露需转人工核查确认。\n\n处理步骤：\n1. 将该问题作为高优先级投诉转人工处理（依据资料1）。\n2. 向人工客服说明情况：上次维修的时间、维修项目、设备类型，以及您怀疑照片被查看的具体情形，便于人工进一步核查。\n3. 等待人工客服按投诉流程跟进处理，不要自行尝试通过拆机、短接等方式检查设备。\n\n注意事项：\n- 根据当前资料无法确认是否发生了数据泄露，请不要仅凭担心下结论，以人工核查结果为准（依据资料1）。\n- 官方维修人员仅在必要范围内访问设备数据用于故障排查，不会主动查看个人照片、聊天记录等隐私内容（依据资料3）。\n- 后续如需再次寄修，建议提前自行备份照片、文档、聊天记录等重要数据；官方会尽量保护用户数据不被泄露，但不对维修导致的数据丢失承担恢复责任（依据资料2、资料4、资料5）。\n- 涉及拆机等操作存在安全风险，请勿自行操作。\n\n引用来源：\n- 资料1：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料2：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料3：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料4：维修过程中的数据隐私说明（data/raw_docs/data_privacy_repair.md）\n- 资料5：维修流程说明（笔记本电脑）（data/raw_docs/repair_process_laptop.md）",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "error_type": null,
+          "attempts": 1,
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 428,
+            "prompt_tokens": 738,
+            "total_tokens": 1166,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 128
+            },
+            "prompt_cache_hit_tokens": 128,
+            "prompt_cache_miss_tokens": 610
+          },
+          "elapsed_ms": 5621.715872000095,
+          "thinking": "disabled"
+        },
+        "timings": {
+          "risk_ms": 0.43172100004085223,
+          "retrieval_ms": 31.563599999799408,
+          "rerank_ms": 1445.4580960000385,
+          "llm_ms": 5621.715872000095,
+          "total_ms": 7099.2220910000015
+        }
+      }
+    }
+  ],
+  "feedback": {
+    "feedback_id": 4
+  },
+  "docker_image_id": "sha256:f2c36cc1e489757b470896515b1603dbb9195888ecd513927180c6132102c8b8",
+  "dependency_check": "No broken requirements found.",
+  "env_file_in_image": "False",
+  "runtime": {
+    "python": "3.10.21 (main, Aug 13 2026, 19:47:36) [GCC 14.2.0]",
+    "torch": "2.6.0+cpu",
+    "cuda": false,
+    "transformers": "5.9.0"
+  }
+}

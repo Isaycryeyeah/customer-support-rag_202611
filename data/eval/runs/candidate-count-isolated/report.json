@@ -1,0 +1,119 @@
+{
+  "created_at": "2026-10-31T02:06:58.918041+00:00",
+  "claim_scope": "exploratory development experiment; not an independent test or end-to-end API latency",
+  "config": {
+    "input": "data/eval/retrieval_eval.jsonl",
+    "dataset_role": "legacy_dev",
+    "output": "data/eval/runs/candidate-count-isolated",
+    "repeats": 3,
+    "candidate_k": 50,
+    "pools": [
+      10,
+      20,
+      30
+    ],
+    "seed": 20261031
+  },
+  "dataset_sha256": "75145488bafcc0a2cddefe0cf6ba55795c684a4ea3e10a4c57647031e2d62733",
+  "knowledge_manifest": {
+    "chunks_sha256": "6c7cc7fb8caf7e6bf85ae79573ddc7507c0b74418dfbd87ef4b57b08cbcff654",
+    "model_name": "BAAI/bge-small-zh-v1.5",
+    "dimension": 512,
+    "chunk_count": 103,
+    "model_revision": "7999e1d3359715c523056ef9478215996d62a620"
+  },
+  "cold_model_load_ms": 37311.32609999986,
+  "device": "cuda:0",
+  "torch_version": "2.6.0+cu124",
+  "reranker_model": "BAAI/bge-reranker-base",
+  "bm25_weight": 0.3,
+  "reranker_revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "warmup_queries": 1,
+  "warmup_per_pool": 1,
+  "concurrency": 1,
+  "cuda": true,
+  "cpu_threads": 8,
+  "summary": {
+    "10": {
+      "hit@1": 0.7758620689655172,
+      "hit@3": 0.9310344827586207,
+      "hit@5": 0.9827586206896551,
+      "recall@1": 0.7758620689655172,
+      "recall@3": 0.9310344827586207,
+      "recall@5": 0.9827586206896551,
+      "mrr@10": 0.8597701149425288,
+      "ndcg@5": 0.890770934454854,
+      "sample_count": 58,
+      "answerable_count": 58,
+      "unanswerable_count": 0,
+      "candidate_recall": 0.9827586206896551,
+      "timing_samples": 174,
+      "retrieval_ms": {
+        "p50": 5.729949999931705,
+        "p95": 7.189349999680416
+      },
+      "rerank_ms": {
+        "p50": 45.991000000412896,
+        "p95": 82.03407000014522
+      },
+      "pipeline_ms": {
+        "p50": 52.097799999955896,
+        "p95": 87.6788950003629
+      }
+    },
+    "20": {
+      "hit@1": 0.7758620689655172,
+      "hit@3": 0.9137931034482759,
+      "hit@5": 0.9655172413793104,
+      "recall@1": 0.7758620689655172,
+      "recall@3": 0.9137931034482759,
+      "recall@5": 0.9655172413793104,
+      "mrr@10": 0.8561781609195402,
+      "ndcg@5": 0.8821502447996816,
+      "sample_count": 58,
+      "answerable_count": 58,
+      "unanswerable_count": 0,
+      "candidate_recall": 1.0,
+      "timing_samples": 174,
+      "retrieval_ms": {
+        "p50": 5.729949999931705,
+        "p95": 7.189349999680416
+      },
+      "rerank_ms": {
+        "p50": 89.36329999960435,
+        "p95": 164.74423499989825
+      },
+      "pipeline_ms": {
+        "p50": 95.69134999992457,
+        "p95": 170.91674999946918
+      }
+    },
+    "30": {
+      "hit@1": 0.7758620689655172,
+      "hit@3": 0.9137931034482759,
+      "hit@5": 0.9655172413793104,
+      "recall@1": 0.7758620689655172,
+      "recall@3": 0.9137931034482759,
+      "recall@5": 0.9655172413793104,
+      "mrr@10": 0.8557471264367816,
+      "ndcg@5": 0.8821502447996816,
+      "sample_count": 58,
+      "answerable_count": 58,
+      "unanswerable_count": 0,
+      "candidate_recall": 1.0,
+      "timing_samples": 174,
+      "retrieval_ms": {
+        "p50": 5.729949999931705,
+        "p95": 7.189349999680416
+      },
+      "rerank_ms": {
+        "p50": 153.8143000002492,
+        "p95": 242.0836899999813
+      },
+      "pipeline_ms": {
+        "p50": 159.3886499999826,
+        "p95": 248.8172450006914
+      }
+    }
+  }
+}

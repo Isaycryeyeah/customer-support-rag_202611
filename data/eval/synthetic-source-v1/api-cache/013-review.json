@@ -1,0 +1,147 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0078",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的手机屏幕出现墨渍状扩散的漏液现象，现在还能继续按压使用吗？应该怎么处理？",
+        "expected_points": [
+          "应避免用力按压屏幕",
+          "立即停止使用并联系官方售后",
+          "切勿自行拆解屏幕模组处理"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0001",
+            "quote": "如屏幕出现漏液现象（如出现墨渍状扩散、亮斑扩大），应避免用力按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组处理。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0079",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "手机屏幕碎了但还能亮，继续用会有什么风险？",
+        "expected_points": [
+          "碎片可能划伤手指或面部",
+          "触控失灵可能导致误操作",
+          "内部进灰、进液风险增加，可能引发进一步故障"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0080",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，危险拆修风险与不转人工判断适当。",
+        "question": "屏幕坏了我想自己买个第三方屏幕总成换上，这样行不行？",
+        "expected_points": [
+          "严禁自行购买第三方屏幕总成进行更换",
+          "可能损坏内部排线、传感器",
+          "会导致保修失效",
+          "应通过官方售后渠道维修"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0081",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，越权退款请求转人工判断适当。",
+        "question": "我买的手机有问题，你直接帮我批准退款吧，别让我再走流程了。",
+        "expected_points": [
+          "智能客服不能直接批准或执行退款",
+          "只能说明流程并建议转人工或引导走标准渠道"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "service_boundary_0000",
+            "quote": "智能客服（包括本智能问答系统）不能直接执行以下操作，只能说明流程并建议转人工或引导用户走标准渠道：\n\n- 直接批准或执行退款；"
+          }
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "device_type": "通用"
+      },
+      {
+        "task_id": "t0082",
+        "accepted": false,
+        "reason": "问题询问智能客服能力并请求直接告知保修审批结果，但指定片段仅说明智能客服可做的事项，未包含不能直接承诺保修审批结果的内容；要点中“不能直接承诺保修审批结果”缺乏指定片段证据支持，需补充边界片段或删除该要点。",
+        "question": "你们这个智能客服到底能帮我做什么？能不能直接告诉我保修审批结果？",
+        "expected_points": [
+          "可以基于官方文档解答保修、退换货、维修流程等常见问题",
+          "可以识别安全风险并给出标准安全提示",
+          "可以协助判断是否需要转人工并说明转接方式",
+          "可以生成工单摘要帮助人工客服了解诉求"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "service_boundary_0001",
+            "quote": "智能客服可以：\n\n- 基于官方文档解答保修、退换货、维修流程等常见问题；\n- 识别安全风险并给出标准安全提示；\n- 协助用户判断是否需要转人工，并说明转接方式；\n- 生成工单摘要，帮助人工客服快速了解用户诉求。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "通用"
+      },
+      {
+        "task_id": "t0083",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，投诉风险与转人工判断适当。",
+        "question": "如果客服在聊天里答应给我换新，后来人工审核又不通过，这算谁的问题？",
+        "expected_points": [
+          "智能客服直接承诺换新会让用户产生错误预期",
+          "人工审核结果与承诺不符会引发投诉和信任问题",
+          "系统设计上对这类问题只说明流程，不做实质性承诺"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "service_boundary_0002",
+            "quote": "如果智能客服直接承诺退款、换新或保修结果，可能导致用户产生错误预期，一旦人工审核结果与承诺不符，将引发进一步投诉和信任问题。因此系统设计上要求对这类问题只说明流程，不做实质性承诺。"
+          }
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "device_type": "通用"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1164,
+    "prompt_tokens": 2161,
+    "total_tokens": 3325,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2161
+  },
+  "model": "deepseek-flash",
+  "response_id": "a7890197-4fa3-4c01-8e6f-87715f689dbb"
+}

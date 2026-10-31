@@ -19,7 +19,8 @@ class DenseRetriever:
     ):
         if model is None:
             from sentence_transformers import SentenceTransformer
-            model = SentenceTransformer(model_name)
+            revision = '7999e1d3359715c523056ef9478215996d62a620' if model_name == 'BAAI/bge-small-zh-v1.5' else None
+            model = SentenceTransformer(model_name, revision=revision)
         self.model = model
         self.index_path = Path(index_path)
         self.meta_path = Path(meta_path)

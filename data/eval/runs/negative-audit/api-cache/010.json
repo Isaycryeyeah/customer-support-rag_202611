@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0107",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0002",
+            "judgment": "ambiguous",
+            "reason": "内容聚焦无法正常充电的排查，与手机充电后仍无法开机部分相关，但未直接支持“充电30分钟后尝试开机”或“可能主板/电池故障”的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "讲的是笔记本无法开机的排查，与手机无法开机及U盘接口问题均不直接相关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "保修审批说明，与两个故障的排查结论无直接支持关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0003",
+            "judgment": "negative_ok",
+            "reason": "购买凭证处理，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0109",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "positive_like",
+            "reason": "直接说明轻负载下风扇异响应停止使用并送修，支持“风扇异响不正常”这一必要结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0001",
+            "judgment": "ambiguous",
+            "reason": "仅将风扇异响列入保修范围，未直接回答是否正常或维修是否丢数据。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "换货审批说明，与风扇噪音及数据丢失问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0000",
+            "judgment": "negative_ok",
+            "reason": "人为损坏免责说明，与问题无直接支持关系。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0110",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "禁止自行更换屏幕的说明，未直接支持保修范围、费用或凭证结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "ambiguous",
+            "reason": "针对第三方渠道丢失发票的保修认定，与电商订单截图能否作凭证部分相关但未直接支持所需信息要求。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0000",
+            "judgment": "negative_ok",
+            "reason": "维修申请流程，与保修判断、费用及凭证信息无直接支持关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本键盘故障，与手机屏幕及凭证问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0112",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "虽为笔记本文档，但直接说明维修更换硬件可能丢数据、不承担恢复责任，支持“能否保证不丢”这一结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "直接建议寄修前备份数据，支持维修可能丢数据、无法保证不丢的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0003",
+            "judgment": "negative_ok",
+            "reason": "售后能力边界说明，与摄像头模糊及数据丢失问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0003",
+            "judgment": "negative_ok",
+            "reason": "平板数据同步问题，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0114",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "退货审批说明，未涉及退款到账时间，不直接支持问题结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "七天无理由退货条件，与退款到账时间无直接支持关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0002",
+            "judgment": "negative_ok",
+            "reason": "危险操作清单，与退货退款问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0000",
+            "judgment": "ambiguous",
+            "reason": "涉及退款审批及投诉应转人工，与投诉处理相关，但未直接回答退款到账时间。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0115",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "positive_like",
+            "reason": "直接说明快充时明显温热正常、烫手无法触摸应停止充电，支持发热处理结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "充电器选择建议，未直接支持当前发烫该如何处理的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0002",
+            "judgment": "negative_ok",
+            "reason": "禁止操作清单，与当前发烫处置无直接支持关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "快充禁止操作，与发烫处置结论无直接支持关系。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1172,
+    "prompt_tokens": 5831,
+    "total_tokens": 7003,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5831
+  },
+  "model": "deepseek-flash",
+  "response_id": "872bae0d-3b55-42a3-b587-85efc00312b7"
+}

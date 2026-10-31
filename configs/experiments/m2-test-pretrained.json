@@ -1,0 +1,43 @@
+{
+  "model": "BAAI/bge-reranker-base",
+  "dev_sha256": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c",
+  "risk_detector_sha256": "6832c04451bdd17a43ca19e952bde4f68977704ab672cb9cc5f97a08de562b67",
+  "test_v1_sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+  "selection_scope": "DEV only; small-data model is a learning-curve control, not an adoption candidate",
+  "acceptance_gate": "test Hit@5/effective Recall@5 drop <= .02, no-answer refusal recall non-inferior; otherwise retain baseline",
+  "dtype": "float16",
+  "pool": 20,
+  "threshold": 0.6,
+  "dev_metrics": {
+    "hit@1": 0.8311688311688312,
+    "hit@3": 0.987012987012987,
+    "hit@5": 1.0,
+    "recall@1": 0.5064935064935064,
+    "recall@3": 0.8051948051948052,
+    "recall@5": 0.8701298701298701,
+    "mrr@10": 0.9036796536796536,
+    "ndcg@5": 0.8206023973991227,
+    "sample_count": 89,
+    "answerable_count": 77,
+    "unanswerable_count": 12,
+    "effective_recall@5": 0.847457627118644,
+    "refusal": {
+      "evaluated_count": 71,
+      "excluded_count": 18,
+      "true_refusals": 12,
+      "false_refusals": 1,
+      "unsupported_answers": 0,
+      "correct_answers_decision": 58,
+      "precision": 0.9230769230769231,
+      "recall": 1.0,
+      "false_refusal_rate": 0.01694915254237288,
+      "unsupported_answer_rate": 0.0,
+      "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+    },
+    "recognized_high_risk_fraction": 1.0
+  },
+  "dev_timing_speedup_fraction": 0.6710831703538663,
+  "precision_quality_gate": true,
+  "test_v2_sha256": "731fb10cc35d1c1de6da36d4e487df63495d133885c0cd802286754417207b5a",
+  "dev_selected_candidate_name": "hard"
+}

@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0250",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讲非官方维修记录影响保修，与发票丢失和保修期计算无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0002",
+            "judgment": "positive_like",
+            "reason": "直接支持无发票时可通过序列号查询保修状态，回应了发票丢失后能否保修的问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "讲设备无法开机的排查，与发票丢失和保修期无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0000",
+            "judgment": "negative_ok",
+            "reason": "讲投诉识别规则，与保修期计算无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0252",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0002",
+            "judgment": "ambiguous",
+            "reason": "讲平板屏幕漏光偏色，与笔记本亮点主题相近但设备类型不同，不能直接支持笔记本屏幕问题处理。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕漏液的安全处理，与摄像头模糊和屏幕亮点均无直接关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲快充发热，与摄像头模糊和屏幕亮点无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0003",
+            "judgment": "negative_ok",
+            "reason": "讲维修数据丢失责任，与两个故障处理无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0254",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲电池衰减处理，与长期存放建议和碎屏风险无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0004",
+            "judgment": "negative_ok",
+            "reason": "讲平板长期存放后电量异常，设备类型不同且未提供存放建议，不能支持笔记本电池存放问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0004",
+            "judgment": "negative_ok",
+            "reason": "讲隐私投诉处理，与碎屏风险和电池存放无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本维修申请流程，未涉及碎屏风险或电池存放。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0256",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲禁止自行更换第三方屏幕，与换屏费用和隐私投诉无直接支持关系。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_pricing_0000",
+            "judgment": "positive_like",
+            "reason": "说明维修费用以检测为准、公布价格仅参考，直接支持换屏费用问题的回答边界。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0001",
+            "judgment": "negative_ok",
+            "reason": "讲平板外接键盘问题，与隐私投诉和换屏费用无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0000",
+            "judgment": "negative_ok",
+            "reason": "讲电池危险操作清单，与两个问题均无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0258",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0002",
+            "judgment": "positive_like",
+            "reason": "讲异常发热应立即停用并远离易燃物，直接支持手机冒烟后的安全处理方向。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲快充发热，与冒烟处理和笔记本高负载过热无直接关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0005",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本屏幕亮点，与冒烟和过热问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0004",
+            "judgment": "negative_ok",
+            "reason": "讲隐私投诉处理，与安全问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0259",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "讲维修申请流程，未涉及数据隐私投诉处理或屏幕亮点保修判断。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讲非官方维修影响保修，与隐私投诉和屏幕亮点保修无直接支持关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "讲人工客服工作时间，与隐私投诉内容和屏幕亮点保修无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0004",
+            "judgment": "negative_ok",
+            "reason": "讲平板电量异常，与两个问题均无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1144,
+    "prompt_tokens": 5659,
+    "total_tokens": 6803,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5659
+  },
+  "model": "deepseek-flash",
+  "response_id": "e4221b08-3dc8-4870-9710-05f778c27054"
+}

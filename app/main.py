@@ -83,6 +83,7 @@ def ask(request: AskRequest):
         handoff_reason=result['handoff_reason'],
         trace={
             'knowledge_version': knowledge_version,
+            'domain_scope': result['domain_scope'], 'citation_status': result['citation_status'],
             'timings': result['timings'], 'generation': result['generation'],
             'candidates': result['retrieval_trace'], 'config': result['config'],
             'contexts': [{k: c[k] for k in ('chunk_id', 'rerank_score') if k in c}

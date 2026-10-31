@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0136",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "通风快充建议与避免叠加发热，未直接回答是否正常或何时停止。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲充电器选择与劣质充电器风险，未直接支持快充发热正常或停止条件。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "与上条同内容，主题相关但不直接回答发热正常性与停止条件。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本无法开机内容，与快充发热问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0137",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_0003",
+            "judgment": "positive_like",
+            "reason": "直接说明保修范围外可付费维修且费用以检测后报价为准，支持问题核心结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "仅列手机平板保修范围，未回答付费维修与费用。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0003",
+            "judgment": "negative_ok",
+            "reason": "摄像头故障排查，与屏幕保修外付费维修无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "退货审批说明，与维修付费问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0138",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "直接说明更换主板可能导致数据丢失并建议备份，支持数据安全部分结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "讲保修不覆盖情况，未回答维修费用或换主板数据丢失。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0002",
+            "judgment": "negative_ok",
+            "reason": "平板屏幕漏光偏色，与笔记本主板维修无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0003",
+            "judgment": "negative_ok",
+            "reason": "手机平板维修费用说明，未涉及笔记本主板费用或数据丢失。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0139",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "直接说明更换硬件可能导致数据丢失并建议备份，支持数据丢失部分结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0001",
+            "judgment": "negative_ok",
+            "reason": "平板外接键盘问题，与笔记本内置键盘失灵及数据丢失无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "快充禁止操作，与键盘维修和数据安全无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "笔记本维修费用说明，未回答键盘更换或数据丢失。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0144",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲充电器选择与劣质充电器风险，未直接回答充电器烫手或自行换屏。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "禁止第三方快充头与拆解，未涉及自行购买第三方屏幕更换。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "电池漏液处理，与充电器烫手和换屏问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0004",
+            "judgment": "negative_ok",
+            "reason": "保修外付费维修说明，未回答自行换第三方屏幕是否可行。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0146",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "service_boundary_0002",
+            "judgment": "positive_like",
+            "reason": "直接说明智能客服不应直接承诺退款，支持不能直接承诺退款结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "七天无理由退货规则，未回答投诉处理时限或直接承诺退款。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0004",
+            "judgment": "negative_ok",
+            "reason": "保修期计算示例，与投诉退款承诺和时限无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0001",
+            "judgment": "positive_like",
+            "reason": "明确不承诺处理结果、赔偿方案或时限，直接支持不能直接承诺退款和时限不确定。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1129,
+    "prompt_tokens": 5281,
+    "total_tokens": 6410,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5281
+  },
+  "model": "deepseek-flash",
+  "response_id": "1de2469e-125c-43da-9e85-6542a6175f1e"
+}

@@ -46,16 +46,19 @@ if data:
     if data.get('answer_type') == 'service_unavailable':
         st.warning('回答服务暂时不可用，请稍后重试。下方为人工处理建议。')
     elif data.get('answer_type') == 'low_confidence':
-        st.info('当前资料不足，建议联系人工客服核实。')
+        if data.get('domain_scope') == 'out_of_scope':
+            st.info('这个问题不属于售后服务范围，无需转接售后人工客服。')
+        else:
+            st.info('当前资料不足，建议联系人工客服核实。')
     elif data.get('answer_type') == 'safety_refusal':
         st.warning('该问题涉及安全风险，请查看安全提示并联系专业售后。')
     st.subheader("回答")
     st.write(data["answer"])
 
     st.subheader("风险识别")
-    st.json(data["risk_info"])
+    st.write('风险等级：' + {'high': '高', 'medium': '中', 'low': '低'}.get(data['risk_info'].get('risk_level'), '未知'))
 
-    st.subheader("是否需要人工处理")
+    st.subheader("是否建议人工协助")
     st.write("是" if data["need_human"] else "否")
 
     if data.get("ticket"):
@@ -98,11 +101,14 @@ if data:
     st.subheader("检索资料")
     if data.get('answer_type') == 'service_unavailable':
         st.caption('以下资料来自检索，尚未生成基于资料的回答。')
-    for idx, ctx in enumerate(data["contexts"], start=1):
-        with st.expander(f"资料 {idx}: {ctx.get('title', '')}"):
-            st.write(ctx["content"])
-            st.json({
-                "chunk_id": ctx.get("chunk_id"),
-                "doc_id": ctx.get("doc_id"),
-                "score": ctx.get("rerank_score")
-            })
+    if data.get('citation_status', {}).get('status') in ('missing', 'invalid'):
+        st.caption('部分正文引用尚未通过定位核查，请结合下方资料核实。')
+    sources = data.get('sources') or [
+        {'title': ctx.get('title', ''), 'passages': [{'passage_id': i, 'section': ctx.get('section', '未标注章节')}]}
+        for i, ctx in enumerate(data['contexts'], 1)
+    ]
+    for source in sources:
+        with st.expander(f"{source['title']} · {len(source['passages'])} 个片段"):
+            for passage in source['passages']:
+                st.markdown(f"**[资料{passage['passage_id']}] {passage['section']}**")
+                st.write(data['contexts'][passage['passage_id'] - 1]['content'])

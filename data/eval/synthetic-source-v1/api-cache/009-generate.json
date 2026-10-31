@@ -1,0 +1,134 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0054",
+        "question": "我的笔记本在没跑什么程序的时候风扇也一直很响，偶尔还有咔哒声，这种情况还能继续用吗？需要怎么处理？",
+        "expected_points": [
+          "轻负载下风扇异常响或出现异响不属于正常现象",
+          "风扇完全不转会导致设备过热",
+          "建议立即停止高负载使用并联系售后检测散热模组"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本",
+        "rationale": "用户描述轻负载下风扇异响，属于该片段覆盖的故障场景，需要片段中的判断与处理建议来回答。"
+      },
+      {
+        "task_id": "t0055",
+        "question": "笔记本的USB接口插U盘一直识别不到，我换了根线和另一个U盘还是不行，是不是接口坏了？接下来该怎么办？",
+        "expected_points": [
+          "先更换其他数据线或外接设备排查是否为配件问题",
+          "更换后仍无法识别可能是接口故障",
+          "建议联系售后检测"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本",
+        "rationale": "用户已排除线材和U盘，询问接口是否故障及后续处理，需要片段中的排查与售后建议。"
+      },
+      {
+        "task_id": "t0056",
+        "question": "笔记本屏幕上有个一直亮着的白点，在深色背景特别明显，这种能保修换屏吗？",
+        "expected_points": [
+          "先在纯色背景下仔细观察确认异常位置和数量",
+          "确认存在显示异常建议联系售后检测屏幕面板",
+          "具体是否保修以官方检测结果为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0005",
+            "quote": "请先在纯色背景下仔细观察确认异常位置和数量。如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本",
+        "rationale": "用户询问屏幕亮点的保修问题，需要片段中的确认方法和保修以官方检测为准的说明。"
+      },
+      {
+        "task_id": "t0057",
+        "question": "平板的磁吸键盘突然连不上了，笔也配对不上，我该怎么排查？",
+        "expected_points": [
+          "先确认配件电量充足",
+          "在系统设置中重新配对蓝牙或检查磁吸接口是否对齐",
+          "排除配件问题后仍无法连接建议联系售后检测平板本体的连接模组"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0000",
+            "quote": "请先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐。如排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "平板",
+        "rationale": "用户反映平板键盘和触控笔均无法连接，需要片段中的排查步骤与售后检测建议。"
+      },
+      {
+        "task_id": "t0058",
+        "question": "平板接上外接键盘打字总是延迟，有时候还失灵，是不是键盘坏了？",
+        "expected_points": [
+          "先确认键盘固件是否为最新版本",
+          "检查是否同时连接了多个蓝牙设备造成干扰",
+          "问题持续建议联系售后检测"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "平板",
+        "rationale": "用户描述外接键盘打字延迟失灵，需要片段中的固件与蓝牙干扰排查及售后建议。"
+      },
+      {
+        "task_id": "t0059",
+        "question": "平板在暗光下看屏幕四周有一圈发亮，颜色也有点偏，这算正常吗？需要送修吗？",
+        "expected_points": [
+          "在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显",
+          "轻微漏光在部分机型属于正常工艺现象",
+          "如影响使用体验较严重建议联系售后评估检测"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "平板",
+        "rationale": "用户询问平板漏光和偏色是否正常及是否送修，需要片段中的测试方法与正常工艺说明。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1054,
+    "prompt_tokens": 974,
+    "total_tokens": 2028,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 846
+  },
+  "model": "deepseek-flash",
+  "response_id": "f7f09f17-d9d9-4dcd-97a0-d425392669d4"
+}

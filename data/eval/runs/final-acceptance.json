@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-31",
+  "m1_implementation_accepted": true,
+  "m2_feasibility_experiment_complete": true,
+  "bounded_clean_negative_study_complete": true,
+  "trained_model_adopted": false,
+  "regression_tests_passed": 56,
+  "four_human_reviewed_old_outputs": true,
+  "full_dataset_human_verified": false,
+  "post_fix_human_scores_inferred": false,
+  "human_feedback_http_regressions_passed": 4,
+  "cuda_component_pipeline_p95_reduction_fraction": 0.6210523514725809,
+  "deployment": {
+    "reranker_model": "BAAI/bge-reranker-base",
+    "reranker_dtype": "auto",
+    "rerank_k": 20,
+    "threshold": 0.6,
+    "selection_record": "data/eval/runs/m1-summary.json",
+    "training_model_adopted": false
+  },
+  "demo_frontend": "http://127.0.0.1:8503",
+  "artifact_integrity_verified": true,
+  "runtime_matches_workspace": true,
+  "secret_scan_passed": true,
+  "limitations": [
+    "AI-reviewed simulated known-KB data; four purposeful human output reviews only.",
+    "232 independent training evidence groups, below the original 500-group collection target.",
+    "Single-seed final-layer/head training; no held-out training gain.",
+    "Keyword risk recognition is incomplete; no universal safety claim.",
+    "CUDA timing excludes LLM generation and does not apply to CPU Docker."
+  ]
+}

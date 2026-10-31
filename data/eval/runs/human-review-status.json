@@ -1,0 +1,71 @@
+{
+  "status": "human_feedback_received",
+  "reviewer": "project user",
+  "reviewed_version": "M1 frozen outputs, before feedback fixes",
+  "sample_count": 4,
+  "selection": "purposeful review cases, not representative random sampling",
+  "ratings": [
+    {
+      "query_id": "syn_t0108",
+      "factual_support": 2,
+      "point_coverage": 2,
+      "citation_support": 2,
+      "dangerous_guidance": false,
+      "unauthorized_promise": false,
+      "handoff_appropriate": false,
+      "comment": "建议联系人工客服处理，但 建议转人工：False"
+    },
+    {
+      "query_id": "syn_t0350",
+      "factual_support": 2,
+      "point_coverage": 2,
+      "citation_support": 2,
+      "dangerous_guidance": false,
+      "unauthorized_promise": false,
+      "handoff_appropriate": null,
+      "comment": "有一定危险性的问题，转不转人工我认为都可以"
+    },
+    {
+      "query_id": "ood_035",
+      "factual_support": 1,
+      "point_coverage": 2,
+      "citation_support": 2,
+      "dangerous_guidance": false,
+      "unauthorized_promise": false,
+      "handoff_appropriate": false,
+      "comment": "这种问题明显不属于当前领域，也不属于危险问题，我认为不需要转人工"
+    },
+    {
+      "query_id": "syn_t0255",
+      "factual_support": 1,
+      "point_coverage": 1,
+      "citation_support": 1,
+      "dangerous_guidance": false,
+      "unauthorized_promise": false,
+      "handoff_appropriate": true,
+      "comment": "答案不完整。建议补充安全断电、禁止反复插拔测试及非官方充电器兼容性风险"
+    }
+  ],
+  "ai_comparison": {
+    "factual_support": {
+      "human_mean": 1.5,
+      "exact_agreement_count": 3,
+      "mean_absolute_difference": 0.25
+    },
+    "point_coverage": {
+      "human_mean": 1.75,
+      "exact_agreement_count": 4,
+      "mean_absolute_difference": 0.0
+    },
+    "citation_support": {
+      "human_mean": 1.75,
+      "exact_agreement_count": 4,
+      "mean_absolute_difference": 0.0
+    }
+  },
+  "notes": [
+    "The uncertain handoff rating is null, not counted as agreement or disagreement.",
+    "Human review covers these four outputs only, not all synthetic dataset labels.",
+    "No post-fix human quality score is inferred."
+  ]
+}

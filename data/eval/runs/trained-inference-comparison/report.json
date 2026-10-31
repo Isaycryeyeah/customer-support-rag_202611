@@ -1,0 +1,45 @@
+{
+  "scope": "inference-only paired dev diagnostic; no model selection or training",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "cpu_threads": 4,
+  "pool": 20,
+  "dtype": "float16",
+  "concurrency": 1,
+  "warmup_queries": 3,
+  "repeats": 1,
+  "seed": 20261031,
+  "input_sha256": "bc54cc11fdacb00a4187f57d096fed3ea39fe3420f428d0eb37f8114c8c412bb",
+  "model_paths": {
+    "pretrained": "BAAI/bge-reranker-base",
+    "random": "models/reranker-random",
+    "hard": "models/reranker-hard",
+    "clean": "models/reranker-hard-clean"
+  },
+  "models_resident_together": true,
+  "summary": {
+    "pretrained": {
+      "count": 89,
+      "p50_ms": 37.166699999943376,
+      "p95_ms": 55.97645999987434
+    },
+    "random": {
+      "count": 89,
+      "p50_ms": 37.37399999954505,
+      "p95_ms": 56.2259799997264
+    },
+    "hard": {
+      "count": 89,
+      "p50_ms": 37.19409999939671,
+      "p95_ms": 56.9244999991497
+    },
+    "clean": {
+      "count": 89,
+      "p50_ms": 37.50849999960337,
+      "p95_ms": 54.37765999995462
+    }
+  },
+  "limitations": [
+    "One timing pass; hardware-session variation remains.",
+    "Excludes retrieval, model initialization and LLM generation."
+  ]
+}

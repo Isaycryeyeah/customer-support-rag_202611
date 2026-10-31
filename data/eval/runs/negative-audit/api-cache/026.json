@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0262",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "仅说明禁止自行更换屏幕及保修风险，未支持是否需换屏或维修时长等结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲15天换新政策，与触控失灵是否换屏及维修时长无直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "快充发热说明，与屏幕触控及笔记本键盘维修时长无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "充电器选择建议，与问题结论无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0263",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "negative_ok",
+            "reason": "针对配件无法连接（电量、配对、磁吸），用户已排除连接问题，未支持延迟失灵后续处理结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本键盘按键失灵排查，与平板外接键盘延迟及笔记本维修流程无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0005",
+            "judgment": "negative_ok",
+            "reason": "笔记本屏幕亮点暗点，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "维修费用说明，未涉及维修申请流程或数据备份结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0264",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0002",
+            "judgment": "negative_ok",
+            "reason": "平板屏幕漏光偏色检测，与笔记本亮点确认及进度查询无直接支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本维修申请流程，未涉及亮点检测或维修进度查询方式。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "充电异常处理，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本过热说明，与屏幕亮点及进度查询无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0265",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "讲屏幕漏液处理，用户问电池漏液及屏幕裂纹；可能被误关联到漏液，但对象不同，无法确定是否支持结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本键盘失灵，与平板电池漏液及屏幕裂纹无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0000",
+            "judgment": "negative_ok",
+            "reason": "讲人为损坏不保修，未支持漏液接触处理或裂纹能否继续使用的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本维修时长，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0266",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "非官方维修记录影响保修，未涉及维修时隐私数据访问问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0005",
+            "judgment": "negative_ok",
+            "reason": "笔记本屏幕亮点检测，与手机触控及隐私问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "电池漏液处理，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "充电环境要求，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0267",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "禁止自行更换屏幕，未支持摔落后是否保修或维修费用结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "非官方维修记录影响保修，与摔落导致屏幕不亮的保修及费用无直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "保修所需材料，未涉及意外损坏保修判定或费用。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "快充协议说明，与问题无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1121,
+    "prompt_tokens": 5581,
+    "total_tokens": 6702,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5581
+  },
+  "model": "deepseek-flash",
+  "response_id": "ae97bbcd-de60-42a3-bb47-a1402045cd18"
+}

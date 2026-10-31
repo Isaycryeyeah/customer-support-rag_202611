@@ -1,0 +1,8 @@
+{
+  "reranker_model": "BAAI/bge-reranker-base",
+  "reranker_dtype": "auto",
+  "rerank_k": 20,
+  "threshold": 0.6,
+  "selection_record": "data/eval/runs/m1-summary.json",
+  "training_model_adopted": false
+}

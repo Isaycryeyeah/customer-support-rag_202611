@@ -1,0 +1,22 @@
+{
+  "scope": "post-experiment diagnostic AI review; no training pairs or test outcomes were rewritten",
+  "query_count": 232,
+  "negative_count": 928,
+  "counts": {
+    "hard": {
+      "positive_like": 132,
+      "negative_ok": 279,
+      "ambiguous": 53
+    },
+    "random": {
+      "negative_ok": 456,
+      "ambiguous": 3,
+      "positive_like": 5
+    }
+  },
+  "human_verified": false,
+  "limitations": [
+    "Candidate labels may be ambiguous; same-model review is not ground truth.",
+    "Suspect negatives motivate a future cleaned dataset and untouched test, not retrospective improvement claims."
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0171",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "ambiguous",
+            "reason": "讲充电异常处理（拔充电器、断电源），与冒烟焦味及非官方充电器风险主题相关，但未直接支持用水扑灭是否正确或非官方充电器是否增加风险。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "positive_like",
+            "reason": "直接说明使用非认证劣质充电器可能导致设备发热、损坏电池甚至安全事故，支持问题第二项风险结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0001",
+            "judgment": "negative_ok",
+            "reason": "仅讲维修时长，与冒烟处理和充电器风险无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "讲碎屏继续使用风险，与电池冒烟及充电器问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0172",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "讲屏幕漏液处理，与碎屏临时处理及浴室使用主题相关，但未直接支持胶带覆盖或潮湿环境建议。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "讲触控异常排查，未涉及碎屏临时处理或浴室使用注意事项。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0004",
+            "judgment": "negative_ok",
+            "reason": "讲维修数据隐私投诉，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0002",
+            "judgment": "negative_ok",
+            "reason": "讲禁止指导的危险操作，未直接支持碎屏临时处理或浴室使用建议。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0173",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲15天换新政策，未涉及充电异常排查或维修时长。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "讲无法开机排查，与充不进电及维修时长无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0003",
+            "judgment": "negative_ok",
+            "reason": "讲摄像头模糊，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲进液紧急处理，与充电异常及维修时长无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0175",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "positive_like",
+            "reason": "直接说明客服不能在未检测情况下承诺换新，支持问题第二项结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "ambiguous",
+            "reason": "讲15天换新政策，与换新时间窗口主题相关，但未直接说明摔落人为损坏是否适用换新。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "讲维修前数据备份，与换新及客服承诺无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本维修数据安全，与手机换新问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0176",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "直接建议寄修前备份数据，支持问题第一项结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "直接建议寄修前备份重要数据，支持问题第一项结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "讲进液是否影响保修，与备份数据及寄修流程无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0003",
+            "judgment": "negative_ok",
+            "reason": "讲维修费用说明，与备份数据及寄修流程无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0178",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "negative_ok",
+            "reason": "讲平板配件无法连接，与屏幕漏液及非原装充电器风险无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0001",
+            "judgment": "negative_ok",
+            "reason": "讲外接键盘延迟，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲电池鼓包处理，与屏幕漏液及充电器风险无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕碎裂处理，未涉及墨渍状漏液或充电器风险。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1151,
+    "prompt_tokens": 5461,
+    "total_tokens": 6612,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5461
+  },
+  "model": "deepseek-flash",
+  "response_id": "0c62b9c5-b6e4-4a0b-b720-c8350ba569fd"
+}

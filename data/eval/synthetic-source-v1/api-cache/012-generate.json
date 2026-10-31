@@ -1,0 +1,132 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0072",
+        "question": "我的云枢笔记本保修期内因为进液坏了，送修的话需要自己掏钱吗？费用怎么算？",
+        "expected_points": [
+          "进液属于超出保修范围的情况，维修需支付费用",
+          "具体费用以检测后报价为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_laptop_0003",
+            "quote": "保修期内非人为故障免费维修；保修期外或超出保修范围（如进液、摔落）的维修需支付费用，具体费用以检测后报价为准。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本",
+        "rationale": "用户询问进液损坏的保修与费用问题，需要该片段说明进液属超保范围及费用以检测报价为准。"
+      },
+      {
+        "task_id": "t0073",
+        "question": "我收到云枢手机已经第9天了，东西没拆封也没用过，还能申请七天无理由退货吗？",
+        "expected_points": [
+          "超过7天后无理由退货申请不再受理",
+          "如存在质量问题可按保修或换货政策处理"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0000",
+            "quote": "超过 7 天后，无理由退货申请将不再受理，但如存在质量问题，可按保修政策或换货政策处理。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户询问超过7天能否无理由退货，需要该片段说明超期不受理及质量问题的替代处理。"
+      },
+      {
+        "task_id": "t0074",
+        "question": "我想把云枢平板退掉，提交申请后大概多久能收到退款？",
+        "expected_points": [
+          "需先提交申请、客服审核、寄回商品、验货后原路退款",
+          "退款通常为验货通过后3～7个工作日内到账"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "平板",
+        "rationale": "用户询问退货退款到账时间，需要该片段说明退货流程及退款时效。"
+      },
+      {
+        "task_id": "t0075",
+        "question": "我买的云枢笔记本已经拆封用了一周，屏幕上有划痕，还能走七天无理由退货吗？",
+        "expected_points": [
+          "商品已拆封使用且存在明显使用痕迹（如屏幕划痕）通常不支持七天无理由退货"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0002",
+            "quote": "商品已拆封使用且存在明显使用痕迹（如屏幕划痕、机身磕碰）；"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本",
+        "rationale": "用户询问有使用痕迹和划痕能否无理由退货，需要该片段说明不支持无理由退货的情形。"
+      },
+      {
+        "task_id": "t0076",
+        "question": "我提交退货申请后，客服能不能现在就保证给我退款？",
+        "expected_points": [
+          "退货申请需经过官方审核，客服不能未审核就承诺退款",
+          "是否退款以验货结果为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0003",
+            "quote": "退货申请需经过官方审核，客服不能在未审核的情况下直接承诺退款，具体是否退款以验货结果为准。"
+          }
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "device_type": "通用",
+        "rationale": "用户要求客服直接保证退款，涉及退款审批边界，需要该片段说明不能未审核承诺退款。"
+      },
+      {
+        "task_id": "t0077",
+        "question": "我的云枢手机屏幕摔碎了，现在还能继续用手划吗？该怎么处理？",
+        "expected_points": [
+          "应立即停止触摸破损区域，避免划伤手指",
+          "用胶带或保护膜临时覆盖碎裂区域后停止使用",
+          "联系官方售后进行屏幕更换检测"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          }
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "屏幕碎裂涉及划伤等现实安全风险，需要该片段给出停止触摸、临时覆盖并联系售后的安全处理建议。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 927,
+    "prompt_tokens": 994,
+    "total_tokens": 1921,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 866
+  },
+  "model": "deepseek-flash",
+  "response_id": "6bae84a7-d39f-4e21-9f9b-00bc6558b462"
+}

@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0269",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "ambiguous",
+            "reason": "列出保修所需材料含发票或电子凭证，与发票丢失后能否补开/补发凭证主题相关，但不直接支持补开或补发电子凭证的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "ambiguous",
+            "reason": "针对第三方渠道丢失发票的保修认定困难，与用户官方渠道场景不同，不直接支持补开凭证或收费维修报价结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及维修前数据备份建议，与发票补开及维修费用预估无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "触控板故障排查内容，与问题两项诉求均无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0275",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "ambiguous",
+            "reason": "针对笔记本电池鼓包，与用户手机电池鼓包产品类型不同，不能直接支持手机场景结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0002",
+            "judgment": "positive_like",
+            "reason": "直接说明碎裂屏幕继续使用的风险，支持“是否还能继续用”的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_pricing_0001",
+            "judgment": "negative_ok",
+            "reason": "维修费用参考区间，与能否继续使用及如何处理的安全问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_pricing_0000",
+            "judgment": "negative_ok",
+            "reason": "费用报价原则，与电池鼓包和屏幕碎裂的处理问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0278",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本过热现象与散热建议，未涉及电池续航衰减是否正常损耗。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "长期存放建议，与电池衰减判断及屏幕漏液处理无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "换货审批说明，与电池损耗和屏幕墨渍问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "键盘按键失灵排查，与问题两项诉求无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0280",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "positive_like",
+            "reason": "给出整机12个月、电池6个月及以凭证日期为准，直接支持保修期限结论，但未覆盖日期不一致时以系统为准。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0002",
+            "judgment": "ambiguous",
+            "reason": "说明序列号查询基于激活或注册时间估算，与日期不一致时以哪个为准相关，但未直接给出结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池衰减处理，与手机保修期计算无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "维修数据备份建议，与保修期计算无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0281",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "ambiguous",
+            "reason": "针对第三方渠道丢失发票情形，用户为官方渠道，不能直接支持序列号查询或收费结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_pricing_0002",
+            "judgment": "positive_like",
+            "reason": "说明检测后正式报价、确认后才收费，直接支持后续维修收费流程的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0004",
+            "judgment": "negative_ok",
+            "reason": "设备发热处理，与凭证丢失查询保修及维修收费无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "电池鼓包处理，与问题两项诉求无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0282",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "保修期限说明，与进水后能否开机及紧急处理无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "ambiguous",
+            "reason": "设备无法开机排查建议充电后开机，与进水场景冲突，可能误导，不能作为进水处理的直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0005",
+            "judgment": "negative_ok",
+            "reason": "系统卡顿或重启处理，与进水问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "转人工规则，虽提及安全风险转人工，但不直接支持进水后能否开机及处理结论。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1187,
+    "prompt_tokens": 5556,
+    "total_tokens": 6743,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5556
+  },
+  "model": "deepseek-flash",
+  "response_id": "65c04aea-2eb3-488f-a185-1658ed329299"
+}

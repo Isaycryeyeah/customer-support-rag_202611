@@ -1,0 +1,136 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0048",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的手机摄像头拍照一直很模糊，擦过镜片也没用，相机设置里也没开什么特殊滤镜，这种情况需要送售后检测摄像头模组吗？",
+        "expected_points": [
+          "先清洁摄像头镜片表面并检查相机设置中的滤镜或对焦模式",
+          "清洁后仍模糊或出现黑屏、无法启动相机应用，建议联系售后检测摄像头模组"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0003",
+            "quote": "请先清洁摄像头镜片表面，并在相机设置中检查是否开启了特殊滤镜或对焦模式。如清洁后仍模糊，或出现摄像头黑屏、无法启动相机应用等情况，建议联系售后检测摄像头模组。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0049",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，异常发热涉及电池安全风险标签适当，无需转人工。",
+        "question": "我的手机最近用一会儿就明显发热，已经排除了打游戏等高负载场景，还是烫得厉害，这种情况该怎么处理？",
+        "expected_points": [
+          "参考电池安全使用指南中的电池发热处理说明",
+          "排除高负载使用场景后仍异常发热，建议联系售后检测"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0004",
+            "quote": "请参考\"电池安全使用指南\"文档中的电池发热处理说明。如排除高负载使用场景后仍存在异常发热，建议联系售后检测。"
+          }
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0050",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的手机系统经常卡顿，有时候还会自己重启，清理后台和更新系统都试过了还是这样，接下来能怎么处理？",
+        "expected_points": [
+          "先尝试清理后台应用并更新系统至最新版本",
+          "问题持续可联系客服远程诊断或送修检测硬件异常"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0005",
+            "quote": "建议先尝试清理后台应用、更新系统至最新版本。如问题持续存在，可联系客服协助远程诊断，或送修检测硬件是否存在异常。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0051",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的笔记本电脑按电源键完全没反应开不了机，电源适配器也确认插好了，长按电源键10秒再开机还是不行，是不是要送售后检测？",
+        "expected_points": [
+          "确认电源适配器连接正常并尝试长按电源键10秒后重新开机",
+          "仍无法开机可能是主板、电池或电源模块故障，建议联系官方售后检测"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0000",
+            "quote": "请先确认电源适配器连接正常，并尝试长按电源键 10 秒后重新开机。如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本"
+      },
+      {
+        "task_id": "t0052",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "笔记本键盘有几个按键按下去没反应，周围也没看到异物或液体，清理过还是失灵，需要联系售后更换键盘吗？",
+        "expected_points": [
+          "先检查按键周围是否有异物或液体残留",
+          "清理后仍失灵可能是键盘模组故障，建议联系售后检测更换"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本"
+      },
+      {
+        "task_id": "t0053",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的笔记本触控板突然没反应了，系统设置里也没禁用，也没接外接鼠标，这种情况要送售后检测吗？",
+        "expected_points": [
+          "先在系统设置中确认触控板未被禁用，并检查是否连接外接鼠标导致自动关闭",
+          "排除设置问题后仍异常，建议联系售后检测"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1130,
+    "prompt_tokens": 2041,
+    "total_tokens": 3171,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2041
+  },
+  "model": "deepseek-flash",
+  "response_id": "034a72c5-5ccb-4fd0-8337-cdffb777651d"
+}

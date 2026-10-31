@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0303",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "直接支持笔记本维修时数据可能丢失、建议寄修前备份这一必要结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0003",
+            "judgment": "positive_like",
+            "reason": "直接说明维修换硬件可能导致数据丢失且官方不承担恢复责任，支持数据丢失相关结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "讨论退货审批与退款，与摄像头模糊及维修数据问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_pricing_0000",
+            "judgment": "negative_ok",
+            "reason": "讨论维修费用报价原则，未涉及摄像头故障或数据丢失。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0304",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "虽为笔记本文档，但直接支持维修可能导致数据丢失、建议寄修前备份这一结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讨论非官方维修记录对保修资格的影响，与备份数据及维修时长无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0000",
+            "judgment": "negative_ok",
+            "reason": "描述维修申请流程，未涉及数据备份建议或维修时长。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本维修流程，虽提及备份但针对笔记本，且未涉及手机换电池时长，主题相关但非直接支持。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0305",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讨论非官方维修记录影响保修，与电池续航检测及进水保修问题无直接支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "列出保修所需材料，未涉及电池衰减处理或进水保修判定。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "讨论维修前数据备份，与电池检测和进水保修问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "讨论长期存放建议，与电池续航下降检测及进水保修无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0306",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "positive_like",
+            "reason": "直接说明使用非官方充电器存在兼容性风险，支持非官方充电器是否有风险这一结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "positive_like",
+            "reason": "直接说明使用来源不明第三方快充头存在严重安全风险，支持非官方充电器风险结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0002",
+            "judgment": "negative_ok",
+            "reason": "讨论维修进度查询，与电池鼓包充电及充电器风险无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讨论充电异常处理，未直接回答鼓包能否充电或非官方充电器风险。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0310",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "positive_like",
+            "reason": "虽为笔记本文档，但明确鼓包应停止使用、断开电源且切勿自行拆开，支持鼓包处理结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讨论保修期限，与鼓包能否湿手拆开及充电注意事项无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讨论15天换新政策，与鼓包处理及充电注意事项无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讨论充电器外观检查，未涉及鼓包拆解或日常充电注意事项。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0312",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "positive_like",
+            "reason": "列出摔落、进液、私自拆机等不保修情况，间接支持哪些属于非人为可保修范围的界定。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "讨论维修费用承担，未界定非人为原因保修范围。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "讨论退货审批，与保修范围界定无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "讨论电池长期存放建议，与保修范围无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1182,
+    "prompt_tokens": 5615,
+    "total_tokens": 6797,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5615
+  },
+  "model": "deepseek-flash",
+  "response_id": "a026e6eb-2653-4d51-8290-b4b8ebefe76e"
+}

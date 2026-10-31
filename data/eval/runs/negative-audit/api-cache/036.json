@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0380",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "ambiguous",
+            "reason": "涉及笔记本电池衰减检测，与平板电池检测主题相关，但未直接支持数据安全建议或电池检测结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "直接给出寄修前自行备份重要数据的数据安全建议，支持问题中的数据安全结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0001",
+            "judgment": "negative_ok",
+            "reason": "仅说明购买凭证信息要求，与数据安全或电池检测无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讨论非官方维修对保修资格的影响，与数据安全建议无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0381",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "明确说明电池鼓包不应自行刺破或修复，直接支持问题中鼓包处理结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0002",
+            "judgment": "negative_ok",
+            "reason": "讨论无法充电的排查，未涉及充电器变形、数据线破皮或电池鼓包处理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0001",
+            "judgment": "negative_ok",
+            "reason": "投诉处理原则，与充电器安全或电池鼓包无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0002",
+            "judgment": "negative_ok",
+            "reason": "列举电气安全危险操作，但未涉及插脚变形、线材破皮或鼓包放气。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0383",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讨论电池衰减检测更换，未涉及漏液处理或长期存放建议。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "讨论屏幕漏液而非电池漏液，主题相近但对象不同，不能直接支持电池漏液处理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "人工客服转接流程，与漏液处理或电池存放无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0003",
+            "judgment": "negative_ok",
+            "reason": "投诉禁止行为，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0385",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "说明屏幕碎裂后临时覆盖并联系售后，未直接回答能否自行购买屏幕更换。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "换货政策，与自行更换屏幕或充电发热无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0001",
+            "judgment": "negative_ok",
+            "reason": "投诉处理原则，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修材料，与手机屏幕更换或发热无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0386",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "positive_like",
+            "reason": "提到风扇异响应停止使用并送修，直接支持笔记本风扇异响处理结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "讨论无法开机，与充不进电或风扇噪音无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "维修费用说明，与两个故障处理无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0002",
+            "judgment": "negative_ok",
+            "reason": "电气安全危险操作，与充不进电或风扇噪音无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0390",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，未涉及手机电池保修或笔记本风扇保修范围。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "讨论过热与风扇异响处理，未涉及保修资格判断。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "转人工规则，与保修期限或范围无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "人工客服工作时间，与问题无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1122,
+    "prompt_tokens": 5661,
+    "total_tokens": 6783,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5661
+  },
+  "model": "deepseek-flash",
+  "response_id": "8c5bf501-7a70-4740-a615-73d8b82c40fb"
+}

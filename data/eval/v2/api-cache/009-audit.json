@@ -1,0 +1,184 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_054",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "return_policy_0000",
+          "exchange_policy_0000",
+          "exchange_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0000",
+            "quote": "用户自收到商品之日起 7 天内，商品无质量问题、保持完好（包装、配件、赠品齐全，无明显使用痕迹）的情况下，可申请无理由退货。"
+          },
+          {
+            "chunk_id": "exchange_policy_0000",
+            "quote": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。"
+          },
+          {
+            "chunk_id": "exchange_policy_0003",
+            "quote": "以下情况通常不适用换新政策：\n\n- 人为损坏（摔落、进水、私自拆机等）；\n- 故障无法复现，且经检测确认设备功能正常；\n- 已超过换新政策规定的时间窗口。"
+          }
+        ],
+        "expected_points": [
+          "七天无理由退货要求商品保持完好、包装配件赠品齐全且无明显使用痕迹",
+          "15天内出现官方认定的性能故障可申请换新",
+          "人为损坏、故障无法复现且检测正常、超过换新时间窗口等情况通常不适用换新"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户问退货条件及换新适用情形，需退货政策与换货政策（含15天换新条件和不适用情形）共同支持；原gold缺少换新正面条件片段，已补入。"
+      },
+      {
+        "query_id": "new_055",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0001",
+          "data_privacy_repair_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 屏幕总成更换 | 手机 / 平板 | 300～1200 元 |"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          }
+        ],
+        "expected_points": [
+          "手机屏幕总成更换参考费用区间为300～1200元，最终以检测中心正式报价为准",
+          "因维修更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量保护数据不被泄露"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "费用区间与数据丢失责任分别由维修费用参考和数据隐私说明片段直接支持，gold完整。"
+      },
+      {
+        "query_id": "new_056",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0003",
+          "battery_safety_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          },
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          }
+        ],
+        "expected_points": [
+          "充电中出现插头发烫、插座冒烟等异常应立即拔出充电器并断开电源，不要继续插拔测试，联系官方售后检测",
+          "日常建议使用官方原装或认证配件充电，避免高温环境长时间存放，避免电池长期满电或零电量存放"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "插座冒烟属现实安全风险，需人工关注；应急处理与日常建议分别有直接片段支持。"
+      },
+      {
+        "query_id": "new_057",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0000",
+          "warranty_exclusions_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0000",
+            "quote": "如用户通过官方商城、官方授权门店购买设备，但丢失发票或电子凭证，可联系客服提供购买时使用的账号、手机号或支付信息，协助在官方系统中查询订单记录作为购买凭证。"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0002",
+            "quote": "如设备保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态，建议用户保留购买凭证以便核实。"
+          }
+        ],
+        "expected_points": [
+          "官方渠道购买丢失发票或电子凭证，可联系客服提供购买账号、手机号或支付信息，协助在官方系统查询订单记录作为购买凭证",
+          "保修标签被撕毁、序列号被涂改或无法识别可能导致无法核实保修状态，建议保留购买凭证以便核实"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "发票丢失处理与序列号磨损影响分别有直接片段支持，gold完整。"
+      },
+      {
+        "query_id": "new_058",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0001",
+          "repair_process_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "expected_points": [
+          "先确认键盘固件是否为最新版本，并检查是否同时连接多个蓝牙设备造成干扰，问题持续则联系售后检测",
+          "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需付费，具体费用以检测后官方报价为准，客服不能在检测前直接报价"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "排查方法与保修期内收费规则分别有直接片段支持，gold完整。"
+      },
+      {
+        "query_id": "new_059",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0005",
+          "repair_faq_tablet_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0005",
+            "quote": "请先在纯色背景下仔细观察确认异常位置和数量。如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          }
+        ],
+        "expected_points": [
+          "笔记本屏幕亮点需先在纯色背景下确认异常位置和数量，确认显示异常后联系售后检测屏幕面板，是否保修以官方检测结果为准",
+          "平板长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准；校准后仍耗电异常快则联系售后检测电池健康度"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由笔记本和平板FAQ片段直接支持，gold完整。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1577,
+    "prompt_tokens": 11590,
+    "total_tokens": 13167,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2118
+  },
+  "model": "deepseek-flash",
+  "response_id": "1e312b4b-cff6-4b72-b2a7-ee83d2fe43b3"
+}

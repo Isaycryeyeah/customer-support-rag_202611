@@ -1,0 +1,8 @@
+{
+  "dev_selected_name": "clean",
+  "test_sha256": "e69a3ed76ba6c1d3b7b0758f7f159a471867bfe1652848639e04f4aa84e4c3da",
+  "dev_mrr_pretrained": 0.9036796536796536,
+  "dev_mrr_clean": 0.9101731601731601,
+  "rule": "Clean model only: dev MRR gain >=.005 with balanced grounding/refusal within .005; adopt only with test_v3 MRR gain >=.005, effective Recall@5 drop <=.02 and refusal recall non-inferior.",
+  "no_further_training_iterations": true
+}

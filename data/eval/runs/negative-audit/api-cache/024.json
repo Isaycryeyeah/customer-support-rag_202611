@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0241",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕触控异常排查，与卡顿重启及维修进度查询无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讲非官方维修影响保修，不涉及卡顿重启或进度查询。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0004",
+            "judgment": "negative_ok",
+            "reason": "笔记本接口问题，与手机卡顿及维修进度无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本触控板问题，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0242",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲电池漏液处理，不涉及浴室充电安全或碎屏处理。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲禁止自行换屏，未提供碎屏后送修前的安全处理建议。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0003",
+            "judgment": "negative_ok",
+            "reason": "平板数据同步问题，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0243",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲设备进液处理，非电池漏液，也未涉及快充发热或停止充电条件。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲电池鼓包处理，与漏液、快充发热问题不同。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池衰减，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0003",
+            "judgment": "negative_ok",
+            "reason": "软件问题保修免责，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0245",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "直接支持维修可能丢数据、需提前备份的结论，虽为笔记本文档但结论对应问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0003",
+            "judgment": "positive_like",
+            "reason": "直接说明维修换硬件可能丢数据及责任，支持数据丢失风险结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0000",
+            "judgment": "negative_ok",
+            "reason": "讲人为损坏保修免责，与数据丢失及备份准备无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0003",
+            "judgment": "negative_ok",
+            "reason": "讲能力边界外问题处理，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0246",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "ambiguous",
+            "reason": "讲平板配件无法连接排查，与蓝牙键盘延迟部分相关但不直接支持延迟排查结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "手机/平板屏幕触控异常，与接口识别及键盘延迟无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "充电异常处理，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "笔记本电池衰减，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0249",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0003",
+            "judgment": "positive_like",
+            "reason": "直接说明客服不能未经审核承诺退款，支持问题中能否承诺退款的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "service_boundary_0000",
+            "judgment": "positive_like",
+            "reason": "明确智能客服不能直接批准退款，直接支持问题结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本键盘失灵，与人工客服及退款承诺无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，与问题无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1082,
+    "prompt_tokens": 5369,
+    "total_tokens": 6451,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5369
+  },
+  "model": "deepseek-flash",
+  "response_id": "b4242c8f-05ea-494e-a618-d728663fbaac"
+}

@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0330",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0001",
+            "judgment": "positive_like",
+            "reason": "换货流程说明需寄回检测确认故障后才寄出换新机，直接支持“客服不能直接安排换新机寄出”这一必要结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "service_boundary_0000",
+            "judgment": "positive_like",
+            "reason": "明确智能客服不能直接批准退款或安排换新机寄出，直接支持问题中“能否直接安排换新并承诺退款”的否定结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "仅涉及非官方维修影响保修资格，与换新和退款能否直接安排无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "列举不支持七天无理由退货的情形，未涉及客服能否直接承诺退款或换新。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0331",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0003",
+            "judgment": "positive_like",
+            "reason": "明确客服不能在未审核情况下直接承诺退款，直接支持问题中“要求直接承诺退款”不可行的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "complaint_escalation_0003",
+            "judgment": "positive_like",
+            "reason": "说明智能客服不能为平息投诉而承诺超出政策范围的退款，直接支持不得直接承诺退款的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "介绍七天无理由退货条件，未涉及投诉处理或客服能否直接承诺退款。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0002",
+            "judgment": "negative_ok",
+            "reason": "仅说明维修进度查询方式，与投诉升级和退款承诺无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0334",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "针对笔记本过热，而问题中过热设备是手机；未直接支持手机发热处理或笔记本维修流程。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "仅列保修所需材料，未涉及笔记本维修流程或手机发热处理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0003",
+            "judgment": "negative_ok",
+            "reason": "关于购买凭证缺失的处理，与手机发热和笔记本维修流程无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "快充禁止操作说明，与设备发热检测和笔记本维修流程无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0336",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "针对屏幕触控异常，与笔记本无法开机及数据同步失败无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "ambiguous",
+            "reason": "通用“设备无法开机”排查与笔记本无法开机主题相关，但未明确针对笔记本且未涉及长按电源键10秒后的情形，支持不直接。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "介绍15天换新政策，与无法开机排查和数据同步问题无直接支持关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0002",
+            "judgment": "negative_ok",
+            "reason": "关于保修标签和序列号缺失，与两个故障的处理方法无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0337",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "说明换货需检测、客服不能直接承诺换新，属于审批限制，未描述换货流程步骤，不直接支持流程问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "描述退货流程而非换货流程，也未涉及人工客服工作时间。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "保修审批说明，与换货流程和人工客服工作时间无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "发票丢失与第三方渠道保修认定，与换货流程及客服工作时间无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0340",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "positive_like",
+            "reason": "明确风扇异响、完全不转导致过热应立即停止使用并送修检测，直接支持“不正常、需送修”这一必要结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "关于电池衰减处理，与风扇异响、不转及维修时长无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "快充协议说明，与风扇故障和维修时长无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "快充禁止操作说明，与风扇异常和送修时长无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1227,
+    "prompt_tokens": 5512,
+    "total_tokens": 6739,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5512
+  },
+  "model": "deepseek-flash",
+  "response_id": "bd71af50-a60d-4720-a4d4-24ecd82d7679"
+}

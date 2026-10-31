@@ -1,46 +1,36 @@
-# 系统架构图
+# 系统架构（2026-10-31）
 
 ```mermaid
 flowchart TD
-    A[用户问题] --> B[安全风险识别<br/>risk_detector.py]
-    B --> C[Hybrid Retrieval]
-    C --> C1[BM25 关键词召回]
-    C --> C2[Dense Embedding 向量召回]
-    C1 --> D[候选合并 + 归一化融合]
-    C2 --> D
-    D --> E[Reranker 重排<br/>CrossEncoder]
-    E --> F{低置信度判断<br/>rerank top1 < 0.1}
-    F -->|是| G[低置信度拒答模板]
-    F -->|否| H[build_rag_prompt]
-    H --> I[DeepSeek API 生成]
-    I --> J[三段式答案<br/>结论/处理步骤/注意事项]
-    G --> K[工单判断]
-    J --> K
-    K --> L{need_human?}
-    L -->|是| M[生成工单<br/>分类/优先级/部门]
-    L -->|否| N[直接返回]
-    M --> O[返回答案 + 引用来源 + 工单]
-    N --> O
-    O --> P[日志记录 SQLite]
-    O --> Q[Streamlit 前端展示]
-    Q --> R[用户点赞/点踩反馈]
-    R --> P
+    UI[Streamlit] --> API[FastAPI /ask]
+    API --> R[风险识别]
+    R -->|已识别高风险| S[确定性安全提示]
+    R -->|普通请求| D[领域判断]
+    D -->|明确域外| O[说明服务范围，无需售后人工]
+    D -->|域内或不确定| H[BM25 + Dense / FAISS]
+    H --> C[Hybrid 候选 20 条]
+    C --> X[CrossEncoder 重排]
+    X -->|证据不足| L[低置信度提示与人工建议]
+    X -->|通过校准阈值| G[DeepSeek 生成]
+    G -->|非空且未截断| F[校验引用编号，按文档汇总来源]
+    G -->|上游故障| E[结构化 HTTP 503]
+    S --> T[统一人工建议与工单建议]
+    O --> T
+    L --> T
+    F --> T
+    E --> T
+    T --> DB[SQLite 请求轨迹与反馈]
+    T --> UI
 ```
 
-## 模块与代码对应关系
+知识库为 24 篇模拟文档、103 个切片。向量模型为固定 revision 的 bge-small-zh-v1.5；重排序模型及阈值从 `configs/deployment.json` 读取，环境变量可覆盖。CUDA 使用 FP16、CPU 使用 FP32。Hybrid 的 BM25 权重固定为 0.3，本轮未重新搜索。
 
-| 架构环节 | 对应代码 |
-|---|---|
-| 安全风险识别 | `app/safety/risk_detector.py`、`app/safety/policy.py`、`app/safety/refusal.py` |
-| BM25 召回 | `app/retrieval/bm25_retriever.py` |
-| Dense 召回 | `app/retrieval/dense_retriever.py`（FAISS 持久化索引） |
-| Hybrid 融合 | `app/retrieval/hybrid_retriever.py`（`bm25_weight` 可调） |
-| Reranker 重排 | `app/retrieval/reranker.py`（CrossEncoder） |
-| Prompt 构造 | `app/generation/prompt.py` |
-| LLM 生成 | `app/generation/llm_client.py`（DeepSeek API + 降级兜底） |
-| 工单判断与生成 | `app/ticket/classifier.py`、`app/ticket/ticket_builder.py` |
-| 主流程串联 | `app/main_pipeline.py`（`CustomerSupportRAG.answer`） |
-| FastAPI 后端 | `app/main.py`（`/ask`、`/feedback`、`/health`） |
-| 日志与反馈存储 | `app/storage/db.py`（SQLite：`query_logs`、`feedback`） |
-| Streamlit 前端 | `frontend/streamlit_app.py` |
-| 离线评估 | `app/evaluation/`、`scripts/run_eval.py` |
+`need_human` 为最终路由，响应、工单建议、日志与页面共同使用。风险内部信号不等于最终路由。工单状态为建议，没有实际派单或承诺退款权限。
+
+生成适配层最多尝试两次，关闭 SDK 内置重试；记录错误类别、finish_reason、token、模型和耗时。HTTP 操作超时与剩余预算检查不能保证严格的墙钟时间上限。故障不伪装成成功回答。
+
+引用以切片编号定位，来源列表按文档归并并保留章节。编号有效不等于语义支持正确。高风险模板注明其为安全规则，不伪造检索来源。
+
+索引清单校验语料 SHA256、模型 revision、维度与数量，失配时重建。SQLite 追加字段迁移，不删除旧反馈。`/health` 检查存活，`/ready` 检查就绪，不调用付费模型。
+
+局限：风险和领域判断主要依赖规则，开放表达仍可能漏检。项目没有真实企业数据、生产 SLA 或完整工单系统。

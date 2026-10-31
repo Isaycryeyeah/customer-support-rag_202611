@@ -1,0 +1,180 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_fed3ec81a1",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0003",
+          "water_damage_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0003",
+            "quote": "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以\"提升\"充电速度，此类操作存在严重安全风险且不在保修范围内。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0002",
+            "quote": "进液导致的故障通常不属于保修范围（详见\"保修免责与不予保修情况说明\"文档），具体是否可维修、维修费用需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "禁止使用来源不明的第三方快充头，此类操作存在安全风险且不在保修范围内",
+          "进液导致的故障通常不属于保修范围，具体以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个片段分别直接支持非原装快充头和进液对保修的影响，与问题必要结论对应。"
+      },
+      {
+        "query_id": "new_b74488793f",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0003",
+          "repair_pricing_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "以上价格为参考区间，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心出具的正式报价为准。"
+          }
+        ],
+        "expected_points": [
+          "轻负载下风扇异常响或异响应停止高负载使用并联系售后检测散热模组",
+          "维修费用需检测后报价，参考区间受机型、故障复杂度等因素影响"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "故障FAQ与费用参考片段分别支持风扇异常处置和费用报价原则。"
+      },
+      {
+        "query_id": "new_add9780c83",
+        "accepted": false,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0000",
+          "return_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0000",
+            "quote": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。"
+          },
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "expected_points": [
+          "15天内出现官方认定的性能故障可申请换新，无需额外费用",
+          "退货需提交申请、审核通过后寄回，验货后原路退款"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "原gold中service_boundary_0003与退货流程问题无关，属噪声；退货流程应由return_policy_0001支持。问题本身可答，但gold需修正，故不接受原标签。"
+      },
+      {
+        "query_id": "new_74b1d05851",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0002",
+          "return_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0002",
+            "quote": "普通投诉由客户体验组在 1～3 个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+          },
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "expected_points": [
+          "普通投诉由客户体验组在1～3个工作日内跟进",
+          "退款到账时间通常为验货通过后3～7个工作日内"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "投诉时限与退款到账均有直接片段支持；含投诉情绪，需转人工。"
+      },
+      {
+        "query_id": "new_dc4265fb0e",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0001",
+          "repair_process_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 屏幕总成更换 | 笔记本 | 800～2500 元 |"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0003",
+            "quote": "保修期外或超出保修范围（如进液、摔落）的维修需支付费用，具体费用以检测后报价为准。"
+          }
+        ],
+        "expected_points": [
+          "笔记本屏幕总成更换参考费用区间为800～2500元",
+          "摔落属于超出保修范围，维修需支付费用，具体以检测后报价为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "费用区间与摔落不保修均有直接原文支持。"
+      },
+      {
+        "query_id": "new_6c4cad90ee",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0001",
+          "screen_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          },
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          }
+        ],
+        "expected_points": [
+          "快充时明显温热正常，但烫手无法触摸等异常应立即停止充电",
+          "碎裂屏幕继续使用可能导致划伤、触控失灵、进灰进液等风险"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "快充异常发热与碎屏继续使用风险均有直接片段支持，涉及现实安全风险。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1319,
+    "prompt_tokens": 11433,
+    "total_tokens": 12752,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1961
+  },
+  "model": "deepseek-flash",
+  "response_id": "198900dd-e293-425e-ad46-03dc89450457"
+}

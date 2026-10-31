@@ -1,0 +1,2 @@
+# Preserve exact bytes across platforms: experiment manifests contain file hashes.
+* -text whitespace=trailing-space,space-before-tab,cr-at-eol

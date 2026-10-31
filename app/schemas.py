@@ -20,6 +20,9 @@ class AskResponse(BaseModel):
     contexts: List[Dict]
     generation: Optional[Dict] = None
     timings: Dict
+    domain_scope: Literal['in_scope', 'out_of_scope', 'undetermined'] = 'undetermined'
+    sources: List[Dict] = Field(default_factory=list)
+    citation_status: Dict = Field(default_factory=dict)
 
 
 class FeedbackRequest(BaseModel):

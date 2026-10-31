@@ -22,3 +22,15 @@ def test_ordinary_policy_questions_do_not_force_handoff(question):
 
 def test_direct_approval_request_needs_human():
     assert detect_risk('请直接批准我换新')['need_human']
+
+
+def test_post_m1_indirect_privacy_complaint():
+    from app.ticket.classifier import classify_ticket
+    q='担心上次维修人员偷看了我的照片，能查有没有数据泄露吗？'
+    risk=detect_risk(q)
+    assert risk['need_human'] and 'complaint' in risk['risk_types']
+    assert classify_ticket(q,risk)['priority']=='高'
+
+
+def test_post_m1_charger_disassembly_wording():
+    assert detect_risk('网上说拆开充电器能改快充，安全吗？')['risk_level']=='high'

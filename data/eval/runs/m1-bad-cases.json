@@ -1,0 +1,181 @@
+[
+  {
+    "query_id": "syn_t0156",
+    "question": "我的云枢手机最近频繁死机，想申请换新机，请问整个换货流程是怎样的？客服能直接帮我确认可以换新吗？",
+    "gold_chunk_ids": [
+      "exchange_policy_0001",
+      "service_boundary_0002"
+    ],
+    "missing_gold_at_5": [
+      "service_boundary_0002"
+    ],
+    "expected_high_risk": false,
+    "actual_high_risk": false,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0169",
+    "question": "我的笔记本电池好像鼓包了，键盘有点翘起，我能不能自己拆开后盖把电池取出来？另外用非官方充电器充电会不会有风险？",
+    "gold_chunk_ids": [
+      "battery_safety_laptop_0000",
+      "fast_charging_safety_0000"
+    ],
+    "missing_gold_at_5": [
+      "fast_charging_safety_0000"
+    ],
+    "expected_high_risk": true,
+    "actual_high_risk": true,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0195",
+    "question": "手机电池有点鼓，屏幕也裂了，我能不能自己买块屏幕换上，平时充电要注意什么？",
+    "gold_chunk_ids": [
+      "battery_safety_0004",
+      "screen_safety_0003"
+    ],
+    "missing_gold_at_5": [
+      "battery_safety_0004"
+    ],
+    "expected_high_risk": true,
+    "actual_high_risk": true,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0196",
+    "question": "充电器插着的时候我有时会把它塞进被子里，这样有风险吗？如果电池鼓包了能不能用针扎一下放气？",
+    "gold_chunk_ids": [
+      "charger_safety_0002",
+      "dangerous_operations_0000"
+    ],
+    "missing_gold_at_5": [
+      "charger_safety_0002"
+    ],
+    "expected_high_risk": true,
+    "actual_high_risk": true,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0216",
+    "question": "我的手机发票弄丢了，还能申请保修吗？需要准备哪些材料？",
+    "gold_chunk_ids": [
+      "lost_invoice_policy_0002",
+      "warranty_policy_0002"
+    ],
+    "missing_gold_at_5": [
+      "lost_invoice_policy_0002"
+    ],
+    "expected_high_risk": false,
+    "actual_high_risk": false,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0221",
+    "question": "我的平板触控笔连不上，自己排查后还是不行，送修的话一般要多久？",
+    "gold_chunk_ids": [
+      "repair_faq_tablet_0000",
+      "repair_process_0001"
+    ],
+    "missing_gold_at_5": [
+      "repair_process_0001"
+    ],
+    "expected_high_risk": false,
+    "actual_high_risk": false,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0301",
+    "question": "我的笔记本玩游戏时底部烫手，风扇也有异响，这正常吗？另外如果笔记本不小心进水了，还能保修吗？",
+    "gold_chunk_ids": [
+      "battery_safety_laptop_0001",
+      "water_damage_policy_0002"
+    ],
+    "missing_gold_at_5": [
+      "water_damage_policy_0002"
+    ],
+    "expected_high_risk": true,
+    "actual_high_risk": true,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0311",
+    "question": "我的云枢手机刚买不久就坏了，能直接给我换新机吗？",
+    "gold_chunk_ids": [
+      "exchange_policy_0002",
+      "service_boundary_0000"
+    ],
+    "missing_gold_at_5": [
+      "service_boundary_0000"
+    ],
+    "expected_high_risk": false,
+    "actual_high_risk": false,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0338",
+    "question": "我的手机进液后还能开机吗？另外快充时充电器有点烫手，这正常吗？",
+    "gold_chunk_ids": [
+      "dangerous_operations_0002",
+      "water_damage_policy_0000",
+      "fast_charging_safety_0001"
+    ],
+    "missing_gold_at_5": [
+      "dangerous_operations_0002"
+    ],
+    "expected_high_risk": true,
+    "actual_high_risk": true,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0343",
+    "question": "我的云枢笔记本屏幕坏了想走官方维修，请问整个流程是怎样的？检测后会不会不经过我同意就直接收费维修？",
+    "gold_chunk_ids": [
+      "repair_process_laptop_0000",
+      "repair_pricing_0002"
+    ],
+    "missing_gold_at_5": [
+      "repair_process_laptop_0000"
+    ],
+    "expected_high_risk": false,
+    "actual_high_risk": false,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0350",
+    "question": "我买了一个便宜的第三方快充头给手机充电，最近手机发热明显，是不是充电器有问题？另外我看到网上有人说拆开充电器能改快充，这样做安全吗？",
+    "gold_chunk_ids": [
+      "charger_safety_0000",
+      "fast_charging_safety_0003"
+    ],
+    "missing_gold_at_5": [],
+    "expected_high_risk": true,
+    "actual_high_risk": false,
+    "diagnosis": "risk rule coverage",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  },
+  {
+    "query_id": "syn_t0359",
+    "question": "我准备把平板电脑寄修，但担心个人数据泄露，寄修前应该做哪些操作？另外，我的平板键盘和触控笔有时连不上，该怎么排查？",
+    "gold_chunk_ids": [
+      "data_privacy_repair_0002",
+      "repair_faq_tablet_0000"
+    ],
+    "missing_gold_at_5": [
+      "repair_faq_tablet_0000"
+    ],
+    "expected_high_risk": false,
+    "actual_high_risk": false,
+    "diagnosis": "candidate recall or ordering",
+    "action": "Record as a residual limitation; do not tune on test_v1 and claim it remains unseen."
+  }
+]

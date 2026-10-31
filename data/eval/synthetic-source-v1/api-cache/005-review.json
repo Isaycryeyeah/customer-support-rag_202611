@@ -1,0 +1,148 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0030",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我想让云枢手机用上最快的充电速度，是不是随便买个第三方快充头也能达到最高功率？",
+        "expected_points": [
+          "需要搭配官方快充充电器和数据线才能达到最大充电功率",
+          "使用非官方充电器可能无法触发快充，或存在兼容性风险"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "云枢设备支持最高 66W 快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率。使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0031",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的云枢手机快充时充电器摸起来很烫，这种情况正常吗，什么程度需要停下来？",
+        "expected_points": [
+          "快充时设备和充电器比普通充电更明显的温热属于正常现象",
+          "出现烫手无法触摸、外壳变形等异常应立即停止充电"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0032",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我经常边打游戏边给云枢手机快充，这样会不会让手机更热，平时快充有什么使用建议？",
+        "expected_points": [
+          "建议在通风环境下快充，避免遮盖设备和充电器",
+          "长时间高负载使用（如游戏）时不建议同时快充，以免叠加发热",
+          "如长期出现快充异常降速，可联系官方售后检测电池和快充芯片状态"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0002",
+            "quote": "- 建议在通风环境下进行快充，避免遮盖设备和充电器；\n- 长时间高负载使用（如游戏）时不建议同时进行快充，以免叠加发热；\n- 如设备长期出现快充异常降速，可联系官方售后检测电池和快充芯片状态。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0033",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险标签与转人工判断适当。",
+        "question": "网上有人卖改装过的快充数据线，说能提高云枢手机的充电速度，这种线能用吗？",
+        "expected_points": [
+          "禁止使用来源不明的第三方快充头或改装数据线",
+          "禁止拆解充电器或电池以“提升”充电速度，存在严重安全风险且不在保修范围内"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0003",
+            "quote": "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以\"提升\"充电速度，此类操作存在严重安全风险且不在保修范围内。"
+          }
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0034",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险标签与转人工判断适当。",
+        "question": "我的云枢手机电池鼓包了，现在还能继续用吗？你们能不能直接给我换个新的？",
+        "expected_points": [
+          "涉及安全风险问题（如电池鼓包）且用户需要进一步指导时，除安全提示外的具体处置应转人工或官方售后热线",
+          "涉及换新、保修审批等需要人工审核决策的事项应转接人工客服"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "涉及安全风险问题（如电池鼓包、起火、漏电）且用户需要进一步指导时，除安全提示外的具体处置应转人工或官方售后热线；"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "涉及退款、换新、保修审批等需要人工审核决策的事项；"
+          }
+        ],
+        "risk_types": [
+          "battery_safety",
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0035",
+        "accepted": true,
+        "reason": "问题可由指定片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我想找人工客服处理云枢手机的问题，应该从哪里进入，转接时你们会记录我之前说的情况吗？",
+        "expected_points": [
+          "可通过官方 App 内“联系人工客服”入口或拨打官方售后热线获得帮助",
+          "如涉及工单，智能客服应记录当前对话摘要，便于人工客服快速了解上下文，减少用户重复描述"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "human_transfer_policy_0001",
+            "quote": "提示用户可以通过官方 App 内\"联系人工客服\"入口，或拨打官方售后热线获得进一步帮助；"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0001",
+            "quote": "如涉及工单，智能客服应记录当前对话摘要，便于人工客服快速了解上下文，减少用户重复描述问题。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "通用"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1265,
+    "prompt_tokens": 2330,
+    "total_tokens": 3595,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2330
+  },
+  "model": "deepseek-flash",
+  "response_id": "81d5b6d2-d63e-4636-b9d7-f796634f3069"
+}

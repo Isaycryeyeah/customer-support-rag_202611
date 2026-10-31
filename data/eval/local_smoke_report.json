@@ -1,0 +1,70 @@
+{
+  "llm_verified": true,
+  "http_verified": true,
+  "blockers": [
+    "Backend Python OpenAI SDK cannot access DeepSeek: WinError 10013. /ask returns fallback rather than a generated answer."
+  ],
+  "indexed_chunks": 103,
+  "safety": {
+    "need_human_accuracy": 1.0,
+    "risk_type_accuracy": 1.0
+  },
+  "retrieval_checks": [
+    {
+      "question": "手机保修期是多久？",
+      "contexts_count": 5,
+      "top_title": "保修政策（手机 / 平板）",
+      "top_score": 0.9952606558799744,
+      "low_confidence": false,
+      "risk": {
+        "risk_types": [],
+        "risk_level": "low",
+        "need_human": false
+      },
+      "elapsed_seconds": 0.46
+    },
+    {
+      "question": "电池鼓包了还能充电吗？",
+      "contexts_count": 5,
+      "top_title": "电池安全使用指南（手机 / 平板）",
+      "top_score": 0.9990597367286682,
+      "low_confidence": false,
+      "risk": {
+        "risk_types": [
+          "battery_safety"
+        ],
+        "risk_level": "high",
+        "need_human": true
+      },
+      "elapsed_seconds": 0.09
+    },
+    {
+      "question": "今天天气怎么样？",
+      "contexts_count": 5,
+      "top_title": "电池安全使用指南（手机 / 平板）",
+      "top_score": 0.005083486903458834,
+      "low_confidence": true,
+      "risk": {
+        "risk_types": [],
+        "risk_level": "low",
+        "need_human": false
+      },
+      "elapsed_seconds": 0.1
+    }
+  ],
+  "end_to_end_verified": false,
+  "http_checks": {
+    "backend_health": 200,
+    "frontend_health": 200,
+    "ask": 200,
+    "ask_returned_fallback": true,
+    "feedback": 200
+  },
+  "direct_api_check": {
+    "transport": "curl",
+    "status": 200,
+    "model": "deepseek-flash",
+    "finish_reason": "stop",
+    "answer": "结论：  \n根据资料，云枢手机整机保修期为购买之日起 **12 个月**，电池作为易耗部件保修期为 **6 个月**；保修期以购机发票或电子凭证日期为准。[资料2]\n\n处理步骤：  \n1. 查看购机发票或电子凭证上的购买日期，作为保修期起始点。[资料2][资料3]  \n2. 按部件分别判断：整机保修 12 个月，电池保修 6 个月。[资料2]  \n3. 如凭证日期与设备序列号在官方系统中的注册日期不一致，需联系客服协助核实，资料说明将以官方系统记录为准。[资料3]\n\n注意事项：  \n- 电池属于易耗部件，保修期与整机保修期不同，为 6 个月，不要按整机 12 个月计算。[资料2]  \n- 保修期起算日期以购机发票或电子凭证日期为准；若与官方系统注册日期不一致，以官方系统记录为准。[资料2][资料3]  \n- 以上为保修期说明，具体维修或保修审批需按实际检测和流程处理，不能仅凭本回答承诺一定通过。[资料4]\n\n引用来源：  \n- [资料2] 保修政策（手机 / 平板）：整机保修 12 个月，电池保修 6 个月，以购机发票或电子凭证日期为准。  \n- [资料3] 发票和购买凭证说明：保修期以购买凭证日期为起始点；如与官方系统注册日期不一致，以官方系统记录为准。  \n- [资料1] 保修政策（手机 / 平板）：示例中整机与电池保修期分别计算。"
+  }
+}

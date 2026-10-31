@@ -1,0 +1,183 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_2130b9734e",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000",
+          "repair_process_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "客服建议用户提前备份重要数据，避免维修过程中数据丢失；"
+          }
+        ],
+        "expected_points": [
+          "维修涉及更换主板、存储模块可能导致数据丢失，官方建议用户寄修前自行备份重要数据",
+          "笔记本维修申请流程中客服也会建议用户提前备份重要数据，避免维修过程中数据丢失"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问笔记本寄修前如何备份数据，两个片段分别说明数据丢失风险及备份建议、维修流程中的备份提醒，直接支持回答。"
+      },
+      {
+        "query_id": "new_447df0a820",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0002",
+          "repair_faq_tablet_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0002",
+            "quote": "请先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物。如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          }
+        ],
+        "expected_points": [
+          "手机无法正常充电：先检查是否使用官方充电器和数据线，清理充电接口灰尘异物；若更换后仍无法充电或提示“充电异常”，建议联系售后检测电池和充电接口",
+          "平板屏幕漏光：在暗光环境下测试屏幕四周是否存在明显漏光；轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户同时咨询手机充电异常和平板屏幕漏光，两个片段分别提供对应排查步骤和处理建议，证据充分。"
+      },
+      {
+        "query_id": "new_f62fadd544",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0002",
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁在设备进液后立即通电测试是否可以使用，短路风险可能导致主板永久性损坏，甚至引发安全事故。"
+          }
+        ],
+        "expected_points": [
+          "碎裂屏幕继续使用可能导致碎片划伤手指或面部、触控失灵导致误操作、内部进灰进液风险增加，可能引发进一步故障",
+          "严禁在设备进液后立即通电测试是否可以使用，短路风险可能导致主板永久性损坏，甚至引发安全事故"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "用户询问碎屏后继续使用的风险和进水后能否立即通电测试，两个片段分别说明危害和禁止操作，直接支持回答。"
+      },
+      {
+        "query_id": "new_70cfaf9ec8",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000",
+          "charger_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          },
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          }
+        ],
+        "expected_points": [
+          "笔记本电池鼓包应立即停止使用，关闭设备并断开电源适配器；笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检",
+          "充电过程中出现充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "用户报告笔记本电池鼓包和充电器插头发烫、插座冒烟两个安全异常，两个片段分别提供正确处理方式，证据直接。"
+      },
+      {
+        "query_id": "new_d7ab452e93",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0002",
+          "dangerous_operations_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；\n- 将电池或设备放入水中、火中处理异常情况；\n- 自行给电池加热或冷冻以\"修复\"故障。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0002",
+            "quote": "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。"
+          }
+        ],
+        "expected_points": [
+          "严禁用针、刀等工具对鼓包电池“放气”或穿刺处理，自行拆卸、刺破、挤压电池等操作也严禁指导",
+          "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "用户询问用针给鼓包电池放气是否安全及电池续航下降处理，两个片段分别明确禁止穿刺放气和说明电池衰减的正常处理途径，证据充分。"
+      },
+      {
+        "query_id": "new_ffba52457e",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0003",
+          "return_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0000",
+            "quote": "用户自收到商品之日起 7 天内，商品无质量问题、保持完好（包装、配件、赠品齐全，无明显使用痕迹）的情况下，可申请无理由退货。\n\n超过 7 天后，无理由退货申请将不再受理，但如存在质量问题，可按保修政策或换货政策处理。"
+          },
+          {
+            "chunk_id": "exchange_policy_0003",
+            "quote": "以下情况通常不适用换新政策：\n\n- 人为损坏（摔落、进水、私自拆机等）；\n- 故障无法复现，且经检测确认设备功能正常；\n- 已超过换新政策规定的时间窗口。"
+          }
+        ],
+        "expected_points": [
+          "自收到商品之日起7天内，商品无质量问题、保持完好可申请无理由退货；超过7天后无理由退货申请不再受理，但如存在质量问题可按保修或换货政策处理",
+          "换货不适用情况包括人为损坏、故障无法复现且检测正常、已超过换新政策规定的时间窗口"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户使用10天后询问无理由退货和换货可能性，两个片段分别说明7天无理由退货时限和换货不适用情况（含时间窗口），直接支持判断。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2066,
+    "prompt_tokens": 11854,
+    "total_tokens": 13920,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2382
+  },
+  "model": "deepseek-flash",
+  "response_id": "46d98611-9dce-41bd-9f1e-f9f87699cbb9"
+}

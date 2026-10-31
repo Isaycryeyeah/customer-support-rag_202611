@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0021",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "直接说明换主板可能导致数据丢失并建议寄修前备份，支持问题核心结论"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "positive_like",
+            "reason": "流程中明确建议提前备份重要数据以避免维修中丢失"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "仅涉及维修费用，与备份数据无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及换新政策，与维修前备份无关"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0022",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "讲的是备份建议，未回答维修人员是否会翻看隐私内容"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "ambiguous",
+            "reason": "提到尽量保护数据隐私，但未直接说明是否会查看照片聊天记录"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "仅涉及保修材料，与隐私访问无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0003",
+            "judgment": "negative_ok",
+            "reason": "仅涉及能力边界处理，与隐私访问无关"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0024",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "讲的是维修前备份建议，未回答能否恢复已丢失数据"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "明确官方不对维修导致的数据丢失承担恢复责任，直接支持问题结论"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及保修期限，与数据恢复无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "仅涉及维修时长，与数据恢复无关"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0025",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0001",
+            "judgment": "ambiguous",
+            "reason": "说明维修人员不会主动查看隐私，但未涉及投诉核查流程，不能直接支持用户要求查清泄露"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0003",
+            "judgment": "negative_ok",
+            "reason": "讲的是数据丢失责任，与怀疑隐私泄露投诉无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "仅涉及风扇噪音故障，与隐私投诉无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "仅涉及换货不适用情况，与隐私投诉无关"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0026",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "positive_like",
+            "reason": "说明换货须经检测确认，直接支持不能直接承诺换新的结论"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "列举换货不适用情况，未直接支持15天内无法开机能否换新"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0001",
+            "judgment": "negative_ok",
+            "reason": "仅涉及平板键盘问题，与换新无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "仅涉及退货审批，与换新无关"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0028",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0005",
+            "judgment": "negative_ok",
+            "reason": "仅涉及屏幕亮点检测建议，未回答能否跳过检测直接换新"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0004",
+            "judgment": "negative_ok",
+            "reason": "仅涉及接口故障排查，与换新审批无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "仅涉及人工客服工作时间，与换新审批无关"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及电池鼓包处理，与换新审批无关"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1073,
+    "prompt_tokens": 4521,
+    "total_tokens": 5594,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4521
+  },
+  "model": "deepseek-flash",
+  "response_id": "fcbd168e-fbe7-492d-b9c9-e1ebf71c58e7"
+}

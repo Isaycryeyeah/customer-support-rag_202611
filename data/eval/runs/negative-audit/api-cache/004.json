@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0039",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0002",
+            "judgment": "positive_like",
+            "reason": "说明无发票时按官方注册/激活时间估算保修状态，直接支持“以官方系统记录为准”这一结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "ambiguous",
+            "reason": "涉及第三方渠道发票丢失时保修认定困难，与日期不一致时按哪个算无直接关系。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0004",
+            "judgment": "negative_ok",
+            "reason": "主题为设备发热处理，与保修期计算无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "主题为充电异常安全处理，与保修期计算无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0042",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "针对官方渠道购买丢失发票的处理，不适用于非官方第三方渠道场景。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅说明保修期限及以发票日期为准，未涉及第三方渠道丢失发票能否保修。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "主题为屏幕触控异常，与保修申请无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "主题为设备无法开机，与保修申请无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0043",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "针对第三方渠道丢失发票的保修认定困难，未说明可用序列号查询保修状态。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "invoice_proof_0003",
+            "judgment": "positive_like",
+            "reason": "明确说明无凭证时可尝试通过序列号在官方系统查询购买记录，直接支持用序列号查保修。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "主题为屏幕漏液安全处理，与序列号查保修无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "主题为快充禁止操作，与序列号查保修无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0044",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0000",
+            "judgment": "positive_like",
+            "reason": "说明官方渠道丢失发票可提供账号、手机号或支付信息查询订单，直接支持补开发票所需信息。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "invoice_proof_0000",
+            "judgment": "negative_ok",
+            "reason": "列举有效购买凭证类型，未涉及补开发票所需准备的信息。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "主题为笔记本电池鼓包处理，与补开发票无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0004",
+            "judgment": "negative_ok",
+            "reason": "为保修期计算示例，与补开发票所需信息无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0049",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "针对笔记本电脑过热，非手机场景，不能直接支持手机发热处理。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "仅涉及快充过程发热，问题为日常使用发热，场景不完全对应。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0003",
+            "judgment": "negative_ok",
+            "reason": "主题为平板与手机数据同步异常，与发热无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "主题为笔记本维修时长，与手机发热处理无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0050",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "主题为屏幕触控异常，与系统卡顿和自动重启无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0003",
+            "judgment": "negative_ok",
+            "reason": "说明非官方系统导致软件故障的保修免责，未提供卡顿重启的处理建议。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0002",
+            "judgment": "negative_ok",
+            "reason": "主题为投诉升级路径，与系统卡顿处理无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0003",
+            "judgment": "negative_ok",
+            "reason": "主题为摄像头模糊或无法对焦，与卡顿重启无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1133,
+    "prompt_tokens": 4714,
+    "total_tokens": 5847,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4714
+  },
+  "model": "deepseek-flash",
+  "response_id": "1e26f7f2-1c06-4d30-b67d-a331834f0b43"
+}

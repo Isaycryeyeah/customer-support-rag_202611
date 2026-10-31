@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0096",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0001",
+            "judgment": "positive_like",
+            "reason": "明确提到风扇异响应停止使用并送修检测，直接支持异响属于需处理的硬件异常，与保修判断相关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0003",
+            "judgment": "positive_like",
+            "reason": "说明风扇异响应联系售后检测散热模组，直接支持异响属硬件故障需售后处理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及发票丢失后的购买凭证查询，与风扇异响是否保修无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及进液紧急处理，与风扇异响保修问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0097",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0002",
+            "judgment": "positive_like",
+            "reason": "列出保修所需材料（发票、序列号、故障描述），虽为手机/平板但直接支持材料清单结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "描述维修申请流程，未涉及申请保修需准备的材料清单。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "仅涉及进液禁止处理方式，与保修材料无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "仅涉及电池衰减检测更换，与保修申请材料无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0101",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "positive_like",
+            "reason": "明确列出进液等意外损坏通常不在保修范围，直接支持进水后能否保修的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "仅涉及电池衰减处理，与进水导致主板损坏的保修问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "涉及换货不适用情况，虽提及进水但针对换货而非保修问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0004",
+            "judgment": "negative_ok",
+            "reason": "手机/平板电池日常建议，与笔记本进水保修无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0102",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及进液后的紧急处理步骤，未回答潮湿环境使用建议或浴室使用风险。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0002",
+            "judgment": "positive_like",
+            "reason": "明确建议避免在浴室等潮湿环境充电，直接支持官方对潮湿环境使用的建议。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0003",
+            "judgment": "negative_ok",
+            "reason": "仅涉及购买凭证查询，与潮湿环境使用风险无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本无法开机排查，与手机潮湿环境使用无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0104",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "明确说明寄修前建议备份数据且官方不承担数据恢复责任，直接支持两个子问题结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "明确建议寄修前自行备份数据，直接支持流程中提醒备份的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "仅涉及人工客服转接流程，与寄修备份及数据恢复责任无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "仅涉及长期存放电池建议，与寄修数据备份问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0106",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0003",
+            "judgment": "positive_like",
+            "reason": "说明风扇异响应停止高负载并联系售后检测散热模组，直接支持异响处理结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "positive_like",
+            "reason": "明确禁止用户自行拆开后盖取出电池，直接支持不能自行拆开处理的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "涉及换货不适用情况，与过热异响原因及自行拆机问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "仅涉及退货流程，与电池过热异响及自行处理问题无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1187,
+    "prompt_tokens": 5303,
+    "total_tokens": 6490,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5303
+  },
+  "model": "deepseek-flash",
+  "response_id": "596ec6ac-45af-440c-9900-999f020656c1"
+}

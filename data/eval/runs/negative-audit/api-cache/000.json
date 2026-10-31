@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0001",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "讨论屏幕液晶漏液而非电池漏液，与问题主题不同，但未直接支持或否定电池漏液处理结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲电池鼓包处理，未涉及漏液接触后的处理，与问题必要结论无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0001",
+            "judgment": "negative_ok",
+            "reason": "仅说明智能客服能力范围，不提供漏液接触处理支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0002",
+            "judgment": "negative_ok",
+            "reason": "投诉升级规则，与漏液接触处理无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0002",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "positive_like",
+            "reason": "直接支持“烫手应停止充电”的结论，虽未覆盖床上充电部分。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "针对充电器插头发烫等异常，未直接回答手机充电烫手能否继续及床上充电问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0004",
+            "judgment": "negative_ok",
+            "reason": "日常充电存放建议，未涉及烫手是否继续充电或床上充电风险。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0003",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲充电器/插座冒烟处理，未涉及手机冒烟焦味及能否用水浇的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲设备进液处理，与冒烟焦味及锂电池火情能否用水无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "人工客服工作时间，与应急处理无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "快充使用建议，未涉及冒烟焦味处理。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0004",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0002",
+            "judgment": "positive_like",
+            "reason": "提供充电环境安全做法（避免潮湿、覆盖充电），直接支持保护电池减少隐患的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "dangerous_operations_0000",
+            "judgment": "negative_ok",
+            "reason": "禁止的危险操作清单，非日常充电存放建议，不直接支持问题结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "换货不适用情况，与充电存放保护电池无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0001",
+            "judgment": "negative_ok",
+            "reason": "拆机主板危险操作，与日常充电存放建议无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0005",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "明确不应自行拆卸鼓包电池并建议联系售后，直接支持“不能自己拆后盖取电池”的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "dangerous_operations_0000",
+            "judgment": "positive_like",
+            "reason": "严禁自行拆卸电池，直接支持不能自行取出电池的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "保修期限，未回答能否自行拆后盖取电池。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0001",
+            "judgment": "negative_ok",
+            "reason": "投诉处理原则，与拆电池问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0006",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0003",
+            "judgment": "positive_like",
+            "reason": "直接支持高负载风扇声大属正常及何时需停用送修的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "长期存放建议，未涉及游戏时风扇噪音和过热送修判断。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0002",
+            "judgment": "negative_ok",
+            "reason": "保修标签缺失说明，与风扇噪音过热问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "保修期限，未回答正常性及送修条件。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1138,
+    "prompt_tokens": 4843,
+    "total_tokens": 5981,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4843
+  },
+  "model": "deepseek-flash",
+  "response_id": "cfc29716-61d8-4f05-9256-09461c8d9b31"
+}

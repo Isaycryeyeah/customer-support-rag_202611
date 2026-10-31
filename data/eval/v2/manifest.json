@@ -1,0 +1,16 @@
+{
+  "query_count": 66,
+  "answerable_count": 56,
+  "test_sha256": "29e0d9559a09f4a712f8a1771595327aa67609e7193227793559e34bfba0c7a9",
+  "rejected_candidates": [
+    "new_000",
+    "new_002",
+    "new_010",
+    "new_020"
+  ],
+  "no_reused_support_sets": true,
+  "max_allowed_wording_similarity_to_previous": 0.8,
+  "frozen_before_clean_training": true,
+  "human_labels_verified": false,
+  "scope": "additional synthetic held-out data-quality study; known KB facts still shared"
+}

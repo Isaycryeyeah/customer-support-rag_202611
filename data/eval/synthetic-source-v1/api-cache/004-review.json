@@ -1,0 +1,140 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0024",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的手机在官方维修时因为换硬件把里面的照片和资料弄丢了，你们能帮我把数据恢复回来吗？",
+        "expected_points": [
+          "因维修更换硬件导致的数据丢失，官方不承担数据恢复责任",
+          "官方会尽量在检测和维修过程中保护用户数据不被泄露"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0025",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，隐私泄露怀疑属投诉，需转人工，风险与转人工判断适当。",
+        "question": "我怀疑上次维修的时候维修人员偷看了我手机里的聊天记录，你们必须马上给我查清楚到底有没有泄露！",
+        "expected_points": [
+          "怀疑维修过程中存在数据隐私泄露应作为高优先级投诉转人工处理",
+          "不能由智能客服直接判断是否存在泄露行为"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          }
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0026",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我上周刚收到的手机现在开不了机，还在15天以内，能直接换一台新的吗？",
+        "expected_points": [
+          "自收到商品之日起15天内出现官方认定的性能故障（如无法开机）可申请换新，无需承担额外费用",
+          "超过15天但在保修期内出现故障按保修政策走维修流程，不再适用换新政策"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0000",
+            "quote": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0027",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我想申请换货，具体要走哪些步骤？寄回去之后大概怎么处理？",
+        "expected_points": [
+          "用户提交换货申请并描述故障现象",
+          "官方客服初步判断是否符合换新条件",
+          "用户寄回故障机，官方检测确认故障属实",
+          "检测通过后寄出全新或同型号换新机"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0001",
+            "quote": "1. 用户提交换货申请并描述故障现象；\n2. 官方客服初步判断是否符合换新条件；\n3. 用户寄回故障机，官方检测确认故障属实；\n4. 检测通过后寄出全新或同型号换新机。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "通用"
+      },
+      {
+        "task_id": "t0028",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，用户要求跳过检测直接承诺换新属换货审批边界，风险与转人工判断适当。",
+        "question": "我的手机屏幕显示有问题，能不能别检测了，你们现在就答应给我换新机直接寄过来？",
+        "expected_points": [
+          "换货申请必须经过官方检测确认故障",
+          "客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0002",
+            "quote": "换货申请必须经过官方检测确认故障，客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出。"
+          }
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": false,
+        "device_type": "手机"
+      },
+      {
+        "task_id": "t0029",
+        "accepted": true,
+        "reason": "问题可由片段回答，证据原文存在且支持要点，无未知承诺，非标题抄写，风险与转人工判断适当。",
+        "question": "我的手机是摔过之后坏的，还在换新期内，这种情况还能申请换新吗？",
+        "expected_points": [
+          "人为损坏（摔落、进水、私自拆机等）通常不适用换新政策",
+          "已超过换新政策规定的时间窗口也不适用换新"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0003",
+            "quote": "以下情况通常不适用换新政策：\n\n- 人为损坏（摔落、进水、私自拆机等）；\n- 故障无法复现，且经检测确认设备功能正常；\n- 已超过换新政策规定的时间窗口。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1135,
+    "prompt_tokens": 2048,
+    "total_tokens": 3183,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2048
+  },
+  "model": "deepseek-flash",
+  "response_id": "852714d6-faef-47ae-aa3c-113b1e02a6d5"
+}

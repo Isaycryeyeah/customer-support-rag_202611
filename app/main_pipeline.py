@@ -3,10 +3,14 @@ from uuid import uuid4
 
 from app.generation.llm_client import FALLBACK_ANSWER
 from app.generation.prompt import build_rag_prompt
+from app.generation.citations import format_citations, group_sources
 from app.safety.risk_detector import detect_risk
-from app.safety.refusal import LOW_CONFIDENCE_ANSWER, build_high_risk_refusal
+from app.safety.scope import classify_scope
+from app.safety.refusal import LOW_CONFIDENCE_ANSWER, OUT_OF_SCOPE_ANSWER, build_high_risk_refusal
 from app.ticket.classifier import classify_ticket
 from app.ticket.ticket_builder import build_ticket
+
+ANSWER_POLICY_VERSION = '2026-10-31-human-feedback-v1'
 
 
 class CustomerSupportRAG:
@@ -28,14 +32,20 @@ class CustomerSupportRAG:
         timings = {'risk_ms': 0.0, 'retrieval_ms': 0.0, 'rerank_ms': 0.0, 'llm_ms': 0.0}
         mark = time.perf_counter()
         risk_info = detect_risk(query)
+        domain_scope = classify_scope(query)
         timings['risk_ms'] = (time.perf_counter() - mark) * 1000
         contexts, candidates, generation = [], [], None
         low_confidence = False
         handoff_reason = None
+        sources = []
+        citation_status = {'status': 'not_applicable', 'invalid_passage_ids': []}
         if risk_info['risk_level'] == 'high':
             answer_type = 'safety_refusal'
-            answer = build_high_risk_refusal(risk_info['risk_types'])
+            answer = build_high_risk_refusal(risk_info['risk_types'], query)
             handoff_reason = 'safety_risk'
+        elif domain_scope == 'out_of_scope':
+            answer_type, answer = 'low_confidence', OUT_OF_SCOPE_ANSWER
+            low_confidence = True
         else:
             mark = time.perf_counter()
             candidates = self.hybrid_retriever.search(query, top_k=self.rerank_k, candidate_k=self.candidate_k)
@@ -52,10 +62,11 @@ class CustomerSupportRAG:
                 timings['llm_ms'] = generation.elapsed_ms
                 if generation.success:
                     answer_type, answer = 'generated', generation.text
+                    answer, sources, citation_status = format_citations(answer, contexts)
                 else:
                     answer_type, answer = 'service_unavailable', FALLBACK_ANSWER
                     handoff_reason = 'service_unavailable'
-        if handoff_reason is None and risk_info['need_human']:
+        if handoff_reason is None and risk_info['need_human'] and domain_scope != 'out_of_scope':
             handoff_reason = 'policy_review'
         need_human = handoff_reason is not None
         ticket = build_ticket(query, answer, risk_info, classify_ticket(query, risk_info),
@@ -68,9 +79,12 @@ class CustomerSupportRAG:
             'contexts': contexts, 'low_confidence': low_confidence,
             'need_human': need_human, 'handoff_reason': handoff_reason, 'ticket': ticket,
             'generation': generation.to_dict() if generation else None,
+            'domain_scope': domain_scope,
+            'sources': sources or group_sources(contexts), 'citation_status': citation_status,
             'timings': timings,
             'retrieval_trace': [{k: c[k] for k in ('chunk_id', 'bm25_score', 'dense_score', 'hybrid_score') if k in c}
                                 for c in candidates],
             'config': {'threshold': self.threshold, 'candidate_k': self.candidate_k,
-                       'rerank_k': self.rerank_k, 'context_k': self.context_k},
+                       'rerank_k': self.rerank_k, 'context_k': self.context_k,
+                       'answer_policy_version': ANSWER_POLICY_VERSION},
         }

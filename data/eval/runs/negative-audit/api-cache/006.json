@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0061",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "negative_ok",
+            "reason": "讲平板配件连接问题，与电量消耗异常无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本无法开机，产品与故障均不相关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "讲换货不适用情况，不涉及电量校准或电池检测。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲进液紧急处理，与电量异常无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0063",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲15天换新政策，未提供换屏或换电池价格。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲保修期限，不涉及维修费用。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0000",
+            "judgment": "negative_ok",
+            "reason": "讲购买凭证类型，与维修价格无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲充电器外观检查，不涉及换屏换电池费用。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0064",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_0003",
+            "judgment": "positive_like",
+            "reason": "提到费用以检测后官方报价为准，直接支持检测后报价这一环节。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0004",
+            "judgment": "positive_like",
+            "reason": "提到具体费用以检测后报价为准，支持检测后报价流程。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "讲换货不适用情况，与报价确认流程无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲充电异常处理，与维修报价确认无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0066",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0003",
+            "judgment": "negative_ok",
+            "reason": "讲摄像头模糊排查，未涉及寄修时长。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "讲保修范围，未涉及维修时长。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0003",
+            "judgment": "negative_ok",
+            "reason": "重复片段，讲摄像头模糊排查，未涉及寄修时长。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "讲转人工流程，与维修时长无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0069",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲15天换新政策，非维修申请流程或寄修准备。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲保修所需材料，非维修申请流程或寄修前数据备份准备。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0001",
+            "judgment": "negative_ok",
+            "reason": "讲平板键盘连接问题，与笔记本维修流程无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0001",
+            "judgment": "negative_ok",
+            "reason": "讲智能客服能力边界，未描述维修申请流程。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0070",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_0001",
+            "judgment": "ambiguous",
+            "reason": "给出手机/平板维修时长，产品类别不符，但时长结构相近，不能确定是否可迁移。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本保修期限，未涉及维修时长。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕触控异常排查，与键盘更换时长无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0003",
+            "judgment": "negative_ok",
+            "reason": "讲危险操作应答原则，与维修时长无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1051,
+    "prompt_tokens": 4853,
+    "total_tokens": 5904,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4853
+  },
+  "model": "deepseek-flash",
+  "response_id": "be66edb5-2c80-4b6a-9fd9-96e137a2ed57"
+}

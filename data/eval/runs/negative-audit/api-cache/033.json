@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0341",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0004",
+            "judgment": "ambiguous",
+            "reason": "涉及隐私投诉转人工，与安全事故投诉升级处理主题相近，但未直接说明升级处理方式或客服工作时间。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "complaint_escalation_0001",
+            "judgment": "positive_like",
+            "reason": "明确说明投诉将被记录并升级至客户体验组处理，直接支持投诉升级处理这一必要结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "键盘故障排查，与投诉升级和客服工作时间无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0000",
+            "judgment": "negative_ok",
+            "reason": "电池危险操作清单，与问题主题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0342",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "通用无法开机排查建议充电后开机，与进水后不应开机的结论相悖，不构成支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "positive_like",
+            "reason": "禁止使用来源不明第三方快充头，直接支持进水后不宜继续使用第三方充电器的相关结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "非官方维修记录影响保修，与进水后能否开机或充电无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0002",
+            "judgment": "negative_ok",
+            "reason": "售后承诺边界说明，与进水处理问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0345",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "保修期限说明，与电池鼓包焦味处理及碎屏继续使用风险无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "明确电池鼓包应立即停止使用、断开电源并联系售后，直接支持鼓包处理结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0002",
+            "judgment": "negative_ok",
+            "reason": "凭证与保修期计算，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0002",
+            "judgment": "negative_ok",
+            "reason": "屏幕漏光偏色排查，与碎屏继续使用风险无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0349",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "ambiguous",
+            "reason": "针对笔记本电池衰减检测与更换评估，与平板电池健康度检测主题相近，但产品类型不同，不能直接支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "保修期限说明，未涉及电池健康度检测或换电池费用。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "invoice_proof_0003",
+            "judgment": "negative_ok",
+            "reason": "无凭证查询购买记录，与电池检测和费用无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修不覆盖情况，与平板电池问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0351",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "15天换新政策，与第三方换屏后其他部件保修及电池保修期无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0004",
+            "judgment": "positive_like",
+            "reason": "示例中明确电池保修期至购买后6个月，直接支持电池保修期多久这一结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "充电器选择建议，与保修问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "电池漏液处理，与保修问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0355",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "针对第三方渠道购买丢失发票，与用户官方渠道购买场景不符，不直接支持补开发票结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "ambiguous",
+            "reason": "笔记本保修所需材料含发票和序列号，与标签撕毁序列号模糊能否保修主题相关，但产品类型不同且未直接回答。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0002",
+            "judgment": "negative_ok",
+            "reason": "屏幕漏光偏色，与保修和补开发票无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "禁止自行更换第三方屏幕，与问题无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1156,
+    "prompt_tokens": 5650,
+    "total_tokens": 6806,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5650
+  },
+  "model": "deepseek-flash",
+  "response_id": "ee865934-9265-42f3-b2ec-cb9babfb061d"
+}

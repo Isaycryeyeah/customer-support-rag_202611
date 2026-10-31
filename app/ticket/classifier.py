@@ -21,7 +21,7 @@ def classify_ticket(query: str, risk_info: Dict) -> Dict:
     if "complaint" in risk_types:
         return {
             "category": "投诉升级",
-            "priority": "中",
+            "priority": "高" if any(word in query for word in ('隐私', '数据', '偷看')) else "中",
             "department": "客户体验组"
         }
 

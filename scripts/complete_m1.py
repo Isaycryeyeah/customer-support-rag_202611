@@ -15,6 +15,8 @@ def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
 
 
 if __name__=='__main__':
+    if Path('data/eval/runs/m1-summary.json').exists():
+        raise SystemExit('M1 was already recorded; do not overwrite historical acceptance.')
     baseline=read('data/eval/runs/m1-test-baseline/report.json')['selected']
     candidate=read('data/eval/runs/m1-test-selected/report.json')['selected']
     online_base=read('data/eval/runs/m1-online-baseline/report.json')

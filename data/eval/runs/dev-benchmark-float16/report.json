@@ -1,0 +1,169 @@
+{
+  "created_at": "2026-10-31T02:45:35.867291+00:00",
+  "claim_scope": "exploratory development experiment; not an independent test or end-to-end API latency",
+  "config": {
+    "input": "data/eval/v1/dev.jsonl",
+    "dataset_role": "dev",
+    "output": "data/eval/runs/dev-benchmark-float16",
+    "repeats": 3,
+    "candidate_k": 50,
+    "pools": [
+      10,
+      20,
+      30
+    ],
+    "seed": 20261031,
+    "dtype": "float16"
+  },
+  "dataset_sha256": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c",
+  "knowledge_manifest": {
+    "chunks_sha256": "6c7cc7fb8caf7e6bf85ae79573ddc7507c0b74418dfbd87ef4b57b08cbcff654",
+    "model_name": "BAAI/bge-small-zh-v1.5",
+    "dimension": 512,
+    "chunk_count": 103,
+    "model_revision": "7999e1d3359715c523056ef9478215996d62a620"
+  },
+  "cold_model_load_ms": 42278.623700000026,
+  "source_sha256": {
+    "app/config.py": "b16b4799d95c61587ce4d05f3ade2cbc43f5eee2ae907c7ba68a06f21e9439de",
+    "app/main.py": "11ebef659e907e6f1f6ca86c01ba0b2c508f66204b4cd732f5cd81f9f63a74e8",
+    "app/main_pipeline.py": "1c72f4adc09aa2c7b0e8fc9306e81e62b07d20f4b15f66dd4daa66bce6fb1c6d",
+    "app/schemas.py": "367c33bc05ac0cfe5f100e50bb8f52353ba8f0f59df291c37a96ffa2c9f49d95",
+    "app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/evaluation/eval_generation.py": "fdb3de3c97883417f71a29b6c750b0306627af2153ef5555995a7388612f5d54",
+    "app/evaluation/eval_retrieval.py": "fdc86aaa2abdec60ed53d1776efa5a779c21365aa5ab5c77d5a9a29dd938d1f3",
+    "app/evaluation/eval_safety.py": "0fdcdc5ab24bf80e7614f4a0e2c2b1faa7c0d9b83f90956f77f875c186d96f5e",
+    "app/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/generation/llm_client.py": "21aeafae252b47d59481460e87cc668c50abf463f33cce82446324ac26fab1c1",
+    "app/generation/prompt.py": "18d7de8a5f4da4a1792a7660a4f9c0a107400e96d0a24855864bf62469a9640e",
+    "app/generation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/ingestion/chunker.py": "dc7de821a0782e7c04dd58d617f56380699a108563faada0a75c168e50d64480",
+    "app/ingestion/cleaner.py": "e089172dc4ca904b0bd75314044a326541af2fe6cfac5fb017742cb60080dcec",
+    "app/ingestion/loader.py": "a52140b6b703e328efecf918ec74c5588d4b5b8512bc4a9ba64f884120484a9f",
+    "app/ingestion/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/retrieval/bm25_retriever.py": "43fb588c99403c0ac45c1621d098f92c3e2f19e60905a479023670c46bec00ec",
+    "app/retrieval/dense_retriever.py": "f9f80f9f4fbf072b7e111cae1b9c4b9de8df5ef24d794775918a52b09e9133cb",
+    "app/retrieval/hybrid_retriever.py": "02711aadefb40a36fccf070c0dec71e2da7eafadccd6e63fbfd30cc2599bd568",
+    "app/retrieval/reranker.py": "a98dc0aba506c47bd25d325a8ee1c359f68891be5e06fc0d92dff5b00e055c53",
+    "app/retrieval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/safety/policy.py": "428552f4eaebdb50bb8d7011ee8effa3768a84586a90c3286bfd7220817c3d42",
+    "app/safety/refusal.py": "f46affffd1063f07008543f4df7c57728da62e694f4eb95c2a89b2af0f3448b2",
+    "app/safety/risk_detector.py": "6832c04451bdd17a43ca19e952bde4f68977704ab672cb9cc5f97a08de562b67",
+    "app/safety/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/storage/db.py": "6ea753064aea9ee40bc7c4a1c31a645ad821a94263207142f83dd02c83b54846",
+    "app/storage/models.py": "eef8ba36e774a7565e6f6d7910a6b5c19dee34c77d068206be9035f6c53f8a4f",
+    "app/storage/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/ticket/classifier.py": "32838189a93343d14a2821732e33a7d2a0b48cd8e475851a7f45fa49546f97d3",
+    "app/ticket/ticket_builder.py": "11753746b131cca2e4efefdc330ce4d59b9b6705d214adb2b37ea07199f22af3",
+    "app/ticket/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/audit_annotations.py": "acc83cc92d27c031c41e753e694150ee852a40bedac1758fa782dd89806997df",
+    "scripts/benchmark.py": "f8b83d3d3896a4d70d7baa84a8181f4b656b4e1f376cfcd8aeb664ff13279cb5",
+    "scripts/build_chunks.py": "1a3e0d5bb2184a14a504a12038db4aad23878b1d313b4b865e9e39383a3c5025",
+    "scripts/build_index.py": "cbd57345e0eea7429ab4c39754a84f26363eb414dfbc7e2235a060bfd3c80497",
+    "scripts/build_synthetic_dataset.py": "7333b1697e471248f62cc6279d15562ef884717dcd2e270c7eb9001eb898b99b",
+    "scripts/capture_baseline.py": "dc1dcfccb46e78b222c1596d6720b95b8dceb9e5496afbe875c8fa5acf8d8749",
+    "scripts/freeze_m1.py": "7de18bb1d0024e4895836850646326da6db4ebf628158ded334530b17faaa073",
+    "scripts/online_evaluation.py": "9118a13805238ffeb65d597b09ff5d01051e2291aaaba56c496cdb74920641ca",
+    "scripts/prepare_eval.py": "abaa8781e84941eb8a92ffed12a369e2a51dd801f07b9e989f1c781b73d3a0b0",
+    "scripts/prepare_training.py": "05d5107a2bf379ae0ff412939e9cff0dd1e54959252250004b92aac896ccbcfe",
+    "scripts/repack_installed_wheel.py": "cea533017d0c7e6acd475a8d63370ebb9817d417f0f120dae1ac03ab3b7c5d92",
+    "scripts/reselect_dev.py": "3fe8b8c37a62e49746f848438a3e6406a89e2205889f85749c214bcd56a0b9c2",
+    "scripts/retrieval_experiment.py": "88f09a6b5fe20b9530bde904b4ac0fbce752de6dca9847a565c14f8e4044b2c7",
+    "scripts/run_eval.py": "9af6adb00058ab7ee97626f428fff8bc190b1abf17fcc6715db8837ebc69e299",
+    "scripts/test_deepseek_connection.py": "425e2398ac282da32b1519fc952e9e7522459d593cec4b67f9b38d137bd52519",
+    "scripts/train_reranker.py": "63b74656aa11c499dcbce4e98e3d3fda181bdbe3c6443f735a4cc0148dad7c40"
+  },
+  "device": "cuda:0",
+  "torch_version": "2.6.0+cu124",
+  "reranker_model": "BAAI/bge-reranker-base",
+  "bm25_weight": 0.3,
+  "reranker_revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "warmup_queries": 1,
+  "warmup_per_pool": 1,
+  "concurrency": 1,
+  "cuda": true,
+  "cpu_threads": 8,
+  "summary": {
+    "10": {
+      "hit@1": 0.8311688311688312,
+      "hit@3": 0.987012987012987,
+      "hit@5": 0.987012987012987,
+      "recall@1": 0.5064935064935064,
+      "recall@3": 0.7922077922077922,
+      "recall@5": 0.8441558441558441,
+      "mrr@10": 0.9025974025974026,
+      "ndcg@5": 0.8057848464984401,
+      "sample_count": 89,
+      "answerable_count": 77,
+      "unanswerable_count": 12,
+      "candidate_recall": 0.8896103896103896,
+      "timing_samples": 267,
+      "retrieval_ms": {
+        "p50": 6.54090000080032,
+        "p95": 7.792570000219712
+      },
+      "rerank_ms": {
+        "p50": 20.949799999470997,
+        "p95": 31.69828999989477
+      },
+      "pipeline_ms": {
+        "p50": 27.753499999562337,
+        "p95": 37.714369999503106
+      }
+    },
+    "20": {
+      "hit@1": 0.8311688311688312,
+      "hit@3": 0.987012987012987,
+      "hit@5": 1.0,
+      "recall@1": 0.5064935064935064,
+      "recall@3": 0.8051948051948052,
+      "recall@5": 0.8701298701298701,
+      "mrr@10": 0.9036796536796536,
+      "ndcg@5": 0.8206023973991227,
+      "sample_count": 89,
+      "answerable_count": 77,
+      "unanswerable_count": 12,
+      "candidate_recall": 0.935064935064935,
+      "timing_samples": 267,
+      "retrieval_ms": {
+        "p50": 6.54090000080032,
+        "p95": 7.792570000219712
+      },
+      "rerank_ms": {
+        "p50": 36.92640000008396,
+        "p95": 54.99752000041553
+      },
+      "pipeline_ms": {
+        "p50": 43.805999999676715,
+        "p95": 61.56880000016827
+      }
+    },
+    "30": {
+      "hit@1": 0.8311688311688312,
+      "hit@3": 0.987012987012987,
+      "hit@5": 1.0,
+      "recall@1": 0.5064935064935064,
+      "recall@3": 0.8051948051948052,
+      "recall@5": 0.8701298701298701,
+      "mrr@10": 0.9036796536796536,
+      "ndcg@5": 0.8206023973991227,
+      "sample_count": 89,
+      "answerable_count": 77,
+      "unanswerable_count": 12,
+      "candidate_recall": 0.9675324675324676,
+      "timing_samples": 267,
+      "retrieval_ms": {
+        "p50": 6.54090000080032,
+        "p95": 7.792570000219712
+      },
+      "rerank_ms": {
+        "p50": 51.556499999605876,
+        "p95": 80.62715999985812
+      },
+      "pipeline_ms": {
+        "p50": 58.14760000066599,
+        "p95": 87.73999000050026
+      }
+    }
+  }
+}

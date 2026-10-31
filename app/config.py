@@ -12,7 +12,7 @@ _deployment = json.loads(_deployment_path.read_text(encoding='utf-8')) if _deplo
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "deepseek")
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
-DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
+DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-flash")
 
 CHUNKS_PATH = str(BASE_DIR / "data" / "processed" / "chunks.jsonl")
 FAISS_INDEX_PATH = str(BASE_DIR / "data" / "processed" / "faiss.index")

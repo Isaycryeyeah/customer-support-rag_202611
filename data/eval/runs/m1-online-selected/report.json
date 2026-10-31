@@ -1,0 +1,135 @@
+{
+  "created_at": "2026-10-31T02:52:06.351538+00:00",
+  "frozen": {
+    "model": "BAAI/bge-reranker-base",
+    "dev_sha256": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c",
+    "risk_detector_sha256": "6832c04451bdd17a43ca19e952bde4f68977704ab672cb9cc5f97a08de562b67",
+    "test_v1_sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+    "selection_scope": "DEV only; test file hash recorded without scoring",
+    "acceptance_gate": "test Hit@5/effective Recall@5 drop <= .02, no-answer refusal recall non-inferior; otherwise retain baseline",
+    "dtype": "float16",
+    "pool": 20,
+    "threshold": 0.6,
+    "dev_metrics": {
+      "hit@1": 0.8311688311688312,
+      "hit@3": 0.987012987012987,
+      "hit@5": 1.0,
+      "recall@1": 0.5064935064935064,
+      "recall@3": 0.8051948051948052,
+      "recall@5": 0.8701298701298701,
+      "mrr@10": 0.9036796536796536,
+      "ndcg@5": 0.8206023973991227,
+      "sample_count": 89,
+      "answerable_count": 77,
+      "unanswerable_count": 12,
+      "effective_recall@5": 0.847457627118644,
+      "refusal": {
+        "evaluated_count": 71,
+        "excluded_count": 18,
+        "true_refusals": 12,
+        "false_refusals": 1,
+        "unsupported_answers": 0,
+        "correct_answers_decision": 58,
+        "precision": 0.9230769230769231,
+        "recall": 1.0,
+        "false_refusal_rate": 0.01694915254237288,
+        "unsupported_answer_rate": 0.0,
+        "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+      },
+      "recognized_high_risk_fraction": 1.0
+    },
+    "dev_timing_speedup_fraction": 0.6710831703538663,
+    "precision_quality_gate": true
+  },
+  "input_sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+  "sample_count": 12,
+  "answer_types": {
+    "generated": 5,
+    "low_confidence": 4,
+    "safety_refusal": 3
+  },
+  "sample_query_ids": [
+    "syn_t0108",
+    "syn_t0350",
+    "ood_035",
+    "syn_t0093",
+    "syn_t0255",
+    "ood_023",
+    "syn_t0343",
+    "syn_t0196",
+    "ood_045",
+    "syn_t0332",
+    "syn_t0169",
+    "ood_021"
+  ],
+  "sampling": "seed 20261031, round-robin normal/safety/unanswerable audit; not a real traffic mix",
+  "service_failure_rate": 0.0,
+  "refusal": {
+    "evaluated_count": 8,
+    "excluded_count": 4,
+    "true_refusals": 4,
+    "false_refusals": 0,
+    "unsupported_answers": 0,
+    "correct_answers_decision": 4,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_refusal_rate": 0.0,
+    "unsupported_answer_rate": 0.0,
+    "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+  },
+  "timings": {
+    "retrieval_ms": {
+      "p50": 8.138800000324409,
+      "p95": 97.3488999999971
+    },
+    "rerank_ms": {
+      "p50": 154.1917000004105,
+      "p95": 301.4311750003344
+    },
+    "llm_ms": {
+      "p50": 0.0,
+      "p95": 4787.965290000009
+    },
+    "total_ms": {
+      "p50": 249.97130000019752,
+      "p95": 5105.384075000709
+    }
+  },
+  "serial_requests_per_second": 0.5501263736552238,
+  "token_usage": {
+    "prompt_tokens": 3961,
+    "completion_tokens": 2457,
+    "cached_input_tokens": 2816
+  },
+  "generation_cost_estimate_usd": 0.001654398,
+  "generation_cost_per_1000_requests_usd": 0.1378665,
+  "pricing_source": {
+    "verified_at": "2026-10-31",
+    "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "model": "deepseek-flash",
+    "currency": "USD",
+    "unit_tokens": 1000000,
+    "off_peak": {
+      "cache_hit_input": 0.003,
+      "cache_miss_input": 0.15,
+      "output": 0.6
+    },
+    "peak": {
+      "cache_hit_input": 0.006,
+      "cache_miss_input": 0.3,
+      "output": 1.2
+    },
+    "schedule": "Peak Mon-Fri 01:00-04:00 and 06:00-10:00 UTC, excluding Chinese public holidays; all other periods off-peak.",
+    "experiment_rate": "off_peak",
+    "experiment_rate_reason": "2026-10-31 is Saturday; no peak period applies.",
+    "note": "Estimate from token counters, not a billing statement; reasoning tokens are included in completion_tokens."
+  },
+  "judge_scope": "same-model AI evidence scoring, not human agreement or independent judge validation",
+  "ai_judge_mean": {
+    "factual_support": 1.6666666666666667,
+    "point_coverage": 1.6666666666666667,
+    "citation_support": 1.6666666666666667
+  },
+  "dangerous_guidance_flags": 0,
+  "unauthorized_promise_flags": 0
+}

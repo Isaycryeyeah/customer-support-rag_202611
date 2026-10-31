@@ -1,0 +1,134 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0090",
+        "question": "我上个月买的云枢手机，现在电池不太耐用了，电池的保修期是多久？",
+        "expected_points": [
+          "手机整机保修期为购买之日起12个月",
+          "电池作为易耗部件保修期为6个月",
+          "保修期以购机发票或电子凭证日期为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户询问手机电池的保修期限，需要该片段中关于整机与电池保修期及起算依据的内容。"
+      },
+      {
+        "task_id": "t0091",
+        "question": "我的云枢平板屏幕显示出现异常，这种情况属于保修范围吗？",
+        "expected_points": [
+          "保修范围包括非人为原因导致的硬件故障",
+          "屏幕显示异常属于保修范围示例"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0001",
+            "quote": "保修范围包括非人为原因导致的硬件故障，例如主板故障、屏幕显示异常、摄像头模组故障、按键失灵等。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "平板",
+        "rationale": "用户想确认屏幕显示异常是否在保修范围内，需要该片段中保修范围及示例的内容。"
+      },
+      {
+        "task_id": "t0092",
+        "question": "我要给云枢手机申请保修，需要准备哪些材料？",
+        "expected_points": [
+          "需提供购买发票或电子凭证",
+          "需提供设备序列号（IMEI或SN码）",
+          "需提供故障现象描述，必要时提供故障照片或视频"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0002",
+            "quote": "申请保修需提供以下材料：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（IMEI 或 SN 码）；\n3. 故障现象描述，必要时提供故障照片或视频。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户询问申请保修所需材料，需要该片段列出的材料清单。"
+      },
+      {
+        "task_id": "t0093",
+        "question": "我的云枢手机还没送去检测，你能直接帮我确认这次保修一定能通过吗？",
+        "expected_points": [
+          "保修申请需经过官方售后检测确认故障原因后方可批准",
+          "客服人员无法在未检测的情况下直接承诺保修通过",
+          "具体审批结果以检测报告为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0003",
+            "quote": "保修申请需经过官方售后检测确认故障原因后方可批准，客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准。"
+          }
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "device_type": "手机",
+        "rationale": "用户要求客服在未检测情况下直接承诺保修通过，涉及越权批准，需要该片段说明审批须以检测报告为准。"
+      },
+      {
+        "task_id": "t0094",
+        "question": "我2026年1月10日买的云枢手机，整机和电池的保修期分别到哪天？",
+        "expected_points": [
+          "整机保修期至2027年1月9日",
+          "电池保修期至2026年7月9日"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0004",
+            "quote": "例如用户于 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户按具体购机日期询问保修截止日，需要该片段中的保修期计算示例。"
+      },
+      {
+        "task_id": "t0095",
+        "question": "云枢笔记本的整机和电池保修期各是多久？随机附赠的鼠标保修多久？",
+        "expected_points": [
+          "笔记本整机保修期为购买之日起24个月",
+          "电池保修期为12个月",
+          "外接鼠标、键盘等随机赠品配件保修期为6个月"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0000",
+            "quote": "云枢笔记本整机保修期为购买之日起 24 个月，电池保修期为 12 个月，外接鼠标、键盘等随机赠品配件保修期为 6 个月。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "笔记本",
+        "rationale": "用户询问笔记本整机、电池及赠品配件的保修期限，需要该片段中的对应期限说明。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1007,
+    "prompt_tokens": 968,
+    "total_tokens": 1975,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 840
+  },
+  "model": "deepseek-flash",
+  "response_id": "83745da0-c666-4201-8a67-14205386c747"
+}

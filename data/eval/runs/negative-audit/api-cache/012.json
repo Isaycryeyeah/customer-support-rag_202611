@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0125",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "仅讲无法开机时先充电再尝试开机，未涉及屏幕碎裂能否继续用或进液后能否通电测试。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "water_damage_policy_0000",
+            "judgment": "positive_like",
+            "reason": "直接支持进液后不要尝试开机测试这一必要结论，虽不能覆盖屏幕问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0001",
+            "judgment": "negative_ok",
+            "reason": "仅涉及维修时长，与屏幕碎裂使用及进液通电问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_pricing_0002",
+            "judgment": "negative_ok",
+            "reason": "仅涉及费用确认流程，与问题结论无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0126",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及保修期限，未涉及进水紧急处理或长期存放电量。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲电池衰减处理，未给出长期存放电量区间或进水处理步骤。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲充电异常处理，与进水紧急步骤和存放电量无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "仅涉及保修材料，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0127",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "ambiguous",
+            "reason": "讲屏幕漏液处理，与电池漏液安全处理主题相近但对象不同，不能确定是否支持电池漏液结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕碎裂处理，未涉及电池漏液处理或第三方屏幕更换问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0002",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本电池衰减，与手机电池漏液及第三方屏幕无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0002",
+            "judgment": "negative_ok",
+            "reason": "仅涉及投诉升级路径，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0130",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "ambiguous",
+            "reason": "讲笔记本电池鼓包处理，与手机电池鼓包主题相近但产品不同，不能确定是否支持手机鼓包结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及保修期限，未涉及电池鼓包处理或续航下降处理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及维修前数据备份，与问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0001",
+            "judgment": "negative_ok",
+            "reason": "仅描述智能客服能力，与电池问题结论无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0132",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "positive_like",
+            "reason": "直接支持充电温热属正常现象及异常发热需停止充电的结论，与问题相关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲充电异常如插头发烫、冒烟的处理，未涉及床上充电或覆盖散热问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0001",
+            "judgment": "negative_ok",
+            "reason": "仅涉及维修数据访问，与充电安全无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0004",
+            "judgment": "negative_ok",
+            "reason": "仅涉及收费维修说明，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0133",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及保修期限，未给出键盘更换费用或时长。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "讲键盘失灵排查建议，未涉及更换费用或维修时长。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "讲风扇噪音问题，与键盘更换费用和时长无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕漏液处理，与键盘更换问题无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1129,
+    "prompt_tokens": 5564,
+    "total_tokens": 6693,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5564
+  },
+  "model": "deepseek-flash",
+  "response_id": "ea8b5b91-9aa5-470b-8998-5a6689962ba7"
+}

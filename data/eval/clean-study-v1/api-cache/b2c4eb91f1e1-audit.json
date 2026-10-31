@@ -1,0 +1,189 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_610312ad1e",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0003",
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁在设备进液后立即通电测试是否可以使用，短路风险可能导致主板永久性损坏，甚至引发安全事故。"
+          }
+        ],
+        "expected_points": [
+          "严禁自行购买第三方屏幕总成更换，可能损坏内部排线、传感器，且会导致保修失效。",
+          "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理，可能加速腐蚀或短路。",
+          "严禁在设备进液后立即通电测试，短路风险可能导致主板永久损坏甚至安全事故。"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "两个子问题均有直接原文支持：自行换屏风险与保修失效、米缸偏方危害及禁止通电测试。gold片段完整覆盖必要结论。"
+      },
+      {
+        "query_id": "new_b0d86e3e09",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0002",
+          "repair_faq_tablet_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          }
+        ],
+        "expected_points": [
+          "触控板问题先确认系统设置中未被禁用，并检查是否连接外接鼠标导致自动关闭；排除后仍异常建议联系售后检测。",
+          "平板长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准；校准后仍耗电异常快建议联系售后检测电池健康度。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由笔记本触控板FAQ和平板长期存放FAQ直接支持，gold片段准确无噪声。"
+      },
+      {
+        "query_id": "new_c7f673958c",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "invoice_proof_0000",
+          "warranty_exclusions_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0000",
+            "quote": "以下凭证均可作为有效购买凭证：\n\n- 官方商城订单截图或电子发票；\n- 授权线下门店开具的纸质发票或收据；\n- 电商平台（经官方授权店铺）订单详情页。"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0001",
+            "quote": "如设备存在非官方渠道维修记录（例如第三方维修点更换过屏幕、电池等部件），可能影响保修资格评估，需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "有效购买凭证包括官方商城订单截图或电子发票、授权线下门店纸质发票或收据、电商平台授权店铺订单详情页。",
+          "存在非官方渠道维修记录（如第三方更换屏幕）可能影响保修资格评估，需以官方检测结果为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及凭证类型与非官方维修对保修的影响，两个gold片段分别直接支持，结论完整。"
+      },
+      {
+        "query_id": "new_f66f7efde8",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0000",
+          "fast_charging_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；\n- 将电池或设备放入水中、火中处理异常情况；\n- 自行给电池加热或冷冻以\"修复\"故障。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "云枢设备支持最高 66W 快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率。使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          }
+        ],
+        "expected_points": [
+          "严禁自行拆卸、刺破、挤压电池，严禁用针、刀等工具对鼓包电池放气或穿刺处理。",
+          "云枢设备支持最高66W快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率；使用非官方充电器可能无法触发快充或存在兼容性风险。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "鼓包电池穿刺放气属现实安全风险与危险操作诉求，需转人工；快充问题由快充协议片段直接支持。gold片段覆盖必要结论。"
+      },
+      {
+        "query_id": "new_e952929e92",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0002",
+          "complaint_escalation_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0002",
+            "quote": "换货申请必须经过官方检测确认故障，客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出。"
+          },
+          {
+            "chunk_id": "complaint_escalation_0002",
+            "quote": "普通投诉由客户体验组在 1～3 个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+          }
+        ],
+        "expected_points": [
+          "换货申请必须经过官方检测确认故障，客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出。",
+          "普通投诉由客户体验组在1～3个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+        ],
+        "risk_types": [
+          "refund_boundary",
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户要求直接安排换新并投诉，属越权请求与投诉，需转人工；换货审批与投诉时限均有直接原文支持。"
+      },
+      {
+        "query_id": "new_992accf5b9",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0000",
+          "warranty_policy_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0000",
+            "quote": "以下人为原因造成的故障不在免费保修范围内：\n\n- 摔落、挤压导致的外壳破裂、屏幕碎裂；\n- 进水、进液导致的电路损坏；\n- 私自拆机、改装、加装非官方配件；\n- 使用非官方充电器、数据线导致的接口或电池损坏。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0002",
+            "quote": "申请笔记本保修需提供：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（机身底部标签或系统设置中查看）；\n3. 详细故障描述，建议附带截图或录屏。"
+          }
+        ],
+        "expected_points": [
+          "摔落、挤压导致的外壳破裂、屏幕碎裂属于人为损坏，不在免费保修范围内。",
+          "申请笔记本保修需提供购买发票或电子凭证、设备序列号、详细故障描述（建议附带截图或录屏）。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "摔碎屏幕是否免费保修由保修免责片段直接回答，所需材料由笔记本保修政策片段直接列出，gold完整。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1776,
+    "prompt_tokens": 11911,
+    "total_tokens": 13687,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2439
+  },
+  "model": "deepseek-flash",
+  "response_id": "6cae0eee-a29f-4fac-ae6c-367898b54c65"
+}

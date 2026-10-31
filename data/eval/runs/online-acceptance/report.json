@@ -1,0 +1,266 @@
+[
+  {
+    "http_status": 200,
+    "result": {
+      "log_id": 8,
+      "request_id": "b0a2ddd9-1f71-46c0-9b95-70b6b5d748d3",
+      "answer_type": "generated",
+      "question": "手机保修期是多久？",
+      "answer": "结论：\n根据资料，云枢手机整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月；保修期以购机发票或电子凭证日期为准（资料2）。如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准（资料3）。\n\n处理步骤：\n1. 查看购机发票或电子凭证上的购买日期，确认整机与电池各自的保修截止时间（资料2、资料3）。\n2. 若凭证日期与官方系统注册日期不一致，可联系客服协助核实差异原因（资料3）。\n3. 若在保修期内出现故障，按保修政策走维修流程；超过 15 天但在保修期内不再适用换新政策（资料5）。\n\n注意事项：\n- 整机保修 12 个月、电池保修 6 个月，两者期限不同，请分别核对（资料2）。\n- 保修期起算以购买凭证日期为准，但官方系统记录优先（资料3）。\n- 保修审批结果需以实际核实为准，本回答不承诺一定通过。\n- 维修时长仅供参考：一般故障约 3～5 个工作日，主板级故障约 7～10 个工作日，特殊情况可能延长（资料4）。\n\n引用来源：\n- 资料2：data/raw_docs/warranty_policy.md\n- 资料3：data/raw_docs/invoice_proof.md\n- 资料4：data/raw_docs/repair_process.md\n- 资料5：data/raw_docs/exchange_policy.md",
+      "risk_info": {
+        "risk_types": [],
+        "risk_level": "low",
+        "need_human": false
+      },
+      "low_confidence": false,
+      "need_human": false,
+      "handoff_reason": null,
+      "ticket": null,
+      "contexts": [
+        {
+          "chunk_id": "warranty_policy_0004",
+          "doc_id": "warranty_policy",
+          "title": "保修政策（手机 / 平板）",
+          "section": "保修期计算示例",
+          "source": "manual",
+          "source_path": "data/raw_docs/warranty_policy.md",
+          "updated_at": "2026-07-07",
+          "content": "例如用户于 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日。",
+          "bm25_score": 6.560615556789937,
+          "hybrid_score": 0.9514187935102212,
+          "rerank_score": 0.9952606558799744
+        },
+        {
+          "chunk_id": "warranty_policy_0000",
+          "doc_id": "warranty_policy",
+          "title": "保修政策（手机 / 平板）",
+          "section": "保修期限",
+          "source": "manual",
+          "source_path": "data/raw_docs/warranty_policy.md",
+          "updated_at": "2026-07-07",
+          "content": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。",
+          "bm25_score": 7.828311637160754,
+          "hybrid_score": 0.9142395761065232,
+          "rerank_score": 0.9924479722976685
+        },
+        {
+          "chunk_id": "invoice_proof_0002",
+          "doc_id": "invoice_proof",
+          "title": "发票和购买凭证说明",
+          "section": "凭证与保修期计算关系",
+          "source": "manual",
+          "source_path": "data/raw_docs/invoice_proof.md",
+          "updated_at": "2026-07-07",
+          "content": "保修期以购买凭证上的购买日期为起始点计算。如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准，客服会协助核实差异原因。",
+          "bm25_score": 2.420744180597545,
+          "hybrid_score": 0.48530165681729376,
+          "rerank_score": 0.9566321969032288
+        },
+        {
+          "chunk_id": "repair_process_0001",
+          "doc_id": "repair_process",
+          "title": "维修流程说明（手机 / 平板）",
+          "section": "维修时长",
+          "source": "manual",
+          "source_path": "data/raw_docs/repair_process.md",
+          "updated_at": "2026-07-07",
+          "content": "一般故障（如更换电池、摄像头模组）维修时长约为 3～5 个工作日；主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。",
+          "dense_score": 0.6608682870864868,
+          "hybrid_score": 0.4137298268197773,
+          "rerank_score": 0.8499215245246887
+        },
+        {
+          "chunk_id": "exchange_policy_0000",
+          "doc_id": "exchange_policy",
+          "title": "换货政策",
+          "section": "15 天换新政策",
+          "source": "manual",
+          "source_path": "data/raw_docs/exchange_policy.md",
+          "updated_at": "2026-07-07",
+          "content": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。\n\n超过 15 天但在保修期内出现故障的，按保修政策走维修流程，不再适用换新政策。",
+          "bm25_score": 1.9300726005460598,
+          "hybrid_score": 0.5243656139518227,
+          "rerank_score": 0.8006106019020081
+        }
+      ],
+      "generation": {
+        "success": true,
+        "text": "结论：\n根据资料，云枢手机整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月；保修期以购机发票或电子凭证日期为准（资料2）。如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准（资料3）。\n\n处理步骤：\n1. 查看购机发票或电子凭证上的购买日期，确认整机与电池各自的保修截止时间（资料2、资料3）。\n2. 若凭证日期与官方系统注册日期不一致，可联系客服协助核实差异原因（资料3）。\n3. 若在保修期内出现故障，按保修政策走维修流程；超过 15 天但在保修期内不再适用换新政策（资料5）。\n\n注意事项：\n- 整机保修 12 个月、电池保修 6 个月，两者期限不同，请分别核对（资料2）。\n- 保修期起算以购买凭证日期为准，但官方系统记录优先（资料3）。\n- 保修审批结果需以实际核实为准，本回答不承诺一定通过。\n- 维修时长仅供参考：一般故障约 3～5 个工作日，主板级故障约 7～10 个工作日，特殊情况可能延长（资料4）。\n\n引用来源：\n- 资料2：data/raw_docs/warranty_policy.md\n- 资料3：data/raw_docs/invoice_proof.md\n- 资料4：data/raw_docs/repair_process.md\n- 资料5：data/raw_docs/exchange_policy.md",
+        "provider": "deepseek",
+        "model": "deepseek-flash",
+        "error_type": null,
+        "attempts": 1,
+        "finish_reason": "stop",
+        "usage": {
+          "completion_tokens": 332,
+          "prompt_tokens": 799,
+          "total_tokens": 1131,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 799
+        },
+        "elapsed_ms": 4095.6089999999676,
+        "thinking": "disabled"
+      },
+      "timings": {
+        "risk_ms": 1.186000000416243,
+        "retrieval_ms": 230.79950000010285,
+        "rerank_ms": 459.52959999976883,
+        "llm_ms": 4095.6089999999676,
+        "total_ms": 4787.159999999858
+      }
+    }
+  },
+  {
+    "http_status": 200,
+    "result": {
+      "log_id": 9,
+      "request_id": "f85312b5-9567-4445-8f55-f41173f777cf",
+      "answer_type": "low_confidence",
+      "question": "今天天气怎么样？",
+      "answer": "结论：\n根据当前资料无法确认该问题的准确答案，建议联系人工客服。\n\n处理步骤：\n1. 请准备设备型号、购买凭证和故障描述。\n2. 联系官方售后渠道。\n3. 等待人工客服进一步核实。\n\n注意事项：\n- 不建议根据非官方信息自行处理。\n- 涉及安全风险时，请停止使用设备。\n\n引用来源：\n- 当前知识库无明确资料。\n",
+      "risk_info": {
+        "risk_types": [],
+        "risk_level": "low",
+        "need_human": false
+      },
+      "low_confidence": true,
+      "need_human": true,
+      "handoff_reason": "insufficient_evidence",
+      "ticket": {
+        "user_question": "今天天气怎么样？",
+        "category": "普通咨询",
+        "priority": "低",
+        "suggested_department": "客服一线",
+        "risk_level": "low",
+        "need_human": true,
+        "handoff_reason": "insufficient_evidence",
+        "answer_type": "low_confidence",
+        "status": "suggested",
+        "summary": "用户咨询：今天天气怎么样？。处理状态：low_confidence。建议联系客服一线；此信息仅为工单建议，尚未实际派单。",
+        "model_answer": "结论：\n根据当前资料无法确认该问题的准确答案，建议联系人工客服。\n\n处理步骤：\n1. 请准备设备型号、购买凭证和故障描述。\n2. 联系官方售后渠道。\n3. 等待人工客服进一步核实。\n\n注意事项：\n- 不建议根据非官方信息自行处理。\n- 涉及安全风险时，请停止使用设备。\n\n引用来源：\n- 当前知识库无明确资料。\n"
+      },
+      "contexts": [
+        {
+          "chunk_id": "battery_safety_0002",
+          "doc_id": "battery_safety",
+          "title": "电池安全使用指南（手机 / 平板）",
+          "section": "电池发热处理",
+          "source": "manual",
+          "source_path": "data/raw_docs/battery_safety.md",
+          "updated_at": "2026-07-07",
+          "content": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。\n\n请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。",
+          "bm25_score": 0.0,
+          "hybrid_score": 1.0,
+          "rerank_score": 0.005083486903458834
+        },
+        {
+          "chunk_id": "repair_faq_0004",
+          "doc_id": "repair_faq",
+          "title": "常见故障 FAQ（手机 / 平板）",
+          "section": "设备发热明显",
+          "source": "manual",
+          "source_path": "data/raw_docs/repair_faq.md",
+          "updated_at": "2026-07-07",
+          "content": "请参考\"电池安全使用指南\"文档中的电池发热处理说明。如排除高负载使用场景后仍存在异常发热，建议联系售后检测。",
+          "bm25_score": 0.0,
+          "hybrid_score": 0.8244376347302715,
+          "rerank_score": 0.0023637108970433474
+        },
+        {
+          "chunk_id": "battery_safety_laptop_0001",
+          "doc_id": "battery_safety_laptop",
+          "title": "电池安全使用指南（笔记本电脑）",
+          "section": "笔记本使用中过热",
+          "source": "manual",
+          "source_path": "data/raw_docs/battery_safety_laptop.md",
+          "updated_at": "2026-07-07",
+          "content": "笔记本在高负载运行（如游戏、渲染）时风扇噪音增大、机身温热属于正常现象。但如果出现底部烫手、风扇异响、自动关机等情况，应立即停止使用并送修检测。\n\n请勿在床上、沙发、毯子等柔软且不透气的表面上长时间使用笔记本，以免影响散热导致电池过热。",
+          "bm25_score": 0.0,
+          "hybrid_score": 0.4645232574644925,
+          "rerank_score": 0.001450431882403791
+        },
+        {
+          "chunk_id": "repair_faq_laptop_0003",
+          "doc_id": "repair_faq_laptop",
+          "title": "常见故障 FAQ（笔记本电脑）",
+          "section": "风扇噪音大或不转",
+          "source": "manual",
+          "source_path": "data/raw_docs/repair_faq_laptop.md",
+          "updated_at": "2026-07-07",
+          "content": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。",
+          "dense_score": 0.3522030711174011,
+          "hybrid_score": 0.45891968744160544,
+          "rerank_score": 0.00044201951823197305
+        },
+        {
+          "chunk_id": "fast_charging_safety_0001",
+          "doc_id": "fast_charging_safety",
+          "title": "快充安全使用说明",
+          "section": "快充发热说明",
+          "source": "manual",
+          "source_path": "data/raw_docs/fast_charging_safety.md",
+          "updated_at": "2026-07-07",
+          "content": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。",
+          "bm25_score": 0.0,
+          "hybrid_score": 0.5619371560572082,
+          "rerank_score": 0.00015838470426388085
+        }
+      ],
+      "generation": null,
+      "timings": {
+        "risk_ms": 0.1509000003352412,
+        "retrieval_ms": 12.542299999950046,
+        "rerank_ms": 219.568800000161,
+        "llm_ms": 0.0,
+        "total_ms": 232.27679999945394
+      }
+    }
+  },
+  {
+    "http_status": 200,
+    "result": {
+      "log_id": 10,
+      "request_id": "c8b502ee-2ca5-422f-99fa-b4e751945b14",
+      "answer_type": "safety_refusal",
+      "question": "电池鼓包了还能充电吗？",
+      "answer": "结论：\n电池鼓包、漏液、冒烟、起火等属于高风险安全问题，请立即停止使用设备并断开电源，不要自行拆卸、挤压、刺破或加热处理，建议尽快联系官方售后服务中心。\n\n处理步骤：\n1. 优先确保人身安全，停止使用设备；不要触碰已冒烟或起火的设备。\n2. 不要自行拆卸、挤压、刺破、加热或短接处理。\n3. 联系官方售后服务中心，由专业人员进行检测和处理。\n\n注意事项：\n- 该问题涉及安全风险，建议优先联系人工售后；当前仅提供处理建议，尚未实际派单。\n- 如出现冒烟、异味或起火，请远离设备并及时报警。\n\n引用来源：\n- 安全风险识别规则（非文档检索结果）。\n",
+      "risk_info": {
+        "risk_types": [
+          "battery_safety"
+        ],
+        "risk_level": "high",
+        "need_human": true
+      },
+      "low_confidence": false,
+      "need_human": true,
+      "handoff_reason": "safety_risk",
+      "ticket": {
+        "user_question": "电池鼓包了还能充电吗？",
+        "category": "安全风险",
+        "priority": "高",
+        "suggested_department": "售后安全组",
+        "risk_level": "high",
+        "need_human": true,
+        "handoff_reason": "safety_risk",
+        "answer_type": "safety_refusal",
+        "status": "suggested",
+        "summary": "用户咨询：电池鼓包了还能充电吗？。处理状态：safety_refusal。建议联系售后安全组；此信息仅为工单建议，尚未实际派单。",
+        "model_answer": "结论：\n电池鼓包、漏液、冒烟、起火等属于高风险安全问题，请立即停止使用设备并断开电源，不要自行拆卸、挤压、刺破或加热处理，建议尽快联系官方售后服务中心。\n\n处理步骤：\n1. 优先确保人身安全，停止使用设备；不要触碰已冒烟或起火的设备。\n2. 不要自行拆卸、挤压、刺破、加热或短接处理。\n3. 联系官方售后服务中心，由专业人员进行检测和处理。\n\n注意事项：\n- 该问题涉及安全风险，建议优先联系人工售后；当前仅提供处理建议，尚未实际派单。\n- 如出现冒烟、异味或起火，请远离设备并及时报警。\n\n引用来源：\n- 安全风险识别规则（非文档检索结果）。\n"
+      },
+      "contexts": [],
+      "generation": null,
+      "timings": {
+        "risk_ms": 0.47709999944345327,
+        "retrieval_ms": 0.0,
+        "rerank_ms": 0.0,
+        "llm_ms": 0.0,
+        "total_ms": 0.4866999997830135
+      }
+    }
+  }
+]

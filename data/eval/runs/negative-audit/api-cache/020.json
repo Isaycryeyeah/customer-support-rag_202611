@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0207",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "讲保修审批需检测，不直接支持能否保修或保修期计算，仅流程相关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "针对非官方维修记录影响保修，与第三方购买丢发票场景不同，不直接支持结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "重复候选，主题为非官方维修而非购买渠道，不直接支持问题结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0003",
+            "judgment": "negative_ok",
+            "reason": "讲知识库范围外处理，与保修及保修期问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0208",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "讲七天无理由退货条件，不直接支持能否直接退款换新或退货后马上退款。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "service_boundary_0002",
+            "judgment": "positive_like",
+            "reason": "直接支持客服不能直接承诺退款换新，需人工审核，与问题必要结论一致。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0003",
+            "judgment": "negative_ok",
+            "reason": "摄像头故障排查，与退款换新问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "negative_ok",
+            "reason": "平板配件连接问题，与退款换新无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0209",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "positive_like",
+            "reason": "直接支持第三方更换屏幕等非官方维修可能影响保修资格，与自行换屏问题相关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕碎裂后临时处理，未涉及自行购买第三方屏幕总成是否可行。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0001",
+            "judgment": "negative_ok",
+            "reason": "讲维修时长，与自行换屏及进水保修问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0000",
+            "judgment": "negative_ok",
+            "reason": "平板配件连接问题，与问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0210",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_pricing_0001",
+            "judgment": "positive_like",
+            "reason": "提供笔记本屏幕总成更换参考费用区间，直接支持维修大概花费问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讲非官方维修记录影响保修，未涉及亮点是否保修，不直接支持结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "complaint_escalation_0002",
+            "judgment": "negative_ok",
+            "reason": "讲投诉升级路径，与屏幕亮点保修及费用无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲快充发热，与屏幕亮点问题无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0211",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲快充发热正常现象，未涉及电池鼓包能否继续充电或笔记本底部烫手。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本电池鼓包处理，与手机电池鼓包及笔记本高负载烫手问题不直接对应。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲快充协议，与电池鼓包及过热问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲充电器外观检查，与电池鼓包及笔记本过热无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0214",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_pricing_0002",
+            "judgment": "negative_ok",
+            "reason": "讲费用确认流程，未直接说明摄像头模糊维修是否收费。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讲非官方维修记录影响保修，与摄像头模糊是否收费不直接相关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "讲序列号查询保修状态，与摄像头维修收费问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "讲电池发热处理，与摄像头模糊维修收费无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1132,
+    "prompt_tokens": 5446,
+    "total_tokens": 6578,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5446
+  },
+  "model": "deepseek-flash",
+  "response_id": "d55fefc1-9140-4a23-b01f-60c2d12636bb"
+}

@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0072",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "仅说明笔记本保修期限，未涉及进液是否属保修范围或费用计算。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "针对手机/平板保修期限，与笔记本进液维修费用无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0002",
+            "judgment": "negative_ok",
+            "reason": "手机/平板充电故障排查，与进液保修费用无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "手机/平板无法开机排查，与进液保修费用无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0073",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "列举不支持无理由退货的情形，但未涉及超过7天时限这一关键结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "说明退货需审核，未涉及七天无理由时限问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "15天换新政策，与无理由退货时限无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "非官方维修影响保修，与无理由退货无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0074",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "保修期限信息，与退款到账时间无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "说明需审核、以验货结果为准，未给出退款到账时间。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "人工转接规则，与退款到账时间无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "重复的保修期限内容，与退款到账时间无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0075",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "positive_like",
+            "reason": "直接说明7天内且保持完好无使用痕迹才可无理由退货，支持判断拆封有划痕能否退货。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，与无理由退货条件无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0003",
+            "judgment": "negative_ok",
+            "reason": "软件问题保修免责，与无理由退货无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0002",
+            "judgment": "negative_ok",
+            "reason": "越权应答风险说明，未涉及退货条件。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0076",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "退货流程与到账时间，未说明客服能否提前承诺退款。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "七天无理由退货条件，与客服能否保证退款无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "充电器安全说明，与退款承诺无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "屏幕漏液处理，与退款承诺无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0078",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "针对电池漏液处理，非屏幕漏液，未涉及能否按压屏幕。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "针对屏幕碎裂处理，非漏液墨渍扩散情形。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0001",
+            "judgment": "negative_ok",
+            "reason": "智能客服能力说明，与屏幕漏液处理无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "negative_ok",
+            "reason": "维修数据备份建议，与屏幕漏液处理无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1065,
+    "prompt_tokens": 4621,
+    "total_tokens": 5686,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4621
+  },
+  "model": "deepseek-flash",
+  "response_id": "300965bf-4d5c-47b2-a29d-c1000c786fff"
+}

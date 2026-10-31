@@ -1,0 +1,185 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_329b0252a3",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "怀疑维修过程中数据隐私泄露应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。",
+          "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "隐私泄露怀疑需转人工，费用问题以检测结果为准，两片段分别直接支持两项诉求。"
+      },
+      {
+        "query_id": "new_90e12e74f0",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0002",
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0002",
+            "quote": "严禁指导用户进行以下操作：\n\n- 在设备进液、短路后立即通电测试；"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。"
+          }
+        ],
+        "expected_points": [
+          "严禁在设备进液后立即通电测试，短路风险可能导致主板永久性损坏，甚至引发安全事故。",
+          "严禁将进液设备放入米缸等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "两片段分别直接禁止进液后通电测试和米缸偏方，均对应问题。"
+      },
+      {
+        "query_id": "new_45e250dee2",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_faq_laptop_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "寄修前建议备份重要数据到云端或其他存储设备，退出账号或开启访客模式，移除设备内的敏感应用或数据。",
+          "接口无法识别外接设备时，先更换其他数据线或外接设备排查配件问题；如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "寄修前数据准备与USB接口排查均有直接对应片段。"
+      },
+      {
+        "query_id": "new_e4562082cb",
+        "accepted": false,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0004",
+          "repair_process_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0004",
+            "quote": "请参考\"电池安全使用指南\"文档中的电池发热处理说明。如排除高负载使用场景后仍存在异常发热，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "expected_points": [
+          "设备发热明显时，请参考电池安全使用指南中的电池发热处理说明；如排除高负载使用场景后仍存在异常发热，建议联系售后检测。",
+          "保修期内非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "原gold误用笔记本维修费用片段，手机问题应引用手机维修流程片段；已修正为repair_process_0003。"
+      },
+      {
+        "query_id": "new_9039105412",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_faq_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          }
+        ],
+        "expected_points": [
+          "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。",
+          "键盘部分按键失灵时，先检查按键周围是否有异物或液体残留；如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "隐私泄露怀疑需转人工，键盘失灵有直接排查片段，均对应问题。"
+      },
+      {
+        "query_id": "new_de30c04f82",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0003",
+          "dangerous_operations_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；"
+          }
+        ],
+        "expected_points": [
+          "充电过程中出现充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。",
+          "严禁用针、刀等工具对鼓包电池\"放气\"或穿刺处理。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "充电异常处置与鼓包电池禁止穿刺均有直接片段支持。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1534,
+    "prompt_tokens": 11757,
+    "total_tokens": 13291,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2285
+  },
+  "model": "deepseek-flash",
+  "response_id": "18e5b334-cd55-4f9b-a18f-a67b6e5e43b3"
+}

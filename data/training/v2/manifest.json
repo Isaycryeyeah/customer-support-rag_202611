@@ -1,0 +1,8 @@
+{
+  "training_groups": 232,
+  "pairs": 874,
+  "dropped_queries": [],
+  "source": "v1 train queries and diagnostic negative review, no test mining",
+  "queries_sha256": "5016f4f2b781bd36f9991d94ec0e5624ace165beb105f82b1d675b10d623b79a",
+  "human_verified": false
+}

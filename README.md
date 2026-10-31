@@ -1,95 +1,83 @@
 # 中文 3C 售后 RAG 问答系统
 
-基于模拟品牌的售后文档，使用 BM25、向量检索、CrossEncoder 和 DeepSeek 提供资料问答、来源展示、安全提示与工单建议。后端为 FastAPI，页面为 Streamlit，日志和反馈存储于 SQLite。
+使用模拟品牌文档实现 BM25＋Dense／FAISS 检索、CrossEncoder 重排、DeepSeek 生成、安全提示、来源展示及工单建议。FastAPI 提供接口，Streamlit 提供页面，SQLite 留存请求和反馈。
 
-当前正在按 [plan.md](plan.md) 改进正确性、独立评估和性能，之后再开展领域重排序训练。知识库含 24 篇模拟文档、103 个片段；项目尚不代表真实企业生产部署或完整工单平台。
+[实施计划](plan.md)的正确性修复、独立评估、性能优化和领域训练可行性实验已完成。24 篇模拟文档、103 个切片；没有真实企业数据或完整工单流转。
 
-## 当前状态
+## 已完成结果
 
-- 回答区分正常生成、无依据拒答、安全响应和上游服务故障。
-- 已识别的高风险请求使用确定性安全响应，不依赖 LLM 生成。
-- 生成故障返回 HTTP 503 和结构化处理建议；普通业务拒答返回 HTTP 200。
-- 响应、日志与工单建议使用一致的最终转人工状态；工单建议尚未接入实际派单。
-- 索引记录知识库哈希与模型信息，知识库变化时重建，空候选与超范围 k 有边界处理。
-- 日志记录请求 ID、上下文片段与分数、分阶段耗时、生成状态和可用的 token 用量。
-- 检索评估已区分 Hit@k 与 Recall@k；生成故障不会获得质量分。
+- 隔离环境 **56 项测试通过**；Docker 内真实 SDK 问答、来源、人工建议和反馈验证通过。
+- 构建 449 题／446 个证据组合组的 AI 生成与审核数据，按组隔离 train/dev/test；test_v1 44 题，test_v2 47 题。用户另实际评价了四个旧输出，未把 AI 标注冒充人工标注。
+- test_v1 的预训练重排 MRR@10 为 0.9342，Hybrid 为 0.8504，排序分母 38 个有答案问题。
+- RTX 3060 Laptop 上配对复测：FP16 将检索＋重排 P95 从 **172.5 ms 降至 65.4 ms（62.1%）**；dev 排序指标一致，独立 test_v1 排序亦持平。数字不含 LLM，也不适用于 CPU 容器。
+- PyTorch/HF 实际训练最后两层与分类头，约 1477 万可训练参数；232 个训练组、875 对，随机负例／困难负例与 60 组学习曲线均完成。test_v2 未获得排序提升。
+- 审计负例后完成一轮清洗实验（874 对），新增封存 test_v3 65 题；清洗模型仍与预训练模型持平，**保留预训练模型部署**。未为取得正结果继续调参。
+- 四条人工反馈已修复：隐私投诉人工状态一致、明确域外无需售后人工、冒烟插座安全内容补全、来源按文档合并并保留切片定位。
 
-当前运行环境中，后端 Python SDK 访问 DeepSeek 曾受网络权限限制；通过 curl 的模型验证不能替代完整后端成功验证。详见 [正确性报告](docs/correctness_report.md)。原有评估数据用于历史开发和回归，不作为独立测试。历史文档中的实验成绩尚不能作为本轮最终结论。
+## 运行
 
-## 本地启动
+本机已运行验证容器：页面 <http://127.0.0.1:8503>，API <http://127.0.0.1:8003/docs>。
 
-建议使用独立环境。已有临时 `.venv` 继承系统包，不能作为干净安装已验证的证据。`requirements.windows.observed.txt` 是当前机器上的依赖版本快照，包含 CUDA 构建；不是跨平台通用锁文件。
+```powershell
+$env:HF_CACHE_DIR='C:/Users/86136/.cache/huggingface/hub'
+docker compose -p rag-validation -f docker-compose.validation.yml up -d --build
+```
+
+该方式要求已有完整模型缓存及有效 .env。普通 `docker compose up --build` 使用 8501/8000，可联网下载模型。
+
+新环境本地启动：
 
 ```powershell
 python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 Copy-Item .env.example .env
-# 在 .env 中填入自己的模型配置，勿提交密钥。
+# 已有 .env 时不要覆盖；填入自己的模型凭证，勿提交。
 .venv\Scripts\python.exe scripts/build_chunks.py
 .venv\Scripts\python.exe scripts/build_index.py
 .venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+# 另开终端
+.venv\Scripts\python.exe -m streamlit run frontend/streamlit_app.py
 ```
 
-另开终端：
+Windows／Linux 分别有实测依赖锁文件；CUDA Torch 来源和平台说明见 [环境基线](docs/baseline.md)。模型 revision 已固定，首次下载需要网络。
+
+## 业务状态与边界
+
+| 返回类型 | HTTP | 行为 |
+|---|---:|---|
+| generated | 200 | 非空未截断生成，按文档列出来源，语义仍需质量评估 |
+| low_confidence | 200 | 域内缺少依据时建议人工；明确域外只说明服务范围 |
+| safety_refusal | 200 | 已识别高风险的确定性安全提示 |
+| service_unavailable | 503 | 上游连接、限流、超时、空白或截断，保留日志 ID 与处理建议 |
+
+`/health` 为存活、`/ready` 为就绪；`/feedback` 将反馈关联到日志。工单只是建议，没有实际派单。风险和领域规则有覆盖边界，测试通过不等于对任意输入都安全。引用编号校验不替代语义支持判断。
+
+## 验证与实验
 
 ```powershell
-.venv\Scripts\python.exe -m streamlit run frontend/streamlit_app.py --server.address 127.0.0.1 --server.port 8501
+.venv-clean\Scripts\python.exe -m pytest -q
+.venv-clean\Scripts\python.exe -m pip check
+# 新输出目录；真实调用 DeepSeek 并产生用量
+.venv-clean\Scripts\python.exe scripts/validate_deployment.py --output data/eval/runs/new-deployment-check --capture-docker
+.venv-clean\Scripts\python.exe scripts/validate_human_feedback.py --output data/eval/runs/new-feedback-replay
+# 仅 dev 性能复测，不调用 LLM
+.venv-clean\Scripts\python.exe scripts/confirm_performance.py --output data/eval/runs/new-performance-confirmation
 ```
 
-页面：<http://127.0.0.1:8501>；接口文档：<http://127.0.0.1:8000/docs>。
+旧 test 已查看；重放不能继续称为盲测，冻结源码哈希不同需检出原版本。每次使用新目录，不覆盖归档结果。
 
-首次加载需下载模型；已有完整本地缓存时，可在启动前设置 `HF_HUB_OFFLINE=1` 和 `TRANSFORMERS_OFFLINE=1`，仅禁止 Hugging Face 联网，不影响 DeepSeek 配置。
+## 报告与代码入口
 
-```powershell
-docker compose up --build
-```
-
-仓库提供 Docker 配置，当前改动后的容器验收仍待完成。
-
-## 接口状态
-
-| 接口／回答类型 | HTTP 状态 | 含义 |
-|---|---|---|
-| `GET /health` | 200 | 进程存活 |
-| `GET /ready` | 200／503 | 知识库与模型已加载／未就绪，不主动付费调用 LLM |
-| `POST /ask`，`generated` | 200 | 获得非空且未截断的模型回答，仍需评估事实与引用 |
-| `POST /ask`，`low_confidence` | 200 | 当前依据不足，建议人工核实 |
-| `POST /ask`，`safety_refusal` | 200 | 已识别高风险，提供确定性安全提示 |
-| `POST /ask`，`service_unavailable` | 503 | 上游连接、限流、空输出或截断等生成故障 |
-| `POST /feedback` | 200／404 | 写入反馈／查询 ID 不存在 |
-
-故障响应同样保留 `log_id`、`request_id`、`answer_type` 和人工处理建议。安全规则基于关键词并包含有限的否定表达处理，其通过率不能代表所有表达下的安全性。
-
-## 测试与实验
-
-```powershell
-.venv\Scripts\python.exe -m pip install pytest httpx
-.venv\Scripts\python.exe -m pytest -q
-
-# 只跑离线评估，保存逐题输出与配置；每次使用新目录。
-.venv\Scripts\python.exe scripts/run_eval.py --output data/eval/runs/new-eval-name
-
-# 显式增加真实生成，会调用配置的模型并产生相应用量。
-.venv\Scripts\python.exe scripts/run_eval.py --output data/eval/runs/new-online-eval-name --with-generation
-
-# 候选数量的开发实验，不调用 LLM。
-.venv\Scripts\python.exe scripts/benchmark.py --output data/eval/runs/new-benchmark-name --repeats 3
-```
-
-默认数据属于历史开发集。新独立数据的分组、标注和最终测试流程见 [评估协议](docs/evaluation_protocol.md)。尚未审核的数据不得被标记为独立测试成果；不得将重复耗时测量次数当作不同问题数。
-
-## 目录
-
-| 路径 | 职责 |
+| 路径 | 内容 |
 |---|---|
-| `app/ingestion/` | 文档读取、清理和切分 |
-| `app/retrieval/` | BM25、FAISS、融合和重排序 |
-| `app/generation/` | Prompt 与有明确故障语义的模型调用 |
-| `app/safety/`、`app/ticket/` | 风险识别、安全响应和工单建议 |
-| `app/storage/` | 非破坏性 SQLite 迁移、查询日志和反馈 |
-| `app/evaluation/`、`scripts/` | 评估、数据检查、索引与基准实验 |
-| `tests/` | 状态、HTTP、故障、迁移和评估口径回归 |
-| `data/eval/runs/` | 版本化配置、逐题结果与汇总 |
-| `docs/` | 基线、验证、评估协议及性能记录 |
+| [架构](docs/architecture.md)、[正确性](docs/correctness_report.md) | 状态、安全、来源、迁移与验收 |
+| [评估协议](docs/evaluation_protocol.md)、[检索基线](docs/evaluation_baseline.md) | 数据分组、指标、冻结、人工与 AI 评分边界 |
+| [性能报告](docs/performance_report.md) | 配对计时、线上耗时、token 成本与限制 |
+| [训练报告](docs/reranker_training_report.md)、[模型说明](docs/model_card.md) | 数据、损失、学习曲线、消融、负结果与加载 |
+| [人工反馈](docs/human_feedback_report.md) | 原始评分、重复来源原因与实际修复 |
+| [简历描述](docs/resume.md) | 可用成果与面试证据 |
+| app/、frontend/ | 服务、检索、生成、安全与页面 |
+| scripts/、configs/ | 数据构造、训练、评估和冻结配置 |
+| data/eval/runs/ | 配置、逐题结果、汇总、数据与模型哈希 |
 
-简历只写已完成且有证据的功能和指标。领域模型尚未完成训练时，不写“已微调”；工单仅为建议时，不写“已实现完整工单流转”。
+数据、单次硬件会话和单种子训练均有限制，详见各报告。凭证、虚拟环境、运行数据库与模型权重不进入 Git。

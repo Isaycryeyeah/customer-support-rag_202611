@@ -1,0 +1,136 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0398",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "该片段说明保修需提供发票或电子凭证，直接关联发票丢失后能否保修的问题，属于对必要结论的直接支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "ambiguous",
+            "reason": "该片段讨论第三方渠道丢失发票的保修认定困难，与官方商城场景不同，但可能被误用于回答发票丢失问题，主题相关但非直接支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "充电环境安全说明，与发票丢失保修及摔落保修覆盖均无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "service_boundary_0001",
+            "judgment": "negative_ok",
+            "reason": "智能客服能力边界说明，不涉及发票丢失或摔落保修的具体结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0399",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "return_policy_0000",
+            "judgment": "ambiguous",
+            "reason": "七天无理由退货规则与超过15天退货退款问题相关，但未直接回答客服能否直接批准退款，主题相关但非直接支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "positive_like",
+            "reason": "该片段说明换货需官方检测确认，客服不能直接承诺换新，直接支持问题中换新能否直接办理的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0004",
+            "judgment": "negative_ok",
+            "reason": "笔记本接口故障排查，与手机屏幕异常换新及退货退款无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "人工客服工作时间说明，不涉及换新或退货退款审批结论。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0400",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "屏幕触控异常排查，与手机无法开机及笔记本触控板无响应均不直接相关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "ambiguous",
+            "reason": "电池鼓包可能导致触控板异常凸起，与触控板问题主题相关，但未直接提供触控板无响应的排查结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "ambiguous",
+            "reason": "同一片段重复出现，内容涉及触控板异常凸起，与触控板问题主题相关但非直接排查支持。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "手机电池鼓包处理，与充电后无法开机及触控板排查均无直接支持。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0402",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0001",
+            "judgment": "ambiguous",
+            "reason": "第三方渠道丢失发票的保修认定困难，与官方商城场景不同，主题相关但非直接支持。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "lost_invoice_policy_0002",
+            "judgment": "positive_like",
+            "reason": "该片段说明无发票可通过序列号查询保修状态，直接支持发票丢失后如何证明购买时间及申请保修的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "lost_invoice_policy_0002",
+            "judgment": "positive_like",
+            "reason": "同一片段重复出现，内容直接支持无发票时通过序列号查询保修状态的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "进液设备禁止处理方式，与发票丢失保修及购买时间证明无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 866,
+    "prompt_tokens": 3786,
+    "total_tokens": 4652,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 3786
+  },
+  "model": "deepseek-flash",
+  "response_id": "7848c952-a500-41c7-89f1-e67c00ecfaf0"
+}

@@ -1,0 +1,249 @@
+{
+  "bounded_study_complete": true,
+  "trained_model_adopted": false,
+  "decision": {
+    "dev_selected_name": "clean",
+    "test_sha256": "e69a3ed76ba6c1d3b7b0758f7f159a471867bfe1652848639e04f4aa84e4c3da",
+    "dev_mrr_pretrained": 0.9036796536796536,
+    "dev_mrr_clean": 0.9101731601731601,
+    "rule": "Clean model only: dev MRR gain >=.005 with balanced grounding/refusal within .005; adopt only with test_v3 MRR gain >=.005, effective Recall@5 drop <=.02 and refusal recall non-inferior.",
+    "no_further_training_iterations": true
+  },
+  "metrics": {
+    "pretrained": {
+      "hit@1": 0.8181818181818182,
+      "hit@3": 0.9454545454545454,
+      "hit@5": 0.9818181818181818,
+      "recall@1": 0.40606060606060607,
+      "recall@3": 0.6757575757575757,
+      "recall@5": 0.8545454545454545,
+      "mrr@10": 0.8909090909090909,
+      "ndcg@5": 0.7866120492584182,
+      "sample_count": 65,
+      "answerable_count": 55,
+      "unanswerable_count": 10,
+      "effective_recall@5": 0.875,
+      "refusal": {
+        "evaluated_count": 50,
+        "excluded_count": 15,
+        "true_refusals": 10,
+        "false_refusals": 0,
+        "unsupported_answers": 0,
+        "correct_answers_decision": 40,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_refusal_rate": 0.0,
+        "unsupported_answer_rate": 0.0,
+        "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+      },
+      "recognized_high_risk_fraction": 0.8666666666666667
+    },
+    "raw": {
+      "hit@1": 0.8181818181818182,
+      "hit@3": 0.9454545454545454,
+      "hit@5": 0.9818181818181818,
+      "recall@1": 0.40606060606060607,
+      "recall@3": 0.6757575757575757,
+      "recall@5": 0.8545454545454545,
+      "mrr@10": 0.8939393939393939,
+      "ndcg@5": 0.7895312932893932,
+      "sample_count": 65,
+      "answerable_count": 55,
+      "unanswerable_count": 10,
+      "effective_recall@5": 0.875,
+      "refusal": {
+        "evaluated_count": 50,
+        "excluded_count": 15,
+        "true_refusals": 10,
+        "false_refusals": 0,
+        "unsupported_answers": 0,
+        "correct_answers_decision": 40,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_refusal_rate": 0.0,
+        "unsupported_answer_rate": 0.0,
+        "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+      },
+      "recognized_high_risk_fraction": 0.8666666666666667
+    },
+    "clean": {
+      "hit@1": 0.8181818181818182,
+      "hit@3": 0.9454545454545454,
+      "hit@5": 0.9818181818181818,
+      "recall@1": 0.40606060606060607,
+      "recall@3": 0.6848484848484848,
+      "recall@5": 0.8545454545454545,
+      "mrr@10": 0.8909090909090909,
+      "ndcg@5": 0.7859252540394787,
+      "sample_count": 65,
+      "answerable_count": 55,
+      "unanswerable_count": 10,
+      "effective_recall@5": 0.875,
+      "refusal": {
+        "evaluated_count": 50,
+        "excluded_count": 15,
+        "true_refusals": 10,
+        "false_refusals": 0,
+        "unsupported_answers": 0,
+        "correct_answers_decision": 40,
+        "precision": 1.0,
+        "recall": 1.0,
+        "false_refusal_rate": 0.0,
+        "unsupported_answer_rate": 0.0,
+        "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+      },
+      "recognized_high_risk_fraction": 0.8666666666666667
+    }
+  },
+  "mrr_gain_clean_vs_pretrained": 0.0,
+  "training": {
+    "configuration": {
+      "base_model": "BAAI/bge-reranker-base",
+      "base_revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+      "training_queries": "data/training/v2/queries.jsonl",
+      "dev_cache": "data/eval/runs/dev-fp32-reviewed/rows.jsonl",
+      "seed": 42,
+      "train_last_layers": 2,
+      "max_length": 512,
+      "batch_size": 4,
+      "gradient_accumulation": 4,
+      "learning_rate": 1e-05,
+      "epochs": 3,
+      "patience": 2,
+      "negative_strategy": "hard",
+      "limit_groups": null,
+      "output": "models/reranker-hard-clean"
+    },
+    "device": "cuda",
+    "torch_version": "2.6.0+cu124",
+    "training_groups": 232,
+    "training_pairs": 874,
+    "trainable_parameters": 14767105,
+    "total_parameters": 278044417,
+    "loss_function": "BCEWithLogitsLoss on query-document relevance",
+    "optimizer": "AdamW",
+    "best_epoch": 3,
+    "best_dev_mrr@10": 0.9101731601731601,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.5675774741224152,
+        "dev": {
+          "hit@1": 0.8311688311688312,
+          "hit@3": 0.987012987012987,
+          "hit@5": 1.0,
+          "recall@1": 0.5064935064935064,
+          "recall@3": 0.8051948051948052,
+          "recall@5": 0.8701298701298701,
+          "mrr@10": 0.9015151515151516,
+          "ndcg@5": 0.8195598102452032,
+          "sample_count": 77,
+          "answerable_count": 77,
+          "unanswerable_count": 0
+        },
+        "elapsed_seconds": 15.43364449999899
+      },
+      {
+        "epoch": 2,
+        "loss": 0.4475662926157608,
+        "dev": {
+          "hit@1": 0.8311688311688312,
+          "hit@3": 0.987012987012987,
+          "hit@5": 1.0,
+          "recall@1": 0.5064935064935064,
+          "recall@3": 0.8051948051948052,
+          "recall@5": 0.8701298701298701,
+          "mrr@10": 0.9036796536796536,
+          "ndcg@5": 0.8206023973991227,
+          "sample_count": 77,
+          "answerable_count": 77,
+          "unanswerable_count": 0
+        },
+        "elapsed_seconds": 30.656867300000158
+      },
+      {
+        "epoch": 3,
+        "loss": 0.4423551037630548,
+        "dev": {
+          "hit@1": 0.8441558441558441,
+          "hit@3": 0.987012987012987,
+          "hit@5": 1.0,
+          "recall@1": 0.512987012987013,
+          "recall@3": 0.8051948051948052,
+          "recall@5": 0.8701298701298701,
+          "mrr@10": 0.9101731601731601,
+          "ndcg@5": 0.8235412855229008,
+          "sample_count": 77,
+          "answerable_count": 77,
+          "unanswerable_count": 0
+        },
+        "elapsed_seconds": 45.80633579999994
+      }
+    ],
+    "elapsed_seconds": 45.88222759999917,
+    "peak_allocated_gpu_bytes": 1434534400,
+    "input_sha256": {
+      "training_queries": "5016f4f2b781bd36f9991d94ec0e5624ace165beb105f82b1d675b10d623b79a",
+      "dev_cache": "bc54cc11fdacb00a4187f57d096fed3ea39fe3420f428d0eb37f8114c8c412bb"
+    },
+    "adapter_sha256": "b6ec14b43868885c4b37e5d1bec5570a6e8475bc1f7d5201ea871a632fae0007",
+    "limitations": [
+      "Single seed feasibility experiment on AI-generated/reviewed synthetic data.",
+      "Only final transformer layers and classification head trained; not full-model or LoRA fine-tuning."
+    ]
+  },
+  "negative_audit": {
+    "scope": "post-experiment diagnostic AI review; no training pairs or test outcomes were rewritten",
+    "query_count": 232,
+    "negative_count": 928,
+    "counts": {
+      "hard": {
+        "positive_like": 132,
+        "negative_ok": 279,
+        "ambiguous": 53
+      },
+      "random": {
+        "negative_ok": 456,
+        "ambiguous": 3,
+        "positive_like": 5
+      }
+    },
+    "human_verified": false,
+    "limitations": [
+      "Candidate labels may be ambiguous; same-model review is not ground truth.",
+      "Suspect negatives motivate a future cleaned dataset and untouched test, not retrospective improvement claims."
+    ]
+  },
+  "clean_data": {
+    "training_groups": 232,
+    "pairs": 874,
+    "dropped_queries": [],
+    "source": "v1 train queries and diagnostic negative review, no test mining",
+    "queries_sha256": "5016f4f2b781bd36f9991d94ec0e5624ace165beb105f82b1d675b10d623b79a",
+    "human_verified": false
+  },
+  "test_manifest": {
+    "query_count": 65,
+    "answerable_count": 55,
+    "test_sha256": "e69a3ed76ba6c1d3b7b0758f7f159a471867bfe1652848639e04f4aa84e4c3da",
+    "rejected_candidates": [
+      "new_26aaa5bce6",
+      "new_69d0627db9",
+      "new_6e053f1389",
+      "new_add9780c83",
+      "new_e4562082cb"
+    ],
+    "no_reused_support_sets": true,
+    "no_reused_original_target_pairs": true,
+    "max_allowed_wording_similarity_to_previous": 0.8,
+    "frozen_before_clean_training": true,
+    "human_labels_verified": false,
+    "scope": "additional synthetic held-out data-quality study; known KB facts still shared"
+  },
+  "limitations": [
+    "AI negative review is not human ground truth.",
+    "Cleaning uses verified random fallback as well as retained hard negatives.",
+    "Single seed and synthetic data; no statistical significance claim.",
+    "Old test_v1/test_v2 results and data were not rewritten."
+  ]
+}

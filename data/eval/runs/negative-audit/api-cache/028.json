@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0283",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "仅涉及笔记本保修期限，未支持接口故障判断或维修数据丢失问题。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "直接说明维修更换主板/存储芯片可能导致数据丢失且官方不承担恢复责任，支持问题中送修资料是否会丢的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "讲进液预防，与USB接口故障及送修数据无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_tablet_0003",
+            "judgment": "negative_ok",
+            "reason": "平板数据同步问题，与笔记本USB接口及送修数据无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0284",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅说明保修期限及以发票日期为准，未直接支持非官方渠道丢发票能否保修的结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "讲非官方维修记录影响保修，与购买渠道和发票丢失的保修认定不同。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "human_transfer_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "人工客服工作时间，与保修资格判断无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0004",
+            "judgment": "negative_ok",
+            "reason": "笔记本接口问题，与手机屏幕保修及发票丢失无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0286",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "仅保修期限，未支持漏光是否正常或维修时长。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0005",
+            "judgment": "negative_ok",
+            "reason": "笔记本屏幕亮点暗点，非平板漏光，且未涉及维修时长。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0001",
+            "judgment": "negative_ok",
+            "reason": "保修范围含屏幕显示异常，但未直接回答漏光是否正常或维修时长。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "笔记本保修期限，与平板漏光及维修时长无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0287",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0001",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕触控异常，与摄像头模糊和平板键盘延迟无关。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "笔记本键盘失灵，非平板外接键盘延迟，主题不同。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "water_damage_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "进液预防建议，与摄像头模糊及键盘延迟无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0000",
+            "judgment": "negative_ok",
+            "reason": "退货政策，与两个故障处理无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0289",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "说明快充温热属正常及异常停止条件，未直接支持边游戏边快充或被子充电的风险与注意事项。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "禁止第三方快充头等，与游戏快充发热及被子充电场景不直接相关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_exclusions_0001",
+            "judgment": "negative_ok",
+            "reason": "非官方维修记录影响保修，与充电风险无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "warranty_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "保修审批说明，与快充安全注意事项无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0291",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_process_laptop_0002",
+            "judgment": "positive_like",
+            "reason": "虽为笔记本文档，但直接说明更换主板可能导致数据丢失且官方不承担恢复责任，支持数据丢失责任结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "data_privacy_repair_0000",
+            "judgment": "positive_like",
+            "reason": "直接说明更换主板可能导致数据丢失并建议备份，支持维修数据是否会丢的结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_pricing_0001",
+            "judgment": "negative_ok",
+            "reason": "维修费用参考，与维修时长及数据丢失责任无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "dangerous_operations_0002",
+            "judgment": "negative_ok",
+            "reason": "危险操作清单，与维修时长及数据丢失责任无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1157,
+    "prompt_tokens": 5430,
+    "total_tokens": 6587,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5430
+  },
+  "model": "deepseek-flash",
+  "response_id": "302edde9-2b02-4928-8317-be1c6943eb72"
+}

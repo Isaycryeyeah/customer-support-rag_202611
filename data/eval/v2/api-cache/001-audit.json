@@ -1,0 +1,184 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "new_006",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "怀疑维修过程中数据隐私泄露应作为高优先级投诉转人工处理，智能客服不能直接判断是否存在泄露",
+          "具体维修费用以设备实际检测结果为准，客服公布的价格仅作参考区间，不能作为最终报价承诺"
+        ],
+        "risk_types": [
+          "complaint",
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "两个诉求分别由隐私投诉转人工片段和费用报价边界片段直接支持，gold准确。"
+      },
+      {
+        "query_id": "new_007",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0002",
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0002",
+            "quote": "在设备进液、短路后立即通电测试；"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。"
+          }
+        ],
+        "expected_points": [
+          "严禁在设备进液后立即通电测试，短路风险可能导致主板永久损坏甚至引发安全事故",
+          "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理，这些方法可能加速内部腐蚀或造成短路"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "进液后通电和米缸偏方均属禁止操作，两个片段直接支持，风险标签合理。"
+      },
+      {
+        "query_id": "new_008",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_faq_laptop_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "寄修前建议备份重要数据到云端或其他存储设备，退出账号或开启访客模式，移除敏感应用或数据",
+          "接口无法识别外接设备时先更换数据线或外接设备排查，更换后仍无法识别可能是接口故障，建议联系售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "数据准备和接口排查两个诉求分别由对应片段直接支持，无风险。"
+      },
+      {
+        "query_id": "new_009",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0001",
+          "battery_safety_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0001",
+            "quote": "笔记本在高负载运行（如游戏、渲染）时风扇噪音增大、机身温热属于正常现象。但如果出现底部烫手、风扇异响、自动关机等情况，应立即停止使用并送修检测。"
+          },
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          }
+        ],
+        "expected_points": [
+          "笔记本高负载运行时风扇噪音增大、机身温热属于正常现象，但出现底部烫手、风扇异响、自动关机应立即停止使用并送修",
+          "手机建议使用官方原装或认证配件充电，避免高温环境长时间存放，避免电池长期处于满电或零电量状态存放"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "笔记本发热与手机电池日常建议分别由对应片段支持，gold准确。"
+      },
+      {
+        "query_id": "new_010",
+        "accepted": false,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0004",
+          "repair_process_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0004",
+            "quote": "如排除高负载使用场景后仍存在异常发热，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "expected_points": [
+          "排除高负载使用场景后仍存在异常发热，建议联系售后检测",
+          "保修期内非人为故障免费维修；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户问手机维修费用，原gold误用笔记本维修费用片段；应改为手机/平板维修流程中的费用说明片段，故不接受原标签。"
+      },
+      {
+        "query_id": "new_011",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_faq_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          }
+        ],
+        "expected_points": [
+          "怀疑维修过程中数据隐私泄露应作为高优先级投诉转人工处理，智能客服不能直接判断是否存在泄露行为",
+          "键盘按键失灵先检查周围是否有异物或液体残留，清理后仍失灵可能是键盘模组故障，建议联系售后检测更换"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "隐私投诉转人工和键盘失灵排查两个诉求分别由对应片段支持，风险标签合理。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1456,
+    "prompt_tokens": 11536,
+    "total_tokens": 12992,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 2064
+  },
+  "model": "deepseek-flash",
+  "response_id": "a12d8b43-351a-4b21-a5da-469c47d14b51"
+}

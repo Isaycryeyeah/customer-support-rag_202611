@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "changed_test_rejected_before_model_loading": true,
+  "reason": "Test data changed after configuration freeze."
+}

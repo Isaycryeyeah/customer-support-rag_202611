@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0008",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_tablet_0004",
+            "judgment": "negative_ok",
+            "reason": "讲平板长期存放后电量显示异常与校准，未涉及笔记本存放电量区间或环境要求。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0004",
+            "judgment": "positive_like",
+            "reason": "提到避免高温环境存放及避免满电或零电量长期存放，直接支持存放环境与电量留存的必要结论。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_laptop_0001",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本维修时长，与存放电量及环境无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲充电异常处理，与长期存放建议无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0009",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0003",
+            "judgment": "positive_like",
+            "reason": "明确禁止使用来源不明的第三方快充头，直接支持第三方充电器存在安全风险这一结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0002",
+            "judgment": "negative_ok",
+            "reason": "讲无法充电的排查，虽提及官方充电器但未回答第三方充电器安全性或是否必须原装。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "return_policy_0003",
+            "judgment": "negative_ok",
+            "reason": "讲退货审批，与充电器安全问题无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_faq_laptop_0004",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本接口无法识别外接设备，与手机充电器安全无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0012",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "charger_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲充电器外观破损检查，未涉及插头发烫或插座冒烟的处理。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲快充协议与兼容性，未涉及发烫冒烟应急处理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0004",
+            "judgment": "negative_ok",
+            "reason": "讲日常充电建议，未涉及插头发烫、插座冒烟的应急处理。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0003",
+            "judgment": "ambiguous",
+            "reason": "讲设备冒烟起火处理，但问题核心是充电器插头发烫与插座冒烟，是否直接适用不够明确。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0017",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_0000",
+            "judgment": "positive_like",
+            "reason": "明确说明不应自行刺破鼓包电池并建议联系售后，直接支持拒绝穿刺放气这一结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "battery_safety_laptop_0000",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本电池鼓包处理，针对笔记本而非手机，未直接支持手机鼓包穿刺问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "charger_safety_0002",
+            "judgment": "negative_ok",
+            "reason": "讲充电环境要求，与电池鼓包穿刺无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "exchange_policy_0002",
+            "judgment": "negative_ok",
+            "reason": "讲换货审批，与鼓包电池处理无关。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0018",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "screen_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕碎裂处理，问题为后盖摔裂自拆，未直接支持拆机相关结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "warranty_policy_laptop_0003",
+            "judgment": "negative_ok",
+            "reason": "讲笔记本保修不覆盖私自拆机，针对笔记本且侧重保修，未直接回答手机拆后盖问题。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "fast_charging_safety_0000",
+            "judgment": "negative_ok",
+            "reason": "讲快充协议，与拆后盖无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "repair_process_0000",
+            "judgment": "negative_ok",
+            "reason": "讲维修申请流程，未涉及自行拆机指导或风险。"
+          }
+        ]
+      },
+      {
+        "query_id": "syn_t0020",
+        "negatives": [
+          {
+            "strategy": "hard",
+            "chunk_id": "dangerous_operations_0001",
+            "judgment": "positive_like",
+            "reason": "明确列出短接主板触点尝试强制开机为禁止指导操作，直接支持拒绝提供短接方法这一结论。"
+          },
+          {
+            "strategy": "hard",
+            "chunk_id": "repair_faq_0000",
+            "judgment": "negative_ok",
+            "reason": "讲无法开机的常规排查，未涉及短接主板触点指导或风险。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "screen_safety_0001",
+            "judgment": "negative_ok",
+            "reason": "讲屏幕漏液处理，与短接主板无关。"
+          },
+          {
+            "strategy": "random",
+            "chunk_id": "battery_safety_0003",
+            "judgment": "negative_ok",
+            "reason": "讲电池冒烟起火处理，与短接主板强制开机无关。"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1164,
+    "prompt_tokens": 4709,
+    "total_tokens": 5873,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4709
+  },
+  "model": "deepseek-flash",
+  "response_id": "26f87c37-e9a1-4d8f-9908-bd7418472c0d"
+}

@@ -1,0 +1,375 @@
+{
+  "milestone": "M1",
+  "implementation_acceptance_complete": true,
+  "human_review_complete": false,
+  "selected_candidate_adopted": true,
+  "regression_tests": 43,
+  "dataset": {
+    "status": "ai_evidence_reviewed",
+    "human_reviewed": false,
+    "source": "data/eval/synthetic-source-v1/annotations.jsonl",
+    "query_count": 449,
+    "group_count": 446,
+    "split_counts": {
+      "test": 91,
+      "train": 269,
+      "dev": 89
+    },
+    "partition_counts": {
+      "train": 269,
+      "dev": 89,
+      "test_v1": 44,
+      "test_v2": 47
+    },
+    "group_split_counts": {
+      "train": 268,
+      "test": 89,
+      "dev": 89
+    },
+    "seed": 20261031,
+    "test_v2_seed": 20261101,
+    "files_sha256": {
+      "train.jsonl": "4cbe14c358c7ca80d8aea7c7aeadb2fb18f202ae04c2ff0e9c529c6934118651",
+      "dev.jsonl": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c",
+      "test_v1.jsonl": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+      "test_v2.jsonl": "731fb10cc35d1c1de6da36d4e487df63495d133885c0cd802286754417207b5a"
+    },
+    "rejected": [
+      {
+        "query_id": "syn_t0273",
+        "reason": "漏光是否正常与换屏参考价均有直接对应片段，价格已注明为参考区间，无越权承诺。"
+      },
+      {
+        "query_id": "syn_t0309",
+        "reason": "亮点检测建议与笔记本屏幕参考费用区间均有直接片段。"
+      }
+    ],
+    "near_duplicate_merges": [
+      [
+        "syn_t0000",
+        "syn_t0288",
+        0.937
+      ],
+      [
+        "syn_t0179",
+        "syn_t0279",
+        0.949
+      ],
+      [
+        "syn_t0329",
+        "syn_t0364",
+        0.883
+      ]
+    ],
+    "warnings": [],
+    "historical_like_groups_train_only": 0,
+    "limitations": [
+      "Synthetic known-KB benchmark, shared underlying facts across partitions.",
+      "Evidence-combination groups are not independently collected real user intents.",
+      "Same-model review has correlated errors; no human agreement statistic is claimed."
+    ]
+  },
+  "test_baseline": {
+    "hit@1": 0.868421052631579,
+    "hit@3": 1.0,
+    "hit@5": 1.0,
+    "recall@1": 0.5614035087719298,
+    "recall@3": 0.8201754385964912,
+    "recall@5": 0.8596491228070174,
+    "mrr@10": 0.9342105263157895,
+    "ndcg@5": 0.8323816231481552,
+    "sample_count": 44,
+    "answerable_count": 38,
+    "unanswerable_count": 6,
+    "effective_recall@5": 0.8888888888888888,
+    "refusal": {
+      "evaluated_count": 33,
+      "excluded_count": 11,
+      "true_refusals": 6,
+      "false_refusals": 0,
+      "unsupported_answers": 0,
+      "correct_answers_decision": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_refusal_rate": 0.0,
+      "unsupported_answer_rate": 0.0,
+      "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+    },
+    "recognized_high_risk_fraction": 0.9090909090909091
+  },
+  "test_selected": {
+    "hit@1": 0.868421052631579,
+    "hit@3": 1.0,
+    "hit@5": 1.0,
+    "recall@1": 0.5614035087719298,
+    "recall@3": 0.8201754385964912,
+    "recall@5": 0.8596491228070174,
+    "mrr@10": 0.9342105263157895,
+    "ndcg@5": 0.8323816231481552,
+    "sample_count": 44,
+    "answerable_count": 38,
+    "unanswerable_count": 6,
+    "effective_recall@5": 0.8888888888888888,
+    "refusal": {
+      "evaluated_count": 33,
+      "excluded_count": 11,
+      "true_refusals": 6,
+      "false_refusals": 0,
+      "unsupported_answers": 0,
+      "correct_answers_decision": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_refusal_rate": 0.0,
+      "unsupported_answer_rate": 0.0,
+      "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+    },
+    "recognized_high_risk_fraction": 0.9090909090909091
+  },
+  "dev_pipeline_p95_reduction_fraction": 0.6710831703538663,
+  "online_baseline": {
+    "created_at": "2026-10-31T02:50:51.184288+00:00",
+    "frozen": {
+      "model": "BAAI/bge-reranker-base",
+      "dev_sha256": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c",
+      "risk_detector_sha256": "6832c04451bdd17a43ca19e952bde4f68977704ab672cb9cc5f97a08de562b67",
+      "test_v1_sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+      "selection_scope": "DEV only; test file hash recorded without scoring",
+      "acceptance_gate": "test Hit@5/effective Recall@5 drop <= .02, no-answer refusal recall non-inferior; otherwise retain baseline",
+      "dtype": "float32",
+      "pool": 20,
+      "threshold": 0.1
+    },
+    "input_sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+    "sample_count": 12,
+    "answer_types": {
+      "generated": 5,
+      "low_confidence": 4,
+      "safety_refusal": 3
+    },
+    "sample_query_ids": [
+      "syn_t0108",
+      "syn_t0350",
+      "ood_035",
+      "syn_t0093",
+      "syn_t0255",
+      "ood_023",
+      "syn_t0343",
+      "syn_t0196",
+      "ood_045",
+      "syn_t0332",
+      "syn_t0169",
+      "ood_021"
+    ],
+    "sampling": "seed 20261031, round-robin normal/safety/unanswerable audit; not a real traffic mix",
+    "service_failure_rate": 0.0,
+    "refusal": {
+      "evaluated_count": 8,
+      "excluded_count": 4,
+      "true_refusals": 4,
+      "false_refusals": 0,
+      "unsupported_answers": 0,
+      "correct_answers_decision": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_refusal_rate": 0.0,
+      "unsupported_answer_rate": 0.0,
+      "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+    },
+    "timings": {
+      "retrieval_ms": {
+        "p50": 7.5022000000899425,
+        "p95": 98.55343499975774
+      },
+      "rerank_ms": {
+        "p50": 172.69820000001346,
+        "p95": 350.8741500001178
+      },
+      "llm_ms": {
+        "p50": 0.0,
+        "p95": 6392.27329000009
+      },
+      "total_ms": {
+        "p50": 331.0006999995494,
+        "p95": 6700.639565000571
+      }
+    },
+    "serial_requests_per_second": 0.4608419202456376,
+    "token_usage": {
+      "prompt_tokens": 3961,
+      "completion_tokens": 2338,
+      "cached_input_tokens": 640
+    },
+    "generation_cost_estimate_usd": 0.0019028699999999999,
+    "generation_cost_per_1000_requests_usd": 0.15857249999999998,
+    "pricing_source": {
+      "verified_at": "2026-10-31",
+      "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "model": "deepseek-flash",
+      "currency": "USD",
+      "unit_tokens": 1000000,
+      "off_peak": {
+        "cache_hit_input": 0.003,
+        "cache_miss_input": 0.15,
+        "output": 0.6
+      },
+      "peak": {
+        "cache_hit_input": 0.006,
+        "cache_miss_input": 0.3,
+        "output": 1.2
+      },
+      "schedule": "Peak Mon-Fri 01:00-04:00 and 06:00-10:00 UTC, excluding Chinese public holidays; all other periods off-peak.",
+      "experiment_rate": "off_peak",
+      "experiment_rate_reason": "2026-10-31 is Saturday; no peak period applies.",
+      "note": "Estimate from token counters, not a billing statement; reasoning tokens are included in completion_tokens."
+    },
+    "judge_scope": "same-model AI evidence scoring, not human agreement or independent judge validation",
+    "ai_judge_mean": {
+      "factual_support": 1.6666666666666667,
+      "point_coverage": 1.6666666666666667,
+      "citation_support": 1.6666666666666667
+    },
+    "dangerous_guidance_flags": 0,
+    "unauthorized_promise_flags": 0
+  },
+  "online_selected": {
+    "created_at": "2026-10-31T02:52:06.351538+00:00",
+    "frozen": {
+      "model": "BAAI/bge-reranker-base",
+      "dev_sha256": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c",
+      "risk_detector_sha256": "6832c04451bdd17a43ca19e952bde4f68977704ab672cb9cc5f97a08de562b67",
+      "test_v1_sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+      "selection_scope": "DEV only; test file hash recorded without scoring",
+      "acceptance_gate": "test Hit@5/effective Recall@5 drop <= .02, no-answer refusal recall non-inferior; otherwise retain baseline",
+      "dtype": "float16",
+      "pool": 20,
+      "threshold": 0.6,
+      "dev_metrics": {
+        "hit@1": 0.8311688311688312,
+        "hit@3": 0.987012987012987,
+        "hit@5": 1.0,
+        "recall@1": 0.5064935064935064,
+        "recall@3": 0.8051948051948052,
+        "recall@5": 0.8701298701298701,
+        "mrr@10": 0.9036796536796536,
+        "ndcg@5": 0.8206023973991227,
+        "sample_count": 89,
+        "answerable_count": 77,
+        "unanswerable_count": 12,
+        "effective_recall@5": 0.847457627118644,
+        "refusal": {
+          "evaluated_count": 71,
+          "excluded_count": 18,
+          "true_refusals": 12,
+          "false_refusals": 1,
+          "unsupported_answers": 0,
+          "correct_answers_decision": 58,
+          "precision": 0.9230769230769231,
+          "recall": 1.0,
+          "false_refusal_rate": 0.01694915254237288,
+          "unsupported_answer_rate": 0.0,
+          "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+        },
+        "recognized_high_risk_fraction": 1.0
+      },
+      "dev_timing_speedup_fraction": 0.6710831703538663,
+      "precision_quality_gate": true
+    },
+    "input_sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+    "sample_count": 12,
+    "answer_types": {
+      "generated": 5,
+      "low_confidence": 4,
+      "safety_refusal": 3
+    },
+    "sample_query_ids": [
+      "syn_t0108",
+      "syn_t0350",
+      "ood_035",
+      "syn_t0093",
+      "syn_t0255",
+      "ood_023",
+      "syn_t0343",
+      "syn_t0196",
+      "ood_045",
+      "syn_t0332",
+      "syn_t0169",
+      "ood_021"
+    ],
+    "sampling": "seed 20261031, round-robin normal/safety/unanswerable audit; not a real traffic mix",
+    "service_failure_rate": 0.0,
+    "refusal": {
+      "evaluated_count": 8,
+      "excluded_count": 4,
+      "true_refusals": 4,
+      "false_refusals": 0,
+      "unsupported_answers": 0,
+      "correct_answers_decision": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_refusal_rate": 0.0,
+      "unsupported_answer_rate": 0.0,
+      "scope": "explicit answerability labels; excludes expected safety cases and service failures"
+    },
+    "timings": {
+      "retrieval_ms": {
+        "p50": 8.138800000324409,
+        "p95": 97.3488999999971
+      },
+      "rerank_ms": {
+        "p50": 154.1917000004105,
+        "p95": 301.4311750003344
+      },
+      "llm_ms": {
+        "p50": 0.0,
+        "p95": 4787.965290000009
+      },
+      "total_ms": {
+        "p50": 249.97130000019752,
+        "p95": 5105.384075000709
+      }
+    },
+    "serial_requests_per_second": 0.5501263736552238,
+    "token_usage": {
+      "prompt_tokens": 3961,
+      "completion_tokens": 2457,
+      "cached_input_tokens": 2816
+    },
+    "generation_cost_estimate_usd": 0.001654398,
+    "generation_cost_per_1000_requests_usd": 0.1378665,
+    "pricing_source": {
+      "verified_at": "2026-10-31",
+      "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "model": "deepseek-flash",
+      "currency": "USD",
+      "unit_tokens": 1000000,
+      "off_peak": {
+        "cache_hit_input": 0.003,
+        "cache_miss_input": 0.15,
+        "output": 0.6
+      },
+      "peak": {
+        "cache_hit_input": 0.006,
+        "cache_miss_input": 0.3,
+        "output": 1.2
+      },
+      "schedule": "Peak Mon-Fri 01:00-04:00 and 06:00-10:00 UTC, excluding Chinese public holidays; all other periods off-peak.",
+      "experiment_rate": "off_peak",
+      "experiment_rate_reason": "2026-10-31 is Saturday; no peak period applies.",
+      "note": "Estimate from token counters, not a billing statement; reasoning tokens are included in completion_tokens."
+    },
+    "judge_scope": "same-model AI evidence scoring, not human agreement or independent judge validation",
+    "ai_judge_mean": {
+      "factual_support": 1.6666666666666667,
+      "point_coverage": 1.6666666666666667,
+      "citation_support": 1.6666666666666667
+    },
+    "dangerous_guidance_flags": 0,
+    "unauthorized_promise_flags": 0
+  },
+  "bad_case_count": 12,
+  "remaining_limitations": [
+    "Synthetic AI-reviewed labels; no human agreement statistic.",
+    "Held-out test has small safety/no-answer subgroups; keyword risk coverage is incomplete.",
+    "Docker daemon validation is conditional on local runtime availability."
+  ]
+}

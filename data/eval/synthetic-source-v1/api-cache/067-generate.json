@@ -1,0 +1,42 @@
+{
+  "data": {
+    "items": [
+      {
+        "task_id": "t0402",
+        "question": "我在官方商城买的云枢手机发票丢了，还能按保修期申请保修吗？需要提供什么来证明购买时间？",
+        "expected_points": [
+          "官方渠道购买丢失发票可联系客服提供购买账号、手机号或支付信息，协助查询订单记录作为购买凭证",
+          "手机整机保修期为购买之日起12个月，保修期以购机发票或电子凭证日期为准"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0000",
+            "quote": "可联系客服提供购买时使用的账号、手机号或支付信息，协助在官方系统中查询订单记录作为购买凭证。"
+          },
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          }
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "device_type": "手机",
+        "rationale": "用户既需要知道发票丢失后如何证明购买凭证（片段1），也需要确认手机整机保修期限及起算依据（片段2），两个片段共同才能完整回答。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 253,
+    "prompt_tokens": 526,
+    "total_tokens": 779,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 398
+  },
+  "model": "deepseek-flash",
+  "response_id": "f99154ae-d2cd-449e-a5eb-28b6b00e2464"
+}

@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "file": "data\\eval\\v1\\train.jsonl",
+      "sha256": "4cbe14c358c7ca80d8aea7c7aeadb2fb18f202ae04c2ff0e9c529c6934118651"
+    },
+    {
+      "file": "data\\eval\\v1\\dev.jsonl",
+      "sha256": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c"
+    },
+    {
+      "file": "data\\eval\\v1\\test_v1.jsonl",
+      "sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe"
+    },
+    {
+      "file": "data\\eval\\v1\\test_v2.jsonl",
+      "sha256": "731fb10cc35d1c1de6da36d4e487df63495d133885c0cd802286754417207b5a"
+    },
+    {
+      "file": "data\\training\\v1\\queries.jsonl",
+      "sha256": "c9f0d52a82cbc99fdff9da97f308110c2dec58edca351d3d516be270c7a3f1c9"
+    },
+    {
+      "file": "data\\training\\v2\\queries.jsonl",
+      "sha256": "5016f4f2b781bd36f9991d94ec0e5624ace165beb105f82b1d675b10d623b79a"
+    },
+    {
+      "file": "data\\eval\\clean-study-v1\\test_v3.jsonl",
+      "sha256": "e69a3ed76ba6c1d3b7b0758f7f159a471867bfe1652848639e04f4aa84e4c3da"
+    }
+  ],
+  "group_partitions_disjoint": true,
+  "candidate_comparisons": [
+    {
+      "experiment": "m2-test-",
+      "models": [
+        "pretrained",
+        "random",
+        "hard",
+        "hard-60"
+      ],
+      "queries": 47,
+      "same_ordered_top20_candidates": true
+    },
+    {
+      "experiment": "clean-study-test-",
+      "models": [
+        "pretrained",
+        "raw",
+        "clean"
+      ],
+      "queries": 65,
+      "same_ordered_top20_candidates": true
+    }
+  ],
+  "scope": "File integrity and controlled inputs; not human label validation or an unseen rerun."
+}
