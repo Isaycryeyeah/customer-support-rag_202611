@@ -1,0 +1,13 @@
+.env
+.git/
+.gitignore
+.venv/
+.venv-clean/
+models/
+checkpoints/
+venv/
+__pycache__/
+*.pyc
+data/app.db
+.pytest_cache/
+*.egg-info/

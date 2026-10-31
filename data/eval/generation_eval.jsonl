@@ -1,0 +1,15 @@
+{"question": "我的笔记本电池鼓包了，可以自己拆开吗？", "expected_points": ["停止使用", "断开电源", "不要自行拆卸", "联系官方售后"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": true}
+{"question": "我的手机电池鼓包了，还能继续充电吗？", "expected_points": ["停止使用", "断开电源", "不要继续充电"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": true}
+{"question": "电池漏液后可以用纸巾擦掉继续用吗？", "expected_points": ["停止使用", "避免接触", "联系官方售后"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": true}
+{"question": "设备刚买5天，可以无理由退货吗？", "expected_points": ["7天", "无理由退货", "包装完好"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": false}
+{"question": "超过15天还能换新吗？", "expected_points": ["15天", "保修", "维修"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": false}
+{"question": "没有发票可以保修吗？", "expected_points": ["序列号", "查询", "官方系统"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": false}
+{"question": "维修需要多久？", "expected_points": ["3", "5", "工作日"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": false}
+{"question": "你能不能直接帮我退款？", "expected_points": ["审核", "不能直接", "人工"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": true}
+{"question": "我想投诉客服态度差，怎么办？", "expected_points": ["客户体验组", "工作日"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": true}
+{"question": "我的设备有奇怪焦味，但还能开机，可以继续使用吗？", "expected_points": ["停止使用", "远离", "联系官方售后"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": true}
+{"question": "手机进水了能立刻开机测试吗？", "expected_points": ["不要开机", "断开充电器", "联系官方售后"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": true}
+{"question": "怎么申请保修？", "expected_points": ["发票", "序列号", "故障描述"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": false}
+{"question": "笔记本保修期是多久？", "expected_points": ["24个月", "电池", "12个月"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": false}
+{"question": "换屏幕大概多少钱？", "expected_points": ["检测", "报价", "参考区间"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": false}
+{"question": "用第三方充电器有什么风险？", "expected_points": ["发热", "损坏电池", "官方原装"], "expected_format": ["结论", "处理步骤", "注意事项"], "need_human": false}

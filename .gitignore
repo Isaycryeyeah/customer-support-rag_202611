@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+.venv-clean/
+models/
+checkpoints/
+venv/
+data/app.db
+data/processed/*.index
+data/processed/*.pkl
+data/eval/report.json
+*.egg-info/
+.pytest_cache/

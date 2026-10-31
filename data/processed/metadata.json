@@ -1,0 +1,152 @@
+{
+  "doc_count": 24,
+  "chunk_count": 103,
+  "chunk_size": 500,
+  "chunk_overlap": 80,
+  "docs": [
+    {
+      "doc_id": "battery_safety",
+      "title": "电池安全使用指南（手机 / 平板）",
+      "source_path": "data/raw_docs/battery_safety.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "battery_safety_laptop",
+      "title": "电池安全使用指南（笔记本电脑）",
+      "source_path": "data/raw_docs/battery_safety_laptop.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "charger_safety",
+      "title": "充电器安全使用说明",
+      "source_path": "data/raw_docs/charger_safety.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "complaint_escalation",
+      "title": "投诉升级处理规则",
+      "source_path": "data/raw_docs/complaint_escalation.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "dangerous_operations",
+      "title": "禁止指导的危险操作清单",
+      "source_path": "data/raw_docs/dangerous_operations.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "data_privacy_repair",
+      "title": "维修过程中的数据隐私说明",
+      "source_path": "data/raw_docs/data_privacy_repair.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "exchange_policy",
+      "title": "换货政策",
+      "source_path": "data/raw_docs/exchange_policy.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "fast_charging_safety",
+      "title": "快充安全使用说明",
+      "source_path": "data/raw_docs/fast_charging_safety.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "human_transfer_policy",
+      "title": "人工客服转接规则",
+      "source_path": "data/raw_docs/human_transfer_policy.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "invoice_proof",
+      "title": "发票和购买凭证说明",
+      "source_path": "data/raw_docs/invoice_proof.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "lost_invoice_policy",
+      "title": "发票丢失处理政策",
+      "source_path": "data/raw_docs/lost_invoice_policy.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "repair_faq",
+      "title": "常见故障 FAQ（手机 / 平板）",
+      "source_path": "data/raw_docs/repair_faq.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "repair_faq_laptop",
+      "title": "常见故障 FAQ（笔记本电脑）",
+      "source_path": "data/raw_docs/repair_faq_laptop.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "repair_faq_tablet",
+      "title": "常见故障 FAQ（平板电脑）",
+      "source_path": "data/raw_docs/repair_faq_tablet.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "repair_pricing",
+      "title": "维修费用参考说明",
+      "source_path": "data/raw_docs/repair_pricing.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "repair_process",
+      "title": "维修流程说明（手机 / 平板）",
+      "source_path": "data/raw_docs/repair_process.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "repair_process_laptop",
+      "title": "维修流程说明（笔记本电脑）",
+      "source_path": "data/raw_docs/repair_process_laptop.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "return_policy",
+      "title": "退货政策",
+      "source_path": "data/raw_docs/return_policy.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "screen_safety",
+      "title": "屏幕破损安全处理说明",
+      "source_path": "data/raw_docs/screen_safety.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "service_boundary",
+      "title": "售后能力边界说明",
+      "source_path": "data/raw_docs/service_boundary.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "warranty_exclusions",
+      "title": "保修免责与不予保修情况说明",
+      "source_path": "data/raw_docs/warranty_exclusions.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "warranty_policy",
+      "title": "保修政策（手机 / 平板）",
+      "source_path": "data/raw_docs/warranty_policy.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "warranty_policy_laptop",
+      "title": "保修政策（笔记本电脑）",
+      "source_path": "data/raw_docs/warranty_policy_laptop.md",
+      "updated_at": "2026-07-07"
+    },
+    {
+      "doc_id": "water_damage_policy",
+      "title": "进液 / 进水处理说明",
+      "source_path": "data/raw_docs/water_damage_policy.md",
+      "updated_at": "2026-07-07"
+    }
+  ]
+}
