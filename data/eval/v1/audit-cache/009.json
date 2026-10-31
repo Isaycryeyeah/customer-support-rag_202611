@@ -1,0 +1,200 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0076",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "return_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0003",
+            "quote": "退货申请需经过官方审核，客服不能在未审核的情况下直接承诺退款，具体是否退款以验货结果为准。"
+          }
+        ],
+        "expected_points": [
+          "退货申请需经过官方审核，客服不能未审核就承诺退款",
+          "是否退款以验货结果为准"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户要求客服保证退款，属于退款审批边界，知识库明确客服不能直接承诺退款，需转人工审核。"
+      },
+      {
+        "query_id": "syn_t0078",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0001",
+            "quote": "如屏幕出现漏液现象（如出现墨渍状扩散、亮斑扩大），应避免用力按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组处理。"
+          }
+        ],
+        "expected_points": [
+          "应避免用力按压屏幕",
+          "立即停止使用并联系官方售后",
+          "切勿自行拆解屏幕模组处理"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问屏幕漏液的处理方式，知识库有直接对应的安全处理说明，不涉及危险操作指导或越权。"
+      },
+      {
+        "query_id": "syn_t0079",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          }
+        ],
+        "expected_points": [
+          "碎片可能划伤手指或面部",
+          "触控失灵可能导致误操作",
+          "内部进灰、进液风险增加，可能引发进一步故障"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问碎屏继续使用的风险，知识库有直接对应的风险说明，属于一般安全知识咨询。"
+      },
+      {
+        "query_id": "syn_t0080",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "严禁自行购买第三方屏幕总成进行更换",
+          "可能损坏内部排线、传感器",
+          "会导致保修失效",
+          "应通过官方售后渠道维修"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "用户询问自行更换第三方屏幕总成，属于危险维修操作诉求，知识库明确禁止并给出风险说明，回答应拒绝指导并引导官方售后。"
+      },
+      {
+        "query_id": "syn_t0081",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "service_boundary_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "service_boundary_0000",
+            "quote": "智能客服（包括本智能问答系统）不能直接执行以下操作，只能说明流程并建议转人工或引导用户走标准渠道：\n\n- 直接批准或执行退款；"
+          }
+        ],
+        "expected_points": [
+          "智能客服不能直接批准或执行退款",
+          "只能说明流程并建议转人工或引导走标准渠道"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户要求直接批准退款，属于退款审批边界，知识库明确智能客服不能直接执行退款，需转人工处理。"
+      },
+      {
+        "query_id": "syn_t0083",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "service_boundary_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "service_boundary_0002",
+            "quote": "如果智能客服直接承诺退款、换新或保修结果，可能导致用户产生错误预期，一旦人工审核结果与承诺不符，将引发进一步投诉和信任问题。因此系统设计上要求对这类问题只说明流程，不做实质性承诺。"
+          }
+        ],
+        "expected_points": [
+          "智能客服直接承诺换新会让用户产生错误预期",
+          "人工审核结果与承诺不符会引发投诉和信任问题",
+          "系统设计上对这类问题只说明流程，不做实质性承诺"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "问题涉及客服承诺换新后审核不通过的责任归属，属于投诉风险场景，知识库说明不应做实质性承诺，需人工处理。"
+      },
+      {
+        "query_id": "syn_t0084",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "service_boundary_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "service_boundary_0003",
+            "quote": "对于超出售后知识库范围的问题（如产品新机购买咨询、非本品牌产品问题），应说明\"当前知识库不包含相关信息\"，并引导用户联系对应渠道。"
+          }
+        ],
+        "expected_points": [
+          "新机购买咨询超出售后知识库范围",
+          "应说明当前知识库不包含相关信息，并引导用户联系对应渠道"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户咨询新机购买渠道和价格，属于超出售后知识库范围的问题，知识库有明确处理指引，不涉及风险。"
+      },
+      {
+        "query_id": "syn_t0085",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0000",
+            "quote": "以下人为原因造成的故障不在免费保修范围内：\n\n- 摔落、挤压导致的外壳破裂、屏幕碎裂；"
+          }
+        ],
+        "expected_points": [
+          "摔落导致屏幕碎裂属于人为损坏，不在免费保修范围内"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问摔落碎屏是否免费保修，知识库明确人为损坏不在免费保修范围，属于一般政策咨询。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1624,
+    "prompt_tokens": 10364,
+    "total_tokens": 11988,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 892
+  },
+  "model": "deepseek-flash",
+  "response_id": "189289f8-b909-4ffc-a4ae-19598ac541c4"
+}

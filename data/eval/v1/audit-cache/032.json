@@ -1,0 +1,239 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0264",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0005",
+          "repair_process_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0005",
+            "quote": "请先在纯色背景下仔细观察确认异常位置和数量。如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+          },
+          {
+            "chunk_id": "repair_process_0002",
+            "quote": "用户可通过官方 App 的\"维修进度\"页面或客服热线查询实时维修状态，包括：已收到设备、检测中、维修中、待寄出、已寄出等节点。"
+          }
+        ],
+        "expected_points": [
+          "建议在纯色背景下观察确认异常位置和数量，联系售后检测屏幕面板，是否保修以官方检测结果为准",
+          "可通过官方App的“维修进度”页面或客服热线查询实时维修状态"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题均有直接对应片段，gold准确无噪声。"
+      },
+      {
+        "query_id": "syn_t0265",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001",
+          "screen_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          },
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          }
+        ],
+        "expected_points": [
+          "避免皮肤直接接触漏液区域，停止使用设备并放置在通风安全位置；如不慎接触应使用清水冲洗并及时就医",
+          "屏幕碎裂应立即停止触摸破损区域，用胶带或保护膜临时覆盖后停止使用，并联系官方售后检测更换"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "电池漏液涉及现实安全风险，需人工介入；证据完整。"
+      },
+      {
+        "query_id": "syn_t0266",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0001",
+          "repair_faq_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "请先重启设备排查是否为临时软件卡顿问题。如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0001",
+            "quote": "官方检测和维修人员在维修过程中仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。"
+          }
+        ],
+        "expected_points": [
+          "重启排查后仍无法触控或出现局部失灵、漂移，建议联系售后检测屏幕模组",
+          "官方检测和维修人员仅在必要范围内访问设备数据用于故障排查，不会主动查看个人照片、聊天记录等隐私内容"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "触控故障与隐私问题均有直接证据，gold准确。"
+      },
+      {
+        "query_id": "syn_t0267",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0004",
+          "warranty_policy_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "以下情况通常不在保修范围内，需要额外说明：\n\n- 摔落、进液等意外损坏（可走意外保范围，如已购买）；\n- 私自拆机、改装、加装非官方硬件导致的故障；\n- 使用非官方电源适配器导致的接口或主板损坏。\n\n具体是否保修需以官方检测结果为准，客服不能提前承诺。"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0004",
+            "quote": "不在保修范围内的故障，官方售后仍可提供有偿维修服务，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用。"
+          }
+        ],
+        "expected_points": [
+          "摔落等意外损坏通常不在保修范围内，可走意外保范围（如已购买），具体是否保修以官方检测结果为准，客服不能提前承诺",
+          "不在保修范围内的故障可提供有偿维修，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "保修与费用两个子问题均有直接片段支持。"
+      },
+      {
+        "query_id": "syn_t0268",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "human_transfer_policy_0000",
+          "return_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "1. 在官方渠道提交退货申请，说明退货原因；\n2. 客服审核订单信息和退货条件；\n3. 审核通过后，用户按指引寄回商品；\n4. 官方收到商品并验货后，原路退款。\n\n退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "以下情况智能客服应主动建议转接人工客服，而不是直接给出结论：\n\n1. 涉及退款、换新、保修审批等需要人工审核决策的事项；\n2. 用户情绪明显激动、表达强烈不满或投诉意向；\n3. 智能客服连续两次未能理解用户问题或给出的回答无法解决用户诉求；\n4. 涉及安全风险问题（如电池鼓包、起火、漏电）且用户需要进一步指导时，除安全提示外的具体处置应转人工或官方售后热线；\n5. 用户明确要求转人工。"
+          }
+        ],
+        "expected_points": [
+          "审核通过后按指引寄回，官方收到并验货后原路退款，退款到账时间通常为验货通过后3～7个工作日内",
+          "涉及退款等需要人工审核决策的事项，智能客服应主动建议转接人工客服；用户明确要求转人工也应转接"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "涉及退款审批与转人工诉求，需人工处理；证据完整。"
+      },
+      {
+        "query_id": "syn_t0269",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0003",
+          "warranty_exclusions_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0003",
+            "quote": "官方渠道购买的用户如需要补开发票或补发电子凭证，可联系官方客服或原购买门店，通常需要提供订单号或购买时使用的账号信息。"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0004",
+            "quote": "不在保修范围内的故障，官方售后仍可提供有偿维修服务，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用。"
+          }
+        ],
+        "expected_points": [
+          "官方渠道购买的用户可联系官方客服或原购买门店补开发票或补发电子凭证，通常需提供订单号或购买时使用的账号信息",
+          "不在保修范围内的故障可提供有偿维修，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "补开发票与费用咨询均有直接证据支持。"
+      },
+      {
+        "query_id": "syn_t0270",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0002",
+          "screen_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。\n\n请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。"
+          },
+          {
+            "chunk_id": "screen_safety_0001",
+            "quote": "如屏幕出现漏液现象（如出现墨渍状扩散、亮斑扩大），应避免用力按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组处理。"
+          }
+        ],
+        "expected_points": [
+          "异常发热、烫手时应立即停止使用并断开电源",
+          "不要将发热设备放在床上、沙发等易燃物附近，也不要用衣物、被子覆盖散热",
+          "屏幕漏液时应避免用力按压屏幕，立即停止使用并联系官方售后",
+          "切勿自行拆解屏幕模组处理"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "发热与屏幕漏液均有直接安全处理片段，gold准确。"
+      },
+      {
+        "query_id": "syn_t0271",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0003",
+          "screen_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0003",
+            "quote": "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以\"提升\"充电速度，此类操作存在严重安全风险且不在保修范围内。"
+          },
+          {
+            "chunk_id": "screen_safety_0001",
+            "quote": "如屏幕出现漏液现象（如出现墨渍状扩散、亮斑扩大），应避免用力按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组处理。"
+          }
+        ],
+        "expected_points": [
+          "禁止使用来源不明的第三方快充头或改装数据线",
+          "禁止拆解充电器或电池以提升充电速度，此类操作有严重安全风险且不在保修范围内",
+          "屏幕漏液时应避免用力按压，立即停止使用并联系官方售后",
+          "切勿自行拆解屏幕模组处理"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "涉及第三方快充与自行拆解诉求，有明确禁止与安全提示证据；属危险操作诉求但知识库已有标准拒绝应答，need_human按规则可判false。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2185,
+    "prompt_tokens": 10786,
+    "total_tokens": 12971,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1314
+  },
+  "model": "deepseek-flash",
+  "response_id": "10194602-cd0c-4f02-8147-f98a0cc94968"
+}

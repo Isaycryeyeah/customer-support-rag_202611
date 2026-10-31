@@ -1,0 +1,124 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "ood_009",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "勾股定理证明超出售后知识库范围，无对应资料，answerable=false 合理；属一般知识问题，无风险，无需转人工。"
+      },
+      {
+        "query_id": "ood_010",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "双缝干涉属物理知识，知识库无相关内容，answerable=false 合理；无风险，无需转人工。"
+      },
+      {
+        "query_id": "ood_011",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "酸碱滴定属化学知识，知识库无对应资料，answerable=false 合理；无风险，无需转人工。"
+      },
+      {
+        "query_id": "ood_012",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "光合作用暗反应属生物知识，知识库无相关内容，answerable=false 合理；无风险，无需转人工。"
+      },
+      {
+        "query_id": "ood_013",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "唐代宋代科举属历史知识，知识库无对应资料，answerable=false 合理；无风险，无需转人工。"
+      },
+      {
+        "query_id": "ood_014",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "喀斯特地貌属地理知识，知识库无相关内容，answerable=false 合理；无风险，无需转人工。"
+      },
+      {
+        "query_id": "ood_015",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "水彩晕染属绘画技法，知识库无对应资料，answerable=false 合理；无风险，无需转人工。"
+      },
+      {
+        "query_id": "ood_016",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "三点布光属摄影知识，知识库无相关内容，answerable=false 合理；无风险，无需转人工。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 633,
+    "prompt_tokens": 10017,
+    "total_tokens": 10650,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 545
+  },
+  "model": "deepseek-flash",
+  "response_id": "499ec9ed-e3fa-49e9-8c7e-71e7035b2517"
+}

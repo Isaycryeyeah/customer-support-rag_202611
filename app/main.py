@@ -16,7 +16,7 @@ from app.config import (
     FAISS_META_PATH,
     RERANKER_MODEL_NAME,
     BM25_WEIGHT,
-    LOW_CONFIDENCE_THRESHOLD, CANDIDATE_K, RERANK_K, CONTEXT_K,
+    LOW_CONFIDENCE_THRESHOLD, CANDIDATE_K, RERANK_K, CONTEXT_K, RERANKER_DTYPE,
 )
 
 app = FastAPI(title="中文 3C 售后客服助手")
@@ -43,7 +43,7 @@ def startup():
     bm25 = BM25Retriever(CHUNKS_PATH)
     dense = DenseRetriever(CHUNKS_PATH, DENSE_MODEL_NAME, FAISS_INDEX_PATH, FAISS_META_PATH)
     hybrid = HybridRetriever(bm25, dense, bm25_weight=BM25_WEIGHT)
-    reranker = Reranker(RERANKER_MODEL_NAME)
+    reranker = Reranker(RERANKER_MODEL_NAME, dtype=RERANKER_DTYPE)
     llm = LLMClient(provider=LLM_PROVIDER)
 
     rag_system = CustomerSupportRAG(

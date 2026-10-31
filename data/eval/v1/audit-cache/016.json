@@ -1,0 +1,240 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0135",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0001",
+          "dangerous_operations_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0001",
+            "quote": "如充电器出现外壳破损、插脚变形、数据线破皮外露铜线等情况，应立即停止使用，避免触电风险，并更换新的充电器。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0002",
+            "quote": "严禁指导用户进行以下操作：\n\n- 在设备进液、短路后立即通电测试；\n- 用湿手或在潮湿环境下拆解、插拔电子设备；\n- 私自改装充电器、电源适配器内部电路。"
+          }
+        ],
+        "expected_points": [
+          "充电器外壳破损、插脚变形、数据线破皮外露铜线等情况应立即停止使用，避免触电风险，并更换新的充电器",
+          "严禁指导用户私自改装充电器、电源适配器内部电路",
+          "严禁指导在潮湿环境下拆解、插拔电子设备"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "问题包含充电器破损能否继续使用及请求指导自行拆修，gold片段直接支持停止使用和禁止指导改装，风险类型正确。"
+      },
+      {
+        "query_id": "syn_t0136",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0002",
+          "fast_charging_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。\n\n请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "expected_points": [
+          "快充过程中设备和充电器比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热",
+          "如果出现烫手无法触摸、外壳变形等异常，应立即停止充电",
+          "设备异常发热、烫手时应立即停止使用并断开电源",
+          "不要将发热设备放在床上、沙发等易燃物附近，也不要用衣物、被子覆盖散热"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题询问快充发热是否正常及何时停止，两个gold片段分别覆盖正常发热和异常停止条件，证据充分。"
+      },
+      {
+        "query_id": "syn_t0137",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0004",
+          "warranty_policy_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0004",
+            "quote": "不在保修范围内的故障，官方售后仍可提供有偿维修服务，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0001",
+            "quote": "保修范围包括主板故障、屏幕显示异常、键盘失灵、散热风扇异响或不转、接口无法识别设备等非人为硬件故障。"
+          }
+        ],
+        "expected_points": [
+          "屏幕显示异常属于笔记本保修范围内的非人为硬件故障",
+          "不在保修范围内的故障，官方售后仍可提供有偿维修服务",
+          "具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问非保修范围能否付费维修及费用，gold片段支持屏幕异常属保修范围、非保修可付费维修且不能提前报价，证据直接。"
+      },
+      {
+        "query_id": "syn_t0138",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0000",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。",
+          "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。",
+          "官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问主板维修费用及换主板数据丢失风险，两个gold片段分别覆盖费用报价原则和数据丢失责任，证据充分。"
+      },
+      {
+        "query_id": "syn_t0139",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0003",
+          "repair_faq_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          }
+        ],
+        "expected_points": [
+          "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。",
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含键盘失灵处理及换硬件数据丢失风险，两个gold片段分别覆盖键盘故障建议和数据丢失责任，证据直接。"
+      },
+      {
+        "query_id": "syn_t0140",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0000",
+          "warranty_policy_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0000",
+            "quote": "如用户通过官方商城、官方授权门店购买设备，但丢失发票或电子凭证，可联系客服提供购买时使用的账号、手机号或支付信息，协助在官方系统中查询订单记录作为购买凭证。"
+          },
+          {
+            "chunk_id": "warranty_policy_0004",
+            "quote": "例如用户于 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日。"
+          }
+        ],
+        "expected_points": [
+          "如用户通过官方商城、官方授权门店购买设备，但丢失发票或电子凭证，可联系客服提供购买时使用的账号、手机号或支付信息，协助在官方系统中查询订单记录作为购买凭证。",
+          "例如用户于 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含官方商城发票丢失能否查记录及保修期计算，两个gold片段分别覆盖凭证查询和具体日期示例，证据充分。"
+      },
+      {
+        "query_id": "syn_t0141",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "human_transfer_policy_0001",
+          "service_boundary_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "human_transfer_policy_0001",
+            "quote": "1. 智能客服识别到需要转人工的情形后，向用户说明转接原因；\n2. 提示用户可以通过官方 App 内\"联系人工客服\"入口，或拨打官方售后热线获得进一步帮助；\n3. 如涉及工单，智能客服应记录当前对话摘要，便于人工客服快速了解上下文，减少用户重复描述问题。"
+          },
+          {
+            "chunk_id": "service_boundary_0000",
+            "quote": "智能客服（包括本智能问答系统）不能直接执行以下操作，只能说明流程并建议转人工或引导用户走标准渠道：\n\n- 直接批准或执行退款；\n- 直接批准换新或安排换新机寄出；\n- 直接承诺保修审批结果；\n- 直接承诺具体维修费用或赔偿金额；\n- 修改用户订单信息、地址、支付方式等账户敏感信息。"
+          }
+        ],
+        "expected_points": [
+          "智能客服识别到需要转人工的情形后，向用户说明转接原因；提示用户可以通过官方 App 内“联系人工客服”入口，或拨打官方售后热线获得进一步帮助。",
+          "智能客服不能直接批准或执行退款，只能说明流程并建议转人工或引导用户走标准渠道。"
+        ],
+        "risk_types": [
+          "complaint",
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "问题包含投诉和退款要求，gold片段支持转人工流程及智能客服不能直接退款，风险类型正确。"
+      },
+      {
+        "query_id": "syn_t0142",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "invoice_proof_0002",
+          "warranty_exclusions_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0002",
+            "quote": "保修期以购买凭证上的购买日期为起始点计算。如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准，客服会协助核实差异原因。"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0004",
+            "quote": "不在保修范围内的故障，官方售后仍可提供有偿维修服务，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用。"
+          }
+        ],
+        "expected_points": [
+          "保修期以购买凭证上的购买日期为起始点计算。如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准，客服会协助核实差异原因。",
+          "不在保修范围内的故障，官方售后仍可提供有偿维修服务，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含保修期计算依据及非保修范围能否提前报价，两个gold片段分别覆盖日期不一致处理和检测前不报价原则，证据直接。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2727,
+    "prompt_tokens": 10911,
+    "total_tokens": 13638,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1439
+  },
+  "model": "deepseek-flash",
+  "response_id": "2392c7cd-e5c1-4143-9802-a4d25fafc467"
+}

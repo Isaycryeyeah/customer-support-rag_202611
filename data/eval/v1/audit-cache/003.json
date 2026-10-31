@@ -1,0 +1,196 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0028",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0002",
+            "quote": "换货申请必须经过官方检测确认故障，客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出。"
+          }
+        ],
+        "expected_points": [
+          "换货申请必须经过官方检测确认故障",
+          "客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": false,
+        "reason": "用户要求跳过检测直接换新，属于越权审批诉求，gold片段直接说明不能跳过检测流程，支持拒绝承诺。"
+      },
+      {
+        "query_id": "syn_t0029",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0003",
+            "quote": "以下情况通常不适用换新政策：\n\n- 人为损坏（摔落、进水、私自拆机等）；\n- 故障无法复现，且经检测确认设备功能正常；\n- 已超过换新政策规定的时间窗口。"
+          }
+        ],
+        "expected_points": [
+          "人为损坏（摔落、进水、私自拆机等）通常不适用换新政策",
+          "已超过换新政策规定的时间窗口也不适用换新"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户询问摔过之后损坏能否换新，gold片段明确人为损坏通常不适用换新政策，直接支持结论。"
+      },
+      {
+        "query_id": "syn_t0030",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "云枢设备支持最高 66W 快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率。使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          }
+        ],
+        "expected_points": [
+          "需要搭配官方快充充电器和数据线才能达到最大充电功率",
+          "使用非官方充电器可能无法触发快充，或存在兼容性风险"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户询问第三方快充头能否达到最高功率，gold片段直接说明需官方充电器和数据线才能达到最大功率，非官方存在兼容性风险。"
+      },
+      {
+        "query_id": "syn_t0031",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "expected_points": [
+          "快充时设备和充电器比普通充电更明显的温热属于正常现象",
+          "出现烫手无法触摸、外壳变形等异常应立即停止充电"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户询问快充发热是否正常及何时停止，gold片段直接说明正常温热和异常停止条件。"
+      },
+      {
+        "query_id": "syn_t0032",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0002",
+            "quote": "- 建议在通风环境下进行快充，避免遮盖设备和充电器；\n- 长时间高负载使用（如游戏）时不建议同时进行快充，以免叠加发热；\n- 如设备长期出现快充异常降速，可联系官方售后检测电池和快充芯片状态。"
+          }
+        ],
+        "expected_points": [
+          "建议在通风环境下快充，避免遮盖设备和充电器",
+          "长时间高负载使用（如游戏）时不建议同时快充，以免叠加发热",
+          "如长期出现快充异常降速，可联系官方售后检测电池和快充芯片状态"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户询问边游戏边快充是否更热及使用建议，gold片段直接包含通风、避免高负载同时快充等建议。"
+      },
+      {
+        "query_id": "syn_t0033",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0003",
+            "quote": "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以\"提升\"充电速度，此类操作存在严重安全风险且不在保修范围内。"
+          }
+        ],
+        "expected_points": [
+          "禁止使用来源不明的第三方快充头或改装数据线",
+          "禁止拆解充电器或电池以“提升”充电速度，存在严重安全风险且不在保修范围内"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "用户询问改装数据线能否使用，gold片段明确禁止使用改装数据线，并说明安全风险，属于电池安全风险提示。"
+      },
+      {
+        "query_id": "syn_t0034",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "human_transfer_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "以下情况智能客服应主动建议转接人工客服，而不是直接给出结论：\n\n1. 涉及退款、换新、保修审批等需要人工审核决策的事项；\n2. 用户情绪明显激动、表达强烈不满或投诉意向；\n3. 智能客服连续两次未能理解用户问题或给出的回答无法解决用户诉求；\n4. 涉及安全风险问题（如电池鼓包、起火、漏电）且用户需要进一步指导时，除安全提示外的具体处置应转人工或官方售后热线；\n5. 用户明确要求转人工。"
+          }
+        ],
+        "expected_points": [
+          "涉及安全风险问题（如电池鼓包）且用户需要进一步指导时，除安全提示外的具体处置应转人工或官方售后热线",
+          "涉及换新、保修审批等需要人工审核决策的事项应转接人工客服"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户询问电池鼓包能否继续使用并要求直接换新，涉及电池安全风险和换新审批，gold片段明确应转人工，need_human为true。"
+      },
+      {
+        "query_id": "syn_t0035",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "human_transfer_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "human_transfer_policy_0001",
+            "quote": "1. 智能客服识别到需要转人工的情形后，向用户说明转接原因；\n2. 提示用户可以通过官方 App 内\"联系人工客服\"入口，或拨打官方售后热线获得进一步帮助；\n3. 如涉及工单，智能客服应记录当前对话摘要，便于人工客服快速了解上下文，减少用户重复描述问题。"
+          }
+        ],
+        "expected_points": [
+          "可通过官方 App 内“联系人工客服”入口或拨打官方售后热线获得帮助",
+          "如涉及工单，智能客服应记录当前对话摘要，便于人工客服快速了解上下文，减少用户重复描述"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户询问人工客服入口及是否记录之前情况，gold片段直接说明入口和记录对话摘要的流程。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1925,
+    "prompt_tokens": 10521,
+    "total_tokens": 12446,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 10521
+  },
+  "model": "deepseek-flash",
+  "response_id": "4559d9ce-75af-4eef-9775-ca8efeebbb65"
+}

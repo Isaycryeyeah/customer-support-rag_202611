@@ -1,0 +1,245 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0364",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "return_policy_0002",
+          "return_policy_0003",
+          "service_boundary_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0002",
+            "quote": "以下情况通常不支持七天无理由退货：\n\n- 商品已拆封使用且存在明显使用痕迹（如屏幕划痕、机身磕碰）；"
+          },
+          {
+            "chunk_id": "return_policy_0003",
+            "quote": "退货申请需经过官方审核，客服不能在未审核的情况下直接承诺退款，具体是否退款以验货结果为准。"
+          },
+          {
+            "chunk_id": "service_boundary_0000",
+            "quote": "智能客服（包括本智能问答系统）不能直接执行以下操作，只能说明流程并建议转人工或引导用户走标准渠道：\n\n- 直接批准或执行退款；"
+          }
+        ],
+        "expected_points": [
+          "商品已拆封使用且存在明显使用痕迹（如屏幕划痕）通常不支持七天无理由退货",
+          "退货申请需经过官方审核，客服不能在未审核的情况下直接承诺退款",
+          "智能客服不能直接批准或执行退款，只能说明流程并建议转人工或引导用户走标准渠道"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户要求直接退款，涉及退款审批边界；gold应包含退货政策中不支持无理由退货的情形及客服不能直接承诺退款/执行退款的条款。原gold中complaint_escalation_0003不直接支持该问题，替换为更直接相关的return_policy_0003和service_boundary_0000。"
+      },
+      {
+        "query_id": "syn_t0365",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0000",
+          "repair_process_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0000",
+            "quote": "请先确认电源适配器连接正常，并尝试长按电源键 10 秒后重新开机。如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_0002",
+            "quote": "用户可通过官方 App 的\"维修进度\"页面或客服热线查询实时维修状态，包括：已收到设备、检测中、维修中、待寄出、已寄出等节点。"
+          }
+        ],
+        "expected_points": [
+          "先确认电源适配器连接正常，尝试长按电源键10秒后重新开机；仍无法开机可能是主板、电池或电源模块故障，建议联系官方售后检测",
+          "可通过官方App的“维修进度”页面或客服热线查询实时维修状态"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含笔记本无法开机的排查建议和维修进度查询，gold片段直接对应，无风险。"
+      },
+      {
+        "query_id": "syn_t0366",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_0002",
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_0002",
+            "quote": "用户可通过官方 App 的\"维修进度\"页面或客服热线查询实时维修状态，包括：已收到设备、检测中、维修中、待寄出、已寄出等节点。"
+          },
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "可通过官方App的“维修进度”页面或客服热线查询实时维修状态，包括已收到设备、检测中、维修中、待寄出、已寄出等节点。",
+          "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问维修进度查询和维修费用，gold片段直接对应，无风险。"
+      },
+      {
+        "query_id": "syn_t0367",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000",
+          "battery_safety_laptop_0003",
+          "dangerous_operations_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 建议将电量维持在 40%～60% 区间存放；\n- 避免在高温、潮湿环境下长期存放笔记本；\n- 长期存放前建议完全关机而非仅休眠。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0003",
+            "quote": "当用户询问上述危险操作时，智能客服必须明确拒绝提供操作指导，说明该操作存在安全风险，并建议用户停止相关尝试、联系官方售后由专业人员处理。"
+          }
+        ],
+        "expected_points": [
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。",
+          "长期存放时建议将电量维持在40%～60%区间，避免高温潮湿环境，存放前完全关机而非仅休眠。",
+          "对于危险操作必须明确拒绝提供指导，说明安全风险，并建议停止尝试、联系官方售后。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "用户询问自行拆换鼓包电池，涉及电池安全和危险操作；gold应包含笔记本电池鼓包处理、长期存放建议及危险操作拒绝指导原则。原gold中battery_safety_laptop_0003正确，但dangerous_operations_0003较泛，补充battery_safety_laptop_0000更直接支持“不能自行拆换”。"
+      },
+      {
+        "query_id": "syn_t0368",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0001",
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "请先重启设备排查是否为临时软件卡顿问题。如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          },
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "重启后仍无法正常触控或出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。",
+          "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问触控失灵处理及维修费用，gold片段直接对应，无风险。"
+      },
+      {
+        "query_id": "syn_t0369",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0000",
+          "return_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0000",
+            "quote": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。"
+          },
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "expected_points": [
+          "自收到商品之日起15天内出现官方认定的性能故障（如无法开机），可申请换新，无需承担额外费用。",
+          "退货退款到账时间通常为验货通过后3～7个工作日内。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问15天内无法开机能否换新及退货退款时间，gold片段直接对应，无风险。"
+      },
+      {
+        "query_id": "syn_t0370",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0001",
+          "return_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0001",
+            "quote": "1. 用户提交换货申请并描述故障现象；\n2. 官方客服初步判断是否符合换新条件；\n3. 用户寄回故障机，官方检测确认故障属实；\n4. 检测通过后寄出全新或同型号换新机。"
+          },
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "expected_points": [
+          "换货流程：提交换货申请并描述故障现象，客服初步判断是否符合换新条件，用户寄回故障机，官方检测确认故障属实后寄出全新或同型号换新机。",
+          "退货退款到账时间根据支付渠道不同，通常为验货通过后3～7个工作日内。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问换货流程及退货退款时间，gold片段直接对应，无风险。"
+      },
+      {
+        "query_id": "syn_t0371",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0001",
+          "warranty_policy_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0001",
+            "quote": "保修范围包括非人为原因导致的硬件故障，例如主板故障、屏幕显示异常、摄像头模组故障、按键失灵等。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0002",
+            "quote": "申请笔记本保修需提供：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（机身底部标签或系统设置中查看）；\n3. 详细故障描述，建议附带截图或录屏。"
+          }
+        ],
+        "expected_points": [
+          "手机保修范围包括非人为原因导致的硬件故障，例如屏幕显示异常等。",
+          "申请笔记本保修需提供购买发票或电子凭证、设备序列号、详细故障描述（建议附带截图或录屏）。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含手机屏幕显示异常是否属保修范围及笔记本保修材料，gold片段直接对应，无风险。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2644,
+    "prompt_tokens": 10756,
+    "total_tokens": 13400,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1284
+  },
+  "model": "deepseek-flash",
+  "response_id": "ebb3a129-8975-4946-98c2-56a0b0062d13"
+}

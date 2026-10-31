@@ -1,0 +1,124 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "ood_001",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "烘焙问题超出售后知识库范围，无相关资料。"
+      },
+      {
+        "query_id": "ood_002",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "园艺问题超出知识库范围，无相关资料。"
+      },
+      {
+        "query_id": "ood_003",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "语言学习问题超出知识库范围，无相关资料。"
+      },
+      {
+        "query_id": "ood_004",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "文学解读问题超出知识库范围，无相关资料。"
+      },
+      {
+        "query_id": "ood_005",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "音乐练习问题超出知识库范围，无相关资料。"
+      },
+      {
+        "query_id": "ood_006",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "体育训练问题超出知识库范围，无相关资料。"
+      },
+      {
+        "query_id": "ood_007",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "旅游规划问题超出知识库范围，无相关资料。"
+      },
+      {
+        "query_id": "ood_008",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "天文常识问题超出知识库范围，无相关资料。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 509,
+    "prompt_tokens": 10021,
+    "total_tokens": 10530,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 549
+  },
+  "model": "deepseek-flash",
+  "response_id": "76f88e1c-c252-4b35-a2b7-cad11a74ec46"
+}

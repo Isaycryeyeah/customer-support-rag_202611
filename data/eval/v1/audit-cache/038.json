@@ -1,0 +1,238 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0312",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0000",
+          "warranty_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0000",
+            "quote": "以下人为原因造成的故障不在免费保修范围内：\n\n- 摔落、挤压导致的外壳破裂、屏幕碎裂；"
+          },
+          {
+            "chunk_id": "warranty_policy_0001",
+            "quote": "保修范围包括非人为原因导致的硬件故障，例如主板故障、屏幕显示异常、摄像头模组故障、按键失灵等。"
+          }
+        ],
+        "expected_points": [
+          "摔落、挤压导致的外壳破裂、屏幕碎裂属于人为损坏，不在免费保修范围内",
+          "非人为原因导致的硬件故障在保修范围内，例如主板故障、屏幕显示异常、摄像头模组故障、按键失灵等"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问保修范围，两个gold片段分别说明人为损坏免责和非人为保修范围，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0313",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001",
+          "dangerous_operations_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0003",
+            "quote": "当用户询问上述危险操作时，智能客服必须明确拒绝提供操作指导，说明该操作存在安全风险，并建议用户停止相关尝试、联系官方售后由专业人员处理。"
+          }
+        ],
+        "expected_points": [
+          "避免皮肤直接接触漏液区域，停止使用设备并放置在通风安全位置",
+          "如不慎接触，应使用清水冲洗并及时就医",
+          "客服必须拒绝提供拆机等危险操作指导，说明存在安全风险，建议停止尝试并联系官方售后由专业人员处理"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "涉及电池漏液安全风险和拆机危险操作诉求，需转人工；gold片段提供安全处理指引和拒绝危险操作的原则。"
+      },
+      {
+        "query_id": "syn_t0314",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0001",
+          "repair_faq_tablet_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "请先重启设备排查是否为临时软件卡顿问题。如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "屏幕触控异常可先重启排查临时软件卡顿，重启后仍失灵或局部失灵、漂移应联系售后检测屏幕模组",
+          "外接键盘打字延迟应先确认键盘固件是否为最新版本，并检查是否同时连接多个蓝牙设备造成干扰，问题持续则联系售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个问题分别对应屏幕触控和键盘延迟的排查步骤，gold片段直接给出答案。"
+      },
+      {
+        "query_id": "syn_t0315",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000",
+          "water_damage_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0000",
+            "quote": "设备进液或进水后，应立即执行以下步骤：\n\n1. 立即关机，不要尝试开机测试是否正常；\n2. 断开充电器，不要在设备潮湿状态下充电；\n3. 用干燥软布擦拭外部液体，不要用吹风机加热吹干；\n4. 尽快将设备送至官方售后进行专业拆检和干燥处理。"
+          }
+        ],
+        "expected_points": [
+          "发现鼓包应立即停止使用，关闭设备并断开电源适配器",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后专业拆检",
+          "设备进液后应立即关机，不要尝试开机测试是否正常，并断开充电器，尽快送官方售后拆检干燥"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "涉及电池鼓包安全风险和自行拆机诉求，以及进液后开机测试的危险操作，需转人工；gold片段提供安全指引和禁止操作说明。"
+      },
+      {
+        "query_id": "syn_t0316",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0002",
+          "repair_process_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0002",
+            "quote": "请先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物。如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口。"
+          },
+          {
+            "chunk_id": "repair_process_0002",
+            "quote": "用户可通过官方 App 的\"维修进度\"页面或客服热线查询实时维修状态，包括：已收到设备、检测中、维修中、待寄出、已寄出等节点。"
+          }
+        ],
+        "expected_points": [
+          "更换充电器和数据线后仍无法充电或提示充电异常，建议联系售后检测电池和充电接口",
+          "可通过官方App的维修进度页面或客服热线查询实时维修状态，包括已收到设备、检测中、维修中、待寄出、已寄出等节点"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含充电异常排查和维修进度查询，两个gold片段分别提供对应信息。"
+      },
+      {
+        "query_id": "syn_t0317",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000",
+          "repair_faq_tablet_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          }
+        ],
+        "expected_points": [
+          "维修涉及更换主板、存储模块可能导致数据丢失，官方建议寄修前自行备份重要数据",
+          "长期存放后首次开机可能电量显示异常，建议完全充满电后重新校准，校准后仍耗电异常快则联系售后检测电池健康度"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问寄修前备份和电池耗电快处理，两个gold片段分别给出备份建议和电池校准检测建议。"
+      },
+      {
+        "query_id": "syn_t0318",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0005",
+          "repair_faq_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0005",
+            "quote": "建议先尝试清理后台应用、更新系统至最新版本。如问题持续存在，可联系客服协助远程诊断，或送修检测硬件是否存在异常。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          }
+        ],
+        "expected_points": [
+          "手机系统卡顿或频繁重启可先清理后台应用、更新系统至最新版本，若问题持续可联系客服远程诊断或送修检测硬件。",
+          "笔记本风扇在轻负载下异常响或出现异响，建议立即停止高负载使用并联系售后检测散热模组。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个问题分别对应手机卡顿重启和笔记本风扇异响，gold片段提供排查和处理建议。"
+      },
+      {
+        "query_id": "syn_t0319",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0002",
+          "charger_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0002",
+            "quote": "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。"
+          },
+          {
+            "chunk_id": "charger_safety_0000",
+            "quote": "建议用户使用官方原装充电器或经过官方认证的第三方充电器。使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故。"
+          }
+        ],
+        "expected_points": [
+          "笔记本电池长期使用后续航下降属正常损耗，衰减严重影响使用可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。",
+          "建议使用官方原装或经过官方认证的第三方充电器；使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题涉及电池续航下降处理和非原装充电器安全隐患，两个gold片段分别提供处理建议和安全警告。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2549,
+    "prompt_tokens": 10841,
+    "total_tokens": 13390,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1369
+  },
+  "model": "deepseek-flash",
+  "response_id": "938a5dff-7f0a-48fc-8d79-9fc05575f16e"
+}

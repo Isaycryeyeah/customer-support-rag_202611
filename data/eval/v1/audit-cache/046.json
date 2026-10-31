@@ -1,0 +1,242 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0380",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0004",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准，若仍异常建议联系售后检测电池健康度",
+          "维修涉及更换主板、存储芯片可能导致数据丢失，建议寄修前自行备份数据，官方不承担数据恢复责任"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及平板电池检测和数据安全建议，两个gold片段分别直接支持电池处理建议和数据备份责任说明，证据充分。"
+      },
+      {
+        "query_id": "syn_t0381",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0001",
+          "dangerous_operations_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0001",
+            "quote": "如充电器出现外壳破损、插脚变形、数据线破皮外露铜线等情况，应立即停止使用，避免触电风险，并更换新的充电器。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；\n- 将电池或设备放入水中、火中处理异常情况；\n- 自行给电池加热或冷冻以\"修复\"故障。"
+          }
+        ],
+        "expected_points": [
+          "充电器外壳破损、插脚变形、数据线破皮外露铜线时应立即停止使用，避免触电风险，并更换新充电器",
+          "严禁自行拆卸、刺破、挤压电池，严禁用针等工具对鼓包电池放气或穿刺处理"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题包含充电器安全咨询和电池鼓包危险操作询问，两个gold片段分别直接支持安全建议和禁止操作说明，证据充分。"
+      },
+      {
+        "query_id": "syn_t0382",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0001",
+          "repair_process_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "请先重启设备排查是否为临时软件卡顿问题。如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          },
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "expected_points": [
+          "重启后仍触控异常建议联系售后检测屏幕模组",
+          "保修期内非人为故障维修免费，保修期外或非保修范围需付费，具体费用以检测后官方报价为准，客服不能在检测前直接报价"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及屏幕触控故障处理和保修费用咨询，两个gold片段分别直接支持故障处理建议和费用政策说明，证据充分。"
+      },
+      {
+        "query_id": "syn_t0383",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001",
+          "battery_safety_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 建议将电量维持在 40%～60% 区间存放；\n- 避免在高温、潮湿环境下长期存放笔记本；\n- 长期存放前建议完全关机而非仅休眠。"
+          }
+        ],
+        "expected_points": [
+          "电池漏液应避免皮肤直接接触，停止使用设备并放置在通风安全位置，不慎接触用清水冲洗并及时就医",
+          "笔记本长期存放建议电量维持在40%～60%，避免高温潮湿环境，长期存放前完全关机而非仅休眠"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题涉及电池漏液处理和笔记本电池存放建议，两个gold片段分别直接支持对应安全处理建议，证据充分。"
+      },
+      {
+        "query_id": "syn_t0384",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "invoice_proof_0003",
+          "warranty_exclusions_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0003",
+            "quote": "如无法提供购买凭证，可尝试通过设备序列号在官方系统查询购买记录（适用于官方渠道购买的设备）。第三方渠道购买且无法查询到记录的，可参考\"丢失发票处理政策\"文档进一步处理。"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0002",
+            "quote": "如设备保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态，建议用户保留购买凭证以便核实。"
+          }
+        ],
+        "expected_points": [
+          "保修标签撕毁或序列号无法识别可能导致无法核实保修状态",
+          "建议保留购买凭证以便核实",
+          "可尝试通过设备序列号在官方系统查询购买记录（适用于官方渠道购买的设备）",
+          "第三方渠道购买且无法查询到记录的，可参考丢失发票处理政策"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及保修标签和序列号问题，两个gold片段分别直接支持保修状态核实困难和查询购买记录的建议，证据充分。"
+      },
+      {
+        "query_id": "syn_t0385",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0002",
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。\n\n请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。"
+          },
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "设备异常发热、烫手时应立即停止使用并断开电源",
+          "请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热",
+          "严禁自行购买第三方屏幕总成进行更换",
+          "自行更换屏幕可能损坏内部排线、传感器，且会导致保修失效，应通过官方售后渠道处理"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题涉及充电发热和屏幕碎裂自行更换，两个gold片段分别直接支持发热安全处理和禁止自行更换屏幕的说明，证据充分。"
+      },
+      {
+        "query_id": "syn_t0386",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0002",
+          "repair_faq_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0002",
+            "quote": "请先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物。如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          }
+        ],
+        "expected_points": [
+          "手机无法充电先检查是否使用官方充电器和数据线，并清理充电接口灰尘异物",
+          "更换充电器和数据线后仍无法充电，或提示充电异常，建议联系售后检测电池和充电接口",
+          "笔记本风扇在轻负载下异常响或出现异响，建议立即停止高负载使用并联系售后检测散热模组"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及手机充电故障和笔记本风扇异响，两个gold片段分别直接支持对应故障处理建议，证据充分。"
+      },
+      {
+        "query_id": "syn_t0387",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_0003",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价",
+          "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据",
+          "官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及过保维修费用和数据备份，两个gold片段分别直接支持费用政策和数据备份责任说明，证据充分。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2608,
+    "prompt_tokens": 10826,
+    "total_tokens": 13434,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1354
+  },
+  "model": "deepseek-flash",
+  "response_id": "90ad5d8b-92e7-4900-a418-25328ff1a144"
+}

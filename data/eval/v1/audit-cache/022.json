@@ -1,0 +1,237 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0184",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0000",
+          "warranty_policy_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0002",
+            "quote": "申请笔记本保修需提供：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（机身底部标签或系统设置中查看）；\n3. 详细故障描述，建议附带截图或录屏。"
+          }
+        ],
+        "expected_points": [
+          "云枢手机电池作为易耗部件保修期为 6 个月（整机 12 个月）",
+          "申请笔记本保修需提供购买发票或电子凭证、设备序列号、详细故障描述（建议附带截图或录屏）"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由电池保修期和笔记本保修材料片段直接支持，gold完整无噪声。"
+      },
+      {
+        "query_id": "syn_t0185",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0001",
+          "battery_safety_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0001",
+            "quote": "如充电器出现外壳破损、插脚变形、数据线破皮外露铜线等情况，应立即停止使用，避免触电风险，并更换新的充电器。"
+          },
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          }
+        ],
+        "expected_points": [
+          "充电器插脚变形应立即停止使用，避免触电风险并更换新充电器",
+          "充电建议使用官方原装或认证配件",
+          "避免在高温环境（如车内暴晒）下长时间存放设备",
+          "避免电池长期处于满电或零电量状态存放"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "插脚变形处理与充电/存放注意事项均有直接原文支持。"
+      },
+      {
+        "query_id": "syn_t0186",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000",
+          "fast_charging_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "expected_points": [
+          "电池鼓包应立即停止使用设备，断开电源，避免继续充电",
+          "快充时比普通充电更明显的温热属正常现象",
+          "若烫手无法触摸或外壳变形等异常，应立即停止充电"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "鼓包与快充发热均有直接原文，涉及电池安全但属标准安全提示，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0187",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0002",
+          "repair_process_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交维修申请，描述故障现象；\n2. 客服协助预判故障类型，建议用户选择寄修或到店维修；\n3. 用户提交设备并提供购买凭证；\n4. 官方检测中心确认故障原因，出具检测报告；\n5. 根据保修状态确定是否免费维修，用户确认后进行维修；\n6. 维修完成后设备寄回或通知用户到店取件。"
+          }
+        ],
+        "expected_points": [
+          "轻微漏光在部分机型属正常工艺现象，影响严重建议联系售后评估检测",
+          "维修流程：提交申请描述故障→客服预判并建议寄修/到店→提交设备及购买凭证→检测出具报告→按保修状态确认维修→完成后寄回或取件"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "漏光判断与维修流程均有直接原文支持。"
+      },
+      {
+        "query_id": "syn_t0188",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0000",
+          "repair_process_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0000",
+            "quote": "请先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机。如仍无法开机，可能是主板或电池故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_0001",
+            "quote": "一般故障（如更换电池、摄像头模组）维修时长约为 3～5 个工作日；主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。"
+          }
+        ],
+        "expected_points": [
+          "先确认有电并充电30分钟后重试，仍无法开机可能是主板或电池故障，建议联系官方售后检测",
+          "一般故障维修约3～5个工作日，主板级故障约7～10个工作日，具体以检测中心为准，特殊情况可能延长"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "无法开机排查与维修时长均有直接原文。"
+      },
+      {
+        "query_id": "syn_t0189",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_faq_tablet_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "怀疑维修数据泄露应作为高优先级投诉转人工，智能客服不能直接判断是否存在泄露",
+          "平板外接键盘延迟先确认固件最新并检查多蓝牙设备干扰，持续则联系售后检测"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "涉及数据泄露投诉，需转人工；键盘问题有直接原文。"
+      },
+      {
+        "query_id": "syn_t0190",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003",
+          "water_damage_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0002",
+            "quote": "进液导致的故障通常不属于保修范围（详见\"保修免责与不予保修情况说明\"文档），具体是否可维修、维修费用需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "冒烟/焦味应立即远离设备，不用水扑灭锂电池火情，用干粉灭火器或沙土覆盖，及时报警并联系官方售后",
+          "进液故障通常不属保修范围，具体以官方检测结果为准"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "冒烟处理与进液保修均有直接原文，属标准安全提示。"
+      },
+      {
+        "query_id": "syn_t0191",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0002",
+          "warranty_policy_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0002",
+            "quote": "如设备保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态，建议用户保留购买凭证以便核实。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0001",
+            "quote": "保修范围包括主板故障、屏幕显示异常、键盘失灵、散热风扇异响或不转、接口无法识别设备等非人为硬件故障。"
+          }
+        ],
+        "expected_points": [
+          "保修标签撕毁、序列号无法识别可能导致无法核实保修状态，建议保留购买凭证以便核实",
+          "笔记本保修范围包括主板故障、屏幕显示异常、键盘失灵、散热风扇异响或不转、接口无法识别设备等非人为硬件故障"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "标签/序列号问题与笔记本保修范围均有直接原文。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1988,
+    "prompt_tokens": 10869,
+    "total_tokens": 12857,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1397
+  },
+  "model": "deepseek-flash",
+  "response_id": "eea55217-0d56-41b7-91a4-682b122086fd"
+}

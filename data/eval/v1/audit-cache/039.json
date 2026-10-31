@@ -1,0 +1,243 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0320",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0002",
+          "fast_charging_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0002",
+            "quote": "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0002",
+            "quote": "- 建议在通风环境下进行快充，避免遮盖设备和充电器；\n- 长时间高负载使用（如游戏）时不建议同时进行快充，以免叠加发热；\n- 如设备长期出现快充异常降速，可联系官方售后检测电池和快充芯片状态。"
+          }
+        ],
+        "expected_points": [
+          "笔记本电池衰减严重影响使用可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。",
+          "长时间高负载使用（如游戏）时不建议同时进行快充，以免叠加发热；建议在通风环境下快充，避免遮盖设备和充电器。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "两个子问题均有直接对应的知识库片段，gold准确，风险标签合理。"
+      },
+      {
+        "query_id": "syn_t0321",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0004",
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "更换数据线或外接设备后仍无法识别，可能是接口故障，建议联系售后检测。",
+          "具体维修费用需以设备实际检测结果为准，客服和售前公布的价格仅作参考区间，不能作为最终报价承诺。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "排查建议和费用原则均有直接证据，gold完整，无风险。"
+      },
+      {
+        "query_id": "syn_t0322",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "invoice_proof_0003",
+          "lost_invoice_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0003",
+            "quote": "如无法提供购买凭证，可尝试通过设备序列号在官方系统查询购买记录（适用于官方渠道购买的设备）。第三方渠道购买且无法查询到记录的，可参考\"丢失发票处理政策\"文档进一步处理。"
+          },
+          {
+            "chunk_id": "lost_invoice_policy_0001",
+            "quote": "通过非官方授权的第三方渠道购买且丢失发票的，官方无法直接查询到购买记录，此时保修期认定可能存在困难，需要客服进一步核实，具体是否可以保修以实际核实结果为准，客服不能直接承诺可以保修。"
+          }
+        ],
+        "expected_points": [
+          "无法提供购买凭证时，可尝试通过设备序列号在官方系统查询购买记录（适用于官方渠道购买的设备）。",
+          "通过非官方授权的第三方渠道购买且丢失发票的，官方无法直接查询到购买记录，保修期认定可能存在困难，需要客服进一步核实，不能直接承诺可以保修。"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "涉及保修审批承诺，需转人工核实，gold片段直接支持结论。"
+      },
+      {
+        "query_id": "syn_t0323",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0002",
+          "fast_charging_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0002",
+            "quote": "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0003",
+            "quote": "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以\"提升\"充电速度，此类操作存在严重安全风险且不在保修范围内。"
+          }
+        ],
+        "expected_points": [
+          "笔记本电池衰减严重影响使用可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。",
+          "禁止拆解充电器或电池以“提升”充电速度，此类操作存在严重安全风险且不在保修范围内。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "两个子问题均有直接证据，危险操作诉求已明确禁止，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0324",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0004",
+          "repair_process_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          },
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "expected_points": [
+          "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。",
+          "校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。",
+          "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用。",
+          "具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "电池排查建议和费用原则均有直接证据，gold完整。"
+      },
+      {
+        "query_id": "syn_t0325",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0001",
+          "repair_faq_laptop_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "请先重启设备排查是否为临时软件卡顿问题。如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "手机屏幕触控异常可先重启设备排查是否为临时软件卡顿问题。",
+          "重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。",
+          "笔记本接口无法识别外接设备，请先更换其他数据线或外接设备排查是否为配件问题。",
+          "更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个故障的排查建议均有直接对应片段，gold准确。"
+      },
+      {
+        "query_id": "syn_t0326",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0003",
+          "repair_faq_tablet_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0000",
+            "quote": "请先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐。如排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。"
+          }
+        ],
+        "expected_points": [
+          "请先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐。",
+          "排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。",
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任。",
+          "官方会尽量在检测和维修过程中保护用户数据不被泄露。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "连接排查建议和数据责任说明均有直接证据，gold完整。"
+      },
+      {
+        "query_id": "syn_t0327",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0003",
+          "repair_faq_tablet_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          }
+        ],
+        "expected_points": [
+          "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。",
+          "轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。",
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任。",
+          "官方会尽量在检测和维修过程中保护用户数据不被泄露。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "屏幕检测建议和数据责任说明均有直接证据，gold准确。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2573,
+    "prompt_tokens": 10942,
+    "total_tokens": 13515,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1470
+  },
+  "model": "deepseek-flash",
+  "response_id": "02331487-d47f-4b8b-bccc-a1ab01cadf7a"
+}

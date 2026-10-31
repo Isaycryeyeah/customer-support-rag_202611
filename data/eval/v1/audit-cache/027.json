@@ -1,0 +1,231 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0224",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0004",
+          "repair_process_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0001",
+            "quote": "常规部件（键盘、触控板、电池）维修时长约为 3～5 个工作日；主板级维修或需要更换屏幕总成的维修时长约为 7～15 个工作日，具体以检测中心和零件库存情况为准。"
+          }
+        ],
+        "expected_points": [
+          "先更换数据线或外接设备排查配件问题，仍无法识别可能是接口故障，建议联系售后检测",
+          "常规部件维修约3～5个工作日，主板级或换屏维修约7～15个工作日，具体以检测中心和零件库存情况为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由接口故障排查和笔记本维修时长片段直接支持，gold准确。"
+      },
+      {
+        "query_id": "syn_t0225",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0000",
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0000",
+            "quote": "请先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机。如仍无法开机，可能是主板或电池故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "先充电30分钟再尝试开机，仍无法开机可能是主板或电池故障，建议联系官方售后检测",
+          "具体维修费用需以实际检测结果为准，客服和售前公布的价格仅作参考区间，不能作为最终报价承诺"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "开机排查与费用报价原则均有直接证据，未承诺具体费用。"
+      },
+      {
+        "query_id": "syn_t0226",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0002",
+          "water_damage_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0003",
+            "quote": "- 避免在浴室、厨房、雨天户外等潮湿环境使用设备；\n- 如设备具备防水等级，仍建议避免长时间浸泡或超出防水等级的使用场景。"
+          }
+        ],
+        "expected_points": [
+          "碎裂屏幕继续使用可能导致碎片划伤、触控失灵误操作、内部进灰进液风险增加",
+          "避免在潮湿环境使用设备，即使有防水等级也应避免长时间浸泡或超出防水等级的使用场景"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "屏幕碎裂风险与进液预防两个子问题均有逐字证据支持。"
+      },
+      {
+        "query_id": "syn_t0227",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0000",
+          "data_privacy_repair_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0000",
+            "quote": "请先确认电源适配器连接正常，并尝试长按电源键 10 秒后重新开机。如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0001",
+            "quote": "官方检测和维修人员在维修过程中仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。"
+          }
+        ],
+        "expected_points": [
+          "先确认电源适配器连接正常，长按电源键10秒后重试，仍无法开机可能是主板、电池或电源模块故障，建议联系售后检测",
+          "官方检测和维修人员仅在必要范围内访问设备数据用于故障排查，不会主动查看个人照片、聊天记录等隐私内容"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "开机排查与维修数据隐私说明均有直接原文支持。"
+      },
+      {
+        "query_id": "syn_t0228",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0004",
+          "repair_process_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交维修申请，描述故障现象；"
+          }
+        ],
+        "expected_points": [
+          "更换数据线或外接设备后仍无法识别，可能是接口故障，建议联系售后检测",
+          "可通过官方App、官网或客服热线提交维修申请并描述故障现象"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "接口故障判断与维修申请渠道均有证据，维修流程片段为手机/平板但申请渠道表述通用，可接受。"
+      },
+      {
+        "query_id": "syn_t0229",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0003",
+          "charger_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0003",
+            "quote": "当用户询问上述危险操作时，智能客服必须明确拒绝提供操作指导，说明该操作存在安全风险，并建议用户停止相关尝试、联系官方售后由专业人员处理。"
+          },
+          {
+            "chunk_id": "charger_safety_0002",
+            "quote": "- 避免在潮湿环境（如浴室、水边）为设备充电；\n- 避免使用充电器时用湿手触摸插头；\n- 避免长时间覆盖充电器和设备（如塞进被子中充电）。"
+          }
+        ],
+        "expected_points": [
+          "智能客服必须拒绝提供拆解充电器的操作指导，说明存在安全风险，建议停止尝试并联系官方售后由专业人员处理",
+          "充电时应避免潮湿环境、湿手触摸插头以及长时间覆盖充电器和设备"
+        ],
+        "risk_types": [
+          "dangerous_repair",
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "用户要求拆解充电器，属危险操作诉求，需拒绝并转人工；充电环境建议有直接证据。"
+      },
+      {
+        "query_id": "syn_t0230",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0001",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "先确认键盘固件是否为最新版本，并检查是否同时连接多个蓝牙设备造成干扰，问题持续建议联系售后检测",
+          "维修涉及更换主板、存储芯片可能导致数据丢失，建议寄修前自行备份数据"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "键盘延迟排查与维修数据丢失风险均有直接证据；数据片段为笔记本流程但表述通用，可接受。"
+      },
+      {
+        "query_id": "syn_t0231",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "invoice_proof_0002",
+          "warranty_exclusions_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0002",
+            "quote": "保修期以购买凭证上的购买日期为起始点计算。如凭证日期与设备序列号在官方系统中的注册日期不一致，将以官方系统记录为准，客服会协助核实差异原因。"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0002",
+            "quote": "如设备保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态，建议用户保留购买凭证以便核实。"
+          }
+        ],
+        "expected_points": [
+          "保修期以购买凭证上的购买日期为起始点计算，如与官方系统注册日期不一致，以官方系统记录为准",
+          "保修标签被撕毁、序列号被涂改或无法识别可能导致无法核实保修状态，建议保留购买凭证以便核实"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "日期不一致与保修标签缺失两个子问题均有逐字证据支持。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1939,
+    "prompt_tokens": 10703,
+    "total_tokens": 12642,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1231
+  },
+  "model": "deepseek-flash",
+  "response_id": "6d9f3be6-67fc-45e8-a63d-7d1742862ac2"
+}

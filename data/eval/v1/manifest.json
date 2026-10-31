@@ -1,0 +1,65 @@
+{
+  "status": "ai_evidence_reviewed",
+  "human_reviewed": false,
+  "source": "data/eval/synthetic-source-v1/annotations.jsonl",
+  "query_count": 449,
+  "group_count": 446,
+  "split_counts": {
+    "test": 91,
+    "train": 269,
+    "dev": 89
+  },
+  "partition_counts": {
+    "train": 269,
+    "dev": 89,
+    "test_v1": 44,
+    "test_v2": 47
+  },
+  "group_split_counts": {
+    "train": 268,
+    "test": 89,
+    "dev": 89
+  },
+  "seed": 20261031,
+  "test_v2_seed": 20261101,
+  "files_sha256": {
+    "train.jsonl": "4cbe14c358c7ca80d8aea7c7aeadb2fb18f202ae04c2ff0e9c529c6934118651",
+    "dev.jsonl": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c",
+    "test_v1.jsonl": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+    "test_v2.jsonl": "731fb10cc35d1c1de6da36d4e487df63495d133885c0cd802286754417207b5a"
+  },
+  "rejected": [
+    {
+      "query_id": "syn_t0273",
+      "reason": "漏光是否正常与换屏参考价均有直接对应片段，价格已注明为参考区间，无越权承诺。"
+    },
+    {
+      "query_id": "syn_t0309",
+      "reason": "亮点检测建议与笔记本屏幕参考费用区间均有直接片段。"
+    }
+  ],
+  "near_duplicate_merges": [
+    [
+      "syn_t0000",
+      "syn_t0288",
+      0.937
+    ],
+    [
+      "syn_t0179",
+      "syn_t0279",
+      0.949
+    ],
+    [
+      "syn_t0329",
+      "syn_t0364",
+      0.883
+    ]
+  ],
+  "warnings": [],
+  "historical_like_groups_train_only": 0,
+  "limitations": [
+    "Synthetic known-KB benchmark, shared underlying facts across partitions.",
+    "Evidence-combination groups are not independently collected real user intents.",
+    "Same-model review has correlated errors; no human agreement statistic is claimed."
+  ]
+}

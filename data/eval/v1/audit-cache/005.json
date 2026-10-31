@@ -1,0 +1,195 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0044",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0003",
+            "quote": "官方渠道购买的用户如需要补开发票或补发电子凭证，可联系官方客服或原购买门店，通常需要提供订单号或购买时使用的账号信息。"
+          }
+        ],
+        "expected_points": [
+          "官方渠道购买的用户可联系官方客服或原购买门店补开发票或补发电子凭证",
+          "通常需要提供订单号或购买时使用的账号信息"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题明确为官方商城购买、发票丢失后补开所需信息，gold片段直接给出补开渠道及所需订单号/账号信息，完全支持结论。"
+      },
+      {
+        "query_id": "syn_t0045",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0000",
+            "quote": "请先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机。如仍无法开机，可能是主板或电池故障，建议联系官方售后检测。"
+          }
+        ],
+        "expected_points": [
+          "先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机",
+          "如仍无法开机，可能是主板或电池故障，建议联系官方售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为手机无法开机，gold片段直接给出排查步骤和送修建议，完全支持。"
+      },
+      {
+        "query_id": "syn_t0046",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "请先重启设备排查是否为临时软件卡顿问题。如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          }
+        ],
+        "expected_points": [
+          "先重启设备排查是否为临时软件卡顿问题",
+          "如重启后仍无法正常触控，或出现局部触控失灵、漂移，建议联系售后检测屏幕模组"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为平板局部触控失灵且重启无效，gold片段直接覆盖排查与送修建议。"
+      },
+      {
+        "query_id": "syn_t0047",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0002",
+            "quote": "请先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物。如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口。"
+          }
+        ],
+        "expected_points": [
+          "先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物",
+          "如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为换充电器仍无法充电并提示充电异常，gold片段直接给出排查与送修建议。"
+      },
+      {
+        "query_id": "syn_t0048",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0003",
+            "quote": "请先清洁摄像头镜片表面，并在相机设置中检查是否开启了特殊滤镜或对焦模式。如清洁后仍模糊，或出现摄像头黑屏、无法启动相机应用等情况，建议联系售后检测摄像头模组。"
+          }
+        ],
+        "expected_points": [
+          "先清洁摄像头镜片表面并检查相机设置中的滤镜或对焦模式",
+          "清洁后仍模糊或出现黑屏、无法启动相机应用，建议联系售后检测摄像头模组"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为摄像头模糊且已清洁镜片、无特殊滤镜，gold片段直接给出送修检测建议。"
+      },
+      {
+        "query_id": "syn_t0049",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0004",
+          "battery_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0004",
+            "quote": "请参考\"电池安全使用指南\"文档中的电池发热处理说明。如排除高负载使用场景后仍存在异常发热，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。"
+          }
+        ],
+        "expected_points": [
+          "异常发热、烫手应立即停止使用并断开电源",
+          "排除高负载使用场景后仍异常发热，建议联系售后检测"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题涉及异常发热，需同时引用发热处理说明和FAQ送修建议；属安全提示类咨询，非现实危险操作，need_human为false。"
+      },
+      {
+        "query_id": "syn_t0050",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0005"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0005",
+            "quote": "建议先尝试清理后台应用、更新系统至最新版本。如问题持续存在，可联系客服协助远程诊断，或送修检测硬件是否存在异常。"
+          }
+        ],
+        "expected_points": [
+          "先尝试清理后台应用并更新系统至最新版本",
+          "问题持续可联系客服远程诊断或送修检测硬件异常"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为系统卡顿和自动重启且已尝试清理更新，gold片段直接给出后续远程诊断或送修建议。"
+      },
+      {
+        "query_id": "syn_t0051",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0000",
+            "quote": "请先确认电源适配器连接正常，并尝试长按电源键 10 秒后重新开机。如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。"
+          }
+        ],
+        "expected_points": [
+          "确认电源适配器连接正常并尝试长按电源键10秒后重新开机",
+          "仍无法开机可能是主板、电池或电源模块故障，建议联系官方售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为笔记本无法开机且已尝试长按电源键，gold片段直接给出送修检测建议。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1437,
+    "prompt_tokens": 10498,
+    "total_tokens": 11935,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1026
+  },
+  "model": "deepseek-flash",
+  "response_id": "e7658430-c163-4c9e-ae4a-6d4327cffeee"
+}

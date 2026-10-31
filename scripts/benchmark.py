@@ -25,6 +25,7 @@ def main():
     parser.add_argument('--candidate-k', type=int, default=50)
     parser.add_argument('--pools', type=int, nargs='+', default=[10, 20, 30])
     parser.add_argument('--seed', type=int, default=20261031)
+    parser.add_argument('--dtype', choices=['float32','float16'], default='float32')
     args = parser.parse_args()
     if args.repeats < 1 or not args.pools or min(args.pools) < 1 or args.candidate_k < max(args.pools):
         raise SystemExit('Positive repeats/pools required; candidate-k must cover all pools.')
@@ -49,7 +50,7 @@ def main():
     bm25 = BM25Retriever(CHUNKS_PATH)
     dense = DenseRetriever(CHUNKS_PATH, DENSE_MODEL_NAME, FAISS_INDEX_PATH, FAISS_META_PATH)
     hybrid = HybridRetriever(bm25, dense, BM25_WEIGHT)
-    reranker = Reranker(RERANKER_MODEL_NAME)
+    reranker = Reranker(RERANKER_MODEL_NAME, dtype=args.dtype)
     def sync():
         if torch.cuda.is_available():
             torch.cuda.synchronize()

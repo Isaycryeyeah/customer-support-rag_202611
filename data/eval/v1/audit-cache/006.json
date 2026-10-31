@@ -1,0 +1,194 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0052",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          }
+        ],
+        "expected_points": [
+          "先检查按键周围是否有异物或液体残留",
+          "清理后仍失灵可能是键盘模组故障，建议联系售后检测更换"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题与gold直接对应，用户已清理仍失灵，证据支持建议售后检测更换键盘。"
+      },
+      {
+        "query_id": "syn_t0053",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "先在系统设置中确认触控板未被禁用，并检查是否连接外接鼠标导致自动关闭",
+          "排除设置问题后仍异常，建议联系售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户已排除设置和外接鼠标，证据支持建议售后检测。"
+      },
+      {
+        "query_id": "syn_t0054",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          }
+        ],
+        "expected_points": [
+          "轻负载下风扇异常响或出现异响不属于正常现象",
+          "风扇完全不转会导致设备过热",
+          "建议立即停止高负载使用并联系售后检测散热模组"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题描述轻负载异响，证据直接支持停止高负载使用并联系售后检测散热模组。"
+      },
+      {
+        "query_id": "syn_t0055",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "先更换其他数据线或外接设备排查是否为配件问题",
+          "更换后仍无法识别可能是接口故障",
+          "建议联系售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "用户已更换线和U盘仍不识别，证据支持接口故障并建议售后检测。"
+      },
+      {
+        "query_id": "syn_t0056",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0005"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0005",
+            "quote": "请先在纯色背景下仔细观察确认异常位置和数量。如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "先在纯色背景下仔细观察确认异常位置和数量",
+          "确认存在显示异常建议联系售后检测屏幕面板",
+          "具体是否保修以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据直接回答亮点处理及保修需检测确认，未越权承诺。"
+      },
+      {
+        "query_id": "syn_t0057",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0000",
+            "quote": "请先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐。如排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。"
+          }
+        ],
+        "expected_points": [
+          "先确认配件电量充足",
+          "在系统设置中重新配对蓝牙或检查磁吸接口是否对齐",
+          "排除配件问题后仍无法连接建议联系售后检测平板本体的连接模组"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及键盘和笔无法连接，证据提供排查步骤和售后建议。"
+      },
+      {
+        "query_id": "syn_t0058",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "先确认键盘固件是否为最新版本",
+          "检查是否同时连接了多个蓝牙设备造成干扰",
+          "问题持续建议联系售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据直接支持外接键盘延迟失灵的排查与售后建议。"
+      },
+      {
+        "query_id": "syn_t0059",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          }
+        ],
+        "expected_points": [
+          "在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显",
+          "轻微漏光在部分机型属于正常工艺现象",
+          "如影响使用体验较严重建议联系售后评估检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据直接回答漏光偏色是否正常及是否需要送修评估。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1307,
+    "prompt_tokens": 10492,
+    "total_tokens": 11799,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1020
+  },
+  "model": "deepseek-flash",
+  "response_id": "81fc6943-fb77-4f1e-94e6-3b7e2719fcb9"
+}

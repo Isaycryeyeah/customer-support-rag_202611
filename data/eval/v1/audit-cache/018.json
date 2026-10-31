@@ -1,0 +1,242 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0151",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0000",
+          "fast_charging_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "云枢设备支持最高 66W 快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率。使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          }
+        ],
+        "expected_points": [
+          "屏幕碎裂后应立即停止触摸破损区域，避免划伤手指",
+          "可用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测",
+          "需搭配官方快充充电器和数据线才能达到最大充电功率",
+          "使用非官方充电器可能无法触发快充，或存在兼容性风险"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两问分别有屏幕碎裂临时处理和第三方充电器快充风险的原文明示，证据充分。"
+      },
+      {
+        "query_id": "syn_t0152",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_faq_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "寄修前建议备份重要数据到云端或其他存储设备",
+          "退出账号或开启访客模式（如设备支持）",
+          "移除设备内的敏感应用或数据，如银行类应用的登录状态",
+          "可先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "寄修前隐私准备有明确清单，触控板排查也有对应FAQ，证据匹配。"
+      },
+      {
+        "query_id": "syn_t0153",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0001",
+          "screen_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          },
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          }
+        ],
+        "expected_points": [
+          "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象",
+          "如果出现烫手无法触摸、外壳变形等异常，应立即停止充电",
+          "屏幕碎裂后应立即停止触摸破损区域，避免划伤手指",
+          "可用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "快充发热判断和屏幕碎裂处理均有直接原文支持。"
+      },
+      {
+        "query_id": "syn_t0154",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000",
+          "charger_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          },
+          {
+            "chunk_id": "charger_safety_0001",
+            "quote": "如充电器出现外壳破损、插脚变形、数据线破皮外露铜线等情况，应立即停止使用，避免触电风险，并更换新的充电器。"
+          }
+        ],
+        "expected_points": [
+          "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起",
+          "发现鼓包迹象后应立即停止使用，关闭设备并断开电源适配器",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检",
+          "充电器插脚变形等情况应立即停止使用，避免触电风险，并更换新的充电器"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "涉及鼓包电池和自行拆机诉求，属电池安全与危险操作风险，需转人工。"
+      },
+      {
+        "query_id": "syn_t0155",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0000",
+          "return_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0000",
+            "quote": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。\n\n超过 15 天但在保修期内出现故障的，按保修政策走维修流程，不再适用换新政策。"
+          },
+          {
+            "chunk_id": "return_policy_0002",
+            "quote": "以下情况通常不支持七天无理由退货：\n\n- 商品已拆封使用且存在明显使用痕迹（如屏幕划痕、机身磕碰）；\n- 赠品、配件缺失或损坏；\n- 定制化商品（如刻字、定制配置）。"
+          }
+        ],
+        "expected_points": [
+          "自收到商品之日起15天内，如出现官方认定的性能故障（如屏幕显示异常），可申请换新，无需承担额外费用",
+          "超过15天但在保修期内出现故障的，按保修政策走维修流程，不再适用换新政策",
+          "商品已拆封使用且存在明显使用痕迹（如屏幕划痕、机身磕碰）通常不支持七天无理由退货"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "换新时间窗口和已拆封有划痕不支持无理由退货均有原文依据。"
+      },
+      {
+        "query_id": "syn_t0156",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0001",
+          "service_boundary_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0001",
+            "quote": "1. 用户提交换货申请并描述故障现象；\n2. 官方客服初步判断是否符合换新条件；\n3. 用户寄回故障机，官方检测确认故障属实；\n4. 检测通过后寄出全新或同型号换新机。"
+          },
+          {
+            "chunk_id": "service_boundary_0002",
+            "quote": "如果智能客服直接承诺退款、换新或保修结果，可能导致用户产生错误预期，一旦人工审核结果与承诺不符，将引发进一步投诉和信任问题。因此系统设计上要求对这类问题只说明流程，不做实质性承诺。"
+          }
+        ],
+        "expected_points": [
+          "换货需用户提交申请并描述故障现象，客服初步判断是否符合换新条件",
+          "用户寄回故障机后需官方检测确认故障属实，检测通过才寄出换新机",
+          "智能客服只能说明流程，不能直接承诺换新或保修结果，否则会造成错误预期"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "换货流程和客服不能直接承诺换新的边界均有原文支持。"
+      },
+      {
+        "query_id": "syn_t0157",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0001",
+          "battery_safety_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          },
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          }
+        ],
+        "expected_points": [
+          "快充时设备和充电器比普通充电更温热属于正常现象",
+          "若出现烫手无法触摸、外壳变形等异常应立即停止充电",
+          "建议使用官方原装或认证配件充电，避免高温环境长时间存放，避免长期满电或零电量存放"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "快充发热判断和日常充电存放建议均有直接原文。"
+      },
+      {
+        "query_id": "syn_t0158",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0000",
+          "water_damage_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0002",
+            "quote": "进液导致的故障通常不属于保修范围（详见\"保修免责与不予保修情况说明\"文档），具体是否可维修、维修费用需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "屏幕碎裂应立即停止触摸破损区域，用胶带或保护膜临时覆盖后停止使用，并联系官方售后检测更换",
+          "进液导致的故障通常不属于保修范围，具体是否可维修及费用以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "屏幕碎裂处理和进液保修判断均有原文依据。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2212,
+    "prompt_tokens": 10892,
+    "total_tokens": 13104,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1420
+  },
+  "model": "deepseek-flash",
+  "response_id": "304ecaee-909b-4fda-88fb-2fad3fe75255"
+}

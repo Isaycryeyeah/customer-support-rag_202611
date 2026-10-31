@@ -1,0 +1,11 @@
+{
+  "model": "BAAI/bge-reranker-base",
+  "dev_sha256": "7fe8156d08a103dbc0695dabccf825cee01827a4858c3c2396ebb1944a14055c",
+  "risk_detector_sha256": "6832c04451bdd17a43ca19e952bde4f68977704ab672cb9cc5f97a08de562b67",
+  "test_v1_sha256": "70d1587c4115934f7baa0fb21af2dfd287d7429917c0f2f39ae2d34c16f5a0fe",
+  "selection_scope": "DEV only; test file hash recorded without scoring",
+  "acceptance_gate": "test Hit@5/effective Recall@5 drop <= .02, no-answer refusal recall non-inferior; otherwise retain baseline",
+  "dtype": "float32",
+  "pool": 20,
+  "threshold": 0.1
+}

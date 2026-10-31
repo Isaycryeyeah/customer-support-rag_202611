@@ -1,0 +1,236 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0345",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003",
+          "screen_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。\n\n严禁在冒烟或起火后继续操作、充电或强行关机。"
+          },
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          }
+        ],
+        "expected_points": [
+          "出现冒烟、焦味或起火迹象应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后",
+          "严禁在冒烟或起火后继续操作、充电或强行关机",
+          "碎裂屏幕继续使用可能导致碎片划伤、触控失灵误操作、内部进灰进液风险增加"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "问题包含电池鼓包伴焦味的高危安全情形，gold准确覆盖冒烟焦味处置与碎屏继续使用风险，需转人工。"
+      },
+      {
+        "query_id": "syn_t0349",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0004",
+          "repair_pricing_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 电池更换 | 手机 / 平板 | 100～300 元 |"
+          }
+        ],
+        "expected_points": [
+          "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准；若校准后仍耗电异常快，建议联系售后检测电池健康度",
+          "平板电池更换参考费用区间为100～300元，最终以检测中心正式报价为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由平板耗电FAQ和维修价格表直接支持，价格区间明确且非最终报价。"
+      },
+      {
+        "query_id": "syn_t0350",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0000",
+          "fast_charging_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0000",
+            "quote": "建议用户使用官方原装充电器或经过官方认证的第三方充电器。使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0003",
+            "quote": "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以\"提升\"充电速度，此类操作存在严重安全风险且不在保修范围内。"
+          }
+        ],
+        "expected_points": [
+          "使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故",
+          "禁止拆解充电器或电池以提升充电速度，此类操作存在严重安全风险且不在保修范围内"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题涉及拆解充电器改快充的危险操作诉求，gold给出禁止性安全说明，未提供操作步骤，风险标签正确。"
+      },
+      {
+        "query_id": "syn_t0351",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0001",
+          "warranty_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0001",
+            "quote": "如设备存在非官方渠道维修记录（例如第三方维修点更换过屏幕、电池等部件），可能影响保修资格评估，需以官方检测结果为准。"
+          },
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          }
+        ],
+        "expected_points": [
+          "非官方渠道维修记录可能影响保修资格评估，需以官方检测结果为准",
+          "电池作为易耗部件保修期为6个月"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "非官方换屏对保修的影响和电池保修期均有直接原文支持。"
+      },
+      {
+        "query_id": "syn_t0352",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000",
+          "screen_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。\n\n用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。\n\n建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          },
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          }
+        ],
+        "expected_points": [
+          "电池鼓包应立即停止使用设备，断开电源，避免继续充电，不应自行拆卸、挤压、刺破、加热或尝试修复，建议联系官方售后服务中心处理",
+          "碎裂屏幕继续使用可能导致碎片划伤、触控失灵、内部进灰进液风险增加"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "电池鼓包属现实安全风险，gold覆盖鼓包处置与碎屏风险，需转人工。"
+      },
+      {
+        "query_id": "syn_t0353",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0003",
+          "repair_process_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0003",
+            "quote": "请先确认两台设备登录同一账号且网络连接正常。如排查后仍无法同步，建议联系客服协助远程诊断账号或网络配置问题。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交笔记本维修申请；\n2. 客服建议用户提前备份重要数据，避免维修过程中数据丢失；\n3. 用户将笔记本寄至官方指定检测中心或到店提交；\n4. 检测中心确认故障原因（如主板、屏幕、键盘、散热模组等）；\n5. 根据保修状态确认维修方案和费用，用户确认后开始维修；\n6. 维修完成后寄回或通知到店取件。"
+          }
+        ],
+        "expected_points": [
+          "确认两台设备登录同一账号且网络正常后仍无法同步，建议联系客服协助远程诊断账号或网络配置问题",
+          "笔记本维修需通过官方App、官网或客服热线提交申请，提前备份数据，寄至或到店提交检测中心，确认故障和费用后维修，完成后寄回或取件"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "平板同步异常与笔记本维修流程两个子问题均有对应原文支持。"
+      },
+      {
+        "query_id": "syn_t0354",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0002",
+          "human_transfer_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0002",
+            "quote": "换货申请必须经过官方检测确认故障，客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0001",
+            "quote": "1. 智能客服识别到需要转人工的情形后，向用户说明转接原因；\n2. 提示用户可以通过官方 App 内\"联系人工客服\"入口，或拨打官方售后热线获得进一步帮助；\n3. 如涉及工单，智能客服应记录当前对话摘要，便于人工客服快速了解上下文，减少用户重复描述问题。"
+          }
+        ],
+        "expected_points": [
+          "换货申请必须经过官方检测确认故障，客服不能在未检测的情况下直接承诺换新。",
+          "智能客服识别到需要转人工的情形后，会向用户说明转接原因。",
+          "用户可以通过官方App内“联系人工客服”入口或拨打官方售后热线获得进一步帮助。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "换货需检测的原因和转人工操作方式均有直接原文支持，属流程咨询。"
+      },
+      {
+        "query_id": "syn_t0355",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0003",
+          "warranty_exclusions_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0003",
+            "quote": "官方渠道购买的用户如需要补开发票或补发电子凭证，可联系官方客服或原购买门店，通常需要提供订单号或购买时使用的账号信息。"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0002",
+            "quote": "如设备保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态，建议用户保留购买凭证以便核实。"
+          }
+        ],
+        "expected_points": [
+          "保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态，建议保留购买凭证以便核实。",
+          "官方渠道购买的用户可联系官方客服或原购买门店补开发票或补发电子凭证，通常需要提供订单号或购买时使用的账号信息。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "保修标签/序列号问题与官方渠道补开发票均有对应原文，属政策咨询。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2152,
+    "prompt_tokens": 10831,
+    "total_tokens": 12983,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1359
+  },
+  "model": "deepseek-flash",
+  "response_id": "8e99e778-6128-4d34-b8e9-7f7903d41d49"
+}

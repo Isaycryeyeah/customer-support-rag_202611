@@ -35,6 +35,7 @@ class GenerationResult:
     finish_reason: str | None = None
     usage: dict = field(default_factory=dict)
     elapsed_ms: float = 0.0
+    thinking: str = ''
 
     def to_dict(self):
         return asdict(self)
@@ -64,6 +65,9 @@ class LLMClient:
         if self.timeout <= 0 or self.budget <= 0 or self.max_attempts < 1:
             raise ValueError('Generation timeout/budget must be positive; attempts must be >= 1.')
         self.model = os.getenv('DEEPSEEK_MODEL', 'deepseek-chat') if provider == 'deepseek' else provider
+        self.thinking = os.getenv('DEEPSEEK_THINKING', 'disabled')
+        if self.thinking not in ('enabled', 'disabled'):
+            raise ValueError('DEEPSEEK_THINKING must be enabled or disabled.')
         if provider == 'deepseek':
             api_key = os.getenv('DEEPSEEK_API_KEY')
             if client is None and not api_key:
@@ -76,7 +80,7 @@ class LLMClient:
 
     def generate_safe(self, prompt, temperature=0.2):
         start = time.perf_counter()
-        result = GenerationResult(False, provider=self.provider, model=self.model)
+        result = GenerationResult(False, provider=self.provider, model=self.model, thinking=self.thinking)
         if self.provider == 'mock':
             result.success = True
             result.text = '结论：测试替身回答。\n处理步骤：联系官方售后。\n注意事项：以检测结果为准。'
@@ -93,6 +97,7 @@ class LLMClient:
                         model=self.model, messages=[{'role': 'system', 'content': SYSTEM_PROMPT},
                                                     {'role': 'user', 'content': prompt}],
                         temperature=temperature, max_tokens=1024,
+                        extra_body={'thinking': {'type': self.thinking}},
                         timeout=min(self.timeout, remaining))
                     result.usage = response.usage.model_dump() if response.usage else {}
                     choice = response.choices[0] if response.choices else None

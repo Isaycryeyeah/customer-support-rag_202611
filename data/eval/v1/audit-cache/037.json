@@ -1,0 +1,242 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0304",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000",
+          "repair_process_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          },
+          {
+            "chunk_id": "repair_process_0001",
+            "quote": "一般故障（如更换电池、摄像头模组）维修时长约为 3～5 个工作日；主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。"
+          }
+        ],
+        "expected_points": [
+          "维修过程中如涉及更换主板、存储模块，可能导致数据丢失，官方建议寄修前自行备份重要数据。",
+          "一般故障（如更换电池、摄像头模组）维修时长约为3～5个工作日，具体以检测中心实际情况为准，遇特殊情况可能延长。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由数据备份建议和维修时长片段直接支持，gold准确。"
+      },
+      {
+        "query_id": "syn_t0305",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0002",
+          "water_damage_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0002",
+            "quote": "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0002",
+            "quote": "进液导致的故障通常不属于保修范围（详见\"保修免责与不予保修情况说明\"文档），具体是否可维修、维修费用需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "笔记本电池长期使用后续航下降属正常损耗，如严重影响使用可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。",
+          "进液导致的故障通常不属于保修范围，具体是否可维修、维修费用需以官方检测结果为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "电池衰减与进液保修两个子问题均有直接对应片段。"
+      },
+      {
+        "query_id": "syn_t0306",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000",
+          "charger_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。\n\n用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。\n\n建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          },
+          {
+            "chunk_id": "charger_safety_0000",
+            "quote": "建议用户使用官方原装充电器或经过官方认证的第三方充电器。使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故。"
+          }
+        ],
+        "expected_points": [
+          "电池鼓包应立即停止使用，断开电源，避免继续充电。",
+          "用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池，应联系官方售后处理。",
+          "使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "原gold中fast_charging_safety_0000仅涉及快充兼容性，未直接回答非官方充电器风险；已替换为charger_safety_0000。鼓包问题由battery_safety_0000直接支持。"
+      },
+      {
+        "query_id": "syn_t0307",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0001",
+          "warranty_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0001",
+            "quote": "如设备存在非官方渠道维修记录（例如第三方维修点更换过屏幕、电池等部件），可能影响保修资格评估，需以官方检测结果为准。"
+          },
+          {
+            "chunk_id": "warranty_policy_0001",
+            "quote": "保修范围包括非人为原因导致的硬件故障，例如主板故障、屏幕显示异常、摄像头模组故障、按键失灵等。"
+          }
+        ],
+        "expected_points": [
+          "非官方渠道维修记录可能影响保修资格评估，需以官方检测结果为准。",
+          "屏幕显示异常属于保修范围（非人为原因导致的硬件故障），但最终是否保修需官方检测确认。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "非官方维修记录影响保修与屏幕显示异常属保修范围均有直接片段。"
+      },
+      {
+        "query_id": "syn_t0308",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_faq_tablet_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "寄修前建议备份重要数据到云端或其他存储设备，退出账号或开启访客模式，移除敏感应用或数据。",
+          "外接键盘打字延迟可先确认键盘固件是否为最新版本，并检查是否同时连接多个蓝牙设备造成干扰；如问题持续，建议联系售后检测。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "寄修前数据与账号处理、键盘延迟排查均有直接片段。"
+      },
+      {
+        "query_id": "syn_t0309",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0005",
+          "repair_pricing_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0005",
+            "quote": "请先在纯色背景下仔细观察确认异常位置和数量。如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 屏幕总成更换 | 笔记本 | 800～2500 元 |\n\n以上价格为参考区间，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心出具的正式报价为准。"
+          }
+        ],
+        "expected_points": [
+          "屏幕出现亮点、暗点或色斑，建议联系售后检测屏幕面板，是否保修以官方检测结果为准。",
+          "笔记本屏幕总成更换参考费用区间为800～2500元，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心正式报价为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "亮点检测建议与笔记本屏幕参考费用区间均有直接片段。"
+      },
+      {
+        "query_id": "syn_t0310",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000",
+          "battery_safety_0004",
+          "dangerous_operations_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。\n\n用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。\n\n建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          },
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0002",
+            "quote": "严禁指导用户进行以下操作：\n\n- 在设备进液、短路后立即通电测试；\n- 用湿手或在潮湿环境下拆解、插拔电子设备；\n- 私自改装充电器、电源适配器内部电路。"
+          }
+        ],
+        "expected_points": [
+          "严禁用湿手或在潮湿环境下拆解、插拔电子设备。",
+          "电池鼓包应停止使用并联系官方售后，不应自行拆卸。",
+          "电池日常使用建议使用官方原装或认证配件充电，避免高温环境长时间存放，避免电池长期满电或零电量存放。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "用户询问湿手拆鼓包电池，属危险操作诉求，需明确拒绝并转人工；原gold缺少鼓包处理片段，已补充battery_safety_0000。"
+      },
+      {
+        "query_id": "syn_t0311",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0002",
+          "service_boundary_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0002",
+            "quote": "换货申请必须经过官方检测确认故障，客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出。"
+          },
+          {
+            "chunk_id": "service_boundary_0000",
+            "quote": "智能客服（包括本智能问答系统）不能直接执行以下操作，只能说明流程并建议转人工或引导用户走标准渠道：\n\n- 直接批准或执行退款；\n- 直接批准换新或安排换新机寄出；\n- 直接承诺保修审批结果；\n- 直接承诺具体维修费用或赔偿金额；\n- 修改用户订单信息、地址、支付方式等账户敏感信息。"
+          }
+        ],
+        "expected_points": [
+          "换货申请必须经过官方检测确认故障，客服不能在未检测的情况下直接承诺换新，也不能跳过检测流程直接安排换新机寄出。",
+          "智能客服不能直接批准换新或安排换新机寄出，只能说明流程并建议转人工或引导用户走标准渠道。"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户要求直接换新，属越权审批诉求，需转人工；gold片段直接支持。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2253,
+    "prompt_tokens": 10755,
+    "total_tokens": 13008,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1283
+  },
+  "model": "deepseek-flash",
+  "response_id": "ccd01f33-b73f-4aff-9d80-93e30299f25b"
+}

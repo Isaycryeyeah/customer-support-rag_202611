@@ -1,0 +1,124 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "ood_041",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "机械臂逆运动学不属于售后知识库范围，资料中无相关内容。"
+      },
+      {
+        "query_id": "ood_042",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "水稻施肥与售后知识库无关，无对应资料。"
+      },
+      {
+        "query_id": "ood_043",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "手冲咖啡研磨与知识库无关，无对应资料。"
+      },
+      {
+        "query_id": "ood_044",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "茶叶发酵知识不在知识库范围内。"
+      },
+      {
+        "query_id": "ood_045",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "国际象棋规则与售后知识库无关。"
+      },
+      {
+        "query_id": "ood_046",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "折纸教程不在知识库范围内。"
+      },
+      {
+        "query_id": "ood_047",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "火星探测器着陆技术与售后知识库无关。"
+      },
+      {
+        "query_id": "ood_048",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库无下一代手机处理器型号信息，属超出范围问题。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 510,
+    "prompt_tokens": 10025,
+    "total_tokens": 10535,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 553
+  },
+  "model": "deepseek-flash",
+  "response_id": "715a70a5-522a-4abf-915e-afe10a084526"
+}

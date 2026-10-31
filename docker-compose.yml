@@ -12,16 +12,14 @@ services:
       - PYTHONUNBUFFERED=1
 
   frontend:
-    image: python:3.10-slim
+    build: .
     container_name: customer-support-rag-frontend
     working_dir: /app
     volumes:
       - .:/app
     environment:
       - BACKEND_API_URL=http://backend:8000
-    command: >
-      sh -c "pip install streamlit requests &&
-             streamlit run frontend/streamlit_app.py --server.port 8501 --server.address 0.0.0.0"
+    command: ["streamlit", "run", "frontend/streamlit_app.py", "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
     ports:
       - "8501:8501"
     depends_on:

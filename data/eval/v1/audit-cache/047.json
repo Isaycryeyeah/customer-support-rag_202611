@@ -1,0 +1,243 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0388",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0000",
+          "exchange_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0000",
+            "quote": "用户表达以下类型的诉求应识别为投诉，而非普通咨询：\n\n- 明确使用\"投诉\"\"举报\"\"维权\"等词汇；\n- 对客服态度、处理效率、处理结果表达强烈不满；\n- 多次咨询同一问题未得到解决，情绪逐渐激化。"
+          },
+          {
+            "chunk_id": "exchange_policy_0001",
+            "quote": "1. 用户提交换货申请并描述故障现象；\n2. 官方客服初步判断是否符合换新条件；\n3. 用户寄回故障机，官方检测确认故障属实；\n4. 检测通过后寄出全新或同型号换新机。"
+          }
+        ],
+        "expected_points": [
+          "用户明确使用\"投诉\"等词汇或对处理效率表达强烈不满，应识别为投诉",
+          "换货流程包括：用户提交换货申请并描述故障现象",
+          "官方客服初步判断是否符合换新条件",
+          "用户寄回故障机，官方检测确认故障属实后寄出全新或同型号换新机"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "问题包含投诉意图和换货流程询问，gold片段分别支持投诉识别和换货流程，证据充分。"
+      },
+      {
+        "query_id": "syn_t0389",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000",
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。\n\n用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。\n\n建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          },
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "电池鼓包应立即停止使用设备，断开电源，并避免继续充电",
+          "用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池",
+          "建议联系官方售后服务中心，由专业人员进行检测和处理",
+          "严禁自行购买第三方屏幕总成进行更换，可能损坏内部排线、传感器，且会导致保修失效"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题询问自行拆换鼓包电池和碎裂屏幕，gold片段明确禁止自行拆卸电池和更换屏幕，并给出安全处理建议，证据充分。"
+      },
+      {
+        "query_id": "syn_t0390",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0000",
+          "warranty_policy_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0001",
+            "quote": "保修范围包括主板故障、屏幕显示异常、键盘失灵、散热风扇异响或不转、接口无法识别设备等非人为硬件故障。"
+          }
+        ],
+        "expected_points": [
+          "手机整机保修12个月，电池作为易耗部件保修6个月，所以8个月时电池已超出保修期。",
+          "笔记本散热风扇异响属于非人为硬件故障，在保修范围内。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题分别询问手机电池保修期和笔记本风扇异响保修，gold片段分别给出电池保修6个月和风扇异响属保修范围，证据充分。"
+      },
+      {
+        "query_id": "syn_t0391",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0000",
+          "warranty_policy_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "以下情况通常不在保修范围内，需要额外说明：\n\n- 摔落、进液等意外损坏（可走意外保范围，如已购买）；\n- 私自拆机、改装、加装非官方硬件导致的故障；\n- 使用非官方电源适配器导致的接口或主板损坏。\n\n具体是否保修需以官方检测结果为准，客服不能提前承诺。"
+          }
+        ],
+        "expected_points": [
+          "平板整机保修12个月，10个月在保修期内，但摔落属于意外损坏，通常不在保修范围，可走意外保（如已购买），具体以官方检测结果为准。",
+          "使用非官方电源适配器导致的接口或主板损坏通常不在保修范围内。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问摔过的平板屏幕异常和笔记本非原装充电器损坏保修，gold片段分别给出保修期和摔落/非官方适配器不保修，证据充分。"
+      },
+      {
+        "query_id": "syn_t0392",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0003",
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0003",
+            "quote": "当用户询问上述危险操作时，智能客服必须明确拒绝提供操作指导，说明该操作存在安全风险，并建议用户停止相关尝试、联系官方售后由专业人员处理。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。\n\n严禁在设备进液后立即通电测试是否可以使用，短路风险可能导致主板永久性损坏，甚至引发安全事故。"
+          }
+        ],
+        "expected_points": [
+          "严禁将进液设备放入米缸等民间偏方处理，可能加速腐蚀或短路。",
+          "严禁在进液后立即通电测试，短路风险可能导致主板永久损坏甚至安全事故。",
+          "应停止尝试并联系官方售后由专业人员处理。"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题询问米缸吸水和立即开机测试，gold片段明确禁止这些危险操作并建议联系售后，证据充分。"
+      },
+      {
+        "query_id": "syn_t0393",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000",
+          "screen_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。\n\n用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。\n\n建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          },
+          {
+            "chunk_id": "screen_safety_0001",
+            "quote": "如屏幕出现漏液现象（如出现墨渍状扩散、亮斑扩大），应避免用力按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组处理。"
+          }
+        ],
+        "expected_points": [
+          "电池鼓包应立即停止使用、断开电源、避免继续充电，不应自行拆卸、挤压、刺破、加热或尝试修复，应联系官方售后处理。",
+          "屏幕漏液应避免用力按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题询问鼓包电池和屏幕漏液处理及能否自行拆开，gold片段分别给出安全处理建议和禁止自行拆解，证据充分。"
+      },
+      {
+        "query_id": "syn_t0394",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0001",
+          "screen_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0001",
+            "quote": "如充电器出现外壳破损、插脚变形、数据线破皮外露铜线等情况，应立即停止使用，避免触电风险，并更换新的充电器。"
+          },
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          }
+        ],
+        "expected_points": [
+          "充电器插脚变形、数据线破皮露铜线应立即停止使用，避免触电风险，并更换新的充电器。",
+          "屏幕碎裂应停止触摸破损区域，用胶带或保护膜临时覆盖后停止使用，并联系官方售后进行屏幕更换检测。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问破损充电器能否继续用和屏幕碎裂临时处理，gold片段分别给出停止使用更换充电器和临时覆盖建议，证据充分。"
+      },
+      {
+        "query_id": "syn_t0395",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "invoice_proof_0001",
+          "lost_invoice_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0001",
+            "quote": "购买凭证需清晰显示以下信息：\n\n- 购买日期；\n- 商品型号；\n- 设备序列号（如凭证上有标注）；\n- 购买渠道（门店名称或平台订单号）。"
+          },
+          {
+            "chunk_id": "lost_invoice_policy_0001",
+            "quote": "通过非官方授权的第三方渠道购买且丢失发票的，官方无法直接查询到购买记录，此时保修期认定可能存在困难，需要客服进一步核实，具体是否可以保修以实际核实结果为准，客服不能直接承诺可以保修。"
+          }
+        ],
+        "expected_points": [
+          "通过非官方授权的第三方渠道购买且丢失发票的，官方无法直接查询购买记录，保修期认定可能存在困难，需要进一步核实，客服不能直接承诺可以保修。",
+          "购买凭证需清晰显示购买日期、商品型号、设备序列号（如凭证上有标注）、购买渠道（门店名称或平台订单号）。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问第三方渠道发票丢失能否保修及凭证信息，gold片段分别给出第三方丢失发票处理原则和凭证信息要求，证据充分。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2720,
+    "prompt_tokens": 10832,
+    "total_tokens": 13552,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1360
+  },
+  "model": "deepseek-flash",
+  "response_id": "1c39b9f5-8a87-4104-91e9-1761ba0f79fb"
+}

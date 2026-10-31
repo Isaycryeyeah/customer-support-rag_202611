@@ -1,0 +1,197 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0060",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0003",
+            "quote": "请先确认两台设备登录同一账号且网络连接正常。如排查后仍无法同步，建议联系客服协助远程诊断账号或网络配置问题。"
+          }
+        ],
+        "expected_points": [
+          "先确认两台设备登录同一账号且网络连接正常",
+          "若排查后仍无法同步，建议联系客服协助远程诊断账号或网络配置问题"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题与知识库中平板数据同步异常条目完全匹配，gold片段直接支持回答。"
+      },
+      {
+        "query_id": "syn_t0061",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0004",
+            "quote": "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准。如校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度。"
+          }
+        ],
+        "expected_points": [
+          "长期存放后首次开机可能出现电量显示异常，建议完全充满电后重新校准",
+          "校准后仍存在电量消耗异常快的情况，建议联系售后检测电池健康度"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题描述与知识库中平板长期不用后电量消耗异常快条目一致，gold片段直接支持回答。"
+      },
+      {
+        "query_id": "syn_t0062",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "具体维修费用需以设备实际检测结果为准",
+          "客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问客服报价是否等于最终收费，知识库明确说明客服价格仅作参考，gold片段直接支持。"
+      },
+      {
+        "query_id": "syn_t0063",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 屏幕总成更换 | 手机 / 平板 | 300～1200 元 |\n| 电池更换 | 手机 / 平板 | 100～300 元 |"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "以上价格为参考区间，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心出具的正式报价为准。"
+          }
+        ],
+        "expected_points": [
+          "手机屏幕总成更换参考费用区间为300～1200元",
+          "手机电池更换参考费用区间为100～300元",
+          "以上价格为参考区间，最终以检测中心出具的正式报价为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问手机换屏幕和换电池的大概费用，知识库维修费用参考区间表直接给出对应区间及参考性质说明。"
+      },
+      {
+        "query_id": "syn_t0064",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0002",
+            "quote": "维修费用需在检测完成后，通过官方渠道向用户展示正式报价，用户确认后才会进行收费维修，未经用户确认不会直接收费维修。"
+          }
+        ],
+        "expected_points": [
+          "维修费用需在检测完成后，通过官方渠道向用户展示正式报价",
+          "用户确认后才会进行收费维修，未经用户确认不会直接收费维修"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问维修费用确认流程，知识库费用确认流程条目直接说明需用户确认后才收费。"
+      },
+      {
+        "query_id": "syn_t0065",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交维修申请，描述故障现象；\n2. 客服协助预判故障类型，建议用户选择寄修或到店维修；\n3. 用户提交设备并提供购买凭证；\n4. 官方检测中心确认故障原因，出具检测报告；\n5. 根据保修状态确定是否免费维修，用户确认后进行维修；\n6. 维修完成后设备寄回或通知用户到店取件。"
+          }
+        ],
+        "expected_points": [
+          "通过官方App、官网或客服热线提交维修申请并描述故障现象",
+          "客服协助预判故障类型，建议寄修或到店维修",
+          "提交设备并提供购买凭证",
+          "官方检测中心确认故障原因并出具检测报告",
+          "根据保修状态确定是否免费维修，用户确认后进行维修",
+          "维修完成后设备寄回或通知到店取件"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问手机官方维修申请和检测流程，知识库维修申请流程条目完整列出步骤，gold片段直接支持。"
+      },
+      {
+        "query_id": "syn_t0066",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_0001",
+            "quote": "一般故障（如更换电池、摄像头模组）维修时长约为 3～5 个工作日；主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。"
+          }
+        ],
+        "expected_points": [
+          "更换摄像头模组属于一般故障，维修时长约为3～5个工作日",
+          "具体时长以检测中心实际情况为准，遇零件缺货等特殊情况可能延长"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问摄像头模组寄修时长，知识库维修时长条目明确将摄像头模组列为一般故障并给出3～5个工作日。"
+      },
+      {
+        "query_id": "syn_t0067",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_0002",
+            "quote": "用户可通过官方 App 的\"维修进度\"页面或客服热线查询实时维修状态，包括：已收到设备、检测中、维修中、待寄出、已寄出等节点。"
+          }
+        ],
+        "expected_points": [
+          "可通过官方 App 的“维修进度”页面或客服热线查询实时维修状态",
+          "可查看已收到设备、检测中、维修中、待寄出、已寄出等节点"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问维修进度查询渠道，知识库维修进度查询条目直接列出官方App和客服热线及可查节点。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1828,
+    "prompt_tokens": 10481,
+    "total_tokens": 12309,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1009
+  },
+  "model": "deepseek-flash",
+  "response_id": "a61661a8-2f79-431a-88ab-13af2084bb85"
+}

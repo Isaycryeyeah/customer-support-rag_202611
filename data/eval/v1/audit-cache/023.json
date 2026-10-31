@@ -1,0 +1,245 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0192",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0002",
+          "warranty_policy_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0002",
+            "quote": "即使没有发票，用户仍可通过设备序列号（IMEI 或 SN 码）在官方 App 或官网查询设备是否在保修期内，该查询结果通常基于设备激活时间或官方注册时间估算，可能与实际购买时间存在误差。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "以下情况通常不在保修范围内，需要额外说明：\n\n- 摔落、进液等意外损坏（可走意外保范围，如已购买）；\n- 私自拆机、改装、加装非官方硬件导致的故障；\n- 使用非官方电源适配器导致的接口或主板损坏。\n\n具体是否保修需以官方检测结果为准，客服不能提前承诺。"
+          }
+        ],
+        "expected_points": [
+          "没有发票可通过设备序列号（IMEI或SN码）在官方App或官网查询保修状态，结果基于激活或注册时间估算，可能与实际购买时间有误差",
+          "摔落、进液等意外损坏通常不在保修范围内，如已购买意外保可走意外保范围，具体是否保修以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题均有直接对应的知识库片段，证据充分，无风险。"
+      },
+      {
+        "query_id": "syn_t0193",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0004",
+          "battery_safety_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 建议将电量维持在 40%～60% 区间存放；\n- 避免在高温、潮湿环境下长期存放笔记本；\n- 长期存放前建议完全关机而非仅休眠。"
+          }
+        ],
+        "expected_points": [
+          "手机/平板避免电池长期处于满电或零电量状态存放",
+          "笔记本长期存放建议将电量维持在40%～60%区间，并完全关机而非仅休眠"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个设备类型的存放建议均有直接对应的知识库片段，证据充分，无风险。"
+      },
+      {
+        "query_id": "syn_t0194",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000",
+          "repair_faq_tablet_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0003",
+            "quote": "请先确认两台设备登录同一账号且网络连接正常。如排查后仍无法同步，建议联系客服协助远程诊断账号或网络配置问题。"
+          }
+        ],
+        "expected_points": [
+          "维修涉及更换主板、存储模块可能导致数据丢失，官方建议寄修前自行备份重要数据",
+          "平板与手机同步异常应先确认两台设备登录同一账号且网络正常，排查后仍无法同步可联系客服远程诊断"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题均有直接对应的知识库片段，证据充分，无风险。"
+      },
+      {
+        "query_id": "syn_t0195",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0004",
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          },
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "建议使用官方原装或认证配件充电，避免高温环境长时间存放，避免电池长期满电或零电量存放",
+          "严禁自行购买第三方屏幕总成更换，可能损坏内部排线、传感器并导致保修失效，应通过官方售后渠道处理"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "问题涉及电池鼓包和自行换屏，存在安全风险和危险操作诉求，需转人工。"
+      },
+      {
+        "query_id": "syn_t0196",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0002",
+          "dangerous_operations_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0002",
+            "quote": "- 避免在潮湿环境（如浴室、水边）为设备充电；\n- 避免使用充电器时用湿手触摸插头；\n- 避免长时间覆盖充电器和设备（如塞进被子中充电）。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；\n- 将电池或设备放入水中、火中处理异常情况；\n- 自行给电池加热或冷冻以\"修复\"故障。"
+          }
+        ],
+        "expected_points": [
+          "避免长时间覆盖充电器和设备（如塞进被子中充电）",
+          "严禁用针、刀等工具对鼓包电池放气或穿刺处理"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "问题涉及电池鼓包穿刺等危险操作，存在安全风险，需转人工。"
+      },
+      {
+        "query_id": "syn_t0197",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0003",
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。\n\n严禁在设备进液后立即通电测试是否可以使用，短路风险可能导致主板永久性损坏，甚至引发安全事故。"
+          }
+        ],
+        "expected_points": [
+          "充电中出现插座冒烟等异常应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测",
+          "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理，可能加速腐蚀或短路"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "问题涉及插座冒烟和进液处理，存在安全风险，需转人工。"
+      },
+      {
+        "query_id": "syn_t0198",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000",
+          "dangerous_operations_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；\n- 将电池或设备放入水中、火中处理异常情况；\n- 自行给电池加热或冷冻以\"修复\"故障。"
+          }
+        ],
+        "expected_points": [
+          "发现电池鼓包应立即停止使用，关闭设备并断开电源适配器",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后专业拆检",
+          "严禁自行拆卸、刺破、挤压电池，或用工具对鼓包电池放气、穿刺"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "问题涉及笔记本电池鼓包并想自行拆卸，存在安全风险和危险操作诉求，需转人工。"
+      },
+      {
+        "query_id": "syn_t0199",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0001",
+          "return_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0001",
+            "quote": "1. 智能客服应先安抚用户情绪，避免与用户争辩或反复重复标准话术；\n2. 明确告知用户投诉将被记录并升级至客户体验组处理；\n3. 不承诺具体的处理结果、赔偿方案或处理时限，具体处理方式由人工客服和相关部门根据实际情况决定；\n4. 生成投诉类工单时应完整记录用户诉求、涉及订单/设备信息、历史沟通摘要。"
+          },
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "1. 在官方渠道提交退货申请，说明退货原因；\n2. 客服审核订单信息和退货条件；\n3. 审核通过后，用户按指引寄回商品；\n4. 官方收到商品并验货后，原路退款。\n\n退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "expected_points": [
+          "智能客服应先安抚用户情绪，避免争辩或反复重复标准话术",
+          "明确告知投诉将被记录并升级至客户体验组处理",
+          "不承诺具体处理结果、赔偿方案或处理时限",
+          "退货需审核通过后寄回商品，官方收到并验货后原路退款，退款通常为验货通过后3～7个工作日内"
+        ],
+        "risk_types": [
+          "complaint",
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户明确投诉并要求保证退款时限，涉及投诉和退款边界，需转人工。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2744,
+    "prompt_tokens": 10787,
+    "total_tokens": 13531,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1315
+  },
+  "model": "deepseek-flash",
+  "response_id": "ba4282b5-0128-4a93-902f-a42b6d69f5f6"
+}

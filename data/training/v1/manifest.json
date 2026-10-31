@@ -1,0 +1,12 @@
+{
+  "input_sha256": "4cbe14c358c7ca80d8aea7c7aeadb2fb18f202ae04c2ff0e9c529c6934118651",
+  "queries_sha256": "c9f0d52a82cbc99fdff9da97f308110c2dec58edca351d3d516be270c7a3f1c9",
+  "seed": 42,
+  "independent_training_groups": 232,
+  "pairs_per_negative_strategy": 875,
+  "all_reviewed_positives_excluded_from_negatives": true,
+  "limitations": [
+    "AI annotations may miss relevant positives; hard negatives are not human-verified.",
+    "Fewer than 500 independent groups: feasibility and learning-curve experiment, not a large-data claim."
+  ]
+}

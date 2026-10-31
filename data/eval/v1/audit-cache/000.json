@@ -1,0 +1,208 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0000",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。\n\n用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。\n\n建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          }
+        ],
+        "expected_points": [
+          "应立即停止使用设备，断开电源，并避免继续充电",
+          "不要自行拆卸、挤压、刺破、加热或尝试修复鼓包电池",
+          "应联系官方售后服务中心，由专业人员检测处理"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题明确询问电池鼓包后能否继续充电及处理方式，battery_safety_0000直接包含停止使用、断开电源、避免充电、禁止自行处理及联系售后等必要结论，证据充分。"
+      },
+      {
+        "query_id": "syn_t0001",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          }
+        ],
+        "expected_points": [
+          "应避免皮肤直接接触漏液区域",
+          "停止使用设备，并将设备放置在通风、安全的位置",
+          "如不慎接触，应使用清水冲洗，并及时就医"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题涉及电池漏液及皮肤接触后的处理，battery_safety_0001直接给出避免接触、停止使用、通风放置、清水冲洗和就医等必要步骤，证据充分。"
+      },
+      {
+        "query_id": "syn_t0002",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。\n\n请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。"
+          }
+        ],
+        "expected_points": [
+          "异常发热、烫手时应立即停止使用并断开电源",
+          "请勿将发热设备放置在床上、沙发等易燃物品附近",
+          "不要用衣物、被子覆盖设备散热"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题询问充电烫手能否继续及床上充电风险，battery_safety_0002明确异常发热应停止使用断开电源，并禁止放在床上沙发等易燃物附近及覆盖散热，证据直接支持。"
+      },
+      {
+        "query_id": "syn_t0003",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。\n\n严禁在冒烟或起火后继续操作、充电或强行关机。"
+          }
+        ],
+        "expected_points": [
+          "应立即远离设备",
+          "不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖",
+          "及时报警和联系官方售后",
+          "严禁在冒烟或起火后继续操作、充电或强行关机"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "问题涉及手机冒烟焦味及能否用水浇，battery_safety_0003直接给出远离设备、禁止用水、使用干粉灭火器或沙土、报警联系售后及禁止继续操作等关键安全结论，证据充分；因涉及现实起火风险，need_human=true。"
+      },
+      {
+        "query_id": "syn_t0004",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          }
+        ],
+        "expected_points": [
+          "建议使用官方原装或认证配件充电",
+          "避免在高温环境（如车内暴晒）下长时间存放设备",
+          "避免电池长期处于满电或零电量状态存放"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问日常充电和存放的电池保护做法，battery_safety_0004直接列出使用官方或认证配件、避免高温存放、避免满电或零电量存放等建议，证据充分。"
+      },
+      {
+        "query_id": "syn_t0005",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          }
+        ],
+        "expected_points": [
+          "发现鼓包迹象后应立即停止使用，关闭设备并断开电源适配器",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池",
+          "应联系官方售后进行专业拆检"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题询问笔记本键盘翘起疑似电池鼓包能否自行拆后盖取电池，battery_safety_laptop_0000明确鼓包迹象应停止使用断开电源、内置电池不支持自行更换、切勿自行拆开后盖强行取出，并应联系官方售后，证据直接支持。"
+      },
+      {
+        "query_id": "syn_t0006",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0001",
+            "quote": "笔记本在高负载运行（如游戏、渲染）时风扇噪音增大、机身温热属于正常现象。但如果出现底部烫手、风扇异响、自动关机等情况，应立即停止使用并送修检测。\n\n请勿在床上、沙发、毯子等柔软且不透气的表面上长时间使用笔记本，以免影响散热导致电池过热。"
+          }
+        ],
+        "expected_points": [
+          "高负载运行时风扇噪音增大、机身温热属于正常现象",
+          "出现底部烫手、风扇异响、自动关机等情况应立即停止使用并送修检测",
+          "不要在床上、沙发、毯子等柔软不透气表面长时间使用笔记本，以免影响散热导致电池过热"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问笔记本高负载下风扇噪音和温热是否正常及何时送修，battery_safety_laptop_0001明确正常现象及底部烫手、风扇异响、自动关机等需停止使用送修，并给出散热建议，证据充分。"
+      },
+      {
+        "query_id": "syn_t0007",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0002",
+            "quote": "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。"
+          }
+        ],
+        "expected_points": [
+          "长期使用后续航下降属于正常损耗",
+          "衰减严重影响使用可联系官方售后进行电池健康度检测和更换评估",
+          "费用视保修状态而定"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问笔记本使用两年多续航变短能否检测或更换电池及费用，battery_safety_laptop_0002直接说明续航下降属正常损耗、可联系售后检测评估更换、费用视保修状态而定，证据充分。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2102,
+    "prompt_tokens": 10535,
+    "total_tokens": 12637,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 10535
+  },
+  "model": "deepseek-flash",
+  "response_id": "f8d604bd-e9b2-4dae-9141-8a49aab0862a"
+}

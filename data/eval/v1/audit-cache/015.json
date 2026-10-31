@@ -1,0 +1,275 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0127",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001",
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          },
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "避免皮肤直接接触漏液区域",
+          "停止使用设备，放置在通风、安全的位置",
+          "如不慎接触，用清水冲洗并及时就医",
+          "严禁自行购买第三方屏幕总成更换",
+          "自行更换可能损坏内部排线、传感器，且导致保修失效",
+          "维修应通过官方售后渠道处理"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "两问均有直接证据：漏液处理与禁止自行更换第三方屏幕，gold完整且无噪声。"
+      },
+      {
+        "query_id": "syn_t0128",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0001",
+          "repair_process_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 屏幕总成更换 | 手机 / 平板 | 300～1200 元 |"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "以上价格为参考区间，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心出具的正式报价为准。"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交维修申请，描述故障现象；\n2. 客服协助预判故障类型，建议用户选择寄修或到店维修；\n3. 用户提交设备并提供购买凭证；\n4. 官方检测中心确认故障原因，出具检测报告；\n5. 根据保修状态确定是否免费维修，用户确认后进行维修；\n6. 维修完成后设备寄回或通知用户到店取件。"
+          }
+        ],
+        "expected_points": [
+          "手机屏幕总成更换参考费用区间为300～1200元",
+          "具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心正式报价为准",
+          "维修申请流程包括：提交申请、客服预判、提交设备及凭证、检测中心确认故障、确认维修、维修完成取件"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "费用区间与维修流程均有直接原文支持，gold准确。"
+      },
+      {
+        "query_id": "syn_t0129",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "human_transfer_policy_0000",
+          "service_boundary_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "1. 涉及退款、换新、保修审批等需要人工审核决策的事项；"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "2. 用户情绪明显激动、表达强烈不满或投诉意向；"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "5. 用户明确要求转人工。"
+          },
+          {
+            "chunk_id": "service_boundary_0002",
+            "quote": "如果智能客服直接承诺退款、换新或保修结果，可能导致用户产生错误预期，一旦人工审核结果与承诺不符，将引发进一步投诉和信任问题。"
+          }
+        ],
+        "expected_points": [
+          "涉及换新、保修审批等需要人工审核决策的事项，智能客服应建议转接人工客服，而不是直接给出结论",
+          "智能客服直接承诺退款、换新或保修结果可能导致用户产生错误预期，引发投诉和信任问题",
+          "用户情绪激动、表达强烈不满或投诉意向时应转接人工客服",
+          "用户明确要求转人工时应转接人工客服"
+        ],
+        "risk_types": [
+          "refund_boundary",
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "换新审批与投诉转人工均有直接依据，涉及越权承诺与投诉，需人工。"
+      },
+      {
+        "query_id": "syn_t0130",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000",
+          "battery_safety_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。\n\n用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。\n\n建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0002",
+            "quote": "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。"
+          }
+        ],
+        "expected_points": [
+          "电池鼓包应立即停止使用设备，断开电源，避免继续充电",
+          "不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池",
+          "建议联系官方售后服务中心，由专业人员进行检测和处理",
+          "笔记本电池长期使用后续航下降属于正常损耗",
+          "如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "鼓包处理与笔记本电池衰减均有直接原文，gold完整。"
+      },
+      {
+        "query_id": "syn_t0131",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0003",
+          "screen_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0003",
+            "quote": "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以\"提升\"充电速度，此类操作存在严重安全风险且不在保修范围内。"
+          }
+        ],
+        "expected_points": [
+          "碎裂屏幕继续使用可能导致碎片划伤手指或面部",
+          "可能导致触控失灵导致误操作",
+          "可能增加内部进灰、进液风险，引发进一步故障",
+          "禁止使用来源不明的第三方快充头或改装数据线",
+          "此类操作存在严重安全风险且不在保修范围内"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "屏幕碎裂风险与第三方快充头禁止均有直接证据，gold准确。"
+      },
+      {
+        "query_id": "syn_t0132",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0002",
+          "charger_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。\n\n请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。"
+          },
+          {
+            "chunk_id": "charger_safety_0002",
+            "quote": "- 避免在潮湿环境（如浴室、水边）为设备充电；\n- 避免使用充电器时用湿手触摸插头；\n- 避免长时间覆盖充电器和设备（如塞进被子中充电）。"
+          }
+        ],
+        "expected_points": [
+          "正常使用或充电时轻微温热属于正常现象",
+          "异常发热、烫手应立即停止使用并断开电源",
+          "不要将发热设备放在床上、沙发等易燃物附近，也不要用衣物、被子覆盖散热",
+          "避免长时间覆盖充电器和设备（如塞进被子中充电）",
+          "避免在潮湿环境充电，避免湿手触摸插头"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "床上充电与发热处理均有直接原文，gold完整。"
+      },
+      {
+        "query_id": "syn_t0133",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0001",
+          "repair_process_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 键盘更换 | 笔记本 | 200～500 元 |"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "以上价格为参考区间，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心出具的正式报价为准。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0001",
+            "quote": "常规部件（键盘、触控板、电池）维修时长约为 3～5 个工作日；主板级维修或需要更换屏幕总成的维修时长约为 7～15 个工作日，具体以检测中心和零件库存情况为准。"
+          }
+        ],
+        "expected_points": [
+          "笔记本键盘更换参考费用区间为200～500元",
+          "参考区间非最终报价，具体费用受机型、故障复杂度、零件供应等影响，以检测中心正式报价为准",
+          "常规部件（键盘、触控板、电池）维修时长约为3～5个工作日",
+          "具体时长以检测中心和零件库存情况为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "键盘费用区间与维修时长均有直接证据，gold准确。"
+      },
+      {
+        "query_id": "syn_t0134",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0002",
+          "warranty_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0002",
+            "quote": "如设备保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态，建议用户保留购买凭证以便核实。"
+          },
+          {
+            "chunk_id": "warranty_policy_0003",
+            "quote": "保修申请需经过官方售后检测确认故障原因后方可批准，客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准。"
+          }
+        ],
+        "expected_points": [
+          "保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态",
+          "建议保留购买凭证以便核实",
+          "保修申请需经过官方售后检测确认故障原因后方可批准",
+          "客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "标签/序列号缺失与保修审批均有直接原文，涉及越权承诺需人工。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2282,
+    "prompt_tokens": 10885,
+    "total_tokens": 13167,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1413
+  },
+  "model": "deepseek-flash",
+  "response_id": "addad1a5-e54a-440b-91e6-afc7f0c53f1d"
+}

@@ -1,0 +1,277 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0288",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。"
+          },
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。"
+          },
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          }
+        ],
+        "expected_points": [
+          "电池鼓包应立即停止使用设备、断开电源并避免继续充电",
+          "用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池",
+          "应联系官方售后服务中心由专业人员检测处理"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "问题涉及电池鼓包安全风险，需转人工；gold中charger_safety_0000与鼓包处理无直接关系，已排除。"
+      },
+      {
+        "query_id": "syn_t0289",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0002",
+          "fast_charging_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0002",
+            "quote": "避免长时间覆盖充电器和设备（如塞进被子中充电）。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0002",
+            "quote": "建议在通风环境下进行快充，避免遮盖设备和充电器；"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0002",
+            "quote": "长时间高负载使用（如游戏）时不建议同时进行快充，以免叠加发热；"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0002",
+            "quote": "如设备长期出现快充异常降速，可联系官方售后检测电池和快充芯片状态。"
+          }
+        ],
+        "expected_points": [
+          "避免长时间覆盖充电器和设备（如塞进被子中充电）",
+          "建议在通风环境下进行快充，避免遮盖设备和充电器",
+          "长时间高负载使用（如游戏）时不建议同时进行快充，以免叠加发热",
+          "如设备长期出现快充异常降速，可联系官方售后检测电池和快充芯片状态"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为快充使用风险与注意事项，gold片段直接支持回答，无安全风险升级必要。"
+      },
+      {
+        "query_id": "syn_t0290",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0005",
+          "repair_process_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0005",
+            "quote": "建议先尝试清理后台应用、更新系统至最新版本。如问题持续存在，可联系客服协助远程诊断，或送修检测硬件是否存在异常。"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交维修申请，描述故障现象；"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "2. 客服协助预判故障类型，建议用户选择寄修或到店维修；"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "3. 用户提交设备并提供购买凭证；"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "4. 官方检测中心确认故障原因，出具检测报告；"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "5. 根据保修状态确定是否免费维修，用户确认后进行维修；"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "6. 维修完成后设备寄回或通知用户到店取件。"
+          }
+        ],
+        "expected_points": [
+          "建议先尝试清理后台应用、更新系统至最新版本",
+          "如问题持续可联系客服远程诊断或送修检测硬件",
+          "用户通过官方App、官网或客服热线提交维修申请并描述故障现象",
+          "客服协助预判故障类型，建议寄修或到店维修",
+          "用户提交设备并提供购买凭证，检测中心确认故障原因并出具检测报告",
+          "根据保修状态确定是否免费维修，用户确认后维修，完成后寄回或到店取件"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为维修流程咨询，gold片段完整覆盖流程，无风险。"
+      },
+      {
+        "query_id": "syn_t0291",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_0001",
+          "data_privacy_repair_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_0001",
+            "quote": "主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          }
+        ],
+        "expected_points": [
+          "主板级故障维修时长约为7～10个工作日，具体以检测中心实际情况为准，遇特殊情况可能延长",
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任",
+          "官方会尽量在检测和维修过程中保护用户数据不被泄露"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及维修时长与数据责任，gold片段直接支持，无风险。"
+      },
+      {
+        "query_id": "syn_t0292",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0002",
+          "battery_safety_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          },
+          {
+            "chunk_id": "battery_safety_0004",
+            "quote": "- 建议使用官方原装或认证配件充电；\n- 避免在高温环境（如车内暴晒）下长时间存放设备；\n- 避免电池长期处于满电或零电量状态存放。"
+          }
+        ],
+        "expected_points": [
+          "碎裂屏幕继续使用可能导致碎片划伤手指或面部",
+          "触控失灵可能导致误操作",
+          "内部进灰、进液风险增加，可能引发进一步故障",
+          "建议使用官方原装或认证配件充电",
+          "避免在高温环境（如车内暴晒）下长时间存放设备",
+          "避免电池长期处于满电或零电量状态存放"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为屏幕碎裂继续使用风险及电池注意事项，gold片段直接支持，无风险。"
+      },
+      {
+        "query_id": "syn_t0293",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "water_damage_policy_0000",
+          "battery_safety_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0000",
+            "quote": "设备进液或进水后，应立即执行以下步骤：\n\n1. 立即关机，不要尝试开机测试是否正常；\n2. 断开充电器，不要在设备潮湿状态下充电；\n3. 用干燥软布擦拭外部液体，不要用吹风机加热吹干；\n4. 尽快将设备送至官方售后进行专业拆检和干燥处理。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0002",
+            "quote": "笔记本电池经过长期使用后续航下降属于正常损耗，如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定。"
+          }
+        ],
+        "expected_points": [
+          "设备进液后应立即关机，不要尝试开机测试",
+          "断开充电器，不要在设备潮湿状态下充电",
+          "用干燥软布擦拭外部液体，不要用吹风机加热吹干",
+          "尽快送至官方售后进行专业拆检和干燥处理",
+          "笔记本电池长期使用后续航下降属于正常损耗",
+          "如衰减严重影响使用，可联系官方售后进行电池健康度检测和更换评估，费用视保修状态而定"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及笔记本进液处理与电池衰减检测，gold片段直接支持，无风险。"
+      },
+      {
+        "query_id": "syn_t0294",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0000",
+          "warranty_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0000",
+            "quote": "以下人为原因造成的故障不在免费保修范围内：\n\n- 摔落、挤压导致的外壳破裂、屏幕碎裂；"
+          },
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。"
+          }
+        ],
+        "expected_points": [
+          "摔落、挤压导致的外壳破裂、屏幕碎裂属于人为损坏，不在免费保修范围内",
+          "云枢手机整机保修期为购买之日起12个月，电池保修期为6个月"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题为保修免责与期限咨询，gold片段直接支持，无风险。"
+      },
+      {
+        "query_id": "syn_t0295",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0003",
+          "warranty_policy_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0003",
+            "quote": "因用户自行安装非官方系统、root/越狱、刷入非官方固件导致的软件故障不在硬件保修范围内，但通常可通过官方售后渠道协助恢复出厂系统。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0001",
+            "quote": "保修范围包括主板故障、屏幕显示异常、键盘失灵、散热风扇异响或不转、接口无法识别设备等非人为硬件故障。"
+          }
+        ],
+        "expected_points": [
+          "因用户自行安装非官方系统、刷入非官方固件导致的软件故障不在硬件保修范围内",
+          "键盘失灵属于保修范围包括的非人为硬件故障"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及刷机后键盘失灵保修判定，gold片段提供相关条款，无风险。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2694,
+    "prompt_tokens": 10888,
+    "total_tokens": 13582,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1416
+  },
+  "model": "deepseek-flash",
+  "response_id": "a5d7e776-33f6-4a65-9f6f-4ba9fbace283"
+}

@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-10-31",
+  "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "model": "deepseek-flash",
+  "currency": "USD",
+  "unit_tokens": 1000000,
+  "off_peak": {"cache_hit_input": 0.003, "cache_miss_input": 0.15, "output": 0.6},
+  "peak": {"cache_hit_input": 0.006, "cache_miss_input": 0.3, "output": 1.2},
+  "schedule": "Peak Mon-Fri 01:00-04:00 and 06:00-10:00 UTC, excluding Chinese public holidays; all other periods off-peak.",
+  "experiment_rate": "off_peak",
+  "experiment_rate_reason": "2026-10-31 is Saturday; no peak period applies.",
+  "note": "Estimate from token counters, not a billing statement; reasoning tokens are included in completion_tokens."
+}

@@ -1,0 +1,230 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0102",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "water_damage_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0003",
+            "quote": "- 避免在浴室、厨房、雨天户外等潮湿环境使用设备；\n- 如设备具备防水等级，仍建议避免长时间浸泡或超出防水等级的使用场景。"
+          }
+        ],
+        "expected_points": [
+          "即使设备具备防水等级，仍建议避免长时间浸泡或超出防水等级的使用场景。",
+          "应避免在浴室、厨房、雨天户外等潮湿环境使用设备。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问潮湿环境使用建议，gold片段直接包含相关建议，证据充分。"
+      },
+      {
+        "query_id": "syn_t0103",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0003",
+          "repair_pricing_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          },
+          {
+            "chunk_id": "repair_pricing_0002",
+            "quote": "维修费用需在检测完成后，通过官方渠道向用户展示正式报价，用户确认后才会进行收费维修，未经用户确认不会直接收费维修。"
+          }
+        ],
+        "expected_points": [
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量保护用户数据不被泄露。",
+          "维修费用需在检测完成后通过官方渠道展示正式报价，用户确认后才会进行收费维修，未经确认不会直接收费维修。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由对应gold片段直接支持，证据完整。"
+      },
+      {
+        "query_id": "syn_t0104",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0003",
+          "repair_process_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "2. 客服建议用户提前备份重要数据，避免维修过程中数据丢失；"
+          }
+        ],
+        "expected_points": [
+          "笔记本维修申请流程中，客服会建议用户提前备份重要数据，避免维修过程中数据丢失。",
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量保护用户数据不被泄露。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由对应gold片段直接支持，证据充分。"
+      },
+      {
+        "query_id": "syn_t0105",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "return_policy_0002",
+          "service_boundary_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0002",
+            "quote": "以下情况通常不支持七天无理由退货：\n\n- 商品已拆封使用且存在明显使用痕迹（如屏幕划痕、机身磕碰）；"
+          },
+          {
+            "chunk_id": "service_boundary_0002",
+            "quote": "如果智能客服直接承诺退款、换新或保修结果，可能导致用户产生错误预期，一旦人工审核结果与承诺不符，将引发进一步投诉和信任问题。因此系统设计上要求对这类问题只说明流程，不做实质性承诺。"
+          }
+        ],
+        "expected_points": [
+          "商品已拆封使用且存在明显使用痕迹（如屏幕划痕、机身磕碰）通常不支持七天无理由退货。",
+          "智能客服对退款等问题只说明流程，不做实质性承诺，以避免用户产生错误预期。"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "问题涉及退款承诺，属于越权诉求，需转人工；gold片段直接支持退货条件及客服边界。"
+      },
+      {
+        "query_id": "syn_t0106",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0001",
+          "dangerous_operations_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0001",
+            "quote": "但如果出现底部烫手、风扇异响、自动关机等情况，应立即停止使用并送修检测。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；"
+          }
+        ],
+        "expected_points": [
+          "笔记本出现底部烫手、风扇异响、自动关机等情况，应立即停止使用并送修检测。",
+          "严禁指导用户自行拆卸、刺破、挤压电池，或用针、刀等工具对鼓包电池“放气”或穿刺处理。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "问题包含电池安全风险及危险操作诉求，需转人工；gold片段提供安全提示和禁止操作说明。"
+      },
+      {
+        "query_id": "syn_t0107",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0000",
+          "repair_faq_laptop_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0000",
+            "quote": "请先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机。如仍无法开机，可能是主板或电池故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "手机无法开机可先连接充电器充电30分钟后再次尝试开机，仍无法开机可能是主板或电池故障，建议联系官方售后检测。",
+          "笔记本接口无法识别外接设备可先更换数据线或外接设备排查，更换后仍无法识别可能是接口故障，建议联系售后检测。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由对应gold片段直接支持，证据充分。"
+      },
+      {
+        "query_id": "syn_t0108",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_faq_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_faq_0000",
+            "quote": "请先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机。如仍无法开机，可能是主板或电池故障，建议联系官方售后检测。"
+          }
+        ],
+        "expected_points": [
+          "设备无法开机可先充电30分钟再尝试开机，若仍无法开机可能是主板或电池故障，建议联系官方售后检测。",
+          "用户怀疑维修过程中存在数据隐私泄露，应作为高优先级投诉转人工处理，不能由智能客服直接判断。"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "问题涉及数据隐私泄露怀疑，属于投诉，需转人工；gold片段直接支持故障排查和投诉处理原则。"
+      },
+      {
+        "query_id": "syn_t0109",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000",
+          "repair_faq_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          }
+        ],
+        "expected_points": [
+          "高负载下风扇声音变大正常，但轻负载下异常响、有异响或风扇不转导致过热，应停止高负载使用并联系售后检测散热模组。",
+          "维修涉及更换主板、存储模块可能导致数据丢失，官方建议寄修前自行备份重要数据。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由对应gold片段直接支持，证据充分。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2251,
+    "prompt_tokens": 10790,
+    "total_tokens": 13041,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1318
+  },
+  "model": "deepseek-flash",
+  "response_id": "0ce24b43-6f03-44f0-b2cc-3d5ba2d7c80d"
+}

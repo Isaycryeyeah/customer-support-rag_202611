@@ -1,0 +1,196 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0020",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0003",
+            "quote": "当用户询问上述危险操作时，智能客服必须明确拒绝提供操作指导，说明该操作存在安全风险，并建议用户停止相关尝试、联系官方售后由专业人员处理。"
+          }
+        ],
+        "expected_points": [
+          "必须明确拒绝提供短接触点强制开机的操作指导",
+          "说明该操作存在安全风险",
+          "建议停止尝试并联系官方售后由专业人员处理"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "用户明确要求危险操作指导，知识库有标准拒绝应答原则，gold片段直接支持拒绝、风险说明和转售后建议。"
+      },
+      {
+        "query_id": "syn_t0021",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          }
+        ],
+        "expected_points": [
+          "更换主板、存储模块可能导致设备内数据丢失",
+          "官方建议寄修前自行备份重要数据，如照片、文档、聊天记录等"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问寄修换主板前需备份哪些数据，gold片段直接说明数据丢失风险和备份建议。"
+      },
+      {
+        "query_id": "syn_t0022",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0001",
+            "quote": "官方检测和维修人员在维修过程中仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。"
+          }
+        ],
+        "expected_points": [
+          "维修人员仅在必要范围内访问设备数据用于故障排查，例如系统日志",
+          "不会主动查看用户个人照片、聊天记录等隐私内容"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问维修人员是否会翻看照片和聊天记录，gold片段直接说明访问范围和不会主动查看隐私内容。"
+      },
+      {
+        "query_id": "syn_t0023",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          }
+        ],
+        "expected_points": [
+          "备份重要数据到云端或其他存储设备",
+          "退出账号或开启访客模式（如设备支持）",
+          "移除设备内的敏感应用或数据，如银行类应用的登录状态"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问寄修前保护隐私的操作，gold片段直接列出三项建议操作。"
+      },
+      {
+        "query_id": "syn_t0024",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          }
+        ],
+        "expected_points": [
+          "因维修更换硬件导致的数据丢失，官方不承担数据恢复责任",
+          "官方会尽量在检测和维修过程中保护用户数据不被泄露"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问官方能否恢复维修导致的数据丢失，gold片段直接说明不承担恢复责任但会保护数据不泄露。"
+      },
+      {
+        "query_id": "syn_t0025",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          }
+        ],
+        "expected_points": [
+          "怀疑维修过程中存在数据隐私泄露应作为高优先级投诉转人工处理",
+          "不能由智能客服直接判断是否存在泄露行为"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户表达隐私泄露怀疑并要求查清，属于投诉，知识库明确要求转人工且智能客服不能直接判断，need_human=true。"
+      },
+      {
+        "query_id": "syn_t0026",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0000",
+            "quote": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。\n\n超过 15 天但在保修期内出现故障的，按保修政策走维修流程，不再适用换新政策。"
+          }
+        ],
+        "expected_points": [
+          "自收到商品之日起15天内出现官方认定的性能故障（如无法开机）可申请换新，无需承担额外费用",
+          "超过15天但在保修期内出现故障按保修政策走维修流程，不再适用换新政策"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问15天内无法开机能否直接换新，gold片段直接说明15天内性能故障可申请换新及超期处理。"
+      },
+      {
+        "query_id": "syn_t0027",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0001",
+            "quote": "1. 用户提交换货申请并描述故障现象；\n2. 官方客服初步判断是否符合换新条件；\n3. 用户寄回故障机，官方检测确认故障属实；\n4. 检测通过后寄出全新或同型号换新机。"
+          }
+        ],
+        "expected_points": [
+          "用户提交换货申请并描述故障现象",
+          "官方客服初步判断是否符合换新条件",
+          "用户寄回故障机，官方检测确认故障属实",
+          "检测通过后寄出全新或同型号换新机"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问换货步骤和寄回后处理，gold片段直接列出完整换货流程。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1739,
+    "prompt_tokens": 10453,
+    "total_tokens": 12192,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 10453
+  },
+  "model": "deepseek-flash",
+  "response_id": "45931871-d41b-4d2c-a213-b3531ffd7166"
+}

@@ -1,0 +1,242 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0356",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000",
+          "fast_charging_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0002",
+            "quote": "- 建议在通风环境下进行快充，避免遮盖设备和充电器；\n- 长时间高负载使用（如游戏）时不建议同时进行快充，以免叠加发热；\n- 如设备长期出现快充异常降速，可联系官方售后检测电池和快充芯片状态。"
+          }
+        ],
+        "expected_points": [
+          "发现笔记本电池鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。",
+          "建议在通风环境下进行快充，避免遮盖设备和充电器；长时间高负载使用时不建议同时进行快充。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "问题涉及电池鼓包安全风险和快充注意事项，gold片段直接支持必要结论，风险类型正确，需转人工。"
+      },
+      {
+        "query_id": "syn_t0357",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0000",
+          "human_transfer_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0000",
+            "quote": "用户表达以下类型的诉求应识别为投诉，而非普通咨询：\n\n- 明确使用\"投诉\"\"举报\"\"维权\"等词汇；\n- 对客服态度、处理效率、处理结果表达强烈不满；\n- 多次咨询同一问题未得到解决，情绪逐渐激化。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0000",
+            "quote": "以下情况智能客服应主动建议转接人工客服，而不是直接给出结论：\n\n1. 涉及退款、换新、保修审批等需要人工审核决策的事项；\n2. 用户情绪明显激动、表达强烈不满或投诉意向；\n3. 智能客服连续两次未能理解用户问题或给出的回答无法解决用户诉求；\n4. 涉及安全风险问题（如电池鼓包、起火、漏电）且用户需要进一步指导时，除安全提示外的具体处置应转人工或官方售后热线；\n5. 用户明确要求转人工。"
+          }
+        ],
+        "expected_points": [
+          "用户明确使用“投诉”“举报”“维权”等词汇，或对处理效率表达强烈不满，应识别为投诉。",
+          "涉及用户情绪激动、表达强烈不满或投诉意向时，智能客服应主动建议转接人工客服。"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户明确表达投诉和维权意向，情绪激动，gold片段支持投诉识别和转人工规则，风险类型正确。"
+      },
+      {
+        "query_id": "syn_t0358",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_pricing_0002",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_pricing_0002",
+            "quote": "维修费用需在检测完成后，通过官方渠道向用户展示正式报价，用户确认后才会进行收费维修，未经用户确认不会直接收费维修。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "维修费用需在检测完成后，通过官方渠道向用户展示正式报价，用户确认后才会进行收费维修。",
+          "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及维修费用确认流程和数据备份建议，gold片段直接支持，无风险。"
+      },
+      {
+        "query_id": "syn_t0359",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_faq_tablet_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0000",
+            "quote": "请先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐。如排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。"
+          }
+        ],
+        "expected_points": [
+          "寄修前建议备份重要数据到云端或其他存储设备，退出账号或开启“访客模式”，移除设备内的敏感应用或数据。",
+          "平板配件无法连接时，先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐；如仍无法连接，建议联系售后检测平板本体的连接模组。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及寄修前数据隐私操作和平板配件连接排查，gold片段直接支持，无风险。"
+      },
+      {
+        "query_id": "syn_t0360",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0003",
+          "dangerous_operations_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0003",
+            "quote": "当用户询问上述危险操作时，智能客服必须明确拒绝提供操作指导，说明该操作存在安全风险，并建议用户停止相关尝试、联系官方售后由专业人员处理。"
+          }
+        ],
+        "expected_points": [
+          "应立即拔出充电器并断开电源，不要继续尝试插拔测试",
+          "联系官方售后检测处理",
+          "智能客服应拒绝提供危险操作指导，建议停止尝试并联系专业人员"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题涉及充电异常安全处理，gold片段直接支持停止操作和联系售后，风险类型正确，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0361",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0004",
+          "repair_pricing_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 维修项目 | 适用产品 | 参考费用区间 |\n|---|---|---|\n| 屏幕总成更换 | 手机 / 平板 | 300～1200 元 |\n| 电池更换 | 手机 / 平板 | 100～300 元 |\n| 充电接口维修 | 手机 / 平板 | 100～250 元 |\n| 键盘更换 | 笔记本 | 200～500 元 |\n| 屏幕总成更换 | 笔记本 | 800～2500 元 |\n| 主板维修 | 笔记本 | 500～3000 元 |\n\n以上价格为参考区间，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心出具的正式报价为准。"
+          }
+        ],
+        "expected_points": [
+          "先更换其他数据线或外接设备排查配件问题",
+          "更换后仍无法识别可能是接口故障，建议联系售后检测",
+          "充电接口维修参考费用区间为100～250元（手机/平板），笔记本接口维修费用需以检测中心正式报价为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及笔记本接口故障排查和维修费用参考，gold片段提供排查建议和费用区间，无风险。"
+      },
+      {
+        "query_id": "syn_t0362",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0003",
+          "dangerous_operations_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 建议将电量维持在 40%～60% 区间存放；\n- 避免在高温、潮湿环境下长期存放笔记本；\n- 长期存放前建议完全关机而非仅休眠。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0001",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆开设备外壳、后盖进行\"维修\"；\n- 短接主板触点尝试强制开机；\n- 使用飞线、焊接等方式修复主板故障；\n- 强行撬开粘合的屏幕或电池仓。"
+          }
+        ],
+        "expected_points": [
+          "长期存放建议将电量维持在40%～60%区间",
+          "避免在高温、潮湿环境下长期存放，长期存放前建议完全关机而非仅休眠",
+          "严禁自行拆开设备外壳、后盖进行维修，也严禁强行撬开粘合的屏幕或电池仓"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题涉及电池存放建议和危险操作禁止，gold片段直接支持，风险类型正确。"
+      },
+      {
+        "query_id": "syn_t0363",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0005",
+          "repair_process_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0005",
+            "quote": "请先在纯色背景下仔细观察确认异常位置和数量。如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交笔记本维修申请；\n2. 客服建议用户提前备份重要数据，避免维修过程中数据丢失；\n3. 用户将笔记本寄至官方指定检测中心或到店提交；\n4. 检测中心确认故障原因（如主板、屏幕、键盘、散热模组等）；\n5. 根据保修状态确认维修方案和费用，用户确认后开始维修；\n6. 维修完成后寄回或通知到店取件。"
+          }
+        ],
+        "expected_points": [
+          "先在纯色背景下确认异常位置和数量，联系售后检测屏幕面板，是否保修以官方检测结果为准",
+          "通过官方App、官网或客服热线提交维修申请",
+          "客服建议提前备份重要数据，避免维修过程中数据丢失"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及屏幕亮点售后检测流程和数据备份建议，gold片段直接支持，无风险。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2945,
+    "prompt_tokens": 10804,
+    "total_tokens": 13749,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1332
+  },
+  "model": "deepseek-flash",
+  "response_id": "ee145cb9-bdf3-4c65-94bb-c8fdb040d713"
+}

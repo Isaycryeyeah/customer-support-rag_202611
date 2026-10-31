@@ -1,0 +1,243 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0167",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0000",
+          "human_transfer_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0000",
+            "quote": "用户表达以下类型的诉求应识别为投诉，而非普通咨询：\n\n- 明确使用\"投诉\"\"举报\"\"维权\"等词汇；\n- 对客服态度、处理效率、处理结果表达强烈不满；\n- 多次咨询同一问题未得到解决，情绪逐渐激化。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0002",
+            "quote": "官方人工客服热线服务时间为每日 9:00～21:00，非工作时间用户可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+          }
+        ],
+        "expected_points": [
+          "对客服态度、处理效率、处理结果表达强烈不满，或多次咨询同一问题未解决情绪激化，应识别为投诉",
+          "官方人工客服热线服务时间为每日9:00～21:00，非工作时间可提交在线工单，人工客服将在下一个工作时段内回复"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户明确表达投诉意向并询问转人工及人工客服时间，证据充分，涉及投诉需转人工。"
+      },
+      {
+        "query_id": "syn_t0168",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0001",
+          "repair_process_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0001",
+            "quote": "官方检测和维修人员在维修过程中仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交笔记本维修申请；\n2. 客服建议用户提前备份重要数据，避免维修过程中数据丢失；\n3. 用户将笔记本寄至官方指定检测中心或到店提交；\n4. 检测中心确认故障原因（如主板、屏幕、键盘、散热模组等）；\n5. 根据保修状态确认维修方案和费用，用户确认后开始维修；\n6. 维修完成后寄回或通知到店取件。"
+          }
+        ],
+        "expected_points": [
+          "维修人员仅在必要范围内访问设备数据用于故障排查（如系统日志），不会主动查看个人照片、聊天记录等隐私内容。",
+          "用户通过官方App、官网或客服热线提交笔记本维修申请。",
+          "客服建议用户提前备份重要数据，避免维修过程中数据丢失。",
+          "用户将笔记本寄至官方指定检测中心或到店提交，检测中心确认故障原因后，根据保修状态确认维修方案和费用，用户确认后开始维修。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及数据隐私和维修流程，两个gold片段分别直接回答，证据充分。"
+      },
+      {
+        "query_id": "syn_t0169",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0000",
+          "fast_charging_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。\n\n笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "云枢设备支持最高 66W 快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率。使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          }
+        ],
+        "expected_points": [
+          "发现电池鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。",
+          "使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "涉及电池鼓包和自行拆机危险操作，需安全提示并转人工，证据充分。"
+      },
+      {
+        "query_id": "syn_t0170",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0003",
+          "repair_faq_tablet_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0000",
+            "quote": "请先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐。如排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。"
+          }
+        ],
+        "expected_points": [
+          "高负载运行时风扇声音变大属于正常现象，但轻负载下异常响、出现异响或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。",
+          "平板配件无法连接时，先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐；如排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由对应FAQ片段直接回答，证据充分。"
+      },
+      {
+        "query_id": "syn_t0171",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003",
+          "fast_charging_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。\n\n严禁在冒烟或起火后继续操作、充电或强行关机。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "云枢设备支持最高 66W 快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率。使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          }
+        ],
+        "expected_points": [
+          "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。",
+          "严禁在冒烟或起火后继续操作、充电或强行关机。",
+          "使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "涉及电池冒烟起火安全风险，需紧急安全提示并转人工，证据充分。"
+      },
+      {
+        "query_id": "syn_t0172",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0000",
+          "water_damage_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0003",
+            "quote": "- 避免在浴室、厨房、雨天户外等潮湿环境使用设备；\n- 如设备具备防水等级，仍建议避免长时间浸泡或超出防水等级的使用场景。"
+          }
+        ],
+        "expected_points": [
+          "屏幕碎裂后应立即停止触摸破损区域，避免划伤手指。",
+          "用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。",
+          "避免在浴室、厨房、雨天户外等潮湿环境使用设备。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "屏幕碎裂临时处理和浴室使用注意事项均有直接对应片段，证据充分。"
+      },
+      {
+        "query_id": "syn_t0173",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0002",
+          "repair_process_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0002",
+            "quote": "请先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物。如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口。"
+          },
+          {
+            "chunk_id": "repair_process_0001",
+            "quote": "一般故障（如更换电池、摄像头模组）维修时长约为 3～5 个工作日；主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。"
+          }
+        ],
+        "expected_points": [
+          "更换充电器和数据线后仍无法充电，或提示“充电异常”，建议联系售后检测电池和充电接口。",
+          "一般故障（如更换电池、摄像头模组）维修时长约为3～5个工作日；主板级故障维修时长约为7～10个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "充电异常排查和维修时长均有直接对应片段，证据充分。"
+      },
+      {
+        "query_id": "syn_t0174",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003",
+          "charger_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。\n\n严禁在冒烟或起火后继续操作、充电或强行关机。"
+          },
+          {
+            "chunk_id": "charger_safety_0001",
+            "quote": "如充电器出现外壳破损、插脚变形、数据线破皮外露铜线等情况，应立即停止使用，避免触电风险，并更换新的充电器。"
+          }
+        ],
+        "expected_points": [
+          "设备冒烟时应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。",
+          "严禁在冒烟或起火后继续操作、充电或强行关机。",
+          "充电器插脚变形应立即停止使用，避免触电风险，并更换新的充电器。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "涉及电池冒烟和充电器插脚变形安全风险，需紧急安全提示并转人工，证据充分。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2785,
+    "prompt_tokens": 10952,
+    "total_tokens": 13737,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1480
+  },
+  "model": "deepseek-flash",
+  "response_id": "07bf3c87-8710-49a6-aa37-a0ccc9ed0245"
+}

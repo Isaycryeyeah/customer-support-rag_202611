@@ -1,0 +1,124 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "ood_025",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "问题与售后知识库无关，知识库不包含羊毛大衣去褶皱信息，无法回答。"
+      },
+      {
+        "query_id": "ood_026",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "问题与售后知识库无关，知识库不包含卫生间地漏返味处理信息，无法回答。"
+      },
+      {
+        "query_id": "ood_027",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "问题与售后知识库无关，知识库不包含汽车年检材料信息，无法回答。"
+      },
+      {
+        "query_id": "ood_028",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "问题与售后知识库无关，知识库不包含高铁票查询功能，无法回答。"
+      },
+      {
+        "query_id": "ood_029",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "问题与售后知识库无关，知识库不包含国际航班行李限额信息，无法回答。"
+      },
+      {
+        "query_id": "ood_030",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "问题与售后知识库无关，知识库不包含国际包裹海关税计算信息，无法回答。"
+      },
+      {
+        "query_id": "ood_031",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "问题与售后知识库无关，知识库不包含人寿保险受益人变更信息，无法回答。"
+      },
+      {
+        "query_id": "ood_032",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "问题与售后知识库无关，知识库不包含买房公摊面积计算信息，无法回答。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 748,
+    "prompt_tokens": 10022,
+    "total_tokens": 10770,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 550
+  },
+  "model": "deepseek-flash",
+  "response_id": "2c935fdf-b649-434b-98b3-d0384e8e4f63"
+}

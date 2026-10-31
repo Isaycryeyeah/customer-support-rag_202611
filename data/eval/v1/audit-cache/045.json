@@ -1,0 +1,246 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0372",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0003",
+          "service_boundary_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0003",
+            "quote": "智能客服不能为平息投诉而承诺超出政策范围的赔偿、退款或换新方案，所有超出标准政策的处理方案必须经人工审核。"
+          },
+          {
+            "chunk_id": "service_boundary_0002",
+            "quote": "如果智能客服直接承诺退款、换新或保修结果，可能导致用户产生错误预期，一旦人工审核结果与承诺不符，将引发进一步投诉和信任问题。因此系统设计上要求对这类问题只说明流程，不做实质性承诺。"
+          }
+        ],
+        "expected_points": [
+          "智能客服不能为平息投诉而承诺超出政策范围的赔偿、退款或换新方案",
+          "所有超出标准政策的处理方案必须经人工审核",
+          "直接承诺退款、换新或保修结果可能导致用户产生错误预期，引发进一步投诉和信任问题",
+          "系统设计上要求对这类问题只说明流程，不做实质性承诺"
+        ],
+        "risk_types": [
+          "refund_boundary",
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户要求直接退款或换新，涉及越权承诺和投诉，需转人工；gold片段直接支持智能客服不能承诺退款换新且需人工审核的结论。"
+      },
+      {
+        "query_id": "syn_t0373",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001",
+          "screen_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          },
+          {
+            "chunk_id": "screen_safety_0001",
+            "quote": "如屏幕出现漏液现象（如出现墨渍状扩散、亮斑扩大），应避免用力按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组处理。"
+          }
+        ],
+        "expected_points": [
+          "避免皮肤直接接触漏液区域，停止使用设备，放置在通风安全位置",
+          "如不慎接触，应使用清水冲洗并及时就医",
+          "屏幕漏液应避免用力按压屏幕，立即停止使用并联系官方售后",
+          "切勿自行拆解屏幕模组处理"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题涉及电池漏液和屏幕漏液的安全处理，gold片段直接给出安全操作建议，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0374",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "human_transfer_policy_0002",
+          "service_boundary_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "human_transfer_policy_0002",
+            "quote": "官方人工客服热线服务时间为每日 9:00～21:00，非工作时间用户可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+          },
+          {
+            "chunk_id": "service_boundary_0003",
+            "quote": "对于超出售后知识库范围的问题（如产品新机购买咨询、非本品牌产品问题），应说明\"当前知识库不包含相关信息\"，并引导用户联系对应渠道。"
+          }
+        ],
+        "expected_points": [
+          "人工客服热线服务时间为每日9:00～21:00，非工作时间可提交在线工单，人工客服将在下一个工作时段内回复",
+          "产品新机购买咨询超出售后知识库范围，应说明当前知识库不包含相关信息，并引导用户联系对应渠道"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含新机购买咨询和人工客服联系方式，gold片段分别提供知识库范围说明和客服工作时间及非工作时间处理方式，可回答。"
+      },
+      {
+        "query_id": "syn_t0375",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0000",
+          "fast_charging_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；\n- 将电池或设备放入水中、火中处理异常情况；\n- 自行给电池加热或冷冻以\"修复\"故障。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "expected_points": [
+          "严禁指导用户自行拆卸、刺破、挤压电池，或用针、刀等工具对鼓包电池放气或穿刺处理",
+          "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象",
+          "如果出现烫手无法触摸、外壳变形等异常，应立即停止充电"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题涉及鼓包电池危险操作和快充发热，gold片段明确禁止穿刺放气并说明快充发热正常范围，可安全回答。"
+      },
+      {
+        "query_id": "syn_t0376",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0002",
+          "water_damage_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0002",
+            "quote": "碎裂屏幕继续使用可能导致：\n\n- 碎片划伤手指或面部；\n- 触控失灵导致误操作；\n- 内部进灰、进液风险增加，可能引发进一步故障。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0002",
+            "quote": "进液导致的故障通常不属于保修范围（详见\"保修免责与不予保修情况说明\"文档），具体是否可维修、维修费用需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "碎裂屏幕继续使用可能导致碎片划伤手指或面部、触控失灵导致误操作、内部进灰进液风险增加",
+          "进液导致的故障通常不属于保修范围，具体是否可维修、维修费用需以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及碎屏继续使用风险和进液保修，gold片段分别给出风险说明和保修范围结论，可回答。"
+      },
+      {
+        "query_id": "syn_t0377",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0003",
+          "repair_faq_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0000",
+            "quote": "请先确认电源适配器连接正常，并尝试长按电源键 10 秒后重新开机。如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。"
+          }
+        ],
+        "expected_points": [
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任",
+          "官方会尽量在检测和维修过程中保护用户数据不被泄露",
+          "笔记本无法开机可先确认电源适配器连接正常，尝试长按电源键10秒后重新开机",
+          "如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及维修数据丢失责任和笔记本无法开机处理，gold片段分别给出数据责任说明和开机排查建议，可回答。"
+      },
+      {
+        "query_id": "syn_t0378",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0001",
+          "water_damage_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0001",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆开设备外壳、后盖进行\"维修\"；\n- 短接主板触点尝试强制开机；\n- 使用飞线、焊接等方式修复主板故障；\n- 强行撬开粘合的屏幕或电池仓。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0003",
+            "quote": "- 避免在浴室、厨房、雨天户外等潮湿环境使用设备；\n- 如设备具备防水等级，仍建议避免长时间浸泡或超出防水等级的使用场景。"
+          }
+        ],
+        "expected_points": [
+          "严禁自行拆开设备外壳或后盖进行维修",
+          "避免在浴室、厨房、雨天户外等潮湿环境使用设备",
+          "即使设备具备防水等级，也应避免长时间浸泡或超出防水等级的使用场景"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "问题涉及进水后自行拆机（危险操作）和预防进水，gold片段明确禁止自行拆机并给出预防建议，可安全回答。"
+      },
+      {
+        "query_id": "syn_t0379",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0005",
+          "repair_faq_tablet_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0005",
+            "quote": "建议先尝试清理后台应用、更新系统至最新版本。如问题持续存在，可联系客服协助远程诊断，或送修检测硬件是否存在异常。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          }
+        ],
+        "expected_points": [
+          "手机卡顿重启可先清理后台应用、更新系统，若持续存在可联系客服远程诊断或送修检测硬件",
+          "平板漏光可在暗光环境下测试，轻微漏光可能属于正常工艺现象，若影响使用可联系售后评估检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含手机卡顿重启和平板漏光两个子问题，gold片段分别给出对应处理建议，可回答。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2608,
+    "prompt_tokens": 10787,
+    "total_tokens": 13395,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1315
+  },
+  "model": "deepseek-flash",
+  "response_id": "831b4f92-a275-4e8a-85da-ad1164ae4fbf"
+}

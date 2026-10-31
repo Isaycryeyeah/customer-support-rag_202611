@@ -1,0 +1,224 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0396",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0002",
+          "repair_process_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0002",
+            "quote": "建议用户在寄修前：\n\n1. 备份重要数据到云端或其他存储设备；\n2. 退出账号或开启\"访客模式\"（如设备支持）；\n3. 移除设备内的敏感应用或数据（如银行类应用的登录状态）。"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交维修申请，描述故障现象；\n2. 客服协助预判故障类型，建议用户选择寄修或到店维修；\n3. 用户提交设备并提供购买凭证；\n4. 官方检测中心确认故障原因，出具检测报告；\n5. 根据保修状态确定是否免费维修，用户确认后进行维修；\n6. 维修完成后设备寄回或通知用户到店取件。"
+          }
+        ],
+        "expected_points": [
+          "寄修前建议备份重要数据到云端或其他存储设备",
+          "退出账号或开启访客模式（如设备支持）",
+          "移除设备内的敏感应用或数据（如银行类应用的登录状态）",
+          "维修申请流程包括提交申请、客服预判、提供凭证、检测、确认维修、取回设备"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由数据隐私建议和维修流程片段直接支持，gold完整且无噪声。"
+      },
+      {
+        "query_id": "syn_t0397",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_0001",
+          "repair_process_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_0001",
+            "quote": "一般故障（如更换电池、摄像头模组）维修时长约为 3～5 个工作日；主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0003",
+            "quote": "保修期内非人为故障免费维修；保修期外或超出保修范围（如进液、摔落）的维修需支付费用，具体费用以检测后报价为准。"
+          }
+        ],
+        "expected_points": [
+          "一般故障（如更换电池）维修时长约为3～5个工作日",
+          "保修期外或超出保修范围（如进液、摔落）的维修需支付费用，具体费用以检测后报价为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "换电池时长和保修期外进液维修费用均有直接对应片段，证据充分。"
+      },
+      {
+        "query_id": "syn_t0398",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0000",
+          "warranty_policy_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0000",
+            "quote": "如用户通过官方商城、官方授权门店购买设备，但丢失发票或电子凭证，可联系客服提供购买时使用的账号、手机号或支付信息，协助在官方系统中查询订单记录作为购买凭证。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "以下情况通常不在保修范围内，需要额外说明：\n\n- 摔落、进液等意外损坏（可走意外保范围，如已购买）；\n- 私自拆机、改装、加装非官方硬件导致的故障；\n- 使用非官方电源适配器导致的接口或主板损坏。\n\n具体是否保修需以官方检测结果为准，客服不能提前承诺。"
+          }
+        ],
+        "expected_points": [
+          "官方渠道购买丢失发票可联系客服提供账号、手机号或支付信息查询订单记录作为购买凭证",
+          "摔落、进液等意外损坏通常不在保修范围内，可走意外保范围（如已购买）",
+          "具体是否保修需以官方检测结果为准，客服不能提前承诺"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "发票丢失处理与摔落保修覆盖均有直接证据，gold准确。"
+      },
+      {
+        "query_id": "syn_t0399",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0000",
+          "return_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0000",
+            "quote": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。\n\n超过 15 天但在保修期内出现故障的，按保修政策走维修流程，不再适用换新政策。"
+          },
+          {
+            "chunk_id": "return_policy_0003",
+            "quote": "退货申请需经过官方审核，客服不能在未审核的情况下直接承诺退款，具体是否退款以验货结果为准。"
+          }
+        ],
+        "expected_points": [
+          "自收到商品之日起15天内出现官方认定的性能故障（如屏幕显示异常）可申请换新，无需承担额外费用",
+          "超过15天但在保修期内出现故障的，按保修政策走维修流程，不再适用换新政策",
+          "退货申请需经过官方审核，客服不能在未审核的情况下直接承诺退款，具体是否退款以验货结果为准"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": false,
+        "reason": "换新条件与退款审批边界均有直接证据；涉及退款审批边界但属政策咨询，不构成越权诉求。"
+      },
+      {
+        "query_id": "syn_t0400",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0000",
+          "repair_faq_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0000",
+            "quote": "请先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机。如仍无法开机，可能是主板或电池故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "手机无法开机可先连接充电器充电30分钟后再次尝试开机",
+          "如仍无法开机，可能是主板或电池故障，建议联系官方售后检测",
+          "笔记本触控板无响应可先在系统设置中确认未被禁用，并检查是否连接外接鼠标导致自动关闭",
+          "排除设置问题后仍异常，建议联系售后检测"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个故障排查问题分别有对应FAQ片段直接支持。"
+      },
+      {
+        "query_id": "syn_t0401",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0002",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0002",
+            "quote": "请先检查是否使用官方充电器和数据线，并清理充电接口内的灰尘异物。如更换充电器和数据线后仍无法充电，或提示\"充电异常\"，建议联系售后检测电池和充电接口。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "更换充电器和数据线后仍无法充电或提示充电异常，建议联系售后检测电池和充电接口",
+          "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议寄修前自行备份数据",
+          "官方不对维修导致的数据丢失承担恢复责任"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "充电异常处理与换主板数据风险均有直接证据支持。"
+      },
+      {
+        "query_id": "syn_t0402",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0000",
+          "warranty_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0000",
+            "quote": "如用户通过官方商城、官方授权门店购买设备，但丢失发票或电子凭证，可联系客服提供购买时使用的账号、手机号或支付信息，协助在官方系统中查询订单记录作为购买凭证。"
+          },
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          }
+        ],
+        "expected_points": [
+          "官方渠道购买丢失发票可联系客服提供购买账号、手机号或支付信息，协助查询订单记录作为购买凭证",
+          "手机整机保修期为购买之日起12个月，保修期以购机发票或电子凭证日期为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "发票丢失处理与保修期计算均有直接证据，gold准确。"
+      },
+      {
+        "query_id": "ood_000",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "空气炸锅烹饪问题超出知识库范围，无相关资料，应转人工或引导其他渠道。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2033,
+    "prompt_tokens": 10697,
+    "total_tokens": 12730,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1225
+  },
+  "model": "deepseek-flash",
+  "response_id": "c4a1968c-ffeb-4c25-8a2a-ca984116a629"
+}

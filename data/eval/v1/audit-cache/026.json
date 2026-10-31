@@ -1,0 +1,232 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0216",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0002",
+          "warranty_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0002",
+            "quote": "即使没有发票，用户仍可通过设备序列号（IMEI 或 SN 码）在官方 App 或官网查询设备是否在保修期内，该查询结果通常基于设备激活时间或官方注册时间估算，可能与实际购买时间存在误差。"
+          },
+          {
+            "chunk_id": "warranty_policy_0002",
+            "quote": "申请保修需提供以下材料：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（IMEI 或 SN 码）；\n3. 故障现象描述，必要时提供故障照片或视频。"
+          }
+        ],
+        "expected_points": [
+          "没有发票仍可通过设备序列号（IMEI或SN码）在官方App或官网查询保修状态，但查询结果基于激活或注册时间估算，可能与实际购买时间有误差。",
+          "申请保修需提供购买发票或电子凭证、设备序列号（IMEI或SN码）、故障现象描述（必要时提供故障照片或视频）。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由发票丢失查询保修和保修材料片段直接支持，证据充分。"
+      },
+      {
+        "query_id": "syn_t0217",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0002",
+          "battery_safety_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "设备在正常使用或充电时可能出现轻微温热，属于正常现象。如果设备出现异常发热、烫手，应立即停止使用并断开电源。\n\n请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 建议将电量维持在 40%～60% 区间存放；\n- 避免在高温、潮湿环境下长期存放笔记本；\n- 长期存放前建议完全关机而非仅休眠。"
+          }
+        ],
+        "expected_points": [
+          "设备异常发热、烫手时应立即停止使用并断开电源，不要放在床上、沙发等易燃物附近，也不要用衣物、被子覆盖散热。",
+          "笔记本长期存放建议将电量维持在40%～60%区间，避免高温潮湿环境，长期存放前完全关机而非仅休眠。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "发热处理与笔记本存放建议均有直接原文支持，涉及电池安全但属标准安全提示，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0218",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001",
+          "charger_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          },
+          {
+            "chunk_id": "charger_safety_0000",
+            "quote": "建议用户使用官方原装充电器或经过官方认证的第三方充电器。使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故。"
+          }
+        ],
+        "expected_points": [
+          "发现电池漏液应避免皮肤直接接触，停止使用设备并放置在通风安全位置；如不慎接触，用清水冲洗并及时就医。",
+          "使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "漏液处理有直接原文；非官方充电器风险由充电器选择片段支持，gold已替换为更贴切的charger_safety_0000。"
+      },
+      {
+        "query_id": "syn_t0219",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0000",
+          "human_transfer_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0000",
+            "quote": "用户自收到商品之日起 15 天内，如出现官方认定的性能故障（例如无法开机、屏幕显示异常、无法充电等），可申请换新，无需承担额外费用。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0002",
+            "quote": "官方人工客服热线服务时间为每日 9:00～21:00，非工作时间用户可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+          }
+        ],
+        "expected_points": [
+          "自收到商品之日起15天内出现官方认定的性能故障（如无法开机）可申请换新，无需承担额外费用。",
+          "人工客服热线服务时间为每日9:00～21:00，非工作时间可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "换新时间窗口与人工客服工作时间均有直接原文支持，属政策咨询。"
+      },
+      {
+        "query_id": "syn_t0220",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0001",
+          "data_privacy_repair_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          }
+        ],
+        "expected_points": [
+          "平板外接键盘打字延迟或失灵，应先确认键盘固件是否为最新版本，并检查是否同时连接多个蓝牙设备造成干扰；如问题持续，建议联系售后检测。",
+          "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "键盘故障排查与数据恢复责任均有直接原文支持。"
+      },
+      {
+        "query_id": "syn_t0221",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0000",
+          "repair_process_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0000",
+            "quote": "请先确认配件电量充足，并在系统设置中重新配对蓝牙或检查磁吸接口是否对齐。如排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。"
+          },
+          {
+            "chunk_id": "repair_process_0001",
+            "quote": "一般故障（如更换电池、摄像头模组）维修时长约为 3～5 个工作日；主板级故障维修时长约为 7～10 个工作日，具体以检测中心实际情况为准，遇特殊情况（如零件缺货）可能延长。"
+          }
+        ],
+        "expected_points": [
+          "平板配件无法连接时，应先确认配件电量充足，重新配对蓝牙或检查磁吸接口是否对齐；排除配件问题后仍无法连接，建议联系售后检测平板本体的连接模组。",
+          "一般故障（如更换电池、摄像头模组）维修时长约3～5个工作日；主板级故障维修时长约7～10个工作日，具体以检测中心实际情况为准，遇特殊情况可能延长。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "配件连接排查与维修时长均有直接原文支持。"
+      },
+      {
+        "query_id": "syn_t0222",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0002",
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "先确认触控板未被禁用并检查外接鼠标影响，排除设置问题后仍异常建议联系售后检测",
+          "维修费用需以检测中心正式报价为准，参考区间受机型、故障复杂度等因素影响"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "触控板排查与费用报价原则均有直接原文支持；gold已替换为更贴切的报价原则片段。"
+      },
+      {
+        "query_id": "syn_t0223",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0000",
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。"
+          }
+        ],
+        "expected_points": [
+          "屏幕碎裂应停止触摸破损区域，用胶带或保护膜临时覆盖后停止使用，并联系官方售后检测",
+          "严禁将进液设备放入米缸等民间偏方处理，可能加速腐蚀或造成短路"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "屏幕碎裂临时处理与进液禁止偏方均有直接原文支持。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2099,
+    "prompt_tokens": 10783,
+    "total_tokens": 12882,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1311
+  },
+  "model": "deepseek-flash",
+  "response_id": "37f337c5-621f-4c68-a67d-ead9a8b867bd"
+}

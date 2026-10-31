@@ -1,0 +1,232 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0240",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0003",
+          "service_boundary_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0003",
+            "quote": "以下情况通常不适用换新政策：\n\n- 人为损坏（摔落、进水、私自拆机等）；"
+          },
+          {
+            "chunk_id": "service_boundary_0002",
+            "quote": "如果智能客服直接承诺退款、换新或保修结果，可能导致用户产生错误预期，一旦人工审核结果与承诺不符，将引发进一步投诉和信任问题。因此系统设计上要求对这类问题只说明流程，不做实质性承诺。"
+          }
+        ],
+        "expected_points": [
+          "人为损坏（如摔落）通常不适用换新政策。",
+          "智能客服不能直接承诺换新结果，只能说明流程。"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "问题涉及换新政策确认和越权承诺，gold片段分别支持人为损坏不适用换新及智能客服不能直接承诺换新结果，需转人工。"
+      },
+      {
+        "query_id": "syn_t0241",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0005",
+          "repair_process_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0005",
+            "quote": "建议先尝试清理后台应用、更新系统至最新版本。如问题持续存在，可联系客服协助远程诊断，或送修检测硬件是否存在异常。"
+          },
+          {
+            "chunk_id": "repair_process_0002",
+            "quote": "用户可通过官方 App 的\"维修进度\"页面或客服热线查询实时维修状态，包括：已收到设备、检测中、维修中、待寄出、已寄出等节点。"
+          }
+        ],
+        "expected_points": [
+          "清理后台、更新系统后问题仍在，可联系客服远程诊断或送修检测硬件。",
+          "可通过官方App的“维修进度”页面或客服热线查询实时维修状态。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含卡顿重启排查和维修进度查询，两个gold片段分别直接支持对应答案，无风险。"
+      },
+      {
+        "query_id": "syn_t0242",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0002",
+          "screen_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0002",
+            "quote": "- 避免在潮湿环境（如浴室、水边）为设备充电；"
+          },
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          }
+        ],
+        "expected_points": [
+          "避免在潮湿环境（如浴室、水边）为设备充电。",
+          "屏幕碎裂应立即停止触摸破损区域，用胶带或保护膜临时覆盖后停止使用，并联系官方售后检测。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由充电环境要求和屏幕碎裂处理片段直接支持，属于一般安全知识咨询，无高危操作诉求。"
+      },
+      {
+        "query_id": "syn_t0243",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001",
+          "fast_charging_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "expected_points": [
+          "电池漏液应避免皮肤直接接触，停止使用设备并放置在通风安全位置；如不慎接触，用清水冲洗并及时就医。",
+          "快充时比普通充电更明显的温热是正常现象；但如出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "电池漏液和快充发热均属安全知识咨询，gold片段直接给出标准安全处理建议，不涉及危险操作指导，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0244",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0003",
+          "repair_pricing_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0003",
+            "quote": "请先确认两台设备登录同一账号且网络连接正常。如排查后仍无法同步，建议联系客服协助远程诊断账号或网络配置问题。"
+          },
+          {
+            "chunk_id": "repair_pricing_0000",
+            "quote": "具体维修费用需以设备实际检测结果为准，客服和售前渠道公布的价格仅作参考区间，不能作为最终报价承诺。"
+          }
+        ],
+        "expected_points": [
+          "确认两台设备登录同一账号且网络正常后仍无法同步，建议联系客服远程诊断账号或网络配置问题。",
+          "具体维修费用需以设备实际检测结果为准，客服和售前公布的价格仅作参考区间，不能作为最终报价承诺。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "数据同步排查和维修费用咨询分别由对应片段支持，费用部分仅说明参考原则，未承诺具体报价，无风险。"
+      },
+      {
+        "query_id": "syn_t0245",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0000",
+          "repair_faq_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0000",
+            "quote": "维修过程中如涉及更换主板、存储模块，可能导致设备内数据丢失，官方建议用户在寄修前自行备份重要数据（照片、文档、聊天记录等）。"
+          },
+          {
+            "chunk_id": "repair_faq_0004",
+            "quote": "请参考\"电池安全使用指南\"文档中的电池发热处理说明。如排除高负载使用场景后仍存在异常发热，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "排除高负载使用场景后仍存在异常发热，建议联系售后检测。",
+          "维修中如涉及更换主板、存储模块，可能导致数据丢失，建议寄修前自行备份重要数据。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "异常发热送修建议和数据备份建议分别由对应片段直接支持，属于一般售后流程咨询，无风险。"
+      },
+      {
+        "query_id": "syn_t0246",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0004",
+          "repair_faq_tablet_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0004",
+            "quote": "请先更换其他数据线或外接设备排查是否为配件问题。如更换后仍无法识别，可能是接口故障，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          }
+        ],
+        "expected_points": [
+          "笔记本外接设备无法识别：先更换数据线或外接设备排查配件问题，若仍无法识别可能是接口故障，建议联系售后检测。",
+          "平板外接键盘延迟：先确认键盘固件是否为最新版本，并检查是否同时连接多个蓝牙设备造成干扰；若问题持续，建议联系售后检测。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个故障排查问题分别由对应FAQ片段直接支持，无风险。"
+      },
+      {
+        "query_id": "syn_t0247",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0002",
+          "repair_faq_tablet_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0002",
+            "quote": "请先在系统设置中确认触控板未被禁用，并检查是否连接了外接鼠标导致触控板自动关闭。如排除设置问题后仍异常，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          }
+        ],
+        "expected_points": [
+          "笔记本触控板无响应：先在系统设置中确认触控板未被禁用，并检查是否连接外接鼠标导致自动关闭；排除设置问题后仍异常，建议联系售后检测。",
+          "平板屏幕漏光：暗光环境下测试四周漏光程度，轻微漏光在部分机型属于正常工艺现象，若严重影响使用体验，建议联系售后评估检测。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "触控板无响应和屏幕漏光问题分别由对应FAQ片段直接支持，属于一般故障咨询，无风险。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2373,
+    "prompt_tokens": 10753,
+    "total_tokens": 13126,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1281
+  },
+  "model": "deepseek-flash",
+  "response_id": "12f287b7-0d0a-438a-8afa-6f8f633e547a"
+}

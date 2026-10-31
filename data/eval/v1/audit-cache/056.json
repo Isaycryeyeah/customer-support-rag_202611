@@ -1,0 +1,59 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "ood_057",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库不包含旧手机回收金属结算价信息，无法回答。"
+      },
+      {
+        "query_id": "ood_058",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库仅涉及云枢品牌产品，不包含苹果MacBook保修信息。"
+      },
+      {
+        "query_id": "ood_059",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库无售后安全组实时工程师人数信息，无法回答。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 271,
+    "prompt_tokens": 9780,
+    "total_tokens": 10051,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 308
+  },
+  "model": "deepseek-flash",
+  "response_id": "a85a08e1-3111-404d-a005-f6ae65d5446e"
+}

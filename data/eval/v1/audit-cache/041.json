@@ -1,0 +1,242 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0336",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0000",
+          "repair_faq_tablet_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0000",
+            "quote": "请先确认电源适配器连接正常，并尝试长按电源键 10 秒后重新开机。如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_faq_tablet_0003",
+            "quote": "请先确认两台设备登录同一账号且网络连接正常。如排查后仍无法同步，建议联系客服协助远程诊断账号或网络配置问题。"
+          }
+        ],
+        "expected_points": [
+          "笔记本无法开机：先确认电源适配器连接正常，并尝试长按电源键10秒后重新开机；若仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。",
+          "平板与手机数据同步异常：先确认两台设备登录同一账号且网络连接正常；若排查后仍无法同步，建议联系客服协助远程诊断账号或网络配置问题。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由笔记本无法开机FAQ和平板数据同步FAQ直接支持，gold与证据一致。"
+      },
+      {
+        "query_id": "syn_t0337",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0001",
+          "human_transfer_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0001",
+            "quote": "1. 用户提交换货申请并描述故障现象；\n2. 官方客服初步判断是否符合换新条件；\n3. 用户寄回故障机，官方检测确认故障属实；\n4. 检测通过后寄出全新或同型号换新机。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0002",
+            "quote": "官方人工客服热线服务时间为每日 9:00～21:00，非工作时间用户可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+          }
+        ],
+        "expected_points": [
+          "换货流程：用户提交换货申请并描述故障现象；官方客服初步判断是否符合换新条件；用户寄回故障机，官方检测确认故障属实；检测通过后寄出全新或同型号换新机。",
+          "人工客服工作时间：官方人工客服热线服务时间为每日9:00～21:00，非工作时间用户可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "换货流程与人工客服工作时间均有直接对应片段，属于流程咨询，无越权承诺。"
+      },
+      {
+        "query_id": "syn_t0338",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0002",
+          "water_damage_policy_0000",
+          "fast_charging_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0002",
+            "quote": "在设备进液、短路后立即通电测试；"
+          },
+          {
+            "chunk_id": "water_damage_policy_0000",
+            "quote": "1. 立即关机，不要尝试开机测试是否正常；"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          }
+        ],
+        "expected_points": [
+          "设备进液后应立即关机，不要尝试开机测试是否正常。",
+          "快充过程中设备和充电器比普通充电更明显的温热是正常现象；但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "进液后能否开机涉及安全风险，需补充water_damage_policy_0000直接支持；快充发热由对应片段支持。"
+      },
+      {
+        "query_id": "syn_t0339",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0001",
+          "water_damage_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0001",
+            "quote": "如果发现电池漏液，应避免皮肤直接接触漏液区域。请停止使用设备，并将设备放置在通风、安全的位置。\n\n如不慎接触，应使用清水冲洗，并及时就医。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0002",
+            "quote": "进液导致的故障通常不属于保修范围（详见\"保修免责与不予保修情况说明\"文档），具体是否可维修、维修费用需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "电池漏液处理：避免皮肤直接接触漏液区域，停止使用设备，并将设备放置在通风、安全的位置；如不慎接触，应使用清水冲洗，并及时就医。",
+          "进液是否影响保修：进液导致的故障通常不属于保修范围，具体是否可维修、维修费用需以官方检测结果为准。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "电池漏液处理与进液保修判断均有直接证据，未承诺保修结果。"
+      },
+      {
+        "query_id": "syn_t0340",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0003",
+          "repair_process_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0001",
+            "quote": "常规部件（键盘、触控板、电池）维修时长约为 3～5 个工作日；主板级维修或需要更换屏幕总成的维修时长约为 7～15 个工作日，具体以检测中心和零件库存情况为准。"
+          }
+        ],
+        "expected_points": [
+          "风扇噪音大或不转：高负载运行时风扇声音变大属于正常现象；如轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。",
+          "笔记本维修时长：常规部件维修约3～5个工作日；主板级或更换屏幕总成约7～15个工作日，具体以检测中心和零件库存情况为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "原gold维修时长引用了手机/平板流程，应改为笔记本维修流程片段；风扇问题由笔记本FAQ支持。"
+      },
+      {
+        "query_id": "syn_t0341",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0002",
+          "human_transfer_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0002",
+            "quote": "普通投诉由客户体验组在 1～3 个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+          },
+          {
+            "chunk_id": "human_transfer_policy_0002",
+            "quote": "官方人工客服热线服务时间为每日 9:00～21:00，非工作时间用户可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+          }
+        ],
+        "expected_points": [
+          "投诉升级路径：普通投诉由客户体验组在1～3个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。",
+          "人工客服工作时间：官方人工客服热线服务时间为每日9:00～21:00，非工作时间用户可提交在线工单，人工客服将在下一个工作时段内回复处理。"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户明确投诉且涉及安全事故，应转人工；gold片段直接支持投诉升级与客服时间。"
+      },
+      {
+        "query_id": "syn_t0342",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "water_damage_policy_0000",
+          "fast_charging_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0000",
+            "quote": "1. 立即关机，不要尝试开机测试是否正常；\n2. 断开充电器，不要在设备潮湿状态下充电；"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0000",
+            "quote": "云枢设备支持最高 66W 快充协议，需搭配官方快充充电器和数据线才能达到最大充电功率。使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+          }
+        ],
+        "expected_points": [
+          "设备进液后应立即关机，不要尝试开机测试是否正常。",
+          "不要在设备潮湿状态下充电，应断开充电器。",
+          "使用非官方充电器可能无法触发快充，或存在兼容性风险。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "进液后开机与第三方充电器问题均有直接证据，涉及安全但属标准提示，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0343",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_laptop_0000",
+          "repair_pricing_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交笔记本维修申请；\n2. 客服建议用户提前备份重要数据，避免维修过程中数据丢失；\n3. 用户将笔记本寄至官方指定检测中心或到店提交；\n4. 检测中心确认故障原因（如主板、屏幕、键盘、散热模组等）；\n5. 根据保修状态确认维修方案和费用，用户确认后开始维修；\n6. 维修完成后寄回或通知到店取件。"
+          },
+          {
+            "chunk_id": "repair_pricing_0002",
+            "quote": "维修费用需在检测完成后，通过官方渠道向用户展示正式报价，用户确认后才会进行收费维修，未经用户确认不会直接收费维修。"
+          }
+        ],
+        "expected_points": [
+          "笔记本维修流程：提交申请、备份数据、寄至检测中心或到店提交、检测确认故障、确认维修方案和费用后维修、完成后寄回或取件。",
+          "维修费用需在检测完成后通过官方渠道展示正式报价，用户确认后才会进行收费维修，未经用户确认不会直接收费维修。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "笔记本维修流程与费用确认流程均有直接证据，明确回答不会未经同意收费。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2285,
+    "prompt_tokens": 10890,
+    "total_tokens": 13175,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1418
+  },
+  "model": "deepseek-flash",
+  "response_id": "d137b1ff-c998-425b-a2cb-428088a889fb"
+}

@@ -1,0 +1,193 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0086",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0001",
+            "quote": "如设备存在非官方渠道维修记录（例如第三方维修点更换过屏幕、电池等部件），可能影响保修资格评估，需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "存在非官方渠道维修记录可能影响保修资格评估",
+          "需以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问第三方换屏后保修资格，gold片段直接说明非官方维修记录影响评估且以检测为准，证据充分。"
+      },
+      {
+        "query_id": "syn_t0087",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0002",
+            "quote": "如设备保修标签被撕毁、序列号被涂改或无法识别，可能导致无法核实保修状态，建议用户保留购买凭证以便核实。"
+          }
+        ],
+        "expected_points": [
+          "保修标签被撕毁、序列号无法识别可能导致无法核实保修状态",
+          "建议保留购买凭证以便核实"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及标签撕毁和序列号不清，gold片段直接覆盖两个要点。"
+      },
+      {
+        "query_id": "syn_t0088",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0003",
+            "quote": "因用户自行安装非官方系统、root/越狱、刷入非官方固件导致的软件故障不在硬件保修范围内，但通常可通过官方售后渠道协助恢复出厂系统。"
+          }
+        ],
+        "expected_points": [
+          "自行刷入非官方固件导致的软件故障不在硬件保修范围内",
+          "通常可通过官方售后渠道协助恢复出厂系统"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问刷非官方系统后硬件保修，gold片段直接说明软件故障不在硬件保修范围并给出恢复途径。"
+      },
+      {
+        "query_id": "syn_t0089",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0004",
+            "quote": "不在保修范围内的故障，官方售后仍可提供有偿维修服务，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用。"
+          }
+        ],
+        "expected_points": [
+          "不在保修范围内的故障，官方售后仍可提供有偿维修服务",
+          "具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题问进液后能否维修及费用，gold片段直接回答有偿维修和检测后报价，证据充分。"
+      },
+      {
+        "query_id": "syn_t0090",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          }
+        ],
+        "expected_points": [
+          "手机整机保修期为购买之日起12个月",
+          "电池作为易耗部件保修期为6个月",
+          "保修期以购机发票或电子凭证日期为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题问手机电池保修期，gold片段直接给出电池6个月及整机12个月和起算依据。"
+      },
+      {
+        "query_id": "syn_t0091",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0001",
+            "quote": "保修范围包括非人为原因导致的硬件故障，例如主板故障、屏幕显示异常、摄像头模组故障、按键失灵等。"
+          }
+        ],
+        "expected_points": [
+          "保修范围包括非人为原因导致的硬件故障",
+          "屏幕显示异常属于保修范围示例"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题问平板屏幕显示异常是否保修，gold片段明确将屏幕显示异常列为保修范围示例。"
+      },
+      {
+        "query_id": "syn_t0092",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0002",
+            "quote": "申请保修需提供以下材料：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（IMEI 或 SN 码）；\n3. 故障现象描述，必要时提供故障照片或视频。"
+          }
+        ],
+        "expected_points": [
+          "需提供购买发票或电子凭证",
+          "需提供设备序列号（IMEI或SN码）",
+          "需提供故障现象描述，必要时提供故障照片或视频"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题问保修所需材料，gold片段完整列出三项材料。"
+      },
+      {
+        "query_id": "syn_t0093",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0003",
+            "quote": "保修申请需经过官方售后检测确认故障原因后方可批准，客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准。"
+          }
+        ],
+        "expected_points": [
+          "保修申请需经过官方售后检测确认故障原因后方可批准",
+          "客服人员无法在未检测的情况下直接承诺保修通过",
+          "具体审批结果以检测报告为准"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户要求未检测即确认保修通过，属越权承诺诉求，gold片段直接说明不能承诺，需转人工。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1276,
+    "prompt_tokens": 10386,
+    "total_tokens": 11662,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 914
+  },
+  "model": "deepseek-flash",
+  "response_id": "585830cd-d16b-4cae-a657-d61fe9f720b9"
+}

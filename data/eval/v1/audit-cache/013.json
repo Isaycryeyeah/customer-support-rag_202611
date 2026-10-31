@@ -1,0 +1,252 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0110",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0000",
+          "warranty_exclusions_0004",
+          "invoice_proof_0000",
+          "invoice_proof_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0000",
+            "quote": "以下人为原因造成的故障不在免费保修范围内：\n\n- 摔落、挤压导致的外壳破裂、屏幕碎裂；"
+          },
+          {
+            "chunk_id": "warranty_exclusions_0004",
+            "quote": "不在保修范围内的故障，官方售后仍可提供有偿维修服务，具体费用以检测后报价为准，客服不能在检测前直接报价或承诺费用。"
+          },
+          {
+            "chunk_id": "invoice_proof_0000",
+            "quote": "以下凭证均可作为有效购买凭证：\n\n- 官方商城订单截图或电子发票；\n- 授权线下门店开具的纸质发票或收据；\n- 电商平台（经官方授权店铺）订单详情页。"
+          },
+          {
+            "chunk_id": "invoice_proof_0001",
+            "quote": "购买凭证需清晰显示以下信息：\n\n- 购买日期；\n- 商品型号；\n- 设备序列号（如凭证上有标注）；\n- 购买渠道（门店名称或平台订单号）。"
+          }
+        ],
+        "expected_points": [
+          "屏幕摔坏属于人为损坏，不在免费保修范围内。",
+          "不在保修范围内的故障可提供有偿维修，具体费用以检测后报价为准，客服不能在检测前直接报价。",
+          "电商平台（经官方授权店铺）订单详情页可作为有效购买凭证。",
+          "购买凭证需清晰显示购买日期、商品型号、设备序列号（如凭证上有标注）、购买渠道（门店名称或平台订单号）。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及保修范围、维修费用和购买凭证，知识库有直接对应内容；补充了摔落导致屏幕碎裂不在保修范围的证据，并修正了凭证类型证据。"
+      },
+      {
+        "query_id": "syn_t0111",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0003",
+          "screen_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          },
+          {
+            "chunk_id": "screen_safety_0001",
+            "quote": "如屏幕出现漏液现象（如出现墨渍状扩散、亮斑扩大），应避免用力按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组处理。"
+          }
+        ],
+        "expected_points": [
+          "充电过程中出现插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续插拔测试，联系官方售后检测。",
+          "屏幕出现漏液（墨渍状扩散、亮斑扩大）应避免按压屏幕，立即停止使用并联系官方售后，切勿自行拆解屏幕模组。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "两个子问题均有直接证据支持；涉及充电异常和屏幕漏液，存在安全风险，但知识库已给出明确安全指引，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0112",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0003",
+          "data_privacy_repair_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0003",
+            "quote": "请先清洁摄像头镜片表面，并在相机设置中检查是否开启了特殊滤镜或对焦模式。如清洁后仍模糊，或出现摄像头黑屏、无法启动相机应用等情况，建议联系售后检测摄像头模组。"
+          },
+          {
+            "chunk_id": "data_privacy_repair_0003",
+            "quote": "因维修过程需要更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量在检测和维修过程中保护用户数据不被泄露。"
+          }
+        ],
+        "expected_points": [
+          "清洁镜片后仍模糊或出现黑屏、无法启动相机应用，建议联系售后检测摄像头模组。",
+          "因维修更换硬件导致的数据丢失，官方不承担数据恢复责任，但会尽量保护数据不被泄露。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及摄像头故障排查和数据丢失责任，知识库有直接对应内容；用户询问“能保证不丢吗”，知识库明确不承担数据恢复责任，可如实回答。"
+      },
+      {
+        "query_id": "syn_t0114",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0000",
+          "return_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0000",
+            "quote": "用户表达以下类型的诉求应识别为投诉，而非普通咨询：\n\n- 明确使用\"投诉\"\"举报\"\"维权\"等词汇；\n- 对客服态度、处理效率、处理结果表达强烈不满；\n- 多次咨询同一问题未得到解决，情绪逐渐激化。"
+          },
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "expected_points": [
+          "用户表达投诉意愿，应识别为投诉而非普通咨询。",
+          "退款到账时间通常为验货通过后3～7个工作日内，根据支付渠道不同可能有所差异。"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户明确表达投诉，且涉及退货退款流程；投诉需转人工处理，退款到账时间有明确政策。"
+      },
+      {
+        "query_id": "syn_t0115",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0002",
+          "charger_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "如果设备出现异常发热、烫手，应立即停止使用并断开电源。"
+          },
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          }
+        ],
+        "expected_points": [
+          "设备异常发热、烫手时应立即停止使用并断开电源。",
+          "充电器插头发烫属于充电异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题涉及充电时设备及充电器发烫，知识库有明确安全处理指引；属于安全风险但已有标准提示，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0116",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "invoice_proof_0000",
+          "warranty_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "invoice_proof_0000",
+            "quote": "以下凭证均可作为有效购买凭证：\n\n- 官方商城订单截图或电子发票；\n- 授权线下门店开具的纸质发票或收据；\n- 电商平台（经官方授权店铺）订单详情页。"
+          },
+          {
+            "chunk_id": "warranty_policy_0003",
+            "quote": "保修申请需经过官方售后检测确认故障原因后方可批准，客服人员无法在未检测的情况下直接承诺保修通过，具体审批结果以检测报告为准。"
+          }
+        ],
+        "expected_points": [
+          "电商平台（经官方授权店铺）订单详情页可作为有效购买凭证。",
+          "保修申请需经过官方售后检测确认故障原因后方可批准，客服无法在未检测的情况下直接承诺保修通过。"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户询问能否直接通过保修审批，属于越权请求；知识库明确客服不能直接承诺保修审批结果，需转人工。"
+      },
+      {
+        "query_id": "syn_t0117",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_exclusions_0001",
+          "warranty_policy_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_exclusions_0001",
+            "quote": "如设备存在非官方渠道维修记录（例如第三方维修点更换过屏幕、电池等部件），可能影响保修资格评估，需以官方检测结果为准。"
+          },
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "以下情况通常不在保修范围内，需要额外说明：\n\n- 摔落、进液等意外损坏（可走意外保范围，如已购买）；\n- 私自拆机、改装、加装非官方硬件导致的故障；\n- 使用非官方电源适配器导致的接口或主板损坏。\n\n具体是否保修需以官方检测结果为准，客服不能提前承诺。"
+          }
+        ],
+        "expected_points": [
+          "非官方渠道维修记录可能影响保修资格评估，需以官方检测结果为准。",
+          "摔落等意外损坏通常不在保修范围内，可走意外保范围（如已购买），具体是否保修需以官方检测结果为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题均有直接证据支持；涉及保修资格评估，知识库明确需以官方检测结果为准，客服不能提前承诺。"
+      },
+      {
+        "query_id": "syn_t0118",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0001",
+          "service_boundary_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0001",
+            "quote": "1. 智能客服应先安抚用户情绪，避免与用户争辩或反复重复标准话术；\n2. 明确告知用户投诉将被记录并升级至客户体验组处理；\n3. 不承诺具体的处理结果、赔偿方案或处理时限，具体处理方式由人工客服和相关部门根据实际情况决定；\n4. 生成投诉类工单时应完整记录用户诉求、涉及订单/设备信息、历史沟通摘要。"
+          },
+          {
+            "chunk_id": "service_boundary_0000",
+            "quote": "智能客服（包括本智能问答系统）不能直接执行以下操作，只能说明流程并建议转人工或引导用户走标准渠道：\n\n- 直接批准或执行退款；\n- 直接批准换新或安排换新机寄出；\n- 直接承诺保修审批结果；\n- 直接承诺具体维修费用或赔偿金额；\n- 修改用户订单信息、地址、支付方式等账户敏感信息。"
+          }
+        ],
+        "expected_points": [
+          "智能客服不能直接批准或执行退款，也不能直接承诺赔偿金额。",
+          "投诉应被记录并升级至客户体验组处理，不承诺具体处理结果、赔偿方案或处理时限。"
+        ],
+        "risk_types": [
+          "complaint",
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "用户明确投诉并要求退款赔偿，涉及投诉和越权诉求；知识库明确智能客服不能直接退款或承诺赔偿，需转人工处理。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2884,
+    "prompt_tokens": 10762,
+    "total_tokens": 13646,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1290
+  },
+  "model": "deepseek-flash",
+  "response_id": "1e82814a-fb14-43f9-8f69-335658a7fd59"
+}

@@ -1,0 +1,237 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0119",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0002",
+          "exchange_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0002",
+            "quote": "普通投诉由客户体验组在 1～3 个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+          },
+          {
+            "chunk_id": "exchange_policy_0003",
+            "quote": "以下情况通常不适用换新政策：\n\n- 人为损坏（摔落、进水、私自拆机等）；\n- 故障无法复现，且经检测确认设备功能正常；\n- 已超过换新政策规定的时间窗口。"
+          }
+        ],
+        "expected_points": [
+          "普通投诉由客户体验组在1～3个工作日内跟进，涉及安全事故等将优先升级处理",
+          "人为损坏、故障无法复现或超过换新时间窗口等情况通常不适用换新政策"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户明确表达投诉，且涉及换货政策咨询，需转人工处理；gold片段分别支持投诉处理时限和换货不适用情况。"
+      },
+      {
+        "query_id": "syn_t0120",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "exchange_policy_0001",
+          "complaint_escalation_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "exchange_policy_0001",
+            "quote": "1. 用户提交换货申请并描述故障现象；\n2. 官方客服初步判断是否符合换新条件；\n3. 用户寄回故障机，官方检测确认故障属实；\n4. 检测通过后寄出全新或同型号换新机。"
+          },
+          {
+            "chunk_id": "complaint_escalation_0002",
+            "quote": "普通投诉由客户体验组在 1～3 个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+          }
+        ],
+        "expected_points": [
+          "换货流程包括：用户提交换货申请并描述故障现象；官方客服初步判断是否符合换新条件；用户寄回故障机，官方检测确认故障属实；检测通过后寄出全新或同型号换新机。",
+          "普通投诉由客户体验组在1～3个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含换货流程和投诉处理时限两个子问题，gold片段分别提供直接依据；无投诉表达，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0121",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0001",
+          "repair_faq_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0001",
+            "quote": "官方检测和维修人员在维修过程中仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0001",
+            "quote": "请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+          }
+        ],
+        "expected_points": [
+          "官方检测和维修人员在维修过程中仅会在必要范围内访问设备数据用于故障排查（例如系统日志），不会主动查看用户个人照片、聊天记录等隐私内容。",
+          "键盘部分按键失灵时，请先检查按键周围是否有异物或液体残留。如清理后仍失灵，可能是键盘模组故障，建议联系售后检测更换。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及数据隐私和键盘故障排查，两个gold片段分别直接支持；无风险标签。"
+      },
+      {
+        "query_id": "syn_t0122",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0000",
+          "charger_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0000",
+            "quote": "如果设备出现电池鼓包，应立即停止使用设备，断开电源，并避免继续充电。\n\n用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池。\n\n建议用户联系官方售后服务中心，由专业人员进行检测和处理。"
+          },
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          }
+        ],
+        "expected_points": [
+          "电池鼓包应立即停止使用设备，断开电源，并避免继续充电；用户不应自行拆卸、挤压、刺破、加热或尝试修复鼓包电池；建议联系官方售后服务中心，由专业人员进行检测和处理。",
+          "充电过程中出现充电器插头发烫等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "电池鼓包和充电器发烫属于现实安全风险，需转人工；gold片段提供安全处理指引，且明确禁止自行拆卸。"
+      },
+      {
+        "query_id": "syn_t0123",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0002",
+          "repair_process_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0002",
+            "quote": "请在暗光环境下测试屏幕四周是否存在明显漏光，或对比标准色卡观察是否偏色明显。轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0003",
+            "quote": "保修期内非人为故障免费维修；保修期外或超出保修范围（如进液、摔落）的维修需支付费用，具体费用以检测后报价为准。"
+          }
+        ],
+        "expected_points": [
+          "平板屏幕漏光可在暗光环境下测试四周是否存在明显漏光，轻微漏光在部分机型属于正常工艺现象，如影响使用体验较严重，建议联系售后评估检测。",
+          "笔记本保修期内非人为故障免费维修；保修期外或超出保修范围（如进液、摔落）的维修需支付费用，具体费用以检测后报价为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含平板漏光检测和过保笔记本进液维修收费两个子问题，gold片段分别直接支持；无风险标签。"
+      },
+      {
+        "query_id": "syn_t0124",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0004",
+          "repair_process_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0004",
+            "quote": "请参考\"电池安全使用指南\"文档中的电池发热处理说明。如排除高负载使用场景后仍存在异常发热，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交维修申请，描述故障现象；\n2. 客服协助预判故障类型，建议用户选择寄修或到店维修；\n3. 用户提交设备并提供购买凭证；\n4. 官方检测中心确认故障原因，出具检测报告；\n5. 根据保修状态确定是否免费维修，用户确认后进行维修；\n6. 维修完成后设备寄回或通知用户到店取件。"
+          }
+        ],
+        "expected_points": [
+          "设备发热明显时，如排除高负载使用场景后仍存在异常发热，建议联系售后检测。",
+          "维修申请流程：用户通过官方App、官网或客服热线提交维修申请，描述故障现象；客服协助预判故障类型，建议用户选择寄修或到店维修；用户提交设备并提供购买凭证；官方检测中心确认故障原因，出具检测报告；根据保修状态确定是否免费维修，用户确认后进行维修；维修完成后设备寄回或通知用户到店取件。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及发热售后检测建议和维修申请流程，gold片段分别直接支持；无风险标签。"
+      },
+      {
+        "query_id": "syn_t0125",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "screen_safety_0000",
+          "dangerous_operations_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "screen_safety_0000",
+            "quote": "如设备屏幕碎裂，应立即停止触摸破损区域，避免划伤手指。请用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。"
+          },
+          {
+            "chunk_id": "dangerous_operations_0002",
+            "quote": "严禁指导用户进行以下操作：\n\n- 在设备进液、短路后立即通电测试；\n- 用湿手或在潮湿环境下拆解、插拔电子设备；\n- 私自改装充电器、电源适配器内部电路。"
+          }
+        ],
+        "expected_points": [
+          "屏幕碎裂应立即停止触摸破损区域，避免划伤手指；用胶带或保护膜临时覆盖碎裂区域后停止使用，并联系官方售后进行屏幕更换检测。",
+          "严禁在设备进液、短路后立即通电测试。"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "用户询问进液后通电测试，属于危险操作诉求，需转人工；gold片段提供屏幕碎裂安全处理和禁止通电测试的明确依据。"
+      },
+      {
+        "query_id": "syn_t0126",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "water_damage_policy_0000",
+          "battery_safety_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0000",
+            "quote": "设备进液或进水后，应立即执行以下步骤：\n\n1. 立即关机，不要尝试开机测试是否正常；\n2. 断开充电器，不要在设备潮湿状态下充电；\n3. 用干燥软布擦拭外部液体，不要用吹风机加热吹干；\n4. 尽快将设备送至官方售后进行专业拆检和干燥处理。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 建议将电量维持在 40%～60% 区间存放；\n- 避免在高温、潮湿环境下长期存放笔记本；\n- 长期存放前建议完全关机而非仅休眠。"
+          }
+        ],
+        "expected_points": [
+          "进液后应立即关机，不要尝试开机测试",
+          "断开充电器，不要在潮湿状态下充电",
+          "用干燥软布擦拭外部液体，不要用吹风机加热吹干",
+          "尽快送至官方售后进行专业拆检和干燥处理",
+          "长期存放时电量维持在40%～60%区间"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题包含进液紧急处理和长期存放电量两个子问题，gold片段分别直接支持；无风险标签。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2787,
+    "prompt_tokens": 10962,
+    "total_tokens": 13749,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1490
+  },
+  "model": "deepseek-flash",
+  "response_id": "a5e4bee4-734b-4dac-8316-f2df3a1aad63"
+}

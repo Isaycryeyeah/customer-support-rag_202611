@@ -5,13 +5,14 @@ import re
 RISK_KEYWORDS = {
     "battery_safety": [
         "电池鼓包", "鼓包", "鼓起来", "鼓起", "漏液", "电池发热", "爆炸", "冒烟",
-        "烧焦", "焦味", "异味", "起火", "着火", "电池刺破", "炸了"
+        "烧焦", "焦味", "异味", "起火", "着火", "电池刺破", "炸了",
+        "异常发热", "烫手", "焦糊"
     ],
     "dangerous_repair": [
         "自己拆", "拆电池", "短接", "飞线", "撬开", "加热电池",
         "刺破电池", "电池刺破", "强行拆机", "焊接主板", "自行拆解",
         "湿手", "用力按压屏幕", "按压屏幕", "放进大米", "吹风机吹干",
-        "立刻开机测试", "进水后开机", "进水立刻开机"
+        "立刻开机测试", "进水后开机", "进水立刻开机", "拆充电器", "拆开改装"
     ],
     "refund_boundary": [
         "直接退款", "马上退款", "强制退款", "帮我退钱", "直接帮我退款",
@@ -36,6 +37,18 @@ def detect_risk(query: str) -> Dict:
             for keyword in keywords for match in re.finditer(re.escape(keyword), query)
         ):
             matched_types.append(risk_type)
+
+    # Dev-derived compositional expressions; ordinary official repair remains allowed.
+    def active_match(pattern):
+        return any(not re.search(r'(?:没有(?:出现)?|没|未出现|并未|不存在|不想|不打算|不准备)$', query[:m.start()])
+                   for m in re.finditer(pattern, query))
+
+    if active_match(r'(?:进水|进液|受潮).{0,40}(?:插上充电器|充电试|通电|开机测试)'):
+        if 'dangerous_repair' not in matched_types:
+            matched_types.append('dangerous_repair')
+    if active_match(r'(?:自己|自行).{0,25}(?:拆|改装|屏幕.{0,12}换)'):
+        if 'dangerous_repair' not in matched_types:
+            matched_types.append('dangerous_repair')
 
     risk_level = "low"
     need_human = False

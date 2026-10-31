@@ -1,0 +1,297 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0256",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_pricing_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 屏幕总成更换 | 手机 / 平板 | 300～1200 元 |"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "以上价格为参考区间，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心出具的正式报价为准。"
+          }
+        ],
+        "expected_points": [
+          "怀疑维修过程中数据隐私泄露应作为高优先级投诉转人工处理，不能由智能客服直接判断",
+          "手机屏幕总成更换参考费用区间为300～1200元，具体以检测中心正式报价为准"
+        ],
+        "risk_types": [
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "两个子问题分别有直接证据；隐私泄露投诉需转人工，价格区间有明确参考。"
+      },
+      {
+        "query_id": "syn_t0257",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0003",
+          "repair_pricing_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          },
+          {
+            "chunk_id": "repair_pricing_0002",
+            "quote": "维修费用需在检测完成后，通过官方渠道向用户展示正式报价，用户确认后才会进行收费维修，未经用户确认不会直接收费维修。"
+          }
+        ],
+        "expected_points": [
+          "轻负载下风扇异常响或异响应立即停止高负载使用并联系售后检测散热模组",
+          "维修费用需在检测完成后通过官方渠道展示正式报价，用户确认后才会收费维修"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "风扇异常与费用确认流程均有直接证据，属一般咨询。"
+      },
+      {
+        "query_id": "syn_t0258",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003",
+          "battery_safety_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。"
+          },
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "严禁在冒烟或起火后继续操作、充电或强行关机。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0001",
+            "quote": "但如果出现底部烫手、风扇异响、自动关机等情况，应立即停止使用并送修检测。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0001",
+            "quote": "请勿在床上、沙发、毯子等柔软且不透气的表面上长时间使用笔记本，以免影响散热导致电池过热。"
+          }
+        ],
+        "expected_points": [
+          "手机冒烟后应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。",
+          "严禁在冒烟或起火后继续操作、充电或强行关机。",
+          "笔记本底部烫手、风扇异响、自动关机等情况，应立即停止使用并送修检测。",
+          "请勿在床上、沙发、毯子等柔软且不透气的表面上长时间使用笔记本，以免影响散热导致电池过热。"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "涉及冒烟起火现实安全风险，证据完整，需人工介入。"
+      },
+      {
+        "query_id": "syn_t0259",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "data_privacy_repair_0004",
+          "repair_faq_laptop_0005"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "data_privacy_repair_0004",
+            "quote": "如用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0005",
+            "quote": "请先在纯色背景下仔细观察确认异常位置和数量。如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "用户怀疑维修过程中存在数据隐私泄露问题，应作为高优先级投诉转人工处理，不能由智能客服直接判断是否存在泄露行为。",
+          "屏幕亮点问题请先在纯色背景下仔细观察确认异常位置和数量，如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+        ],
+        "risk_types": [
+          "complaint",
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "隐私泄露投诉及要求保证，需转人工；屏幕亮点保修以检测为准，证据充分。"
+      },
+      {
+        "query_id": "syn_t0260",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0002",
+          "battery_safety_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "如果设备出现异常发热、烫手，应立即停止使用并断开电源。"
+          },
+          {
+            "chunk_id": "battery_safety_0002",
+            "quote": "请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起。发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0000",
+            "quote": "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+          }
+        ],
+        "expected_points": [
+          "设备出现异常发热、烫手，应立即停止使用并断开电源。",
+          "请勿将发热设备放置在床上、沙发等易燃物品附近，也不要用衣物、被子覆盖设备散热。",
+          "笔记本电池鼓包可能导致机身变形、键盘翘起或触控板异常凸起，发现鼓包迹象后，应立即停止使用，关闭设备并断开电源适配器。",
+          "笔记本内置电池不支持用户自行更换，切勿自行拆开后盖强行取出电池，应联系官方售后进行专业拆检。"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "涉及电池鼓包安全风险及自行拆机危险诉求，证据完整，需人工。"
+      },
+      {
+        "query_id": "syn_t0261",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0003",
+          "fast_charging_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 建议将电量维持在 40%～60% 区间存放；"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 避免在高温、潮湿环境下长期存放笔记本；"
+          },
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 长期存放前建议完全关机而非仅休眠。"
+          },
+          {
+            "chunk_id": "fast_charging_safety_0003",
+            "quote": "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以\"提升\"充电速度，此类操作存在严重安全风险且不在保修范围内。"
+          }
+        ],
+        "expected_points": [
+          "建议将电量维持在 40%～60% 区间存放。",
+          "避免在高温、潮湿环境下长期存放笔记本。",
+          "长期存放前建议完全关机而非仅休眠。",
+          "禁止使用来源不明的第三方快充头或改装数据线，禁止拆解充电器或电池以“提升”充电速度，此类操作存在严重安全风险且不在保修范围内。"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "存放建议有直接证据；改装快充头属危险操作诉求，需明确拒绝并转人工。"
+      },
+      {
+        "query_id": "syn_t0262",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0001",
+          "repair_process_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0001",
+            "quote": "请先重启设备排查是否为临时软件卡顿问题。如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0001",
+            "quote": "常规部件（键盘、触控板、电池）维修时长约为 3～5 个工作日；主板级维修或需要更换屏幕总成的维修时长约为 7～15 个工作日，具体以检测中心和零件库存情况为准。"
+          }
+        ],
+        "expected_points": [
+          "请先重启设备排查是否为临时软件卡顿问题。如重启后仍无法正常触控，或屏幕出现局部触控失灵、漂移等情况，建议联系售后检测屏幕模组。",
+          "常规部件（键盘、触控板、电池）维修时长约为 3～5 个工作日。",
+          "主板级维修或需要更换屏幕总成的维修时长约为 7～15 个工作日，具体以检测中心和零件库存情况为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "触控失灵建议与笔记本维修时长均有直接证据；手机维修时长未明确问及具体时长，但笔记本时长已覆盖。"
+      },
+      {
+        "query_id": "syn_t0263",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_tablet_0001",
+          "repair_process_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_tablet_0001",
+            "quote": "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交笔记本维修申请；"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "2. 客服建议用户提前备份重要数据，避免维修过程中数据丢失；"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "3. 用户将笔记本寄至官方指定检测中心或到店提交；"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "4. 检测中心确认故障原因（如主板、屏幕、键盘、散热模组等）；"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "5. 根据保修状态确认维修方案和费用，用户确认后开始维修；"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "6. 维修完成后寄回或通知到店取件。"
+          }
+        ],
+        "expected_points": [
+          "请先确认键盘固件是否为最新版本，并检查是否同时连接了多个蓝牙设备造成干扰。如问题持续，建议联系售后检测。",
+          "用户通过官方 App、官网或客服热线提交笔记本维修申请。",
+          "客服建议用户提前备份重要数据，避免维修过程中数据丢失。",
+          "用户将笔记本寄至官方指定检测中心或到店提交，检测中心确认故障原因，根据保修状态确认维修方案和费用，用户确认后开始维修，维修完成后寄回或通知到店取件。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "平板键盘排查与笔记本维修流程、备份建议均有直接证据，属一般咨询。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2551,
+    "prompt_tokens": 11113,
+    "total_tokens": 13664,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1641
+  },
+  "model": "deepseek-flash",
+  "response_id": "bddc0076-d46d-4960-a2f5-c22018e18cdc"
+}

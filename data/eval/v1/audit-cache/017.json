@@ -1,0 +1,238 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0143",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "lost_invoice_policy_0001",
+          "warranty_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "lost_invoice_policy_0001",
+            "quote": "通过非官方授权的第三方渠道购买且丢失发票的，官方无法直接查询到购买记录，此时保修期认定可能存在困难，需要客服进一步核实，具体是否可以保修以实际核实结果为准，客服不能直接承诺可以保修。"
+          },
+          {
+            "chunk_id": "warranty_policy_0000",
+            "quote": "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+          }
+        ],
+        "expected_points": [
+          "通过非官方授权的第三方渠道购买且丢失发票的，官方无法直接查询到购买记录，此时保修期认定可能存在困难，需要客服进一步核实，具体是否可以保修以实际核实结果为准，客服不能直接承诺可以保修。",
+          "云枢手机和平板整机保修期为购买之日起 12 个月，电池作为易耗部件保修期为 6 个月。保修期以购机发票或电子凭证日期为准。"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由发票丢失政策和手机保修期限片段直接支持，gold完整无噪声。"
+      },
+      {
+        "query_id": "syn_t0144",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "fast_charging_safety_0001",
+          "screen_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "fast_charging_safety_0001",
+            "quote": "快充过程中设备和充电器出现比普通充电更明显的温热是正常现象，属于功率提升带来的正常发热。但如果出现烫手无法触摸、外壳变形等异常，应立即停止充电。"
+          },
+          {
+            "chunk_id": "screen_safety_0003",
+            "quote": "严禁自行购买第三方屏幕总成进行更换，此类操作可能损坏内部排线、传感器，且会导致保修失效，具体维修应统一通过官方售后渠道处理。"
+          }
+        ],
+        "expected_points": [
+          "快充时若出现烫手无法触摸、外壳变形等异常，应立即停止充电",
+          "严禁自行购买第三方屏幕总成更换，可能损坏排线、传感器并导致保修失效，应通过官方售后处理"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "涉及充电器烫手的安全风险及自行更换第三方屏幕的危险操作诉求，需人工介入，证据直接支持。"
+      },
+      {
+        "query_id": "syn_t0145",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0000",
+          "repair_faq_laptop_0005"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0000",
+            "quote": "请先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机。如仍无法开机，可能是主板或电池故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_faq_laptop_0005",
+            "quote": "请先在纯色背景下仔细观察确认异常位置和数量。如确认存在显示异常，建议联系售后检测屏幕面板，具体是否保修以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "手机充电30分钟后仍无法开机，可能是主板或电池故障，建议联系官方售后检测",
+          "笔记本屏幕亮点需先在纯色背景下确认位置和数量，确认显示异常后联系售后检测屏幕面板，是否保修以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "两个子问题分别由手机无法开机和笔记本屏幕亮点FAQ直接支持，gold准确。"
+      },
+      {
+        "query_id": "syn_t0146",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "complaint_escalation_0002",
+          "return_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "complaint_escalation_0002",
+            "quote": "普通投诉由客户体验组在 1～3 个工作日内跟进；涉及安全事故、重大产品质量问题的投诉将优先升级处理，具体时限视事件严重程度由相关部门决定。"
+          },
+          {
+            "chunk_id": "return_policy_0003",
+            "quote": "退货申请需经过官方审核，客服不能在未审核的情况下直接承诺退款，具体是否退款以验货结果为准。"
+          }
+        ],
+        "expected_points": [
+          "退货申请需经官方审核，客服不能在未审核情况下直接承诺退款，是否退款以验货结果为准",
+          "普通投诉由客户体验组在1～3个工作日内跟进，涉及安全事故、重大产品质量问题的投诉会优先升级处理"
+        ],
+        "risk_types": [
+          "refund_boundary",
+          "complaint"
+        ],
+        "need_human": true,
+        "reason": "用户要求直接承诺退款并涉及投诉，属退款边界与投诉风险，需人工处理，证据直接支持。"
+      },
+      {
+        "query_id": "syn_t0147",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_0000",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_0000",
+            "quote": "请先确认设备是否有电，尝试连接充电器充电 30 分钟后再次尝试开机。如仍无法开机，可能是主板或电池故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "手机充电30分钟后仍无法开机，可能是主板或电池故障，建议联系官方售后检测",
+          "维修涉及更换主板、存储芯片可能导致数据丢失，建议寄修前自行备份，官方不对维修导致的数据丢失承担恢复责任"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "手机无法开机与换主板数据丢失两个子问题均有直接证据支持，gold合理。"
+      },
+      {
+        "query_id": "syn_t0148",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0003",
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0003",
+            "quote": "高负载运行时风扇声音变大属于正常现象。如风扇在轻负载下也异常响、出现异响，或风扇完全不转导致设备过热，建议立即停止高负载使用并联系售后检测散热模组。"
+          },
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "轻负载下风扇异常响或出现异响，建议立即停止高负载使用并联系售后检测散热模组",
+          "维修涉及更换主板、存储芯片可能导致数据丢失，建议寄修前自行备份，官方不对维修导致的数据丢失承担恢复责任"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "风扇异响与换主板数据安全两个子问题均有直接证据支持，gold准确。"
+      },
+      {
+        "query_id": "syn_t0149",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_faq_laptop_0000",
+          "repair_pricing_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_faq_laptop_0000",
+            "quote": "请先确认电源适配器连接正常，并尝试长按电源键 10 秒后重新开机。如仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测。"
+          },
+          {
+            "chunk_id": "repair_pricing_0001",
+            "quote": "| 主板维修 | 笔记本 | 500～3000 元 |\n\n以上价格为参考区间，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心出具的正式报价为准。"
+          }
+        ],
+        "expected_points": [
+          "确认电源适配器连接正常并长按电源键10秒后仍无法开机，可能是主板、电池或电源模块故障，建议联系官方售后检测",
+          "笔记本主板维修参考费用区间为500～3000元，具体费用受机型、故障复杂度、零件供应等因素影响，最终以检测中心正式报价为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "笔记本无法开机与主板维修费用区间均有直接证据支持，gold合理。"
+      },
+      {
+        "query_id": "syn_t0150",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_0003",
+          "water_damage_policy_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_0003",
+            "quote": "如设备出现冒烟、焦味或起火迹象，应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后。\n\n严禁在冒烟或起火后继续操作、充电或强行关机。"
+          },
+          {
+            "chunk_id": "water_damage_policy_0003",
+            "quote": "- 避免在浴室、厨房、雨天户外等潮湿环境使用设备；\n- 如设备具备防水等级，仍建议避免长时间浸泡或超出防水等级的使用场景。"
+          }
+        ],
+        "expected_points": [
+          "冒烟或起火后应立即远离设备，不要用水扑灭锂电池火情，应使用干粉灭火器或沙土覆盖，并及时报警和联系官方售后",
+          "严禁在冒烟或起火后继续操作、充电或强行关机",
+          "避免在浴室、厨房、雨天户外等潮湿环境使用设备",
+          "即使设备具备防水等级，也建议避免长时间浸泡或超出防水等级的使用场景"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": true,
+        "reason": "涉及电池冒烟起火的高危安全场景，需人工介入，证据直接支持安全处置与进液预防。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 2116,
+    "prompt_tokens": 10832,
+    "total_tokens": 12948,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 1360
+  },
+  "model": "deepseek-flash",
+  "response_id": "443ef8d8-598b-42ab-bc75-b7a321c6ca31"
+}

@@ -1,0 +1,124 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "ood_033",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及个税申报，知识库为售后客服资料，无相关内容，无法回答。"
+      },
+      {
+        "query_id": "ood_034",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及PostgreSQL索引膨胀排查，知识库无相关内容，无法回答。"
+      },
+      {
+        "query_id": "ood_035",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及快速排序复杂度推导，知识库无相关内容，无法回答。"
+      },
+      {
+        "query_id": "ood_036",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及CSS网格布局，知识库无相关内容，无法回答。"
+      },
+      {
+        "query_id": "ood_037",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及Linux僵尸进程回收，知识库无相关内容，无法回答。"
+      },
+      {
+        "query_id": "ood_038",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及TLS握手流程，知识库无相关内容，无法回答。"
+      },
+      {
+        "query_id": "ood_039",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及BGP路由选择，知识库无相关内容，无法回答。"
+      },
+      {
+        "query_id": "ood_040",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题涉及操作系统虚拟内存实现，知识库无相关内容，无法回答。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 709,
+    "prompt_tokens": 10017,
+    "total_tokens": 10726,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 545
+  },
+  "model": "deepseek-flash",
+  "response_id": "ed11dace-8e27-4d60-ad52-273d2be378d1"
+}

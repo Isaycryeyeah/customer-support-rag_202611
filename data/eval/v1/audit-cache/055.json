@@ -1,0 +1,126 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "ood_049",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库无维修店地址信息，无法回答具体门牌号。"
+      },
+      {
+        "query_id": "ood_050",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库无库存数据，无法回答仓库电池数量。"
+      },
+      {
+        "query_id": "ood_051",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [
+          "refund_boundary"
+        ],
+        "need_human": true,
+        "reason": "需查询具体订单退款状态，知识库无此能力，且涉及退款账户操作。"
+      },
+      {
+        "query_id": "ood_052",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "需查询具体序列号保修状态，知识库无实时查询能力。"
+      },
+      {
+        "query_id": "ood_053",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库无固件版本号信息。"
+      },
+      {
+        "query_id": "ood_054",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库无盲文显示器兼容性信息。"
+      },
+      {
+        "query_id": "ood_055",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库无企业采购合同折扣信息。"
+      },
+      {
+        "query_id": "ood_056",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": true,
+        "reason": "知识库无冰岛地区服务电话信息。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 689,
+    "prompt_tokens": 10050,
+    "total_tokens": 10739,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 578
+  },
+  "model": "deepseek-flash",
+  "response_id": "aeb89e42-6cb0-4f8a-9662-324dd7e6a24f"
+}

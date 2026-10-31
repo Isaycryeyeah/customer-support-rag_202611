@@ -1,0 +1,203 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0008",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "battery_safety_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "battery_safety_laptop_0003",
+            "quote": "- 建议将电量维持在 40%～60% 区间存放；\n- 避免在高温、潮湿环境下长期存放笔记本；\n- 长期存放前建议完全关机而非仅休眠。"
+          }
+        ],
+        "expected_points": [
+          "建议将电量维持在 40%～60% 区间存放",
+          "避免在高温、潮湿环境下长期存放笔记本",
+          "长期存放前建议完全关机而非仅休眠"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问笔记本长期存放的电量和环境注意事项，gold片段直接包含电量区间、环境要求和关机建议，完全支持答案。"
+      },
+      {
+        "query_id": "syn_t0009",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0000",
+            "quote": "建议用户使用官方原装充电器或经过官方认证的第三方充电器。使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故。"
+          }
+        ],
+        "expected_points": [
+          "建议使用官方原装充电器或经过官方认证的第三方充电器",
+          "使用非认证、劣质充电器可能导致设备发热、损坏电池，甚至引发安全事故"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问第三方充电器安全性和是否必须原装，gold片段明确建议使用原装或认证充电器，并说明非认证充电器的风险，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0010",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0001",
+            "quote": "如充电器出现外壳破损、插脚变形、数据线破皮外露铜线等情况，应立即停止使用，避免触电风险，并更换新的充电器。"
+          }
+        ],
+        "expected_points": [
+          "外壳破损、数据线破皮外露铜线等情况应立即停止使用",
+          "继续使用存在触电风险，应更换新的充电器"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题描述充电器外壳裂和数据线破皮露铜，gold片段直接给出应立即停止使用并更换的结论，完全支持答案。"
+      },
+      {
+        "query_id": "syn_t0011",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0002",
+            "quote": "- 避免在潮湿环境（如浴室、水边）为设备充电；\n- 避免使用充电器时用湿手触摸插头；\n- 避免长时间覆盖充电器和设备（如塞进被子中充电）。"
+          }
+        ],
+        "expected_points": [
+          "避免使用充电器时用湿手触摸插头",
+          "避免长时间覆盖充电器和设备（如塞进被子中充电）",
+          "避免在潮湿环境（如浴室、水边）为设备充电"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问湿手拔插头和塞被子充电的风险，gold片段明确列出避免湿手触摸插头和避免覆盖充电，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0012",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "charger_safety_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "charger_safety_0003",
+            "quote": "如充电过程中出现设备无法识别充电器、充电器插头发烫、插座冒烟等异常，应立即拔出充电器并断开电源，不要继续尝试插拔测试，联系官方售后检测处理。"
+          }
+        ],
+        "expected_points": [
+          "应立即拔出充电器并断开电源",
+          "不要继续尝试插拔测试",
+          "联系官方售后检测处理"
+        ],
+        "risk_types": [
+          "battery_safety"
+        ],
+        "need_human": false,
+        "reason": "问题描述充电器插头发烫和插座冒烟，gold片段直接给出立即拔出充电器、断开电源、不要继续插拔测试并联系售后的处理步骤，完全支持答案。"
+      },
+      {
+        "query_id": "syn_t0017",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0000",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆卸、刺破、挤压电池；\n- 用针、刀等工具对鼓包电池\"放气\"或穿刺处理；\n- 将电池或设备放入水中、火中处理异常情况；\n- 自行给电池加热或冷冻以\"修复\"故障。"
+          }
+        ],
+        "expected_points": [
+          "严禁指导用户用针、刀等工具对鼓包电池“放气”或穿刺处理",
+          "严禁指导用户自行拆卸、刺破、挤压电池"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": true,
+        "reason": "用户明确要求指导用针扎鼓包电池放气，属于高危危险操作，gold片段直接禁止该操作，需转人工处理。"
+      },
+      {
+        "query_id": "syn_t0018",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0001",
+            "quote": "严禁指导用户进行以下操作：\n\n- 自行拆开设备外壳、后盖进行\"维修\"；\n- 短接主板触点尝试强制开机；\n- 使用飞线、焊接等方式修复主板故障；\n- 强行撬开粘合的屏幕或电池仓。"
+          }
+        ],
+        "expected_points": [
+          "不能指导用户自行拆开设备外壳或后盖进行维修",
+          "应说明该操作存在安全风险",
+          "建议停止尝试并联系官方售后由专业人员处理"
+        ],
+        "risk_types": [
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "用户要求指导自行拆后盖，gold片段明确禁止指导自行拆开设备外壳或后盖，可据此拒绝并引导售后，无需转人工。"
+      },
+      {
+        "query_id": "syn_t0019",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "dangerous_operations_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "dangerous_operations_0002",
+            "quote": "严禁指导用户进行以下操作：\n\n- 在设备进液、短路后立即通电测试；\n- 用湿手或在潮湿环境下拆解、插拔电子设备；\n- 私自改装充电器、电源适配器内部电路。"
+          }
+        ],
+        "expected_points": [
+          "设备进液后不应立即通电测试",
+          "该操作存在安全风险",
+          "应停止尝试并联系官方售后由专业人员处理"
+        ],
+        "risk_types": [
+          "battery_safety",
+          "dangerous_repair"
+        ],
+        "need_human": false,
+        "reason": "用户询问进水后能否立即充电测试，gold片段明确禁止在设备进液后立即通电测试，可据此给出安全提示并引导售后，无需转人工。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1845,
+    "prompt_tokens": 10477,
+    "total_tokens": 12322,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 10477
+  },
+  "model": "deepseek-flash",
+  "response_id": "eb35a1bf-4534-4b40-910e-9cc08b07ec00"
+}

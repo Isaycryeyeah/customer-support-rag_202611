@@ -1,0 +1,188 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0068",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_0003",
+            "quote": "保修期内的非人为故障维修免费；保修期外或不在保修范围内的故障需支付维修费用，具体费用以检测后官方报价为准，客服不能在检测前直接报价。"
+          }
+        ],
+        "expected_points": [
+          "保修期外或不在保修范围内的故障需支付维修费用",
+          "具体费用以检测后官方报价为准，客服不能在检测前直接报价"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问过保换屏价格及客服能否直接报价，gold片段明确说明保修期外需付费且客服不能在检测前直接报价，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0069",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_laptop_0000",
+            "quote": "1. 用户通过官方 App、官网或客服热线提交笔记本维修申请；\n2. 客服建议用户提前备份重要数据，避免维修过程中数据丢失；\n3. 用户将笔记本寄至官方指定检测中心或到店提交；\n4. 检测中心确认故障原因（如主板、屏幕、键盘、散热模组等）；\n5. 根据保修状态确认维修方案和费用，用户确认后开始维修；\n6. 维修完成后寄回或通知到店取件。"
+          }
+        ],
+        "expected_points": [
+          "可通过官方 App、官网或客服热线提交笔记本维修申请",
+          "客服建议用户提前备份重要数据，避免维修过程中数据丢失",
+          "之后寄至官方指定检测中心或到店提交，检测确认故障后确认方案和费用再维修"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问笔记本维修申请流程及寄修前准备，gold片段完整列出了流程步骤，包含提交申请、备份数据、寄修检测等，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0070",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_laptop_0001",
+            "quote": "常规部件（键盘、触控板、电池）维修时长约为 3～5 个工作日；主板级维修或需要更换屏幕总成的维修时长约为 7～15 个工作日，具体以检测中心和零件库存情况为准。"
+          }
+        ],
+        "expected_points": [
+          "常规部件（键盘、触控板、电池）维修时长约为3～5个工作日",
+          "主板级维修或更换屏幕总成约为7～15个工作日，具体以检测中心和零件库存为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问笔记本键盘更换及主板维修的时长，gold片段明确给出了常规部件和主板级维修的参考工作日，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0071",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_laptop_0002",
+            "quote": "维修过程中如涉及更换主板、存储芯片，可能导致数据丢失，建议用户在寄修前自行备份数据。官方检测和维修流程中会尽量保护用户数据隐私，但不对维修导致的数据丢失承担恢复责任。"
+          }
+        ],
+        "expected_points": [
+          "更换主板、存储芯片可能导致数据丢失，建议寄修前自行备份数据",
+          "官方会尽量保护数据隐私，但不对维修导致的数据丢失承担恢复责任"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问换主板寄修前数据是否会丢及官方能否保证恢复，gold片段明确说明可能丢失、建议备份且官方不承担恢复责任，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0072",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "repair_process_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "repair_process_laptop_0003",
+            "quote": "保修期内非人为故障免费维修；保修期外或超出保修范围（如进液、摔落）的维修需支付费用，具体费用以检测后报价为准。"
+          }
+        ],
+        "expected_points": [
+          "进液属于超出保修范围的情况，维修需支付费用",
+          "具体费用以检测后报价为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问保修期内进液损坏是否需自费及费用计算，gold片段明确进液属于超出保修范围需付费且以检测后报价为准，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0073",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "return_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0000",
+            "quote": "用户自收到商品之日起 7 天内，商品无质量问题、保持完好（包装、配件、赠品齐全，无明显使用痕迹）的情况下，可申请无理由退货。\n\n超过 7 天后，无理由退货申请将不再受理，但如存在质量问题，可按保修政策或换货政策处理。"
+          }
+        ],
+        "expected_points": [
+          "超过7天后无理由退货申请不再受理",
+          "如存在质量问题可按保修或换货政策处理"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问收到手机第9天未拆封能否七天无理由退货，gold片段明确超过7天不再受理无理由退货，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0074",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "return_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0001",
+            "quote": "1. 在官方渠道提交退货申请，说明退货原因；\n2. 客服审核订单信息和退货条件；\n3. 审核通过后，用户按指引寄回商品；\n4. 官方收到商品并验货后，原路退款。\n\n退款到账时间根据支付渠道不同，通常为验货通过后 3～7 个工作日内。"
+          }
+        ],
+        "expected_points": [
+          "需先提交申请、客服审核、寄回商品、验货后原路退款",
+          "退款通常为验货通过后3～7个工作日内到账"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问平板退货后多久收到退款，gold片段明确退款到账时间通常为验货通过后3～7个工作日，直接支持答案。"
+      },
+      {
+        "query_id": "syn_t0075",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "return_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "return_policy_0002",
+            "quote": "以下情况通常不支持七天无理由退货：\n\n- 商品已拆封使用且存在明显使用痕迹（如屏幕划痕、机身磕碰）；\n- 赠品、配件缺失或损坏；\n- 定制化商品（如刻字、定制配置）。"
+          }
+        ],
+        "expected_points": [
+          "商品已拆封使用且存在明显使用痕迹（如屏幕划痕）通常不支持七天无理由退货"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题询问笔记本拆封使用一周有屏幕划痕能否七天无理由退货，gold片段明确已拆封使用且有明显使用痕迹不支持无理由退货，直接支持答案。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1908,
+    "prompt_tokens": 10437,
+    "total_tokens": 12345,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 965
+  },
+  "model": "deepseek-flash",
+  "response_id": "e84fa78a-ebc0-4dac-902e-ada4b06d0b59"
+}

@@ -1,0 +1,124 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "ood_017",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库为售后/产品文档，不含法国新浪潮电影信息，属超范围问题。"
+      },
+      {
+        "query_id": "ood_018",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库不含诗歌创作内容，属超范围问题。"
+      },
+      {
+        "query_id": "ood_019",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库不含求职面试内容，属超范围问题。"
+      },
+      {
+        "query_id": "ood_020",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库不含雅思考试内容，属超范围问题。"
+      },
+      {
+        "query_id": "ood_021",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库不含股票预测内容，属超范围问题。"
+      },
+      {
+        "query_id": "ood_022",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库不含法律诉讼指引，属超范围问题。"
+      },
+      {
+        "query_id": "ood_023",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库不含医疗诊断内容，属超范围问题。"
+      },
+      {
+        "query_id": "ood_024",
+        "accepted": true,
+        "answerable": false,
+        "gold_chunk_ids": [],
+        "evidence": [],
+        "expected_points": [
+          "当前资料无法确认"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "知识库不含宠物护理内容，属超范围问题。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 525,
+    "prompt_tokens": 10022,
+    "total_tokens": 10547,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 550
+  },
+  "model": "deepseek-flash",
+  "response_id": "c8746ffd-801b-4d7a-8bce-79952964adbf"
+}

@@ -1,0 +1,192 @@
+{
+  "data": {
+    "items": [
+      {
+        "query_id": "syn_t0094",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_0004"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_0004",
+            "quote": "例如用户于 2026 年 1 月 10 日购买手机，整机保修期至 2027 年 1 月 9 日，电池保修期至 2026 年 7 月 9 日。"
+          }
+        ],
+        "expected_points": [
+          "整机保修期至2027年1月9日",
+          "电池保修期至2026年7月9日"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "问题直接匹配保修期计算示例，证据完整支持两个日期。"
+      },
+      {
+        "query_id": "syn_t0095",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_laptop_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0000",
+            "quote": "云枢笔记本整机保修期为购买之日起 24 个月，电池保修期为 12 个月，外接鼠标、键盘等随机赠品配件保修期为 6 个月。"
+          }
+        ],
+        "expected_points": [
+          "笔记本整机保修期为购买之日起24个月",
+          "电池保修期为12个月",
+          "外接鼠标、键盘等随机赠品配件保修期为6个月"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "单一证据片段完整覆盖整机、电池和赠品配件保修期。"
+      },
+      {
+        "query_id": "syn_t0096",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_laptop_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0001",
+            "quote": "保修范围包括主板故障、屏幕显示异常、键盘失灵、散热风扇异响或不转、接口无法识别设备等非人为硬件故障。"
+          }
+        ],
+        "expected_points": [
+          "散热风扇异响属于保修范围",
+          "保修范围包括非人为硬件故障"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据明确将散热风扇异响列为保修范围，且限定非人为硬件故障。"
+      },
+      {
+        "query_id": "syn_t0097",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_laptop_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0002",
+            "quote": "申请笔记本保修需提供：\n\n1. 购买发票或电子凭证；\n2. 设备序列号（机身底部标签或系统设置中查看）；\n3. 详细故障描述，建议附带截图或录屏。"
+          }
+        ],
+        "expected_points": [
+          "购买发票或电子凭证",
+          "设备序列号",
+          "详细故障描述"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据直接列出申请笔记本保修所需的三项材料。"
+      },
+      {
+        "query_id": "syn_t0098",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "warranty_policy_laptop_0003"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "warranty_policy_laptop_0003",
+            "quote": "以下情况通常不在保修范围内，需要额外说明：\n\n- 摔落、进液等意外损坏（可走意外保范围，如已购买）；\n- 私自拆机、改装、加装非官方硬件导致的故障；\n- 使用非官方电源适配器导致的接口或主板损坏。\n\n具体是否保修需以官方检测结果为准，客服不能提前承诺。"
+          }
+        ],
+        "expected_points": [
+          "使用非官方电源适配器导致的接口或主板损坏不在保修范围内",
+          "具体是否保修需以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据明确非官方电源适配器导致的接口损坏通常不保修，且最终以检测为准。"
+      },
+      {
+        "query_id": "syn_t0099",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "water_damage_policy_0000"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0000",
+            "quote": "设备进液或进水后，应立即执行以下步骤：\n\n1. 立即关机，不要尝试开机测试是否正常；\n2. 断开充电器，不要在设备潮湿状态下充电；\n3. 用干燥软布擦拭外部液体，不要用吹风机加热吹干；\n4. 尽快将设备送至官方售后进行专业拆检和干燥处理。"
+          }
+        ],
+        "expected_points": [
+          "立即关机，不要开机测试",
+          "断开充电器，不要充电",
+          "用干燥软布擦拭外部液体，不要用吹风机加热吹干",
+          "尽快送官方售后拆检干燥"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据完整列出进液后的紧急处理步骤，与问题直接对应。"
+      },
+      {
+        "query_id": "syn_t0100",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "water_damage_policy_0001"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0001",
+            "quote": "严禁将进液设备放入米缸、加热灯下烘烤等民间偏方处理方式，这些方法可能加速内部腐蚀或造成短路，进一步损坏设备。"
+          }
+        ],
+        "expected_points": [
+          "严禁将进液设备放入米缸等民间偏方处理",
+          "这些方法可能加速腐蚀或造成短路"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据明确禁止米缸偏方并解释风险，直接回答用户疑问。"
+      },
+      {
+        "query_id": "syn_t0101",
+        "accepted": true,
+        "answerable": true,
+        "gold_chunk_ids": [
+          "water_damage_policy_0002"
+        ],
+        "evidence": [
+          {
+            "chunk_id": "water_damage_policy_0002",
+            "quote": "进液导致的故障通常不属于保修范围（详见\"保修免责与不予保修情况说明\"文档），具体是否可维修、维修费用需以官方检测结果为准。"
+          }
+        ],
+        "expected_points": [
+          "进液导致的故障通常不属于保修范围",
+          "具体是否可维修及费用需以官方检测结果为准"
+        ],
+        "risk_types": [],
+        "need_human": false,
+        "reason": "证据直接说明进液故障通常不保修，且最终以检测为准。"
+      }
+    ]
+  },
+  "usage": {
+    "completion_tokens": 1664,
+    "prompt_tokens": 10349,
+    "total_tokens": 12013,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 9472
+    },
+    "prompt_cache_hit_tokens": 9472,
+    "prompt_cache_miss_tokens": 877
+  },
+  "model": "deepseek-flash",
+  "response_id": "b602fada-7ca7-47e7-a3dd-dba4a795b9d2"
+}

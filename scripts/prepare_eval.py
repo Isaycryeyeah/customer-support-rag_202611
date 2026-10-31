@@ -84,7 +84,8 @@ def main():
     parser.add_argument('--input', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--seed', type=int, default=20261031)
-    parser.add_argument('--reviewed', action='store_true', help='Assert annotations and near-duplicate warnings were manually reviewed.')
+    parser.add_argument('--reviewed', action='store_true', help='Assert the declared annotation/evidence review was completed.')
+    parser.add_argument('--review-mode', choices=['ai_evidence', 'human'], default='ai_evidence')
     args = parser.parse_args()
     source = Path(args.input)
     rows = [json.loads(line) for line in source.read_text(encoding='utf-8').splitlines() if line.strip()]
@@ -108,10 +109,11 @@ def main():
         data = ''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in rows if r['split'] == split)
         path = output / f'{split}.jsonl'
         path.write_text(data, encoding='utf-8')
-        files[path.name] = hashlib.sha256(data.encode('utf-8')).hexdigest()
+        files[path.name] = hashlib.sha256(path.read_bytes()).hexdigest()
     manifest = {
         'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(), 'seed': args.seed,
         'status': 'reviewed' if args.reviewed else 'draft_requires_annotation_review',
+        'review_mode': args.review_mode, 'human_reviewed': bool(args.reviewed and args.review_mode == 'human'),
         'sample_counts': dict(Counter(r['split'] for r in rows)),
         'group_counts': dict(Counter(v[0]['split'] for v in _groups(rows).values())),
         'category_counts': dict(Counter(r['category'] for r in rows)),
